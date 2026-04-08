@@ -10,7 +10,7 @@ function loadNotes(): string {
   if (cachedNotes !== null) return cachedNotes;
   const notesPath = path.join(process.cwd(), 'notes', 'generated-notes.md');
   if (!fs.existsSync(notesPath)) { cachedNotes = ''; return ''; }
-  cachedNotes = fs.readFileSync(notesPath, 'utf-8').replace(/^<!--.*?-->\n\n/s, '').trim();
+  cachedNotes = fs.readFileSync(notesPath, 'utf-8').replace(/^<!--[\s\S]*?-->\n\n/, '').trim();
   return cachedNotes;
 }
 
@@ -30,8 +30,7 @@ export async function POST(req: Request) {
       ? [{
           type: 'text' as const,
           text: `Course notes:\n\n${notes}`,
-          // @ts-expect-error cache_control valid in API
-          cache_control: { type: 'ephemeral' },
+          cache_control: { type: 'ephemeral' as const },
         }]
       : []),
   ];
