@@ -1,0 +1,216 @@
+'use client';
+
+import { useState, useRef, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+function SendIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13" />
+      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+    </svg>
+  );
+}
+
+function TypingDots() {
+  return (
+    <div className="flex items-center gap-1 py-1">
+      {[0, 1, 2].map((i) => (
+        <span
+          key={i}
+          className="block w-2 h-2 rounded-full bg-zinc-400 dark:bg-zinc-500 animate-bounce"
+          style={{ animationDelay: `${i * 0.15}s` }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function MessageBubble({ message }: { message: Message }) {
+  const isUser = message.role === 'user';
+  return (
+    <div className={`flex w-full ${isUser ? 'justify-end' : 'justify-start'}`}>
+      <div
+        className={`
+          max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap break-words
+          ${isUser
+            ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-br-sm'
+            : 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 rounded-bl-sm'
+          }
+        `}
+      >
+        {message.content}
+      </div>
+    </div>
+  );
+}
+
+export default function ChatPage() {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, loading]);
+
+  useEffect(() => {
+    const ta = textareaRef.current;
+    if (!ta) return;
+    ta.style.height = 'auto';
+    ta.style.height = `${Math.min(ta.scrollHeight, 160)}px`;
+  }, [input]);
+
+  const send = useCallback(async () => {
+    const text = input.trim();
+    if (!text || loading) return;
+
+    const userMsg: Message = { role: 'user', content: text };
+    const nextMessages = [...messages, userMsg];
+    setMessages(nextMessages);
+    setInput('');
+    setLoading(true);
+    setMessages((prev) => [...prev, { role: 'assistant', content: '' }]);
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: nextMessages }),
+      });
+
+      if (!res.body) throw new Error('No response body');
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value);
+        setMessages((prev) => {
+          const updated = [...prev];
+          updated[updated.length - 1] = {
+            role: 'assistant',
+            content: updated[updated.length - 1].content + chunk,
+          };
+          return updated;
+        });
+      }
+    } catch (err) {
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[updated.length - 1] = {
+          role: 'assistant',
+          content: `Error: ${err instanceof Error ? err.message : 'Something went wrong'}`,
+        };
+        return updated;
+      });
+    } finally {
+      setLoading(false);
+      textareaRef.current?.focus();
+    }
+  }, [input, loading, messages]);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  };
+
+  return (
+    <div className="flex flex-col h-dvh bg-white dark:bg-zinc-950">
+      <header className="flex-none flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm">
+        <div className="flex flex-col">
+          <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Management Grundlagen</span>
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">Study Assistant</span>
+        </div>
+        <Link
+          href="/"
+          className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+        >
+          ← Quiz
+        </Link>
+      </header>
+
+      <main className="flex-1 overflow-y-auto">
+        {messages.length === 0 ? (
+          <div className="flex flex-col items-center justify-center h-full gap-3 px-6 text-center">
+            <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-2xl">
+              📚
+            </div>
+            <p className="font-medium text-zinc-700 dark:text-zinc-300">Ask me anything</p>
+            <p className="text-sm text-zinc-400 dark:text-zinc-500 max-w-xs">
+              Questions about your management course, concepts, or anything else.
+            </p>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-3 px-4 py-4 max-w-3xl mx-auto w-full">
+            {messages.map((msg, i) => (
+              <div key={i}>
+                {msg.content === '' && loading && i === messages.length - 1 ? (
+                  <div className="flex justify-start">
+                    <div className="bg-zinc-100 dark:bg-zinc-800 rounded-2xl rounded-bl-sm px-4 py-3">
+                      <TypingDots />
+                    </div>
+                  </div>
+                ) : (
+                  <MessageBubble message={msg} />
+                )}
+              </div>
+            ))}
+            <div ref={bottomRef} />
+          </div>
+        )}
+      </main>
+
+      <footer
+        className="flex-none border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 pt-3"
+        style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}
+      >
+        <div className="flex items-end gap-2 max-w-3xl mx-auto">
+          <textarea
+            ref={textareaRef}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Message..."
+            rows={1}
+            disabled={loading}
+            className="
+              flex-1 resize-none rounded-2xl border border-zinc-200 dark:border-zinc-700
+              bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100
+              placeholder-zinc-400 dark:placeholder-zinc-500
+              px-4 py-3 text-sm leading-relaxed outline-none
+              focus:border-zinc-400 dark:focus:border-zinc-500
+              disabled:opacity-50 transition-colors
+            "
+            style={{ maxHeight: '160px' }}
+          />
+          <button
+            onClick={send}
+            disabled={!input.trim() || loading}
+            className="
+              flex-none w-10 h-10 rounded-full flex items-center justify-center
+              bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900
+              disabled:opacity-30 disabled:cursor-not-allowed
+              hover:opacity-80 active:scale-95 transition-all
+            "
+          >
+            <SendIcon />
+          </button>
+        </div>
+        <p className="text-center text-xs text-zinc-300 dark:text-zinc-600 mt-2 max-w-3xl mx-auto">
+          Enter to send · Shift+Enter for new line
+        </p>
+      </footer>
+    </div>
+  );
+}

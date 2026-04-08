@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "create-notes": "tsx --env-file=.env scripts/create-notes.ts",
+    "generate": "tsx --env-file=.env scripts/generate-quiz-bank.ts",
     "quiz": "tsx --env-file=.env scripts/quiz.ts"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-<!-- Generated: 2026-04-07T10:56:21.670Z | Model: claude-opus-4-6 -->
+<!-- Generated: 2026-04-08T13:11:24.998Z | Model: claude-opus-4-6 -->
 
 # Management Grundlagen - Komplette Lernnotizen
 
@@ -916,3 +916,501 @@ PE-investitionsvolumen von 2016-2023: 7.220 → 11.539 → 12.087 → 15.668 →
 **venture capital** = sonderform von PE zur finanzierung überwiegend sehr junger und wachstumsträchtiger unternehmen (zb hochtechnologie), vor allem in der frühphase (gründungs- und aufbauphase), mit unternehmerischer betreuung
 
 infoquelle: www.bvkap.de (
+
+bundesverband deutscher kapitalbeteiligungsgesellschaften)
+
+#### hedgefonds
+
+= ein von kapitalanlagegesellschaften generiertes kapitalanlageprodukt. anleger können anteile erwerben und an der performance partizipieren
+
+- hedgefonds sind wesentlich **freier** als andere investmentfonds in der wahl ihrer anlagestrategie
+- für die anlagestrategie gibt es bisher keinen gesetzlich geregelten rahmen
+- vor der internationalen finanzkrise gehörten hedgefonds zu den am schnellsten wachsenden anlageprodukten weltweit
+- gründe: hohe renditechancen, i.d.R. geringe korrelation zu den aktienmärkten
+
+#### investment-phasen (stufendiagramm)
+
+das diagramm zeigt drei aufeinander aufbauende stufen wie eine treppe. unten die breiteste stufe = **venture capital**, darüber = **private equity**, und ganz oben die schmalste stufe = **IPO**. die y-achse zeigt nach oben (wachstum/reife des unternehmens) und die x-achse zeigt nach rechts (zeit). also je reifer das unternehmen desto höher die finanzierungsform
+
+#### wachstumsfinanzierungsalternativen im zeitverlauf (detailliertes diagramm)
+
+das diagramm zeigt eine gewinnkurve die erst negativ ist (verlust), dann den **break-even-punkt** erreicht und dann in den gewinn steigt. die x-achse ist zeit, y-achse ist gewinn/verlust
+
+die phasen sind aufgeteilt in:
+
+**frühphase:**
+- **seed** = produktkonzeption
+- **start-up** = unternehmensgründung
+- **first stage** = produktionsbeginn
+
+**expansionsphase:**
+- **second stage** = skalierung
+- **third stage** = standardisierung
+- **fourth stage** = pre-IPO
+
+dann kommt der **börsengang = IPO**
+
+und danach gibt es noch die **public to private** phase mit dem **take private stage** = delisting (also rückzug von der börse)
+
+#### exitmöglichkeiten für den investoren
+
+- **IPO/börsengang**: "königsweg" - verkauf der unternehmensanteile beim oder nach dem börsengang
+- **trade sale**: veräußerung der unternehmensanteile an einen externen (industriellen) käufer
+- **buy back**: rückkauf der unternehmensanteile durch das finanzierte unternehmen selbst, oder:
+  - **management buy out (MBO)** = das aktuelle management kauft das unternehmen
+  - **management buy in (MBI)** = ein externes management kauft das unternehmen
+- **secondary sale**: veräußerung der unternehmensanteile an einen anderen finanzinvestor
+- **(abschreibung)**: totaler wertverlust (worst case)
+
+ziel der VC/PE-investoren ist immer die **wertmaximierung** über einen mittelfristig realisierbaren exit (meist nach **3-10 Jahren**)
+
+#### ablauf einer PE/VC-finanzierung
+
+10 schritte als pfeil-flussdiagramm:
+
+1. idee und team
+2. erstellung des business-plans
+3. auswahl potenzieller VC/PE-geber
+4. vorbereitung auf das 1. gespräch
+5. kennenlernen
+6. letter of intent
+7. due diligence
+8. verhandlung und abschluss
+9. betreuung
+10. exit
+
+#### IPO/börsengang
+
+im engeren sinne: umgründung eines unternehmens anderer rechtsform in eine AG
+
+gebräuchlich: erstmaliger börsengang einer kapitalgesellschaft, synonym **IPO** (initial public offering)
+
+#### motive für ein IPO
+
+9 motive in kästen um einen orangenen kreis "motive IPO":
+1. übernahmefinanzierung
+2. wachstumsfinanzierung
+3. eigenkapitalstärkung
+4. mehr öffentlichkeit
+5. unternehmensnachfolge
+6. mitarbeiterbeteiligung
+7. exit
+8. spin-off
+9. erhöhung der bekanntheit
+10. privatisierung
+
+#### mezzanine-kapital
+
+= kapital das zwischen eigenkapital und fremdkapital liegt. es gibt 4 formen die auf einem spektrum von EK-tendenz bis FK-tendenz liegen:
+
+**stille beteiligung** (stärkste EK-tendenz):
+- wird auch als stille gesellschaft bezeichnet
+- geregelt in §§ 230ff. HGB
+- ist eine reine innengesellschaft
+- am gewinn beteiligt, nicht zwingend am verlust
+- typische/atypische gesellschaft
+
+**genussrechtskapital**:
+- rein schuldrechtliches kapitalüberlassungsverhältnis
+- begrenzte laufzeit
+- kapitalgeber erhält anteil am gewinn
+- mit verlustbeteiligung
+
+**wandel- und optionsanleihen**:
+- feste verzinsung
+- wandlungsrecht in aktien
+- bei der wandelanleihe kann im gegensatz zur optionsanleihe keine getrennte veräußerung von FK-anleihe und wandlungsrecht erfolgen
+
+**nachrangdarlehen** (stärkste FK-tendenz):
+- liegt im rang hinter erstrangigem FK
+- i.d.R. ohne die stellung von gesonderten sicherheiten
+
+---
+
+## 2.3 Reifephase - Risikomanagement
+
+### problemstellung des risikomanagements
+
+schönes zitat von **sun tzu** (die kunst des krieges, china 500 v. chr.):
+"wenn du den feind kennst und dich selbst, musst du auch hundert schlachten nicht fürchten. wenn du dich selbst kennst aber den feind nicht, wirst du für jeden sieg auch eine niederlage einstecken. wenn du weder den feind kennst noch dich selbst, wirst du in jeder schlacht unterliegen."
+
+das problemstellungsdiagramm zeigt: x-achse = zeit (heute → zukunft), y-achse = komplexität/kompetenzen. es gibt zwei linien: das **komplexitätsniveau** steigt exponentiell an nach rechts oben, während die **steuerungs- und kontrollfähigkeiten** nur leicht ansteigen. der immer größer werdende abstand dazwischen = die **unsicherheit**. in der mitte ist ein kreisdiagramm mit faktoren die den schnellen wandel und zunehmende marktschwankungen verursachen: mergers & acquisitions, expansion, gesetzliche vorschriften, branding, deregulierung, erwartungen stakeholder, ethik, e-business
+
+→ die komplexität wächst schneller als unsere fähigkeit sie zu kontrollieren, das erzeugt neue chancen UND risiken
+
+### moral vs gewinn - konflikt
+
+es gibt einen grundsätzlichen **konflikt** zwischen moral und gewinn in der geschäftswelt. beispiele für diesen konflikt:
+- menschenrechtsverletzungen
+- kinderarbeit
+- umweltverschmutzung
+- korruption
+- bilanzverschleierung
+- insider-trading
+- vernachlässigung von sicherheitsstandards
+- rüstungsexporte in spannungsgebiete
+- geldwäsche
+- hohe preise für lebensnotwendige medikamente
+
+### was heißt "risiko"?
+
+**risiko** = unsicherheit der realisation einer betrachteten größe in abhängigkeit des eintritts verschiedener künftiger umweltzustände
+
+in abgrenzung zur **ungewissheit** sind die eintrittswahrscheinlichkeiten der möglichen zustände sicher und objektiv bekannt
+
+grundsätzliches unternehmerisches ziel: **senkung unternehmerischer risiken bei simultaner erhöhung der erwarteten zahlungen**
+
+### systematisches vs unsystematisches risiko
+
+das diagramm zeigt: x-achse = investitionen (anzahl), y-achse = portfoliorisiko
+
+- **unsystematisches risiko** (= firmenspezifisches risiko): fällt mit zunehmender anzahl der investitionen → kann durch **diversifikation** reduziert werden
+- **systematisches risiko** (= marktrisiko): bleibt als horizontale fläche bestehen, egal wie viel man diversifiziert → NICHT wegdiversifizierbar
+- **gesamtrisiko** = systematisches + unsystematisches risiko → sinkt anfangs stark bei diversifikation, nähert sich dann dem systematischen risiko an
+
+wichtig: das ausmaß der **diversifikationsgewinne** nimmt mit zunehmender anzahl der investitionen ab (die kurve flacht ab)
+
+### begriffsverständnis risikomanagement
+
+**risikomanagement** = messung und zielgerichtete einflussnahme auf das unternehmerische ökonomische risiko
+
+eine zielgerichtete einflussnahme ist grundsätzlich nur dann möglich wenn einzelne **risikoquellen identifiziert** worden sind
+
+### risikomanagementprozess (kreislauf mit 6 schritten)
+
+1. **risikoidentifikation**: bestimmung des beobachtungsbereichs, identifikation der wesentlichen strategie- und leistungsrisiken
+2. **risikobewertung**: bewertung nach schadenshöhe und eintrittswahrscheinlichkeit, wesentliche/bestandsgefährdende risiken (risikoportfolio)
+3. **risikoaggregation**: aussagen zur verteilung und korrelation der risiken, bestimmung der gesamtrisikoposition
+4. **risikobewältigung**: präventive und reaktive maßnahmen, ad-hoc-maßnahmen
+5. **risikoüberwachung**: beschreibung der ablauf- und aufbauorganisation (verantwortlichkeiten), messgrößen, indikatoren, limit (berichtswesen)
+6. **externes berichtswesen**: inhalte der berichterstattung an die stakeholder
+
+### potenzielle risikoquellen
+
+unternehmerisches risiko teilt sich auf in:
+
+- **allgemeine marktentwicklung** → **marktrisiken**: aktienkurse, indexstände (zb DAX), güterpreise, marktzinssätze, wechselkurse
+- **rechtslage** → **rechtliche risiken**
+- **politische lage** → **politische risiken**: enteignungsrisiken (zb russland), transferrisiken
+- **insbesondere bei banken** → **kreditrisiken** und **liquiditätsrisiken**
+
+### risikopolitische gegenmaßnahmen (4 stufen)
+
+**1) risiken vermeiden**:
+- ausstieg aus riskantem geschäftsfeld
+- verzicht auf bestimmte technologien
+
+**2) risiken vermindern**:
+- substitution fixer durch variable kosten
+- organisatorische regelungen
+- redundante auslegung von ressourcen
+
+**3) risiken überwälzen**:
+- optimierung von verträgen
+- optimierung des versicherungsschutzes
+- risikotransfer über kapitalmärkte (zb wetter)
+
+**4) risiken selbst tragen**:
+- ermittlung des eigenkapitalbedarfs
+- optimierung der eigenkapitalallokation
+- berechnung von kapitalkosten
+
+→ **ziel: steigerung des unternehmenswertes**
+
+### balanced scorecard (BSC)
+
+= ein ganzheitliches konzept zur messung, dokumentation und steuerung der aktivitäten eines unternehmens/einer organisation hinsichtlich der **vision und strategie**
+
+das diagramm zeigt 4 perspektiven die alle mit "vision und strategie" in der mitte verbunden sind und sich gegenseitig beeinflussen:
+
+**1. finanzperspektive**: wie sollen wir gegenüber teilhabern auftreten um finanziellen erfolg zu haben? → ziele, kennzahlen, vorgaben, maßnahmen
+
+**2. kundenperspektive**: wie sollen wir gegenüber unseren kunden auftreten um unsere vision zu verwirklichen? → ziele, kennzahlen, vorgaben, maßnahmen
+
+**3. interne geschäftsprozesse**: in welchen geschäftsprozessen müssen wir die besten sein um unsere teilhaber und kunden zu befriedigen? → ziele, kennzahlen, vorgaben, maßnahmen
+
+**4. lernen und entwicklung**: wie können wir unsere veränderungs- und wachstumspotenziale fördern um unsere vision zu verwirklichen? → ziele, kennzahlen, vorgaben, maßnahmen
+
+##### BSC-beispiele (IT-abteilung)
+
+finanzperspektive beispiel: ziel = senkung der IT-supportkosten pro mitarbeitenden, kennzahl = IT-supportkosten pro mitarbeitenden, vorgabe = senkung um 5% gegenüber 2022 bis ende 2023, maßnahme = IT-schulung aller mitarbeitenden
+
+kundenperspektive beispiel: ziel = verbesserung des IT-supports, kennzahl = minuten für bearbeitung einer anfrage, vorgabe = senkung durchschnittliche bearbeitungszeit um 30 sekunden bis juli 2023, maßnahme = fachliche schulung der support-mitarbeitenden
+
+##### vorteile der BSC:
+- hilft kritische erfolgsfaktoren an einer strategie auszurichten auf allen ebenen
+- vermittelt dem management ein umfassendes bild der geschäftstätigkeit
+- vereinfacht kommunikation und verständnis von geschäftszielen und strategien auf allen ebenen
+- ermöglicht strategisches feedback und lernen
+- geht über die einseitige betrachtung des du pont-kennzahlensystems hinaus
+
+##### nachteile der BSC:
+- umfassende marktkenntnisse erforderlich
+- umfangreiche überzeugungsarbeit im vorfeld notwendig
+- hochmotivierte, zukunftsorientierte mitarbeitende sind voraussetzung
+- mittleres management muss hoch qualifiziert sein (vermittlung der visionen an mitarbeitende)
+- der qualitative aspekt ist nicht angemessen berücksichtigt
+
+---
+
+## 2.4 Sättigungsphase
+
+### 2.4.1 Insolvenzrecht
+
+#### aktuelle insolvenzsituation in deutschland
+
+das diagramm zeigt die entwicklung der insolvenzen in deutschland (1. halbjahr) von 2019-2024:
+
+**gesamtinsolvenzen**: 2019: 53.680, 2020: 47.970, 2021: 63.640, 2022: 52.960, 2023: 54.110, **2024: 60.100** (geschätzt)
+
+aufgeteilt in:
+- **unternehmensinsolvenzen**: 2019: 9.690, 2020: 8.950, 2021: 7.510, 2022: 7.230, 2023: 8.470, **2024: 11.000** (geschätzt) → starker anstieg!
+- **verbraucherinsolvenzen**: 2019: 32.920, 2020: 28.240, 2021: 42.710, 2022: 33.350, 2023: 33.180, 2024: 35.400
+- **sonstige insolvenzen**: 2019: 11.070, 2020: 10.780, 2021: 13.420, 2022: 12.380, 2023: 12.460, 2024: 13.700
+
+die unternehmensinsolvenzen zeigen eine deutliche V-form: rückgang während corona (2020-2022) und dann starker anstieg auf **11.000** im 1. HJ 2024 - das ist höher als 2019!
+
+##### schäden und arbeitsplatzverluste durch unternehmensinsolvenzen (1. halbjahr):
+
+| Jahr | Schäden (Mrd. Euro) | Bedrohte Arbeitsplätze |
+|---|---|---|
+| 2019 | 12,4 | 130.000 |
+| 2020 | 15,6 | 125.000 |
+| 2021 | 21,4 | 76.000 |
+| 2022 | 9,8 | 68.000 |
+| 2023 | 13,0 | 125.000 |
+| 2024* | 19,0 | 133.000 |
+
+##### insolvenzen nach hauptwirtschaftsbereichen (1. HJ 2023 vs 2024):
+
+- verarbeitendes gewerbe: 650 → 790 (+21,5%)
+- baugewerbe: 1.380 → 1.760 (+27,5%)
+- handel: 1.620 → 1.950 (+20,4%)
+- **dienstleistungen**: 4.820 → **6.500** (+34,9%) → stärkster anstieg!
+
+##### insolvenzen nach unternehmensalter (1. HJ 2024*):
+
+- 0-4 jahre: 23,1%
+- 5-10 jahre: 36,0%
+- über 10 jahre: 40,9%
+
+also fast 41% der insolventen unternehmen sind über 10 jahre alt - das ist erschreckend
+
+##### insolvenzen in westeuropa 2022/23 (veränderungen in %):
+
+stärkster anstieg: griechenland (+2.969,6% wegen neuer gesetzlicher regelungen), niederlande (+54,9%), frankreich (+35,6%), schweden (+28,7%)
+deutschland: +22,9%
+rückgang: dänemark (-11,1%), luxemburg (-6,2%), spanien (-4,4%), portugal (-4,2%)
+
+#### insolvenzgründe (rechtlich)
+
+3 insolvenzgründe:
+
+1. **drohende zahlungsunfähigkeit** (§18 Abs. 2 InsO) → antragsRECHT des schuldners (§18 Abs. 1)
+2. **zahlungsunfähigkeit** (§17 Abs. 1 InsO) → antragsPFLICHT bei kapitalgesellschaften und haftungsbeschränkten personengesellschaften (§15a InsO)
+3. **überschuldung** (§19 Abs. 1 InsO) → antragsPFLICHT
+
+**WICHTIG**: wer den insolvenzantrag nicht, nicht richtig oder nicht rechtzeitig stellt, macht sich **strafbar** (§15a Abs. 4 InsO)
+- **3 wochen** frist bei zahlungsunfähigkeit
+- **6 wochen** bei überschuldung (NEU!)
+
+#### privatpersonen-insolvenzen
+
+##### schuldner und schuldnerquoten (creditreform daten):
+
+die überschuldungsquote sinkt seit 2019 kontinuierlich: 2014: 9,90% (6,67 mio.), 2018: 10,04% (6,93 mio. = peak), 2023: **8,15%** (**5,65 mio.**)
+
+##### überschuldungsquoten nach altersgruppen 2023:
+
+- unter 30: 6,73% (+0,08 gegenüber vorjahr - einzige altersgruppe mit anstieg!)
+- **30-39: 13,72%** (-0,40) → höchste quote!
+- 40-49: 12,17% (-0,35)
+- 50-59: 8,25% (-0,64)
+- 60-69: 6,59% (-0,47)
+- ab 70: 2,96% (-0,11)
+
+##### überschuldungsauslöser ("big six") - veränderungen 2008 bis 2023:
+
+- arbeitslosigkeit: -45% (1,07 mio. fälle 2023)
+- trennung/scheidung/tod: -29% (0,67 mio.)
+- erkrankung/sucht/unfall: **+37%** (1,01 mio.)
+- unwirtschaftliche haushaltsführung: **+44%** (0,93 mio.)
+- gescheiterte selbstständigkeit: -26% (0,47 mio.)
+- **längerfristiges niedrigeinkommen: +187%** (0,65 mio.) → stärkster anstieg!
+
+##### überschuldungsquoten nach kreisen und städten 2023:
+
+niedrigste quote: eichstätt (3,54%), erlangen-höchstadt (3,90%), schweinfurt (4,09%)
+höchste quote: **bremerhaven (19,02%)**, pirmasens (16,72%), gelsenkirchen (16,62%), neumünster (16,02%), duisburg (15,89%)
+
+##### schuldner nach schulabschluss (überschuldungsquoten in %):
+
+- hauptschule: 11,28%
+- realschule: 9,86%
+- fachhochschulreife: 8,27%
+- **abitur: 8,53%** (hmm interessant dass das höher ist als FH-reife)
+- ohne abschluss oder anderer abschluss: **12,31%** (höchste quote)
+
+#### wichtige neuerung - verbraucherinsolvenzen
+
+am **17.12.2020** wurde eine reform des insolvenzrechts beschlossen:
+- privatinsolvenz wird für alle schuldner auf **3 jahre** verkürzt (vorher 6 jahre!)
+- es ist **keine rückzahlung von 35% mehr nötig** um die insolvenz zu verkürzen
+- gilt **rückwirkend** für alle insolvenzanträge ab dem **01.10.2020**
+- hintergrund: viele personen sind durch die pandemie in eine finanzielle krise geraten
+
+#### insolvenzverfahren
+
+= verwertung des gesamten vermögens zur gemeinschaftlichen (anteiligen) befriedigung aller gläubiger (gläubigerbegünstigung §283c StGB)
+
+lösungen im rahmen der insolvenz:
+- **liquidation** (unternehmen wird aufgelöst und verwertet)
+- **sanierung** (unternehmen wird gerettet)
+- **sanierende übertragung** (gesunde teile werden auf neuen rechtsträger übertragen)
+
+#### ablauf eines insolvenzverfahrens
+
+1. **antrag** §13 InsO (durch gläubiger UND schuldner möglich)
+2. **prüfung durch das insolvenzgericht**:
+   - eröffnungsgrund §§16ff. InsO (zahlungsunfähigkeit, drohende zahlungsunfähigkeit, überschuldung → nicht nur vorübergehend)
+   - hinreichende masse §26 InsO (kosten gericht und insolvenzverwalter müssen gedeckt sein, ggf. einsetzung eines vorläufigen insolvenzverwalters)
+3. **eröffnungsbeschluss** §§27ff. InsO (bestellung des insolvenzverwalters)
+4. **ernennung der verwaltenden person** §27 InsO
+5. **sichtung, verwaltung und verwertung der masse**
+6. **feststellung der gläubiger** §§174ff. InsO (anmeldung durch die gläubiger)
+7. **erlösverteilung** §§187ff. InsO
+8. **aufhebung des verfahrens** §§200ff. InsO
+9. [**restschuldbefreiung** §§286ff. InsO]
+
+---
+
+### 2.4.2 Turnaround-Management
+
+#### insolvenzursachen (tortendiagramm)
+
+- **40%** innerbetriebliche fehler/verlustquellen (größter anteil!)
+- **16%** kapitalmangel
+- **16%** externe auslöser/verlustquellen
+- **15%** fahrlässigkeit
+- **10%** persönliches verschulden (davon 7% betrug)
+- **3%** andere
+
+quelle: APA, KSV
+
+#### differenzierung von krisen
+
+das diagramm zeigt 4 aufeinanderfolgende krisenstadien die zeitlich aufeinander aufbauen. links = ursache, rechts = symptome. der **handlungsbedarf** steigt von gering zu groß, aber der **handlungsspielraum** sinkt von groß zu gering
+
+1. **strategische krise**: verlust von wettbewerbsvorteilen → frühe phase, noch viel handlungsspielraum
+2. **ergebniskrise**: verschlechterung der ergebnis- und finanzsituation → mittlere phase
+3. **liquiditätskrise**: verfehlung von vorgaben der eigentümer und finanziers → späte phase, wenig spielraum
+4. **insolvenz** → endphase, kaum noch spielraum
+
+also je weiter man in der krisenspirale ist desto mehr handlungsbedarf aber desto weniger handlungsspielraum hat man. deswegen ist **frühes erkennen** so wichtig
+
+#### sanierung vs restrukturierung
+
+**sanierung und restrukturierung** = die summe aller finanzwirtschaftlichen, leistungswirtschaftlichen und gesellschaftlichen maßnahmen, durch die das leistungspotential wieder aufgebaut bzw. optimal ausgeschöpft und eine existenzerhaltende rentabilität erreicht werden soll
+
+- grenzen zwischen restrukturierung und sanierung sind fließend
+- **sanierung** → sofortmaßnahmen (akut)
+- **restrukturierung** → kontinuierliche ausrichtung auf neues unternehmenskonzept (langfristig)
+
+#### unternehmenskrise als ausgangssituation
+
+- akute unternehmenskrise mit existenzbedrohung und weit fortgeschrittenem ressourcenverzehr
+- handlungsdruck extrem hoch
+- handlungsspiel eingeschränkt
+- nicht aus eigener kraft zu bewältigen
+
+#### turnaround-prozess (2 stufen)
+
+**stufe 1: konzeptphase (2-6 wochen)**
+
+*bestandsaufnahme*:
+- transparenz über die ist-situation
+- heutige/zukünftige markt- und wettbewerbssituation
+- branchenentwicklung, marktpotentiale
+- gesamtbewertung
+
+*grobkonzept*:
+- operative restrukturierung
+- strategische restrukturierung
+- finanzielle restrukturierung
+- umsetzungsorganisation
+- integrierte businessplanung
+
+→ maßnahmen: kostensenkung, ergebnisverbesserung und liquiditätssicherung
+
+**stufe 2: umsetzungsphase (6-24 monate)**
+
+*detailkonzept*:
+- detaillierung des grobkonzeptes
+- erstellung von maßnahmenplänen
+- verbesserung der schlüsselprozesse
+
+→ maßnahmen: maßnahmencontrolling, realisierungscontrolling, kontrolle durch lenkungsausschüsse, taskforces
+
+also die konzeptphase geht relativ schnell (2-6 wochen) aber die umsetzung dauert dann 6-24 monate. das ist wie bei so ziemlich allem im leben - planen ist easy, umsetzen ist die challenge
+
+#### zusätzliche details zum turnaround-prozess die noch in den slides stehen
+
+die **drei wesentlichen restrukturierungselemente** im grobkonzept sind:
+1. **operative restrukturierung** - also die ganzen operativen prozesse und kosten optimieren
+2. **strategische restrukturierung** - die grundausrichtung des unternehmens neu denken
+3. **finanzielle restrukturierung** - die finanzielle basis wieder stabilisieren
+
+diese drei wirken alle zusammen auf den **integrierten businessplan** - das ist wichtig für die klausur, man muss erklären können wie diese drei elemente zusammenhängen und auf den businessplan wirken
+
+in der **konzeptphase** (2-6 wochen) geht es um die **bestandsaufnahme** (transparenz, markt/wettbewerbssituation, branchenentwicklung, gesamtbewertung) und das **grobkonzept** (die drei restrukturierungselemente + umsetzungsorganisation + integrierte businessplanung)
+
+→ die maßnahmen in der konzeptphase: **kostensenkung, ergebnisverbesserung und liquiditätssicherung**
+
+in der **umsetzungsphase** (6-24 monate) geht es um das **detailkonzept** (detaillierung des grobkonzeptes, erstellung von maßnahmenplänen, verbesserung der schlüsselprozesse)
+
+→ die maßnahmen in der umsetzungsphase: **maßnahmencontrolling, realisierungscontrolling, kontrolle durch lenkungsausschüsse, taskforces**
+
+---
+
+### preiselastizität des angebots (zusätzliches detail aus teil 2)
+
+die slides zeigen auch die **preiselastizität des angebots** - das ist quasi das pendant zur preiselastizität der nachfrage, nur halt für die angebotsseite
+
+das linke diagramm zeigt eine steile angebotskurve = **geringe elastizität** (kleine mengenerhöhung bei preiserhöhung)
+das rechte diagramm zeigt eine flache angebotskurve = **höhere elastizität** (große mengenerhöhung bei preiserhöhung)
+
+also genau umgekehrt wie bei der nachfrage: bei der nachfrage ist eine flache kurve elastisch und eine steile unelastisch. beim angebot gilt dasselbe prinzip aber die kurve geht halt nach oben statt nach unten
+
+---
+
+### einordnung risikomanagement (zusätzliches detail)
+
+eine zentrale aufgabe unternehmerischer entscheidungsträger = die zielgerichtete gestaltung unternehmerischer zahlungsströme
+
+in der realität ist sowohl die prognose zukünftiger umweltsituationen als auch die schätzung zukünftiger zahlungsströme mit **unsicherheit** behaftet. man kann keine punktgenaue zahlungsstromprognose ermitteln sondern nur eine **wahrscheinlichkeitsverteilung** zukünftiger zahlungskonsequenzen angeben
+
+wenn alle zahlungskonsequenzen mit sicherheit feststehen → entscheidungen so treffen dass der **netto-kapitalwert** maximal ist
+
+aber da unsicherheit herrscht muss man neben der erwarteten höhe der zahlungen AUCH das **risiko** berücksichtigen
+
+---
+
+### kreditfinanzierung - weitere wichtige merkmale (aus teil 1 slides)
+
+**formen des fremdkapitals:**
+- geldkredite
+- sachkredite (zb maschinen oder rohstoffe)
+- kreditleihen (stellung von kreditwürdigkeit, zb patronatserklärung)
+
+**entgelt des fremdkapitals:**
+- fester zinssatz
+- variabler zinssatz
+
+**rückzahlung des fremdkapitals:**
+- kann in einem betrag oder mehreren beträgen erfolgen
+- tilgungstermine können bei abschluss des kreditvertrages fest vereinbart oder durch kündigung bewirkt werden
+- das FK ist in **nominaler höhe** zurückzuzahlen → der FK-geber ist somit NICHT am erfolg des unternehmens beteiligt
+
+---
+
+so das war jetzt wirklich alles was in den slides stand. jetzt muss ich das nur noch alles in meinen kopf kriegen bis zur klausur. viel erfolg an mich selbst lol

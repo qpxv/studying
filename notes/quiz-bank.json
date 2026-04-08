@@ -1,0 +1,1921 @@
+{
+  "generated": "2026-04-08T19:34:51.313Z",
+  "model": "claude-haiku-4-5-20251001",
+  "totalQuestions": 319,
+  "questions": [
+    {
+      "id": "q001",
+      "question": "Was ist die zentrale Rolle von Management Basics im Studium?",
+      "answer": "Management Basics ist das Fundament für alle Folgemodule im Studium. Es bildet die Grundlage, auf der alle Semester 2–7 aufbauen, bis zur abschließenden Bachelor Thesis.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q002",
+      "question": "Aus welchen drei Bereichen setzt sich Management zusammen?",
+      "answer": "Management vereint drei Bereiche: Betriebswirtschaftslehre (BWL), Volkswirtschaftslehre (VWL) und Recht. Diese drei Disziplinen bilden die Grundlage für gesunden Menschenverstand im Management.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q003",
+      "question": "Welcher konzeptionelle Rahmen dient als roter Faden durch das Modul Management Basics?",
+      "answer": "Der Produkt-/Unternehmenslebenszyklus dient als roter Faden durch das Modul. Dieser durchläuft die Phasen: Einführung, Wachstum, Reife und Sättigung.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q004",
+      "question": "Nenne die vier Phasen des Produkt-/Unternehmenslebenszyklus.",
+      "answer": "Die vier Phasen sind: 1. Einführung, 2. Wachstum, 3. Reife, 4. Sättigung.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q005",
+      "question": "Welche Herausforderungen charakterisieren das komplexe Umfeld von Unternehmen heute?",
+      "answer": "Unternehmen agieren in einem Umfeld mit intensivem Wettbewerb, disruptiven Innovationen, Globalisierung, kurzen Produktlebenszyklen und schnell wechselnden Konsumentenpräferenzen.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q006",
+      "question": "Was bedeutet VUCA und wer hat diesen Begriff entwickelt?",
+      "answer": "VUCA steht für Volatility, Uncertainty, Complexity und Ambiguity. Der Begriff wurde 1992 vom US-Militär entwickelt, um ein komplexes Umfeld zu beschreiben.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q007",
+      "question": "Was sind die vier Komponenten der VUCA-Welt?",
+      "answer": "Die vier Komponenten der VUCA-Welt sind: Volatility (Volatilität), Uncertainty (Unsicherheit), Complexity (Komplexität) und Ambiguity (Mehrdeutigkeit).",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q008",
+      "question": "Was bedeutet BANI und wer hat dieses Konzept entwickelt?",
+      "answer": "BANI steht für Brittle, Anxious, Non-linear und Incomprehensible. Das Konzept wurde von Jamais Cascio entwickelt, um das moderne komplexe Umfeld zu beschreiben.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q009",
+      "question": "Nenne die vier Komponenten von BANI.",
+      "answer": "Die vier Komponenten von BANI sind: Brittle (Zerbrechlich), Anxious (Angespannt), Non-linear (Nichtlinear) und Incomprehensible (Unverständlich).",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q010",
+      "question": "In welchem Jahr wurde die VUCA-Welt vom US-Militär entwickelt?",
+      "answer": "Die VUCA-Welt wurde 1992 vom US-Militär entwickelt.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q011",
+      "question": "Was ist Bloom'sche Lerntaxonomie und wie viele Stufen hat sie?",
+      "answer": "Bloom'sche Lerntaxonomie ist ein Modell, das Lernziele hierarchisch klassifiziert. Sie besteht aus 6 Stufen, die von unten nach oben angeordnet sind.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q012",
+      "question": "Nenne alle sechs Stufen der Bloom'schen Lerntaxonomie in aufsteigender Reihenfolge.",
+      "answer": "Die sechs Stufen sind: 1. Wissen, 2. Verstehen, 3. Anwenden, 4. Analysieren, 5. Synthetisieren, 6. Evaluieren.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q013",
+      "question": "Bis zu welcher Stufe der Bloom'schen Lerntaxonomie reicht ein Bachelor-Studium?",
+      "answer": "Ein Bachelor-Studium reicht bis zur fünften Stufe, dem Synthetisieren. Die Lernziele werden auf verschiedenen Ebenen dieser Taxonomie formuliert.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q014",
+      "question": "Bis zu welcher Stufe der Bloom'schen Lerntaxonomie reicht ein Master-Studium?",
+      "answer": "Ein Master-Studium reicht bis zur sechsten und höchsten Stufe, dem Evaluieren.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q015",
+      "question": "Was ist der Unterschied zwischen Bachelor- und Master-Niveau bezüglich der Bloom'schen Lerntaxonomie?",
+      "answer": "Der Bachelor reicht bis Stufe 5 (Synthetisieren), während der Master bis Stufe 6 (Evaluieren) geht. Dies zeigt die höhere Komplexität und Tiefe von Lernzielen auf Master-Niveau.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q016",
+      "question": "Welche beiden konzeptionellen Rahmenbedingungen werden zur Beschreibung des modernen Unternehmensumfelds verwendet?",
+      "answer": "Zur Beschreibung des modernen Unternehmensumfelds werden zwei Gesellschaftstheorien verwendet: VUCA-Welt (entwickelt vom US-Militär 1992) und BANI (entwickelt von Jamais Cascio).",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q017",
+      "question": "Was ist disruptive Innovation nach Clayton Christensen und warum ist sie relevant?",
+      "answer": "Disruptive Innovation ist eine Innovation, die ein bestehendes Geschäftsmodell oder Produkt grundlegend verändert. Sie ist heute eine der Hauptherausforderungen für Unternehmen in ihrer komplexen Umgebung.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q018",
+      "question": "Welche Rolle spielt Clayton Christensen im Kontext der modernen Unternehmensherausforderungen?",
+      "answer": "Clayton Christensen ist ein Theoretiker, der das Konzept der disruptiven Innovationen entwickelt hat, das eine zentrale Herausforderung für Unternehmen im heutigen komplexen Umfeld darstellt.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q019",
+      "question": "Wie wird Management in einfachen Worten definiert?",
+      "answer": "Management wird als gesunder Menschenverstand definiert, der die drei Bereiche BWL, VWL und Recht vereint.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q020",
+      "question": "Welche Pflichtliteratur wird für das Modul Management Basics verwendet?",
+      "answer": "Die Pflichtliteratur ist 'Management Basics' von Clemens Jäger und Thomas Heupel mit der ISBN 978-3658112288.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q021",
+      "question": "Wer sind die Autoren des Pflichtlehrbuches für Management Basics?",
+      "answer": "Die Autoren des Pflichtlehrbuches sind Clemens Jäger und Thomas Heupel.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q022",
+      "question": "Wie werden Lernergebnisse mithilfe der Bloom'schen Lerntaxonomie formuliert?",
+      "answer": "Lernergebnisse werden auf verschiedenen Ebenen der Bloom'schen Lerntaxonomie formuliert, je nachdem, ob es um ein Bachelor- oder Master-Studium geht, um unterschiedliche Komplexitätsgrade abzubilden.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q023",
+      "question": "Welche Faktoren tragen zur Komplexität des modernen Unternehmensumfelds bei?",
+      "answer": "Mehrere Faktoren tragen zur Komplexität bei: intensive Wettbewerbe, disruptive Innovationen, Globalisierung, kurze Produktlebenszyklen und schnell wechselnde Konsumentenpräferenzen.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q024",
+      "question": "Warum ist Management Basics vergleichbar mit dem Fundament eines Hauses?",
+      "answer": "Management Basics ist wie das Fundament eines Hauses, weil alle Semester 2–7 des Studiums darauf aufbauen. Ohne ein solides Fundament können die folgenden Module nicht erfolgreich absolviert werden.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q025",
+      "question": "In welchem Kontext wird die VUCA-Welt ursprünglich verwendet?",
+      "answer": "Die VUCA-Welt wurde ursprünglich vom US-Militär 1992 in einem militärischen Kontext entwickelt, wird aber heute auch zur Beschreibung von komplexen Unternehmensumgebungen verwendet.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q026",
+      "question": "Wie unterscheiden sich VUCA und BANI in ihrer Aussage über das moderne Umfeld?",
+      "answer": "VUCA betont Volatilität, Unsicherheit, Komplexität und Mehrdeutigkeit als Charakteristiken des Umfelds. BANI dagegen beschreibt das Umfeld als zerbrechlich, angespannt, nichtlinear und unverständlich – mit einem stärkeren Fokus auf Fragilität und Angst.",
+      "topic": "0 - Einleitung"
+    },
+    {
+      "id": "q027",
+      "question": "Nenne vier bekannte Unternehmer und ihre Unternehmen aus der Vorlesung.",
+      "answer": "Elon Musk (Tesla/SpaceX), Bill Gates (Microsoft), Mark Zuckerberg (Facebook) und Jeff Bezos (Amazon) sind bekannte Unternehmer aus der Vorlesung.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q028",
+      "question": "Welcher Aktienkurs von Berkshire Hathaway wurde am 28.07.2023 genannt?",
+      "answer": "Der Aktienkurs von Berkshire Hathaway betrug am 28.07.2023 484.500 Euro pro Stück.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q029",
+      "question": "Welches Unternehmen wird Warren Buffett zugeordnet?",
+      "answer": "Warren Buffett ist mit Berkshire Hathaway verbunden.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q030",
+      "question": "Welches Unternehmen wird Larry Ellison zugeordnet?",
+      "answer": "Larry Ellison ist mit Oracle verbunden.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q031",
+      "question": "Beschreibe die Erfolgs-Pyramide vom Unternehmer von unten nach oben.",
+      "answer": "Die Pyramide besteht aus vier Stufen: 1. Geschäftsidee (Basis), 2. Geschäftsmöglichkeit, 3. Geschäftsmodell und 4. Erfolg (Spitze). Ein aufwärts zeigender Pfeil symbolisiert, dass man sich durch alle Stufen hocharbeiten muss.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q032",
+      "question": "Was ist die Basis der Erfolgs-Pyramide?",
+      "answer": "Die Geschäftsidee bildet die Basis der Erfolgs-Pyramide.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q033",
+      "question": "Was ist die Spitze der Erfolgs-Pyramide?",
+      "answer": "Der Erfolg bildet die Spitze der Erfolgs-Pyramide.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q034",
+      "question": "Welche Achsen werden im Innovations-Marktvolumen-Diagramm verwendet?",
+      "answer": "Die x-Achse zeigt den Innovationsgrad und die y-Achse das Marktvolumen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q035",
+      "question": "Wo liegt das Feld 'Wissenschaft' im Innovations-Marktvolumen-Diagramm?",
+      "answer": "Die Wissenschaft liegt unten rechts im Diagramm mit hohem Innovationsgrad und niedrigem Marktvolumen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q036",
+      "question": "Wo liegt das Feld 'Wirtschaft' im Innovations-Marktvolumen-Diagramm?",
+      "answer": "Die Wirtschaft liegt oben links im Diagramm mit niedrigem Innovationsgrad und hohem Marktvolumen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q037",
+      "question": "Wo liegt Entrepreneurship im Innovations-Marktvolumen-Diagramm?",
+      "answer": "Entrepreneurship liegt dazwischen, im Übergangsbereich zwischen Wissenschaft und Wirtschaft.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q038",
+      "question": "Definiere Entrepreneurship basierend auf dem Diagramm.",
+      "answer": "Entrepreneurship ist der Prozess, der eine Geschäftsmöglichkeit in ein marktfähiges Produkt umwandelt.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q039",
+      "question": "Beschreibe den ersten Schritt im Ablauf der Punkte 1–5 des Diagramms.",
+      "answer": "Im ersten Schritt entsteht neue Forschung oder eine Idee mit hohem Innovationsgrad und niedrigem Marktvolumen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q040",
+      "question": "Was passiert im zweiten Schritt des Ablaufs?",
+      "answer": "Aus der neuen Forschung oder Idee bildet sich eine Geschäftsidee.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q041",
+      "question": "Was charakterisiert den dritten Schritt des Ablaufs?",
+      "answer": "Entrepreneurship ist der Prozess, der die Geschäftsmöglichkeit zum marktfähigen Produkt entwickelt.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q042",
+      "question": "Beschreibe den vierten Schritt des Ablaufs.",
+      "answer": "Ein erfolgreiches Produkt etabliert sich am Markt mit hohem Marktvolumen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q043",
+      "question": "Was passiert im fünften Schritt des Ablaufs?",
+      "answer": "Nach einer Zeit nimmt das Interesse am Produkt ab.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q044",
+      "question": "Was sind Longseller oder Evergreens?",
+      "answer": "Longseller oder Evergreens sind Produkte, die die Ausnahme darstellen und einfach ewig am Markt laufen, ohne dass das Interesse abnimmt.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q045",
+      "question": "Nenne ein Beispiel für ein mögliches Longseller-Produkt.",
+      "answer": "Beispiele für Longseller sind Produkte wie Coca-Cola, iPhone oder klassische Bücher, die über lange Zeit hinweg konstante Nachfrage behalten.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q046",
+      "question": "Welcher Unterschied besteht zwischen den Achsen 'Innovationsgrad' und 'Marktvolumen'?",
+      "answer": "Der Innovationsgrad misst das Ausmaß der Neuheit und Originalität einer Idee, während das Marktvolumen die potenzielle oder tatsächliche Größe der Nachfrage anzeigt.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q047",
+      "question": "Erkläre den Zusammenhang zwischen Wissenschaft und Wirtschaft anhand des Diagramms.",
+      "answer": "Wissenschaft erzeugt innovative Ideen mit hohem Innovationsgrad, aber niedrigem Marktvolumen. Wirtschaft nutzt bestehende Lösungen mit niedrigem Innovationsgrad, aber hohem Marktvolumen. Entrepreneurship verbindet beide Bereiche.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q048",
+      "question": "Welche Bedeutung hat der aufwärts zeigende Pfeil in der Erfolgs-Pyramide?",
+      "answer": "Der aufwärts zeigende Pfeil symbolisiert, dass ein Unternehmer sich systematisch und nacheinander durch alle vier Stufen der Pyramide hocharbeiten muss, um zum Erfolg zu gelangen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q049",
+      "question": "Wie hängen Geschäftsidee und Geschäftsmodell zusammen?",
+      "answer": "Die Geschäftsidee bildet die Grundlage, aus der sich eine Geschäftsmöglichkeit entwickelt, die dann in ein Geschäftsmodell umgewandelt wird.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q050",
+      "question": "Was ist der Unterschied zwischen einer Geschäftsmöglichkeit und einem Geschäftsmodell?",
+      "answer": "Eine Geschäftsmöglichkeit ist die erkannte Chance auf dem Markt, während ein Geschäftsmodell die konkrete Struktur und Strategie beschreibt, wie diese Chance umgesetzt wird.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q051",
+      "question": "Wie unterstützt Entrepreneurship den Übergang von Wissenschaft zu Wirtschaft?",
+      "answer": "Entrepreneurship ermöglicht es, wissenschaftliche Innovationen mit hohem Innovationsgrad in marktfähige Produkte umzuwandeln und dadurch das Marktvolumen zu erhöhen.",
+      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
+    },
+    {
+      "id": "q052",
+      "question": "Welche zwei Kurven werden im Produkt-/Unternehmenslebenszyklus-Diagramm dargestellt?",
+      "answer": "Die Umsatzkurve (blau/dunkel) und die Gewinnkurve (grün). Die Umsatzkurve zeigt den Absatzverlauf über die Zeit, während die Gewinnkurve die Rentabilität abbildet.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q053",
+      "question": "Was ist die x-Achse und die y-Achse im Lebenszyklusdiagramm?",
+      "answer": "Die x-Achse stellt den Zeitablauf dar, die y-Achse zeigt die Absatzmenge.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q054",
+      "question": "Nenne die vier Phasen des Produkt-/Unternehmenslebenszyklus in der richtigen Reihenfolge.",
+      "answer": "Die vier Phasen sind: Einführung, Wachstum, Reife und Sättigung. Sie folgen aufeinander und beschreiben die Entwicklung eines Produktes vom Marktstart bis zum Rückgang.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q055",
+      "question": "Was passiert mit der Umsatzkurve in der Einführungs- und Wachstumsphase?",
+      "answer": "Die Umsatzkurve steigt an. Dieser Anstieg wird durch die zunehmende Marktakzeptanz und steigende Verkaufsmengen des neuen Produktes verursacht.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q056",
+      "question": "Wann erreicht die Umsatzkurve ihr Maximum?",
+      "answer": "Das Umsatzmaximum wird in der Reifephase erreicht. Nach diesem Punkt fällt die Umsatzkurve in der Sättigungsphase.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q057",
+      "question": "Welchen Wert hat die Gewinnkurve in der Einführungsphase?",
+      "answer": "Die Gewinnkurve startet negativ, d.h. es entstehen Verluste in der Einführungsphase. Dies ist typisch wegen hoher Einführungskosten und geringer Absatzmengen.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q058",
+      "question": "Was ist der erste Break-Even-Punkt im Lebenszyklus und wann tritt er auf?",
+      "answer": "Der erste Break-Even-Punkt ist der Übergang von der Einführungs- zur Wachstumsphase, wo die Gewinnkurve die Null-Linie kreuzt und der Verlust endet.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q059",
+      "question": "Wo liegt das Gewinnmaximum im Verhältnis zum Umsatzmaximum?",
+      "answer": "Das Gewinnmaximum liegt zeitlich VOR dem Umsatzmaximum. Der maximale Gewinn wird also erreicht, bevor der maximale Umsatz erzielt wird.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q060",
+      "question": "In welcher Phase wird das Gewinnmaximum erreicht?",
+      "answer": "Das Gewinnmaximum wird in der Wachstumsphase oder am Anfang der Reifephase erreicht, deutlich vor dem Ende der Reifephase, wo das Umsatzmaximum liegt.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q061",
+      "question": "Was ist der zweite Break-Even-Punkt und in welcher Phase tritt er auf?",
+      "answer": "Der zweite Break-Even-Punkt tritt in der Sättigungsphase auf, wenn die Gewinnkurve erneut die Null-Linie kreuzt, nachdem der Gewinn wieder zu sinken begonnen hat.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q062",
+      "question": "Wie entwickelt sich die Gewinnkurve nach dem zweiten Break-Even-Punkt?",
+      "answer": "Nach dem zweiten Break-Even-Punkt in der Sättigungsphase dreht die Gewinnkurve wieder ins Negative und es entstehen erneut Verluste.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q063",
+      "question": "Warum ist es wichtig, dass das Gewinnmaximum vor dem Umsatzmaximum liegt?",
+      "answer": "Dies zeigt, dass maximale Umsätze nicht gleichbedeutend mit maximalen Gewinnen sind. Mit steigendem Umsatz können Kosten überproportional anwachsen, wodurch der Gewinn trotz höherer Umsätze sinkt.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q064",
+      "question": "Beschreibe den Verlauf der Gewinnkurve über alle vier Phasen.",
+      "answer": "Die Gewinnkurve startet negativ (Einführung), steigt durch den ersten Break-Even, erreicht das Maximum (Wachstum/frühe Reife), fällt danach, kreuzt einen zweiten Break-Even (Sättigung) und wird erneut negativ.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q065",
+      "question": "Was charakterisiert die Reifephase im Lebenszyklus?",
+      "answer": "In der Reifephase erreicht die Umsatzkurve ihr Maximum. Die Gewinnkurve beginnt bereits zu fallen, obwohl die Umsätze noch hoch sind, da Kosten und Wettbewerb zunehmen.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q066",
+      "question": "Was charakterisiert die Sättigungsphase im Lebenszyklus?",
+      "answer": "Die Sättigungsphase ist gekennzeichnet durch fallende Umsätze und sinkende Gewinne. Die Gewinnkurve kreuzt einen zweiten Break-Even und läuft danach wieder in negative Werte.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q067",
+      "question": "Wie viele Break-Even-Punkte existieren im Lebenszyklus insgesamt?",
+      "answer": "Es gibt zwei Break-Even-Punkte: einen am Übergang zwischen Einführungs- und Wachstumsphase und einen in der Sättigungsphase.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q068",
+      "question": "In welcher Phase entstehen Verluste und warum?",
+      "answer": "Verluste entstehen in der Einführungsphase (wegen hoher Einführungskosten und geringer Absätze) und erneut in der späten Sättigungsphase (wegen fallender Umsätze bei gleichbleibenden oder steigenden Kosten).",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q069",
+      "question": "Was zeigt die Tatsache, dass die Umsatzkurve in der Sättigung fällt, die Gewinnkurve aber bereits vorher zu fallen begonnen hat?",
+      "answer": "Es zeigt, dass der Gewinn bereits in der Reifephase unter Druck gerät, obwohl die Umsätze noch steigen. Dies deutet auf steigende Kosten oder erhöhten Wettbewerbsdruck hin.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q070",
+      "question": "Welche Bedeutung hat das Diagramm des Produkt-/Unternehmenslebenszyklus für das Management?",
+      "answer": "Das Diagramm ist der rote Faden des Moduls und zeigt, dass Unternehmen in verschiedenen Phasen unterschiedliche Strategien benötigen. Es verdeutlicht auch, dass Umsatzwachstum nicht automatisch zu Gewinnwachstum führt.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q071",
+      "question": "Warum fällt die Gewinnkurve in der Reife, während die Umsatzkurve noch steigt?",
+      "answer": "Mit zunehmendem Wettbewerb steigen die Kosten für Marketing und Vertrieb, während gleichzeitig die Preise unter Druck geraten. Dadurch sinkt die Rentabilität, obwohl noch hohe Umsätze erzielt werden.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q072",
+      "question": "Wie unterscheiden sich die Anforderungen an das Management zwischen Wachstums- und Sättigungsphase?",
+      "answer": "In der Wachstumsphase liegt der Fokus auf Expansion und Marktanteilgewinnung, während in der Sättigungsphase Kostenoptimierung und Effizienzsteigerung im Vordergrund stehen, um die sinkenden Gewinne zu stabilisieren.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q073",
+      "question": "Was versteht man unter dem 'Umsatzmaximum' und wo wird es erreicht?",
+      "answer": "Das Umsatzmaximum ist der höchste Punkt der Umsatzkurve, der in der Reifephase erreicht wird. Nach diesem Punkt fallen die Absatzmengen und damit auch die Gesamtumsätze in der Sättigungsphase.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q074",
+      "question": "Was versteht man unter dem 'Gewinnmaximum' und wo wird es erreicht?",
+      "answer": "Das Gewinnmaximum ist der höchste Punkt der Gewinnkurve, der zeitlich VOR dem Umsatzmaximum erreicht wird, typischerweise gegen Ende der Wachstumsphase oder Anfang der Reifephase.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q075",
+      "question": "Welche praktische Implikation hat die Erkenntnis, dass das Gewinnmaximum vor dem Umsatzmaximum liegt?",
+      "answer": "Unternehmen sollten nicht blind nach Umsatzwachstum streben, sondern ihre Profitabilität im Auge behalten. Es kann sinnvoll sein, das Geschäft in der Sättigung zu reduzieren oder zu beenden, um weitere Verluste zu vermeiden.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q076",
+      "question": "Wie werden die beiden Kurven im Diagramm farblich unterschieden?",
+      "answer": "Die Umsatzkurve ist blau oder dunkel gefärbt, während die Gewinnkurve grün ist. Dies ermöglicht eine klare visuelle Unterscheidung der beiden Entwicklungen.",
+      "topic": "2 - Produkt-/Unternehmenslebenszyklus"
+    },
+    {
+      "id": "q077",
+      "question": "Wie ist der Begriff 'Umsatz' definiert?",
+      "answer": "Der Umsatz (auch Erlöse genannt) wird berechnet als Absatzmenge multipliziert mit dem Nettoverkaufspreis, vereinfacht ausgedrückt: Menge × Preis.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q078",
+      "question": "Was ist der Gewinn und in welche Arten wird er unterschieden?",
+      "answer": "Der Gewinn ist der Unterschiedsbetrag zwischen Erlösen und Kosten. Man unterscheidet zwischen dem Periodengewinn (über einen Zeitraum) und dem Stückgewinn (pro Einheit).",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q079",
+      "question": "Erklären Sie den Begriff 'Kosten' im betriebswirtschaftlichen Kontext.",
+      "answer": "Kosten sind die monetäre Bewertung des Faktorverzehrs zur Erstellung einer betrieblichen Leistung. Der Faktorverzehr umfasst beispielsweise Güter oder Dienstleistungen. Ein Sonderfall sind die Opportunitätskosten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q080",
+      "question": "Was ist der Break-Even-Point?",
+      "answer": "Der Break-Even-Point ist die Gewinnschwelle, der Punkt an dem Kosten und Erlöse gleich groß sind und weder Gewinn noch Verlust erwirtschaftet wird.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q081",
+      "question": "Charakterisieren Sie fixe Kosten und geben Sie Beispiele.",
+      "answer": "Fixe Kosten sind unabhängig vom Auslastungsgrad. Beispiele sind Miete oder Mitarbeitergehälter. Sie bleiben gleich, egal ob ein Unternehmen 1 oder 1000 Stück produziert.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q082",
+      "question": "Was versteht man unter Fixkostendegression?",
+      "answer": "Fixkostendegression bedeutet, dass die Fixkosten pro Stück mit zunehmender Produktionsmenge sinken. Je mehr produziert wird, desto niedriger sind die durchschnittlichen Fixkosten pro Einheit.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q083",
+      "question": "Wie unterscheiden sich variable Kosten von fixen Kosten?",
+      "answer": "Variable Kosten sind abhängig vom Auslastungsgrad (z.B. Materialeinsatz), während fixe Kosten unabhängig davon sind. Die variablen Stückkosten bleiben konstant, während die variablen Gesamtkosten mit der Menge steigen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q084",
+      "question": "Wie wird die Gesamtkostenfunktion berechnet?",
+      "answer": "Gesamtkosten = Fixkosten + (Menge × Variable Stückkosten). Die Gesamtkostenkurve startet auf dem Niveau der Fixkosten und steigt dann linear an.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q085",
+      "question": "In welchem Jahr ereignete sich die größte Wirtschaftskrise im Zeitraum 2007-2024 und wie war das BIP-Wachstum?",
+      "answer": "Die Finanzkrise 2009 war der größte Einbruch mit einem realen BIP-Wachstum von -5,7%.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q086",
+      "question": "Wie war das BIP-Wachstum Deutschlands im Krisenjahr 2020?",
+      "answer": "Im Jahr 2020 betrug das reale BIP-Wachstum Deutschlands -3,7% aufgrund der Corona-Pandemie.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q087",
+      "question": "Nennen Sie die BIP-Wachstumsraten Deutschlands für 2021 und 2022.",
+      "answer": "2021 betrug das BIP-Wachstum 2,6%, 2022 lag es bei 1,8%.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q088",
+      "question": "In welche beiden Phasen wird der Gründungswille über das Alter aufgeteilt und was charakterisiert sie?",
+      "answer": "Die linke Phase (20-33 Jahre) ist geprägt durch schnelle Zuwächse an Erfahrung, Kompetenz und Selbstbewusstsein. Die rechte Phase (ab 33-35 Jahre) ist geprägt durch schnelle Zuwächse finanzieller Verpflichtungen und eine Werteverschiebung.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q089",
+      "question": "Was wird als 'Periode der Wahlfreiheit' beim Gründungswille bezeichnet?",
+      "answer": "Die Periode der Wahlfreiheit (ca. 28-40 Jahre) ist das Zeitfenster, in dem eine Person genug Kompetenz und Erfahrung hat, aber noch genug Freiheit besitzt um zu gründen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q090",
+      "question": "In welchem Alter liegt der 'Sweet Spot' oder Peak der Gründungskapazität?",
+      "answer": "Der Peak der Gründungskapazität liegt bei etwa 33 Jahren.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q091",
+      "question": "Nennen Sie die drei Phasen der Expertenbefragung zur Ideenfindung.",
+      "answer": "Die drei Phasen sind: (1) Interview-Vorbereitung (Anbahnung, fachliche Vorbereitung, Interviewleitfaden), (2) Interview-Durchführung (Eröffnung, Informationsgewinnung, Abschluss), (3) Interview-Nachbereitung (Auswertung, Bewertung, Dokumentation).",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q092",
+      "question": "Wann führten die Gebrüder Samwer Experteninterviews durch und wie viele?",
+      "answer": "Im November 1998 führten die Gebrüder Samwer 100 Experteninterviews mit Gründern erfolgreicher Internet-Startup-Unternehmen im Rahmen ihrer Diplomarbeit durch. Das Suchergebnis war ebay.com.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q093",
+      "question": "Wann wurde alando.de gegründet und für welchen Betrag verkauft?",
+      "answer": "alando.de wurde im Februar 1999 gegründet. Ende 1999 wurde das Unternehmen für 43 Millionen US-Dollar in Aktien an eBay verkauft.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q094",
+      "question": "Nennen Sie drei erfolgreiche Unternehmen der Samwers bis 2008.",
+      "answer": "Die erfolgreichen Unternehmen waren alando.de (verkauft an eBay 1999), Jamba (gegründet 2000, verkauft 2004 für 273 Millionen US-Dollar an Verisign) und StudiVZ (investiert 2006, verkauft 2007 für 85 Millionen Euro an Holtzbrinck Gruppe).",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q095",
+      "question": "Wann wurde Rocket Internet gegründet und wie hoch war das Emissionsvolumen beim Börsengang?",
+      "answer": "Rocket Internet wurde 2014 gegründet. Das Emissionsvolumen beim Börsengang betrug etwa 1,6 Milliarden Euro mit einer Marktkapitalisierung von 2,1 Milliarden Euro am 31.07.2023.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q096",
+      "question": "Was ist ein Scoring-Verfahren zur Ideenprüfung?",
+      "answer": "Das Scoring-Verfahren ist eine Methode zur Ideenprüfung, bei der Erfolgskriterien gewichtet und mit einem Realisierungspotenzial bewertet werden. Die Kriterienwerte werden multipliziert und addiert, um eine Gesamtpunktzahl zu erhalten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q097",
+      "question": "Wie viele Erfolgskriterien werden in dem gegebenen Scoring-Beispiel verwendet und welche ist das wichtigste?",
+      "answer": "Es werden 6 Erfolgskriterien verwendet. Das wichtigste ist der Kundennutzen mit einer Gewichtung von 0,35.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q098",
+      "question": "Welche Bewertungsskala wird beim Scoring-Verfahren verwendet?",
+      "answer": "Die Bewertungsskala ist: 1-4 = schlecht, 4,1-7 = befriedigend, 7,1-10 = gut.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q099",
+      "question": "Welcher Kriterienwert ergibt sich im Scoring-Beispiel und wie wird dieser bewertet?",
+      "answer": "Der Gesamtkriterienwert beträgt 6,75 und wird als befriedigend bewertet (liegt im Bereich 4,1-7).",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q100",
+      "question": "Nennen Sie drei Hauptkritikpunkte am Scoring-Verfahren.",
+      "answer": "Kritik umfasst: (1) Der Kriterienkatalog ist nicht immer vollständig und praktikabel, (2) Kriterien sind nicht immer unabhängig voneinander, (3) Die Auswahl der Kriterien erfolgt meist auf Zufallsbasis, (4) Nachfolgende Analysen mit weiteren Instrumenten sind notwendig.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q101",
+      "question": "Welche drei Szenarien werden in der Wirtschaftlichkeitsanalyse untersucht?",
+      "answer": "Die drei Szenarien sind: (1) Best Case mit +70.000€ Gewinn, (2) Middle Case mit ±0€, (3) Worst Case mit -45.000€ Verlust.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q102",
+      "question": "Nennen Sie die vier Kompetenzebenen eines Gründers.",
+      "answer": "Die vier Kompetenzebenen sind: (1) Methodische Kompetenz, (2) Soziale Kompetenz, (3) Fachliche Kompetenz, (4) Personale/Persönliche Kompetenz.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q103",
+      "question": "Wie wird ein Gründungsteam definiert?",
+      "answer": "Ein Gründungsteam ist ein Team, das Wachstum und Wertschöpfung als oberstes Ziel verfolgt und unternehmerische Handlungszüge zeigt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q104",
+      "question": "Unterscheiden Sie zwischen innerem und äußerem Kreis eines Gründungsteams.",
+      "answer": "Der innere Kreis besteht aus zwei oder mehr Personen, die eine neue Organisation gründen und daran partizipieren. Der äußere Kreis umfasst Gründer und Teammitglieder, die zu einem späteren Zeitpunkt dazustoßen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q105",
+      "question": "Nennen Sie zwei Vorteile der Gründungsteambildung.",
+      "answer": "Vorteile sind: (1) Erhöhung der Kapazitäten durch mehrere Personen, (2) Schwächen einzelner Teammitglieder werden durch heterogene Teams kompensiert, (3) Sozialpsychologisch zweckmäßig durch Unterstützung, Motivation und Sicherheit.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q106",
+      "question": "Welche zwei Nachteile entstehen durch Homogenität in Gründungsteams?",
+      "answer": "Homogene Teams tendieren zur Einseitigkeit und können zu Konflikten führen, da unterschiedliche Perspektiven und Fähigkeiten fehlen. Dies kann die Innovationskraft und Problemlösungsfähigkeit des Teams beeinträchtigen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q107",
+      "question": "Was ist ein potenzieller Nachteil bei längerer Gründungsteambildung?",
+      "answer": "Fluktuationen im Gründungsteam können zur Auflösung des Teams und somit zur Unternehmensauflösung führen. Dies stellt ein erhebliches Risiko für die Unternehmensstabilität dar.",
+      "topic": "2.1 Gründungsphase › ### 2.1.1 Geschäftsidee"
+    },
+    {
+      "id": "q108",
+      "question": "Was ist ein Business-Plan und welche beiden Zielgruppen hat er?",
+      "answer": "Ein Business-Plan ist ein schriftliches Dokument, das das Konzept eines neu zu gründenden Unternehmens beschreibt. Die beiden Adressaten sind erstens die Gründer zur systematischen Analyse der Geschäftsidee und zweitens potenzielle Investoren als Beteiligungsangebot mit umfassenden Informationen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q109",
+      "question": "Nennen Sie die drei Ziele der Erstellung eines Business-Plans.",
+      "answer": "Die drei Ziele sind: 1) Instrument zur Kapitalakquisition (für Wettbewerbe, Venture Capital, Business Angels, Banken), 2) Fahrplan für Gründer zur Strukturierung von Ideen und Implementierung, 3) Grundlage für internes und externes Controlling.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q110",
+      "question": "Wie viele Elemente hat ein Business-Plan und nennen Sie vier davon.",
+      "answer": "Ein Business-Plan hat 9 Elemente. Vier davon sind: Management Summary, Unternehmen, Produkte/Anwendung und Herstellung, Markt & Wettbewerb. Weitere sind Marketing & Vertrieb, Management & Organisation, Finanzplanung, Chancen & Risiken und Finanzbedarf.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q111",
+      "question": "Was ist eine Management Summary und welche maximale Seitenzahl sollte sie nicht überschreiten?",
+      "answer": "Die Management Summary (Executive Summary) ist eine komprimierte Verdichtung des Business-Plan-Inhalts. Sie ermöglicht es Lesern, in kurzer Zeit zu entscheiden, ob eine detaillierte Prüfung sinnvoll ist. Sie sollte maximal 2 Seiten umfassen und Geschäftsidee, Branche, Finanzierungsphase und Kapitalbedarf enthalten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q112",
+      "question": "Welche drei Bereiche sind im Element 'Unternehmen' des Business-Plans enthalten?",
+      "answer": "Die drei Bereiche sind: 1) Unternehmensprofil (Gründung, Rechtsform, bestehendes Produktprogramm), 2) Besitzverhältnisse (Firmeninhaber, Beteiligungen, Partner), 3) Unternehmensziele (Ausgangslage, angestrebte Ziele, geplante Strategie).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q113",
+      "question": "Was ist ein Einzelunternehmen und wer haftet?",
+      "answer": "Ein Einzelunternehmen ist eine Rechtsform mit einer Person, für die kein Vertrag nötig ist. Der Gründer haftet mit seinem gesamten Betriebs- und Privatvermögen. Es gibt keine Mindesteinlage und die Leitung erfolgt allein durch den Einzelunternehmer.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q114",
+      "question": "Definieren Sie die GbR und nennen Sie drei Charakteristika.",
+      "answer": "Die GbR (Gesellschaft bürgerlichen Rechts) ist eine Personengesellschaft mit folgenden Merkmalen: Sie ist formfrei begründbar, benötigt mindestens 2 Gesellschafter, alle Gesellschafter haften gesamtschuldnerisch und unbeschränkt, es gibt keine Mindesteinlage und kein Handelsregistereintrag ist erforderlich.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q115",
+      "question": "Was ist der Unterschied zwischen einer OHG und einer KG?",
+      "answer": "Bei der OHG (Offene Handelsgesellschaft) haften mindestens 2 Gesellschafter alle unbeschränkt. Bei der KG (Kommanditgesellschaft) gibt es mindestens 1 Komplementär (unbeschränkte Haftung) und 1 Kommanditist (Haftung nur mit Einlage). Die Leitung der KG erfolgt allein durch den Komplementär.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q116",
+      "question": "Welche Mindesteinlage ist für eine GmbH erforderlich und was ist eine juristische Person?",
+      "answer": "Die GmbH (Gesellschaft mit beschränkter Haftung) erfordert eine Mindesteinlage von mindestens 25.000 Euro. Die GmbH ist eine Kapitalgesellschaft und damit eine eigene juristische Person, die eigenständig Rechte und Pflichten hat.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q117",
+      "question": "Welche Mindesteinlage ist für eine AG erforderlich?",
+      "answer": "Die AG (Aktiengesellschaft) erfordert eine Mindesteinlage von mindestens 50.000 Euro. Sie ist ebenfalls eine Kapitalgesellschaft und eigene juristische Person mit notariell beurkundetem Vertrag.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q118",
+      "question": "Was ist das MoMiG und seit wann ist es rechtskräftig?",
+      "answer": "Das MoMiG ist das Gesetz zur Modernisierung des GmbH-Rechts und zur Bekämpfung von Missbräuchen. Es ist seit dem 01.11.2008 rechtskräftig und ermöglicht unter anderem die Gründung einer GmbH mit Stammeinlage von 1 Euro (Unternehmergesellschaft).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q119",
+      "question": "Welche zentralen Bestandteile des MoMiG-Gesetzes kennen Sie?",
+      "answer": "Zentrale Bestandteile sind: Gründung mit Stammeinlage von 1 Euro möglich, 25% des Gewinns müssen angespart werden bis 25.000 Euro erreicht sind, jeder Geschäftsanteil lautet auf mindestens 1 Euro, der Verwaltungssitz kann ins Ausland verlegt werden, eine inländische Geschäftsanschrift muss ins Handelsregister eingetragen werden, und bei Führungslosigkeit müssen Gesellschafter bei Zahlungsunfähigkeit/Überschuldung Insolvenzantrag stellen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q120",
+      "question": "Nennen Sie vier Bereiche der Produktpolitik im Business-Plan.",
+      "answer": "Die vier Bereiche sind: 1) Kundennutzen (Identifikation der Kundenbedürfnisse, Problemanalyse/Lösung, konkreter Kundennutzen), 2) Wettbewerbsvergleich (Wettbewerbsvorteil, Zusatznutzen, USP), 3) Herstellung/Leistungserstellung (Entwicklung, Herstellung, Kapazitäten, Qualität), 4) Kosten/Preise (Kalkulation, Verkaufspreise, Deckungsbeiträge).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q121",
+      "question": "Was ist ein USP und geben Sie zwei Beispiele für USP-Merkmale.",
+      "answer": "USP (Unique Selling Proposition oder Unique Selling Point) ist eine herausragende Eigenschaft eines Produkts, das ihm gegenüber der Konkurrenz überlegene Wettbewerbsvorteile verschafft. Beispiele für USP-Merkmale sind Preis, Design oder technologischer Fortschritt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q122",
+      "question": "Erklären Sie die einfache Deckungsbeitragsrechnung mit den Zwischenergebnissen.",
+      "answer": "Die einfache Deckungsbeitragsrechnung arbeitet wie folgt: Umsatzerlöse minus variable Kosten der abgesetzten Erzeugnisse ergibt den Deckungsbeitrag 1. Dieser minus gesamte fixe Kosten der Periode ergibt das Betriebsergebnis. Der Deckungsbeitrag 1 deckt die variablen Kosten, das Betriebsergebnis zeigt den Gesamterfolg.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q123",
+      "question": "Was sind die langfristige und kurzfristige Preisuntergrenze?",
+      "answer": "Die langfristige Preisuntergrenze ist der Preis, bei dem das Betriebsergebnis null ist (alle Kosten sind gedeckt). Die kurzfristige Preisuntergrenze ist der Preis, bei dem der Deckungsbeitrag 1 null ist (nur variable Kosten sind gedeckt), z.B. bei Auslastung freier Kapazitäten bei Flugzeugen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q124",
+      "question": "Nennen Sie die drei Generischen Grundstrategien nach Porter.",
+      "answer": "Die drei Generischen Grundstrategien nach Porter sind: 1) Kostenführerschaft (preisgünstigster Wettbewerber, großes Marktvolumen, kleiner Wettbewerbsvorteil), 2) Differenzierung (deutlich abgehobene Produkte, großes Marktvolumen, großer Wettbewerbsvorteil), 3) Fokussierung/Nischenstrategie (eng abgegrenztes Kaufsegment, kleines Marktvolumen).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q125",
+      "question": "Was ist Kostenführerschaft und nennen Sie ein Beispiel.",
+      "answer": "Kostenführerschaft ist eine Grundstrategie, deren Ziel ist, der preisgünstigste Wettbewerber zu sein. Dies erfordert rigorose Kostensenkung durch Ausnutzung von Lernkurveneffekten, Fixkostendegression und Standardisierung. Ein Beispiel ist ALDI.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q126",
+      "question": "Was ist eine Differenzierungsstrategie und welcher Effekt soll erreicht werden?",
+      "answer": "Die Differenzierungsstrategie zielt auf die Herstellung von Produkten, die sich deutlich abheben (Qualität, Service, Markenimage). Dadurch soll die Preiselastizität der Nachfrage verringert und ein monopolistischer Bereich geschaffen oder vergrößert werden. Ein Beispiel ist Coca-Cola.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q127",
+      "question": "Was verstehen Sie unter Nischenstrategie und nennen Sie zwei Beispiele.",
+      "answer": "Die Nischenstrategie ist eine Ausrichtung auf ein eng abgegrenztes Kaufsegment oder einen Teilmarkt mit spezieller Bedürfnisstruktur. Beispiele sind Ausrüstungen für seltene Sportarten, Patek Philippe Uhren oder Ferrari.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q128",
+      "question": "Nennen Sie die 4 P's des Marketing-Mix.",
+      "answer": "Die 4 P's des Marketing-Mix sind: 1) Product (Produktpolitik), 2) Price (Preispolitik), 3) Place (Distributionspolitik), 4) Promotion (Kommunikationspolitik).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q129",
+      "question": "Welche vier Orientierungen gibt es in der Preispolitik?",
+      "answer": "Die vier Orientierungen der Preispolitik sind: 1) Wettbewerbsorientierung (Preise in Relation zum Wettbewerb), 2) Nachfrageorientierung (Preise abhängig von Zahlungsbereitschaft), 3) Nutzenoptimierung (kein kalkulatorischer Zusammenhang, hoher Zusatznutzen), 4) Kostenorientierung (Kosten plus Gewinnzuschlag).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q130",
+      "question": "Was ist Distributionspolitik und welche drei Wege existieren?",
+      "answer": "Distributionspolitik ist die Wahl der Absatzwege. Die drei Wege sind: 1) Direkt über eigene Organisation (konventionell), 2) Direkt über Internet, 3) Indirekt über Handelsvertreter/Agenturen zum Einzelhandel, Großhandel oder Versand. Alle Wege führen zum Kunden (Weiterverarbeiter, Endverbraucher).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q131",
+      "question": "Erklären Sie die Kommunikationskette und nennen Sie ihre Elemente.",
+      "answer": "Die Kommunikationskette besteht aus: 1) Wer? (Kommunikator), 2) Sagt was? (Botschaft), 3) Wodurch? (Medium), 4) Wem? (Empfänger), 5) Wirkung. Sie beschreibt den kompletten Prozess der Nachrichtenübertragung.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q132",
+      "question": "Nennen Sie die drei Bereiche der Kommunikationspolitik.",
+      "answer": "Die drei Bereiche der Kommunikationspolitik sind: 1) Werbung (TV, Internet, Zeitungen, Radio, Plakate etc.), 2) Verkaufsförderung (Messen, Ausstellungen, Vorführungen, Rabatte etc.), 3) Public Relations (Unternehmens-/Produktnachrichten).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q133",
+      "question": "Beschreiben Sie die vier Quadranten der BCG-Matrix.",
+      "answer": "Die BCG-Matrix (Achsen: relativer Marktanteil und Marktwachstum) hat vier Quadranten: 1) Question Marks (hoher Marktanteil niedrig, hohes Wachstum, kleine Umsatzvolumina), 2) Stars (hoher Marktanteil, hohes Wachstum, große Umsatzvolumina), 3) Poor Dogs (niedriger Marktanteil, niedriges Wachstum), 4) Cashcows (hoher Marktanteil, niedriges Wachstum, sehr große Umsatzvolumina).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q134",
+      "question": "Warum ist das Managementteam im Business-Plan von besonderer Bedeutung?",
+      "answer": "Das Managementteam ist ein Aspekt mit entscheidender Bedeutung und teilweise wichtiger als das Unternehmenskonzept selbst. Unterschiedliche Qualifikationen sind positiv und ein guter Zusammenhalt ist wichtig. Das Managementteam repräsentiert das Humankapital des Unternehmens.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q135",
+      "question": "Nennen Sie die vier Organisationsarten, die im Business-Plan erwähnt werden.",
+      "answer": "Die vier Organisationsarten sind: 1) Linienorganisation (Einlinien-, Mehrlinien-, Stablinienorganisation), 2) Spartenorganisation, 3) Matrixorganisation, 4) Projektorganisation.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q136",
+      "question": "Erkläre den Unterschied zwischen Einliniensystem und Mehrliniensystem.",
+      "answer": "Im Einliniensystem hat jede Stelle nur EINEN Vorgesetzten. Im Mehrliniensystem haben Stellen MEHRERE Vorgesetzte durch Kreuzverbindungen, was zu komplexeren Strukturen führt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q137",
+      "question": "Was ist Stablinienorganisation?",
+      "answer": "Die Stablinienorganisation ist wie das Einliniensystem strukturiert, hat aber zusätzlich Stabsstellen, die seitlich neben den Abteilungsleitern angesiedelt sind. Diese Stabsstellen beraten die Abteilungsleiter, haben aber selbst keine Weisungsbefugnis.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q138",
+      "question": "Welche fünf Rahmendaten werden in der Finanzplanung erfasst?",
+      "answer": "Die fünf Rahmendaten der Finanzplanung sind: 1) Investitionen, 2) Betriebsmittelbedarf, 3) Liquiditätsplanung, 4) Marketingvorhaben, 5) Entwicklungsvorhaben.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q139",
+      "question": "Was ist eine Liquiditätsplanung und warum ist sie wichtig?",
+      "answer": "Liquiditätsplanung ist die Sicherung der Zahlungsfähigkeit durch Berücksichtigung aller Ein- und Auszahlungen. Sie ist wichtig, weil mangelnde Liquidität neben Überschuldung die häufigste Insolvenzursache ist und oft überraschend eintritt bei unzureichender Planung.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q140",
+      "question": "Warum ist eine reine Kosten- und Umsatzplanung nicht ausreichend?",
+      "answer": "Eine reine Kosten- und Umsatzplanung ist nicht ausreichend, weil wichtig ist die Erfassung der Zahlungsströme (Ein- und Auszahlungen). Diese können zeitlich versetzt zu Kosten und Umsätzen auftreten und beeinflussen die tatsächliche Liquidität.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q141",
+      "question": "Geben Sie die Formel für Liquidität 1. Grades an und was misst sie.",
+      "answer": "Liquidität 1. Grades = liquide Mittel / kurzfristiges Fremdkapital × 100%. Sie misst das Verhältnis der sofort verfügbaren Mittel zum kurzfristigen Fremdkapital und gibt die sofortige Zahlungsfähigkeit an.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q142",
+      "question": "Geben Sie die Formel für Liquidität 2. Grades an und den erstrebenswerten Wert.",
+      "answer": "Liquidität 2. Grades = (liquide Mittel + kurzfristige Forderungen) / kurzfristiges Fremdkapital × 100%. Der erstrebenswerte Wert liegt bei ca. 100%. Sie misst die Zahlungsfähigkeit unter Berücksichtigung schnell realisierbarer Vermögensteile.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q143",
+      "question": "Geben Sie die Formel für Liquidität 3. Grades an und den erstrebenswerten Wert.",
+      "answer": "Liquidität 3. Grades = (liquide Mittel + kurzfristige Forderungen + Vorräte) / kurzfristiges Fremdkapital × 100%. Der erstrebenswerte Wert liegt bei ca. 200%. Sie ist die umfassendste Liquiditätskennzahl.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q144",
+      "question": "Erklären Sie das Konzept von Window-Dressing und geben Sie ein Beispiel.",
+      "answer": "Window-Dressing ist eine Bilanzverlängerung, bei der kurzfristig Kennziffern verbessert werden, ohne die wirtschaftliche Substanz zu ändern. Beispiel: Ein Unternehmen mit Liquidität 2. Grades von 40% nimmt einen einwöchigen Kredit über 200 GE auf, worauf die Liquidität 2. Grades auf 80% steigt (240/300), obwohl sich die tatsächliche Situation nicht verbessert hat.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q145",
+      "question": "Was fordert die Goldene Finanzierungsregel?",
+      "answer": "Die Goldene Finanzierungsregel fordert Fristenkongruenz: Die Fristigkeit der finanziellen Mittel muss mit der Fristigkeit ihrer Verwendung übereinstimmen. Dies bedeutet, dass langfristig gebundene Vermögen mit langfristigem Kapital finanziert werden sollten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q146",
+      "question": "Nennen Sie die drei Fassungen der Goldenen Bilanzregel.",
+      "answer": "Die drei Fassungen sind: 1) Engste Fassung: Anlagevermögen nur mit Eigenkapital finanzieren, 2) Weitere Fassung: Anlagevermögen langfristig finanzieren (EK + langfr. Fremdkapital), 3) Noch weitere Fassung: Alles langfristig gebundene Vermögen (inkl. langfr. Teile des Umlaufvermögens) soll langfristig finanziert sein.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q147",
+      "question": "Definieren Sie Cashflow und nennen Sie zwei Verwendungsweisen.",
+      "answer": "Cashflow ist eine zahlungsstromorientierte Kennzahl, bei der aus dem Jahresüberschuss alle Aufwands- und Erfolgsgrößen eliminiert werden, die in der Periode nicht zu Aus- und Einzahlungen führen. Zwei Verwendungsweisen sind: 1) Analyse der Finanzkraft (Innenfinanzierungskraft), 2) Analyse der Ertragskraft.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q148",
+      "question": "Geben Sie die indirekte Formel zur Berechnung des Cashflows an.",
+      "answer": "Indirekte Berechnung: Jahresüberschuss + Aufwendungen (die nicht zu Auszahlungen führten) - Erträge (die nicht zu Einzahlungen führten) = Cashflow. In der Praxis: Jahresüberschuss ± Abschreibungen/Zuschreibungen ± Veränderungen der Rückstellungen = Cashflow.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q149",
+      "question": "Unterscheiden Sie Rückstellungen und Rücklagen.",
+      "answer": "Rückstellungen (§249 HGB) sind Schulden gegenüber Dritten, deren Eintritt, Fälligkeit oder Höhe am Abschlussstichtag unsicher ist. Auflösung ist nur möglich, wenn der Grund entfällt. Rücklagen (§58 AktG) sind Teil des Eigenkapitals bei Kapitalgesellschaften, dienen der Selbstfinanzierung und Stärkung der Eigenkapitalbasis.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q150",
+      "question": "Was ist eine Gewinn- und Verlustrechnung (GuV) und welche zwei Verfahren existieren?",
+      "answer": "Die GuV ist eine zeitraumbezogene Gegenüberstellung von Aufwendungen und Erträgen. Sie ist wichtiges Instrument für Investoren und ihr Ergebnis korrespondiert mit der Bilanz. Die beiden Verfahren sind: 1) Gesamtkostenverfahren (§275 Abs. 2 HGB), 2) Umsatzkostenverfahren (§275 Abs. 3 HGB).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q151",
+      "question": "Was ist eine Bilanz und welche Wesensmerkmale hat sie?",
+      "answer": "Eine Bilanz basiert auf dem lateinischen Wort 'bilanx' (zwei Waagschalen). Ihre Wesensmerkmale sind: 1) Gegenüberstellung zweier Größen an einem bestimmten Stichtag, 2) Die Summen sind immer gleich (Aktiva = Passiva).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q152",
+      "question": "Nennen Sie drei Komponenten auf der Aktivseite einer Bilanz.",
+      "answer": "Drei Komponenten auf der Aktivseite sind: 1) Anlagevermögen (immaterielles AV, Sachanlagen, Finanzanlagen), 2) Umlaufvermögen (Vorräte, Forderungen, Wertpapiere, flüssige Mittel), 3) Rechnungsabgrenzungsposten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q153",
+      "question": "Nennen Sie drei Komponenten auf der Passivseite einer Bilanz.",
+      "answer": "Drei Komponenten auf der Passivseite sind: 1) Eigenkapital (gezeichnetes Kapital, Gewinnrücklagen, Gewinn-/Verlustvortrag, Jahresüberschuss/-fehlbetrag), 2) Rückstellungen, 3) Verbindlichkeiten und Rechnungsabgrenzungsposten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q154",
+      "question": "Welche Verbindung besteht zwischen Bilanz und GuV?",
+      "answer": "Die GuV berechnet den Jahresüberschuss oder -fehlbetrag, der dann direkt in die Bilanz auf der Passivseite fließt. Damit ist die GuV die Verbindung zwischen den beiden Dokumenten und erklärt die Veränderungen des Eigenkapitals in der Bilanz.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q155",
+      "question": "Nennen Sie die fünf Funktionen der Bilanz.",
+      "answer": "Die fünf Funktionen der Bilanz sind: 1) Informationsfunktion (intern/extern, Grundlage für Kontrolle, Disposition, Planung), 2) Rechenschaftsfunktion (gegenüber Eigentümer, Gläubiger), 3) Dokumentationsfunktion (Nachweis von Geschäftsvorfällen), 4) Sicherungsfunktion (Nachweis der Rückzahlungsmöglichkeit für Gläubiger), 5) Ermittlungsfunktion (Erfolgsermittlung, Besteuerung).",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q156",
+      "question": "Was ist das Nominalprinzip in der Bilanzierung?",
+      "answer": "Das Nominalprinzip (Nennwertprinzip) besagt, dass eine Geldschuld nach ihrem Nennwert bewertet wird. Inflation und Deflation bleiben damit unberücksichtigt bei der Bewertung.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q157",
+      "question": "Nennen Sie vier Zielgruppen des Rechnungswesens, die den Jahresabschluss nutzen.",
+      "answer": "Vier Zielgruppen des externen Rechnungswesens sind: 1) Unternehmensleitung (intern), 2) Aktionäre/Eigentümer, 3) Gläubiger und Banken, 4) Der Staat (Fiskus) für Besteuerung. Weitere sind Arbeitnehmer, Lieferanten, Kunden und interessierte Öffentlichkeit.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q158",
+      "question": "Geben Sie die Formel für Eigenkapitalrentabilität an.",
+      "answer": "Eigenkapitalrentabilität = Jahresergebnis / (Eigenkapital + stille Reserven) × 100%. Sie zeigt, wie effizient das Eigenkapital eingesetzt wurde. Stille Reserven sind Teile des Eigenkapitals, deren Höhe nicht unmittelbar aus der Bilanz ersichtlich ist.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q159",
+      "question": "Geben Sie die Formel für Gesamtkapitalrentabilität an und erklären Sie, warum Zinsaufwand addiert wird.",
+      "answer": "Gesamtkapitalrentabilität = (Jahresergebnis + Zinsaufwand) / (Gesamtkapital + stille Reserven) × 100%. Der Zinsaufwand wird addiert, weil er die Bezahlung der Fremdkapitalnutzung darstellt und man damit die Effizienz mit ALLEN Mitteln misst, nicht nur mit dem Eigenkapital.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q160",
+      "question": "Was ist Betriebsrentabilität und welche Komponenten enthält das betriebsnotwendige Vermögen?",
+      "answer": "Betriebsrentabilität = (ordentlicher) Betriebserfolg / (durchschnittl.) betriebsnotwendiges Vermögen × 100%. Sie misst die Effizienz des eigentlichen betrieblichen Zwecks. Das betriebsnotwendige Vermögen umfasst: immaterielles AV + Sachanlagevermögen + Vorräte (abzgl. Anzahlungen) + Kundenforderungen - Lieferverbindlichkeiten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q161",
+      "question": "Was ist eine Szenarioanalyse und wie wird sie im Kontext des Business-Plans verwendet?",
+      "answer": "Eine Szenarioanalyse nutzt Szenarien als plausible und begründbare Zukunftsbilder basierend auf komplexen Systemen miteinander verknüpfter Einflussfaktoren. Im Business-Plan dienen Szenarien dazu, mögliche Abweichungen von Planzahlen aufzuzeigen, um den Realitätsgrad zu unterstreichen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q162",
+      "question": "Welcher Zeithorizont wird typischerweise im Business-Plan verwendet und warum wird dieser Horizont gewählt?",
+      "answer": "Der Zeithorizont im Business-Plan beträgt typischerweise 3 Jahre. Dieser Horizont wird gewählt, weil die Planzahlen auf Annahmen basieren und mit zunehmendem Zeithorizont die Unsicherheit steigt. Der Einfluss deterministischer Größen nimmt ab, je weiter man in die Zukunft schaut.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q163",
+      "question": "Woher ergibt sich der Finanzbedarf eines Unternehmens und wofür wird er verwendet?",
+      "answer": "Der Finanzbedarf ergibt sich aus der Finanzplanung (Element 7 des Business-Plans). Er wird durch Fremdkapital und/oder Eigenkapital gedeckt und bildet die Grundlage für Beteiligungsverhandlungen mit potenziellen Investoren.",
+      "topic": "2.1 Gründungsphase › ### 2.1.2 Business-Plan"
+    },
+    {
+      "id": "q164",
+      "question": "Was ist der Unterschied zwischen Finanzierung und Finanzwirtschaft?",
+      "answer": "Finanzierung umfasst alle Maßnahmen zur Bereitstellung von Kapital (Beschaffung von Fremd- und Eigenkapital). Finanzwirtschaft hingegen bezeichnet die finanziellen Maßnahmen zur Planung, Steuerung und Kontrolle der Zahlungsströme im Unternehmen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q165",
+      "question": "Nenne die drei Säulen der Finanzwirtschaft.",
+      "answer": "Die drei Säulen sind: 1) Finanzierung (Kapitalbeschaffung), 2) Investition (Kapitalverwendung), 3) Zahlungsverkehr (Kapitalverwaltung).",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q166",
+      "question": "Wie unterscheiden sich Investition und Finanzierung anhand von Cashflows?",
+      "answer": "Investition ist eine Zahlungsreihe, die mit einer Auszahlung beginnt (Verwendung liquider Mittel), gefolgt von Einzahlungsrückflüssen. Finanzierung beginnt mit einer Einzahlung (Kapitalbeschaffung), gefolgt von Rückzahlungen und Zinszahlungen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q167",
+      "question": "Welche vier Ziele bilden das finanzwirtschaftliche Entscheidungsdreieck?",
+      "answer": "Die vier Ziele sind Rentabilität, Liquidität, Sicherheit und Unabhängigkeit. Diese müssen untereinander abgewogen werden, da sie nicht alle gleichzeitig maximiert werden können.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q168",
+      "question": "Welche Ziele verfolgen Eigentümer mit Beteiligungskapital (Eigenkapital)?",
+      "answer": "Eigentümer verfolgen zwei Hauptziele: Wertsteigerung ihrer Anteile und Kontroll- sowie Einflussmöglichkeiten auf das Unternehmen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q169",
+      "question": "Welche Ziele verfolgen Gläubiger mit Kreditkapital (Fremdkapital)?",
+      "answer": "Gläubiger verfolgen die Verzinsung ihres Kapitals, die Rückzahlung des Kapitals und mittelbar auch Kontroll- und Einflussmöglichkeiten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q170",
+      "question": "Wie teilt sich die Finanzierung in die beiden Hauptkategorien auf?",
+      "answer": "Finanzierung teilt sich in Eigenfinanzierung und Fremdfinanzierung. Eigenfinanzierung umfasst Beteiligungsfinanzierung (Außenfinanzierung) und Selbstfinanzierung (Innenfinanzierung).",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q171",
+      "question": "Nenne die drei Formen der Fremdfinanzierung.",
+      "answer": "Die drei Formen sind: 1) Finanzierung aus Kapitalfreisetzung (Innenfinanzierung), 2) Finanzierung aus Rückstellungen (Innenfinanzierung), 3) Kreditfinanzierung (Außenfinanzierung).",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q172",
+      "question": "Was ist das rechtsverhältnis bei Eigenkapital?",
+      "answer": "Das Rechtsverhältnis bei Eigenkapital ist ein Beteiligungsverhältnis, bei dem der Kapitalgeber Anteilseigner des Unternehmens wird.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q173",
+      "question": "Wie ist die Haftung bei Eigenkapital geregelt?",
+      "answer": "Bei Eigenkapital haftet der Eigentümer mindestens in Höhe seiner Einlage, ggf. auch mit seinem gesamten Privatvermögen, je nach Rechtsform des Unternehmens.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q174",
+      "question": "Wie wird Eigenkapital als Entgelt vergütet?",
+      "answer": "Eigenkapitalgeber sind anteilig am Gewinn und am Verlust beteiligt. Sie erhalten keine feste Verzinsung, sondern partizipieren am Geschäftsergebnis.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q175",
+      "question": "Welche Besonderheit gilt für die Steuerbehandlung von Eigenkapitalzinsen?",
+      "answer": "Eigenkapitalzinsen sind nicht steuerlich absetzbar und stellen somit einen zusätzlichen Kostenfaktor dar, im Gegensatz zu Fremdkapitalzinsen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q176",
+      "question": "Was ist das rechtsverhältnis bei Fremdkapital?",
+      "answer": "Das Rechtsverhältnis bei Fremdkapital ist ein Schuldverhältnis. Der Fremdkapitalgeber wird zum Gläubiger des Unternehmens.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q177",
+      "question": "Wie ist die Haftung bei Fremdkapital geregelt?",
+      "answer": "Der Fremdkapitalgeber haftet nicht für Verbindlichkeiten des Unternehmens. Sein Risiko ist auf die zur Verfügung gestellte Kreditvergabe begrenzt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q178",
+      "question": "Wie wird Fremdkapital als Entgelt vergütet?",
+      "answer": "Fremdkapital wird mit einem festen Zinsanspruch vergütet. Der Gläubiger ist nicht am Gewinn oder Verlust beteiligt und erhält seine Verzinsung unabhängig von der Geschäftsentwicklung.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q179",
+      "question": "Welche steuerliche Besonderheit gilt für Fremdkapitalzinsen?",
+      "answer": "Fremdkapitalzinsen sind steuerlich als Aufwand absetzbar (mit Einschränkungen bei der Gewerbesteuer), was einen Steuervorteil darstellt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q180",
+      "question": "Nenne die Außenfinanzierungsmöglichkeiten für Eigen- und Fremdkapital.",
+      "answer": "Eigenfinanzierung nutzt Beteiligungsfinanzierung. Fremdfinanzierung nutzt Kreditfinanzierung mit drei Bereichen: Geld- und Kapitalmarkt, Waren- und Leistungsverkehr sowie Sonderformen wie Leasing und Factoring.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q181",
+      "question": "Was ist typisch für einen Lieferantenkredit?",
+      "answer": "Der Kunde erhält Lieferungen ohne sofortige Bezahlung mit einer typischen Zahlungsfrist von 30 Tagen. Bei schnellerer Zahlung (10-14 Tage) gewährt der Lieferant Skonto. Die Kosten sind oft sehr hoch im Vergleich zu anderen Finanzierungsarten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q182",
+      "question": "Was ist ein Kundenkredit und in welchen Fällen wird er verwendet?",
+      "answer": "Ein Kundenkredit liegt vor, wenn das Unternehmen einen Teil des Kaufpreises vor dem Abrechnungszeitpunkt erhält. Er ist typisch bei Auftragsprodukten und Großprojekten (Anlagenbau, Flugzeugbau) oder bei schlechter Kreditwürdigkeit (Vorkasse).",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q183",
+      "question": "Was ist ein Kontokorrentkredit und wie funktioniert er?",
+      "answer": "Der Kontokorrentkredit ist ein klassischer kurzfristiger Kredit auf Basis eines Kontokorrentkontos. Ein positiver Saldo zeigt Guthaben, ein negativer Saldo Kreditinanspruchnahme bis zu einer vereinbarten Kreditlinie. Er ist sehr flexibel und sichert Zahlungsfähigkeit sowie Skonto-Vorteile.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q184",
+      "question": "Was ist ein Avalkredit und welche Besonderheit hat er?",
+      "answer": "Ein Avalkredit ist die Übernahme einer Bürgschaft oder Garantie durch eine Bank. Der Avalkreditgeber stellt keine Bargeldmittel, sondern seine eigene Kreditwürdigkeit zur Verfügung. Er haftet nur, wenn der Kreditnehmer seinen Verpflichtungen nicht nachkommt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q185",
+      "question": "Wie werden Avale in der Bilanz des Avalkreditgebers erfasst?",
+      "answer": "Avale werden als Eventualverbindlichkeiten in der Bilanz erfasst, da sie nur bei Nichterfüllung der zugrundeliegenden Verpflichtung zur tatsächlichen Zahlung führen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q186",
+      "question": "Nenne die drei Funktionen von Factoring.",
+      "answer": "Die drei Funktionen von Factoring sind: 1) Delkrederefunktion (Übernahme des Ausfallrisikos), 2) Dienstleistungsfunktion (Verwaltung und Inkasso), 3) Finanzierungsfunktion (Liquiditätsbereitstellung).",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q187",
+      "question": "Wie funktioniert Factoring und welche Zahlungsströme entstehen?",
+      "answer": "Das Unternehmen verkauft Forderungen an ein Factoringunternehmen. Der Factor zahlt Liquidität aus (mit 5-20% Sicherheitsabschlag), prüft vorab die Bonität und wird zum neuen Gläubiger. Bei offenem Factoring zahlt der Schuldner direkt an den Factor, bei stillem Factoring an das Unternehmen, das weiterzahlt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q188",
+      "question": "Nenne vier Vorteile von Factoring.",
+      "answer": "Factoring bietet: höhere Umlaufgeschwindigkeit des Kapitals, bessere Rentabilität, bessere Finanzplanung, Einsparungen bei Verwaltung und Kreditüberwachung, Vermeidung von Insolvenzrisiken und schnellere Bearbeitung als Bankkredit.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q189",
+      "question": "Nenne vier Nachteile von Factoring.",
+      "answer": "Nachteile sind: längerfristige Bindung, Umstrukturierungskosten bei Auflösung, Signalwirkung wirtschaftlicher Schwäche, Probleme mit Kunden wegen kurzer Zahlungsziele, Abtretung des Gesamtforderungsbestands und Ausschluss durch Drittschuldner-AGBs.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q190",
+      "question": "Was ist Leasing rechtlich und welche Formen gibt es?",
+      "answer": "Leasing ist rechtlich ein Mietvertrag (§535 BGB). Es bezeichnet die Vermietung oder Verpachtung von beweglichen oder unbeweglichen Gütern durch Hersteller (direktes Leasing) oder Leasinggesellschaft (indirektes Leasing), ggf. mit späterer Erwerbsmöglichkeit.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q191",
+      "question": "Was ist Sale-and-Lease-Back und nenne Beispiele.",
+      "answer": "Sale-and-Lease-Back ist ein Modell, bei dem ein Unternehmen sein eigenes Gut an einen Leasinggeber verkauft und es anschließend zurückleast. Bekannte Beispiele sind Borussia Dortmund und die Stadt Wuppertal.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q192",
+      "question": "Welches durchschnittliche Monatsverdienst wird für Vollzeitbeschäftigung genannt?",
+      "answer": "Der durchschnittliche Monatsverdienst für Vollzeitbeschäftigung (brutto) liegt bei 4.105 Euro.",
+      "topic": "2.1 Gründungsphase › ### 2.1.3 Finanzierung"
+    },
+    {
+      "id": "q193",
+      "question": "Was ist die Definition von Bedürfnissen?",
+      "answer": "Bedürfnisse sind die Empfindung eines Mangels mit dem Bestreben, ihn zu beseitigen. Sie werden unterteilt in Grund-/Existenzbedürfnisse (Primärbedürfnisse) sowie Kultur- und Luxusbedürfnisse (Sekundärbedürfnisse).",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q194",
+      "question": "Nenne die fünf Ebenen der Maslow'schen Bedürfnispyramide von unten nach oben.",
+      "answer": "Die fünf Ebenen sind: 1. Grundbedürfnisse, 2. Sicherheitsbedürfnisse, 3. Soziale Bedürfnisse, 4. Wertschätzungsbedürfnisse, 5. Entwicklungsbedürfnisse.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q195",
+      "question": "Wer war Abraham Maslow und in welchem Zeitraum lebte er?",
+      "answer": "Abraham Maslow war ein Psychologe, der die Bedürfnispyramide entwickelte. Er lebte von 1908 bis 1970.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q196",
+      "question": "Welche zentrale Aussage verbirgt sich hinter Maslows Bedürfnispyramide bezüglich der Erfüllung von Bedürfnisebenen?",
+      "answer": "Solange untere Ebenen nicht erfüllt sind, werden höhere nicht entwickelt. Mit zunehmender Bedürfnisbefriedigung nehmen Bedürfnisse quantitativ und qualitativ zu.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q197",
+      "question": "Was sind Güter und wie werden sie unterteilt?",
+      "answer": "Güter sind Mittel zur Bedürfnisbefriedigung. Sie werden unterteilt in freie Güter und knappe Güter, wobei knappe Güter in relativ und absolut knappe eingeteilt werden. Relative knappe Güter werden in Produktionsgüter und Konsumgüter unterteilt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q198",
+      "question": "Erläutere das Spannungsfeld der Güterknappheit.",
+      "answer": "Das Spannungsfeld entsteht zwischen knappen Gütern und unbegrenzten Bedürfnissen. Dies führt zum Wirtschaften, das als planmäßiger Einsatz knapper Güter nach dem ökonomischen Prinzip definiert ist.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q199",
+      "question": "Was ist das Maximalprinzip des ökonomischen Handelns?",
+      "answer": "Das Maximalprinzip besagt, dass bei gegebenen (fixen) Mitteln eine möglichst hohe Bedürfnisbefriedigung angestrebt wird. Der Input ist fix, der Output variabel und wird maximiert.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q200",
+      "question": "Was ist das Minimalprinzip des ökonomischen Handelns?",
+      "answer": "Das Minimalprinzip zielt darauf ab, eine bestimmte Bedürfnisbefriedigung mit dem geringsten Einsatz von Mitteln zu erreichen. Der Input ist variabel und wird minimiert, während der Output fix ist.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q201",
+      "question": "Was sind Trade-offs in der Ökonomie?",
+      "answer": "Trade-offs sind Situationen, in denen die Auswahl einer Bedürfnisbefriedigung aufgrund knapper Mittel automatisch den Verzicht auf eine Alternative bedeutet. Dies wird durch das Zitat 'There is no such thing as a free lunch' von Milton Friedman zusammengefasst.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q202",
+      "question": "Gib drei konkrete Beispiele für Trade-offs aus verschiedenen Perspektiven.",
+      "answer": "Beispiele sind: Konsument (Lebensmittel vs. Kleidung), Arbeitnehmer (Freizeit vs. Arbeitszeit), Unternehmer (neues Werk vs. altes Werk verbessern). Ein Student muss zwischen Freizeit und Studium wählen, wobei Zeit die knappe Ressource ist.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q203",
+      "question": "Was versteht man unter Opportunitätskosten?",
+      "answer": "Opportunitätskosten sind die Bedürfnisbefriedigung, auf die man verzichtet, um eine andere zu erhalten. Sie repräsentieren die Kosten der nächstbesten Alternative, auf die verzichtet wird.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q204",
+      "question": "Wie wird das Motivationsproblem in Marktwirtschaften gelöst?",
+      "answer": "Das Motivationsproblem wird durch Privateigentum an Produktionsmitteln gelöst. Dies schafft Anreize für Individuen, wirtschaftlich tätig zu werden.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q205",
+      "question": "Wie wird das Koordinationsproblem in Marktwirtschaften gelöst?",
+      "answer": "Das Koordinationsproblem wird durch dezentrale Planungs- und Koordinationssysteme auf Märkten gelöst, im Gegensatz zu Zentralverwaltungswirtschaften mit zentraler Planung und Staatseigentum.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q206",
+      "question": "Von welchen Faktoren hängt die nachgefragte Menge ab?",
+      "answer": "Die nachgefragte Menge hängt vom Preis sowie von anderen Faktoren ab: Einkommen, Zukunftserwartungen, Preise anderer Güter und Präferenzen der Konsumenten.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q207",
+      "question": "Was bedeutet 'ceteris paribus' in der Nachfrageanalyse?",
+      "answer": "Ceteris paribus bedeutet 'alle anderen Faktoren konstant'. Bei der Analyse der Nachfragekurve werden alle Faktoren außer dem Preis als konstant angenommen, um die isolierte Wirkung von Preisveränderungen zu untersuchen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q208",
+      "question": "Formuliere das Gesetz der Nachfrage.",
+      "answer": "Das Gesetz der Nachfrage besagt: Ceteris paribus sinkt die nachgefragte Menge mit steigendem Preis und steigt mit sinkendem Preis. Dies führt zu einer fallenden Nachfragekurve.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q209",
+      "question": "Was ist der Prohibitivpreis und wo befindet er sich im Nachfragediagramm?",
+      "answer": "Der Prohibitivpreis ist jener Preis, ab dem gar nichts mehr nachgefragt wird. Im Diagramm befindet er sich dort, wo die Nachfragekurve die Y-Achse (Preisachse) schneidet.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q210",
+      "question": "Was ist die Sättigungsmenge und wo befindet sie sich im Nachfragediagramm?",
+      "answer": "Die Sättigungsmenge ist jene Menge, die bei einem Preis von null nachgefragt wird. Im Diagramm befindet sie sich dort, wo die Nachfragekurve die X-Achse (Mengenachse) schneidet.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q211",
+      "question": "Erkläre die Bewegung entlang der Nachfragekurve bei Preiserhöhung.",
+      "answer": "Bei Preiserhöhung bewegt sich der Punkt entlang der Nachfragekurve nach oben links. Dies bedeutet eine Reduktion der nachgefragten Menge bei gleichbleibender Nachfragekurve.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q212",
+      "question": "Was passiert mit der Nachfragekurve, wenn sich das Einkommen der Konsumenten erhöht?",
+      "answer": "Die gesamte Nachfragekurve verschiebt sich nach rechts. Bei gleichem Preis wird eine größere Menge nachgefragt, da die Kaufkraft gestiegen ist.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q213",
+      "question": "Was ist die Preiselastizität der Nachfrage?",
+      "answer": "Die Preiselastizität der Nachfrage ist ein Maß für die Stärke der Nachfragereaktion auf Preisveränderungen. Sie wird berechnet als: |prozentuale Veränderung der nachgefragten Menge / prozentuale Preisveränderung|.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q214",
+      "question": "Wann ist eine Nachfrage elastisch und was bedeutet das?",
+      "answer": "Eine Nachfrage ist elastisch, wenn die Preiselastizität größer als 1 ist. Dies bedeutet, dass die Mengenreaktion auf Preisveränderungen groß ist. Grafisch zeigt sich dies in einer flachen Nachfragekurve.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q215",
+      "question": "Wann ist eine Nachfrage unelastisch und was bedeutet das?",
+      "answer": "Eine Nachfrage ist unelastisch, wenn die Preiselastizität kleiner als 1 ist. Dies bedeutet, dass die Mengenreaktion auf Preisveränderungen gering ist. Grafisch zeigt sich dies in einer steilen Nachfragekurve.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q216",
+      "question": "Warum sind Betragszeichen bei der Berechnung der Preiselastizität notwendig?",
+      "answer": "Betragszeichen sind notwendig, weil die Beziehung zwischen Preis und Menge immer negativ ist: Bei Preiserhöhung sinkt die Menge. Ohne Betragszeichen würde die Elastizität immer negativ ausfallen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q217",
+      "question": "Von welchen Faktoren hängt die angebotene Menge ab?",
+      "answer": "Die angebotene Menge hängt vom Preis sowie von anderen Faktoren ab: Erwartungen der Anbieter und technischer Fortschritt.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q218",
+      "question": "Formuliere das Gesetz des Angebots und erkläre die Form der Angebotskurve.",
+      "answer": "Das Gesetz des Angebots besagt: Ceteris paribus steigt die angebotene Menge mit steigendem Preis. Dies führt zu einer steigenden Angebotskurve von links unten nach rechts oben.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q219",
+      "question": "Wie wirkt sich technischer Fortschritt auf die Angebotskurve aus?",
+      "answer": "Technischer Fortschritt führt zu einer Verschiebung der Angebotskurve nach rechts. Bei gleichem Preis können mehr Güter angeboten werden, da die Produktionskosten gesunken sind.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q220",
+      "question": "Wie funktioniert die Preisfindung auf freien Märkten in Bezug auf Zahlungsbereitschaft?",
+      "answer": "Die Nachfrage repräsentiert die Zahlungsbereitschaft der Konsumenten. Auf freien Märkten kommen jene Individuen zum Zuge, die die höchste Zahlungsbereitschaft haben.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q221",
+      "question": "Wie funktioniert die Preisfindung auf freien Märkten in Bezug auf Produktionskosten?",
+      "answer": "Das Angebot repräsentiert die Produktionskosten. Auf freien Märkten kommen jene Anbieter zum Zuge, die die geringsten Produktionskosten haben.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q222",
+      "question": "Was ist der Gleichgewichtspreis und welche Bedingung charakterisiert ihn?",
+      "answer": "Der Gleichgewichtspreis ist der Preis, bei dem größtmögliche Menge gehandelt wird und der Markt geräumt ist. Im Gleichgewicht entspricht die angebotene Menge genau der nachgefragten Menge.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q223",
+      "question": "Welche Funktion erfüllt der Marktpreis in einer Marktwirtschaft?",
+      "answer": "Der Marktpreis fungiert als Knappheitsindikator. Er signalisiert, welche Güter knapp sind und lenkt dadurch die Produktion und den Konsum in die richtige Richtung.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q224",
+      "question": "Nenne drei der sechs Bedingungen für einen vollkommenen Markt.",
+      "answer": "Drei Bedingungen sind: 1. Keine Marktzugangsbeschränkungen, 2. Keine Marktausgangsbeschränkungen, 3. Homogenität des Gutes. Weitere sind vollkommene Markttransparenz, unendliche Reaktionsgeschwindigkeit und keine persönlichen, räumlichen oder zeitlichen Präferenzen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q225",
+      "question": "Erkläre die Bedeutung von 'Homogenität des Gutes' als Bedingung für einen vollkommenen Markt.",
+      "answer": "Homogenität des Gutes bedeutet, dass alle angebotenen Einheiten eines Gutes identisch sind. Es gibt keine Qualitätsunterschiede, die den Preis beeinflussen würden.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q226",
+      "question": "Was ist der Status des 'vollkommenen Marktes' in der wirtschaftlichen Realität?",
+      "answer": "Der vollkommene Markt ist nur ein theoretischer Referenzwert der ökonomischen Analyse. Er existiert in der Realität nicht, da keine realen Märkte alle sechs Bedingungen erfüllen.",
+      "topic": "2.1 Gründungsphase › ### 2.1.4 Angebot und Nachfrage (VWL-Teil)"
+    },
+    {
+      "id": "q227",
+      "question": "Was ist Private Equity?",
+      "answer": "Private Equity ist eine zeitlich begrenzte Eigenkapitalbeteiligung an in der Regel nicht börsennotierten Unternehmen zur Finanzierung des Wachstums in unterschiedlichen Entwicklungsstadien oder für spezielle Finanzierungsanlässe. Es grenzt sich vom Public Equity über Wertpapierbörsen ab.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q228",
+      "question": "Wie ist das Verhältnis zwischen Venture Capital und Private Equity?",
+      "answer": "Venture Capital ist eine Sonderform von Private Equity. VC stellt einen kleineren Kreis innerhalb des größeren PE-Kreises dar und konzentriert sich auf die Finanzierung sehr junger, wachstumsträchtiger Unternehmen.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q229",
+      "question": "Was ist Venture Capital?",
+      "answer": "Venture Capital ist eine Sonderform von Private Equity zur Finanzierung überwiegend sehr junger und wachstumsträchtiger Unternehmen, besonders in der Frühphase (Gründungs- und Aufbauphase). Es wird häufig in Hochtechnologie-Unternehmen eingesetzt und ist mit unternehmerischer Betreuung verbunden.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q230",
+      "question": "Wie viele Beteiligungsgesellschaften gibt es nach BVKap in Deutschland?",
+      "answer": "Nach Angaben des Bundesverbands Deutscher Kapitalbeteiligungsgesellschaften (BVKap) gibt es in Deutschland mehr als 470 Beteiligungsgesellschaften.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q231",
+      "question": "Wie viele Portfoliounternehmen verwalten PE-Gesellschaften in Deutschland?",
+      "answer": "Laut BVKap verwalten PE-Gesellschaften in Deutschland mehr als 5.500 Portfoliounternehmen.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q232",
+      "question": "Wie viele Beschäftigte arbeiten in PE-Portfoliounternehmen in Deutschland?",
+      "answer": "In PE-Portfoliounternehmen in Deutschland arbeiten 1,51 Millionen Beschäftigte.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q233",
+      "question": "Welcher Umsatz wird in deutschen PE-Portfoliounternehmen generiert?",
+      "answer": "PE-Portfoliounternehmen in Deutschland erzielen einen Umsatz von 293 Milliarden Euro.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q234",
+      "question": "Welches Jahr zeigt den Peak des PE-Investitionsvolumens im Zeitraum 2016-2023?",
+      "answer": "Das Jahr 2021 zeigt den Peak des PE-Investitionsvolumens mit 19.563 Millionen Euro im Betrachtungszeitraum 2016-2023.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q235",
+      "question": "Was ist ein Hedgefonds?",
+      "answer": "Ein Hedgefonds ist ein von Kapitalanlagegesellschaften generiertes Kapitalanlageprodukt, an dem Anleger Anteile erwerben und an der Performance partizipieren können. Hedgefonds haben wesentlich mehr Freiheit in der Wahl ihrer Anlagestrategie als andere Investmentfonds.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q236",
+      "question": "Welche Gründe führten zum schnellen Wachstum von Hedgefonds vor der internationalen Finanzkrise?",
+      "answer": "Hedgefonds wuchsen vor der Finanzkrise schnell aufgrund ihrer hohen Renditechancen und ihrer in der Regel geringen Korrelation zu den Aktienmärkten.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q237",
+      "question": "Welche drei Hauptstufen zeigt das Investment-Phasen-Stufendiagramm?",
+      "answer": "Das Stufendiagramm zeigt von unten nach oben die drei Stufen: Venture Capital (breiteste Basis), Private Equity (Mitte), und IPO (schmalste Spitze). Die Stufenform symbolisiert, dass reifere Unternehmen höhere Finanzierungsformen erreichen.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q238",
+      "question": "Was ist der Break-Even-Punkt in der Wachstumsfinanzierungskurve?",
+      "answer": "Der Break-Even-Punkt ist der Zeitpunkt, an dem ein Unternehmen von Verlusten zu Gewinnen übergeht. In der Gewinnkurve ist dies der Punkt, an dem die Kurve die Nulllinie von unten nach oben durchbricht.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q239",
+      "question": "Welche Phasen gehören zur Frühphase in der Wachstumsfinanzierung?",
+      "answer": "Die Frühphase umfasst drei Stadien: Seed (Produktkonzeption), Start-up (Unternehmensgründung), und First Stage (Produktionsbeginn).",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q240",
+      "question": "Welche Phasen umfasst die Expansionsphase?",
+      "answer": "Die Expansionsphase umfasst vier Stadien: Second Stage (Skalierung), Third Stage (Standardisierung), Fourth Stage (Pre-IPO), und endet mit dem Börsengang (IPO).",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q241",
+      "question": "Was ist der Take Private Stage?",
+      "answer": "Der Take Private Stage ist eine Phase nach dem Börsengang, in der ein Unternehmen wieder von der Börse genommen wird (Delisting). Dies wird auch als Public to Private Transaktion bezeichnet.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q242",
+      "question": "Was versteht man unter einem IPO?",
+      "answer": "Ein IPO (Initial Public Offering) ist der erstmalige Börsengang einer Kapitalgesellschaft. Im engeren Sinne ist es eine Umgründung eines Unternehmens anderer Rechtsform in eine Aktiengesellschaft (AG).",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q243",
+      "question": "Nennen Sie fünf Exitmöglichkeiten für PE/VC-Investoren.",
+      "answer": "Die Exitmöglichkeiten sind: IPO/Börsengang (Königsweg), Trade Sale (Verkauf an externen industriellen Käufer), Buy Back (Rückkauf durch das Unternehmen), Secondary Sale (Verkauf an anderen Finanzinvestor), und Abschreibung (Totalverlust).",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q244",
+      "question": "Was ist ein Management Buy Out (MBO)?",
+      "answer": "Ein MBO ist eine Form des Buy Back, bei dem das aktuelle Management des Unternehmens die Unternehmensanteile selbst aufkauft.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q245",
+      "question": "Was ist ein Management Buy In (MBI)?",
+      "answer": "Ein MBI ist eine Form des Buy Back, bei der ein externes Management (Managementteam von außerhalb) das Unternehmen aufkauft.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q246",
+      "question": "Über welchen Zeitraum wird üblicherweise bei VC/PE-Investitionen Wertmaximierung angestrebt?",
+      "answer": "VC/PE-Investoren streben über einen Zeitraum von meist 3-10 Jahren eine Wertmaximierung durch einen mittelfristig realisierbaren Exit an.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q247",
+      "question": "Zählen Sie die 10 Schritte des PE/VC-Finanzierungsablaufs auf.",
+      "answer": "Die 10 Schritte sind: 1. Idee und Team, 2. Erstellung des Business-Plans, 3. Auswahl potenzieller VC/PE-Geber, 4. Vorbereitung auf das 1. Gespräch, 5. Kennenlernen, 6. Letter of Intent, 7. Due Diligence, 8. Verhandlung und Abschluss, 9. Betreuung, 10. Exit.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q248",
+      "question": "Was ist Mezzanine-Kapital?",
+      "answer": "Mezzanine-Kapital ist Kapital, das zwischen Eigenkapital und Fremdkapital liegt und Merkmale beider Kapitalarten vereinigt. Es gibt vier Formen: stille Beteiligung, Genussrechtskapital, Wandel- und Optionsanleihen sowie Nachrangdarlehen.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q249",
+      "question": "Was ist eine stille Beteiligung?",
+      "answer": "Eine stille Beteiligung (stille Gesellschaft) ist eine in den §§ 230ff. HGB geregelte reine Innengesellschaft mit stärkster Eigenkapitaltendenz. Der Kapitalgeber beteiligt sich am Gewinn, ist aber nicht zwingend am Verlust beteiligt.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q250",
+      "question": "Was ist Genussrechtskapital?",
+      "answer": "Genussrechtskapital ist ein rein schuldrechtliches Kapitalüberlassungsverhältnis mit begrenzter Laufzeit. Der Kapitalgeber erhält einen Anteil am Gewinn und ist an Verlusten beteiligt.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q251",
+      "question": "Welche Merkmale haben Wandel- und Optionsanleihen?",
+      "answer": "Wandel- und Optionsanleihen sind fest verzinslich und geben dem Inhaber ein Wandlungsrecht in Aktien. Im Gegensatz zur Wandelanleihe kann die Optionsanleihe getrennt veräußert werden.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q252",
+      "question": "Was ist ein Nachrangdarlehen?",
+      "answer": "Ein Nachrangdarlehen ist eine Form von Mezzanine-Kapital mit stärkster Fremdkapitaltendenz. Es liegt im Rang hinter erstrangigem Fremdkapital und wird in der Regel ohne Stellung von gesonderten Sicherheiten vergeben.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q253",
+      "question": "Nennen Sie drei Motive für einen Börsengang.",
+      "answer": "Mögliche Motive für ein IPO sind: Wachstumsfinanzierung, Eigenkapitalstärkung, Übernahmefinanzierung, Exit, Unternehmensnachfolge, Mitarbeiterbeteiligung, Erhöhung der Bekanntheit, mehr Öffentlichkeit oder Spin-Off.",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q254",
+      "question": "Wo finden Sie Informationen über deutsche Kapitalbeteiligungsgesellschaften?",
+      "answer": "Informationen über deutsche Kapitalbeteiligungsgesellschaften finden Sie unter www.bvkap.de (Bundesverband Deutscher Kapitalbeteiligungsgesellschaften).",
+      "topic": "2.2 Wachstumsphase - Wachstumsfinanzierung"
+    },
+    {
+      "id": "q255",
+      "question": "Was besagt das Zitat von Sun Tzu zur Problemstellung des Risikomanagements?",
+      "answer": "Sun Tzu besagt, dass man sowohl den Feind als auch sich selbst kennen muss, um in Schlachten erfolgreich zu sein. Wer sich selbst kennt aber den Feind nicht, wird für jeden Sieg auch eine Niederlage einstecken. Wer weder den Feind noch sich selbst kennt, wird in jeder Schlacht unterliegen. Dies wird metaphorisch auf Risikomanagement übertragen: Man muss externe Risiken und interne Fähigkeiten kennen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q256",
+      "question": "Welche zwei Linien zeigt das Problemstellungsdiagramm und was symbolisiert ihr Abstand?",
+      "answer": "Das Diagramm zeigt das exponentiell steigende Komplexitätsniveau und die nur leicht ansteigenden Steuerungs- und Kontrollfähigkeiten. Der immer größer werdende Abstand zwischen diesen beiden Linien symbolisiert die zunehmende Unsicherheit im Unternehmen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q257",
+      "question": "Nenne fünf Faktoren aus dem Kreisdiagramm, die Schnellwechsel und Marktschwankungen verursachen.",
+      "answer": "Die Faktoren sind: Mergers & Acquisitions, Expansion, gesetzliche Vorschriften, Branding, Deregulierung, Erwartungen von Stakeholdern, Ethik und E-Business. Jeder dieser Faktoren trägt zu erhöhter Komplexität bei.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q258",
+      "question": "Was ist die zentrale These des Problemstellungsdiagramms bezüglich Komplexität und Managementfähigkeiten?",
+      "answer": "Die Komplexität wächst schneller als unsere Fähigkeit, sie zu kontrollieren. Dies erzeugt sowohl neue Chancen als auch neue Risiken für das Unternehmen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q259",
+      "question": "Gib drei Beispiele für den Konflikt zwischen Moral und Gewinn in der Geschäftswelt.",
+      "answer": "Beispiele sind: Menschenrechtsverletzungen, Kinderarbeit, Umweltverschmutzung, Korruption, Bilanzverschleierung, Insider-Trading, Vernachlässigung von Sicherheitsstandards, Rüstungsexporte in Spannungsgebiete, Geldwäsche und hohe Preise für lebensnotwendige Medikamente.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q260",
+      "question": "Wie lautet die Definition von Risiko?",
+      "answer": "Risiko ist die Unsicherheit der Realisation einer betrachteten Größe in Abhängigkeit des Eintritts verschiedener künftiger Umweltzustände. Im Gegensatz zur Ungewissheit sind die Eintrittswahrscheinlichkeiten der möglichen Zustände sicher und objektiv bekannt.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q261",
+      "question": "Welcher Unterschied besteht zwischen Risiko und Ungewissheit?",
+      "answer": "Bei Risiko sind die Eintrittswahrscheinlichkeiten der möglichen Zustände sicher und objektiv bekannt. Bei Ungewissheit sind diese Wahrscheinlichkeiten hingegen nicht bekannt oder nicht objektiv bestimmbar.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q262",
+      "question": "Welches ist das grundsätzliche unternehmerische Ziel im Risikomanagement?",
+      "answer": "Das grundsätzliche unternehmerische Ziel ist die Senkung unternehmerischer Risiken bei simultaner Erhöhung der erwarteten Zahlungen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q263",
+      "question": "Was ist unsystematisches Risiko und wie kann es reduziert werden?",
+      "answer": "Unsystematisches Risiko ist das firmenspezifische Risiko. Es fällt mit zunehmender Anzahl der Investitionen und kann durch Diversifikation reduziert werden. Es ist also wegdiversifizierbar.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q264",
+      "question": "Was charakterisiert systematisches Risiko?",
+      "answer": "Systematisches Risiko, auch Marktrisiko genannt, bleibt als horizontale Fläche bestehen, egal wie viele Diversifikationen vorgenommen werden. Es ist NICHT wegdiversifizierbar und verbleibt immer im Portfolio.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q265",
+      "question": "Woraus setzt sich das Gesamtrisiko zusammen?",
+      "answer": "Das Gesamtrisiko setzt sich aus systematischem Risiko (Marktrisiko) und unsystematischem Risiko (firmenspezifisches Risiko) zusammen. Durch Diversifikation sinkt das Gesamtrisiko anfangs stark, nähert sich dann aber dem systematischen Risiko an.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q266",
+      "question": "Was nimmt mit zunehmender Anzahl der Investitionen bei Diversifikation ab?",
+      "answer": "Das Ausmaß der Diversifikationsgewinne nimmt mit zunehmender Anzahl der Investitionen ab. Die Risikokurve flacht ab und weitere Diversifikationen bringen immer weniger Risikoreduktion.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q267",
+      "question": "Wie ist Risikomanagement definiert?",
+      "answer": "Risikomanagement ist die Messung und zielgerichtete Einflussnahme auf das unternehmerische ökonomische Risiko. Eine zielgerichtete Einflussnahme ist nur möglich, wenn einzelne Risikoquellen identifiziert worden sind.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q268",
+      "question": "Welche Voraussetzung ist notwendig, damit zielgerichtete Einflussnahme auf Risiken möglich ist?",
+      "answer": "Es ist notwendig, dass einzelne Risikoquellen identifiziert worden sind. Ohne diese Identifikation können Risiken nicht zielgerichtet beeinflusst werden.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q269",
+      "question": "Nenne die sechs Schritte des Risikomanagementprozesses.",
+      "answer": "Die sechs Schritte sind: (1) Risikoidentifikation, (2) Risikobewertung, (3) Risikoaggregation, (4) Risikobewältigung, (5) Risikoüberwachung, (6) Externes Berichtswesen. Sie bilden einen kontinuierlichen Kreislauf.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q270",
+      "question": "Was wird in der Risikoidentifikation durchgeführt?",
+      "answer": "In der Risikoidentifikation werden der Beobachtungsbereich bestimmt und die wesentlichen Strategie- und Leistungsrisiken identifiziert.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q271",
+      "question": "Welche Aufgaben hat die Risikobewertung?",
+      "answer": "Die Risikobewertung bewertet Risiken nach Schadenshöhe und Eintrittswahrscheinlichkeit. Sie identifiziert wesentliche und bestandsgefährdende Risiken und erstellt ein Risikoportfolio.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q272",
+      "question": "Was ist Ziel der Risikoaggregation?",
+      "answer": "Die Risikoaggregation macht Aussagen zur Verteilung und Korrelation der Risiken und bestimmt die Gesamtrisikoposition des Unternehmens.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q273",
+      "question": "Welche Maßnahmen umfasst die Risikobewältigung?",
+      "answer": "Die Risikobewältigung umfasst präventive und reaktive Maßnahmen sowie Ad-hoc-Maßnahmen zur Kontrolle von identifizierten Risiken.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q274",
+      "question": "Was sind die Inhalte der Risikoüberwachung?",
+      "answer": "Die Risikoüberwachung beschreibt die Ablauf- und Aufbauorganisation mit Verantwortlichkeiten, bestimmt Messgrößen und Indikatoren und legt Limits sowie Berichtswesen fest.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q275",
+      "question": "Welche vier Kategorien von Risikoquellen werden unterschieden?",
+      "answer": "Die vier Kategorien sind: (1) Marktrisiken aus allgemeiner Marktentwicklung, (2) Rechtliche Risiken aus der Rechtslage, (3) Politische Risiken aus der politischen Lage, (4) Bei Banken zusätzlich Kreditrisiken und Liquiditätsrisiken.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q276",
+      "question": "Gib Beispiele für Marktrisiken.",
+      "answer": "Beispiele für Marktrisiken sind: Aktienkurse, Indexstände (z.B. DAX), Güterpreise, Marktzinssätze und Wechselkurse.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q277",
+      "question": "Welche Beispiele für politische Risiken werden genannt?",
+      "answer": "Beispiele sind Enteignungsrisiken (z.B. Russland) und Transferrisiken, die aus politischer Instabilität oder Regierungswechseln resultieren.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q278",
+      "question": "Was sind die vier Stufen der risikopolitischen Gegenmaßnahmen?",
+      "answer": "Die vier Stufen sind: (1) Risiken vermeiden, (2) Risiken vermindern, (3) Risiken überwälzen, (4) Risiken selbst tragen. Ziel ist die Steigerung des Unternehmenswertes.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q279",
+      "question": "Nenne zwei Maßnahmen zur Vermeidung von Risiken.",
+      "answer": "Maßnahmen sind: Ausstieg aus riskantem Geschäftsfeld und Verzicht auf bestimmte Technologien.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q280",
+      "question": "Welche Strategien zählen zur Verminderung von Risiken?",
+      "answer": "Zur Risikoverminderung gehören: Substitution fixer durch variable Kosten, organisatorische Regelungen und redundante Auslegung von Ressourcen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q281",
+      "question": "Wie können Risiken überwälzt werden?",
+      "answer": "Risiken können überwälzt werden durch Optimierung von Verträgen, Optimierung des Versicherungsschutzes und Risikotransfer über Kapitalmärkte (z.B. Wetter-Derivate).",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q282",
+      "question": "Welche Maßnahmen gehören zur Kategorie 'Risiken selbst tragen'?",
+      "answer": "Zu dieser Kategorie gehören: Ermittlung des Eigenkapitalbedarfs, Optimierung der Eigenkapitalallokation und Berechnung von Kapitalkosten.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q283",
+      "question": "Was ist die Balanced Scorecard und welche Funktion hat sie?",
+      "answer": "Die Balanced Scorecard ist ein ganzheitliches Konzept zur Messung, Dokumentation und Steuerung der Aktivitäten eines Unternehmens hinsichtlich Vision und Strategie. Sie integriert vier Perspektiven, um umfassend die Unternehmensziele zu verfolgen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q284",
+      "question": "Nenne die vier Perspektiven der Balanced Scorecard und ihre zentrale Frage.",
+      "answer": "Die vier Perspektiven sind: (1) Finanzperspektive (Wie sollen wir gegenüber Teilhabern auftreten?), (2) Kundenperspektive (Wie sollen wir gegenüber Kunden auftreten?), (3) Interne Geschäftsprozesse (In welchen Prozessen müssen wir die Besten sein?), (4) Lernen und Entwicklung (Wie fördern wir Veränderungs- und Wachstumspotenziale?).",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q285",
+      "question": "Gib ein Beispiel für ein Ziel, Kennzahl und Vorgabe aus der Finanzperspektive der IT-Abteilung.",
+      "answer": "Ziel: Senkung der IT-Supportkosten pro Mitarbeitenden. Kennzahl: IT-Supportkosten pro Mitarbeitenden. Vorgabe: Senkung um 5% gegenüber 2022 bis Ende 2023. Maßnahme: IT-Schulung aller Mitarbeitenden.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q286",
+      "question": "Gib ein Beispiel für ein Ziel, Kennzahl und Vorgabe aus der Kundenperspektive der IT-Abteilung.",
+      "answer": "Ziel: Verbesserung des IT-Supports. Kennzahl: Minuten für Bearbeitung einer Anfrage. Vorgabe: Senkung durchschnittliche Bearbeitungszeit um 30 Sekunden bis Juli 2023. Maßnahme: Fachliche Schulung der Support-Mitarbeitenden.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q287",
+      "question": "Nenne drei Vorteile der Balanced Scorecard.",
+      "answer": "Vorteile sind: (1) Hilft, kritische Erfolgsfaktoren an einer Strategie auszurichten auf allen Ebenen, (2) Vermittelt dem Management ein umfassendes Bild der Geschäftstätigkeit, (3) Vereinfacht Kommunikation und Verständnis von Geschäftszielen und Strategien auf allen Ebenen, (4) Ermöglicht strategisches Feedback und Lernen.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q288",
+      "question": "Nenne drei Nachteile der Balanced Scorecard.",
+      "answer": "Nachteile sind: (1) Umfassende Marktkenntnisse erforderlich, (2) Umfangreiche Überzeugungsarbeit im Vorfeld notwendig, (3) Hochmotivierte, zukunftsorientierte Mitarbeitende sind Voraussetzung, (4) Mittleres Management muss hochqualifiziert sein, (5) Der qualitative Aspekt ist nicht angemessen berücksichtigt.",
+      "topic": "2.3 Reifephase - Risikomanagement"
+    },
+    {
+      "id": "q289",
+      "question": "Wie viele Gesamtinsolvenzen gab es in Deutschland im 1. Halbjahr 2024 (geschätzt)?",
+      "answer": "Im 1. Halbjahr 2024 gab es geschätzt 60.100 Gesamtinsolvenzen in Deutschland. Dies setzt sich zusammen aus 11.000 Unternehmensinsolvenzen, 35.400 Verbraucherinsolvenzen und 13.700 sonstigen Insolvenzen.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q290",
+      "question": "Beschreibe die V-Form bei den Unternehmensinsolvenzen von 2019 bis 2024.",
+      "answer": "Die Unternehmensinsolvenzen zeigen einen Rückgang während der Corona-Pandemie (2020-2022) und dann einen starken Anstieg auf 11.000 im 1. Halbjahr 2024, was höher ist als 2019 (9.690). Die Form ähnelt einem V: erst runter, dann wieder rauf.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q291",
+      "question": "Welcher Wirtschaftsbereich zeigte von 2023 zu 2024 den stärksten Anstieg der Insolvenzen?",
+      "answer": "Der Bereich Dienstleistungen zeigte den stärksten Anstieg mit 34,9% (von 4.820 auf 6.500 Insolvenzen). Das Baugewerbe folgte mit 27,5% Anstieg.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q292",
+      "question": "Welcher Prozentsatz der insolventen Unternehmen im 1. Halbjahr 2024 ist älter als 10 Jahre?",
+      "answer": "Etwa 40,9% der insolventen Unternehmen sind älter als 10 Jahre. Das ist bemerkenswert, da es zeigt, dass auch etablierte Unternehmen in finanzielle Schwierigkeiten geraten können.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q293",
+      "question": "Was ist die Frist für die Antragstellung bei Zahlungsunfähigkeit gemäß InsO?",
+      "answer": "Die Frist für die Antragstellung bei Zahlungsunfähigkeit beträgt 3 Wochen (§15a InsO). Wer diese Frist nicht einhält, macht sich strafbar.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q294",
+      "question": "Was ist die Frist für die Antragstellung bei Überschuldung?",
+      "answer": "Die Frist für die Antragstellung bei Überschuldung beträgt 6 Wochen. Dies ist eine neue Regelung, die länger ist als die 3-Wochen-Frist bei Zahlungsunfähigkeit.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q295",
+      "question": "Nenne die drei Insolvenzgründe nach deutschem Recht.",
+      "answer": "Die drei Insolvenzgründe sind: (1) drohende Zahlungsunfähigkeit (§18 Abs. 2 InsO), (2) Zahlungsunfähigkeit (§17 Abs. 1 InsO), und (3) Überschuldung (§19 Abs. 1 InsO).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q296",
+      "question": "Unterscheide zwischen Antragsrecht und Antragspflicht bei Insolvenzen.",
+      "answer": "Bei drohender Zahlungsunfähigkeit hat der Schuldner Antragsrecht (kann, muss aber nicht antragen). Bei Zahlungsunfähigkeit und Überschuldung herrscht Antragspflicht für Kapitalgesellschaften und haftungsbeschränkte Personengesellschaften.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q297",
+      "question": "Wie hat sich die Überschuldungsquote in Deutschland von 2014 bis 2023 entwickelt?",
+      "answer": "Die Überschuldungsquote ist von 9,90% im Jahr 2014 kontinuierlich gesunken und beträgt 2023 etwa 8,15%. Das entspricht 5,65 Millionen überschuldeten Personen (gegenüber 6,67 Millionen im Jahr 2014).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q298",
+      "question": "Welche Altersgruppe hatte 2023 die höchste Überschuldungsquote?",
+      "answer": "Die Altersgruppe 30-39 Jahre hatte 2023 die höchste Überschuldungsquote mit 13,72%. Dies ist deutlich höher als bei anderen Altersgruppen.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q299",
+      "question": "Welcher Überschuldungsauslöser zeigte von 2008 bis 2023 den stärksten Anstieg?",
+      "answer": "Längerfristiges Niedrigeinkommen zeigte mit +187% den stärksten Anstieg (0,65 Millionen Fälle 2023). Dies übertrifft alle anderen Überschuldungsauslöser deutlich.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q300",
+      "question": "Wie hat sich Arbeitslosigkeit als Überschuldungsauslöser von 2008 bis 2023 verändert?",
+      "answer": "Arbeitslosigkeit ist als Überschuldungsauslöser um 45% zurückgegangen (auf 1,07 Millionen Fälle im Jahr 2023). Dies ist eine positive Entwicklung und deutet auf verbesserte Arbeitsmarktbedingungen hin.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q301",
+      "question": "Welche deutsche Stadt oder Region hatte 2023 die höchste Überschuldungsquote?",
+      "answer": "Bremerhaven hatte mit 19,02% die höchste Überschuldungsquote in Deutschland 2023. Danach folgten Pirmasens (16,72%) und Gelsenkirchen (16,62%).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q302",
+      "question": "Wie unterscheiden sich die Überschuldungsquoten nach Schulabschluss?",
+      "answer": "Personen ohne Schulabschluss haben mit 12,31% die höchste Quote, gefolgt von Hauptschülern (11,28%). Personen mit Abitur (8,53%) und Fachhochschulreife (8,27%) haben niedrigere Quoten.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q303",
+      "question": "Was war die Hauptreform der Verbraucherinsolvenzen vom 17.12.2020?",
+      "answer": "Die Privatinsolvenz wurde von 6 auf 3 Jahre verkürzt, und die Rückzahlung von 35% ist nicht mehr nötig. Die Reform gilt rückwirkend für Insolvenzanträge ab 01.10.2020 und adressierte Pandemie-bedingte finanzielle Krisen.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q304",
+      "question": "Definiere den Begriff 'Insolvenzverfahren'.",
+      "answer": "Ein Insolvenzverfahren ist die Verwertung des Gesamtvermögens zur gemeinschaftlichen (anteiligen) Befriedigung aller Gläubiger (Gläubigerbegünstigung gemäß §283c StGB).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q305",
+      "question": "Nenne die drei Lösungen im Rahmen einer Insolvenz.",
+      "answer": "Die drei Lösungen sind: (1) Liquidation (Auflösung und Verwertung des Unternehmens), (2) Sanierung (Rettung des Unternehmens), und (3) Sanierende Übertragung (Übernahme gesunder Teile durch neuen Rechtsträger).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q306",
+      "question": "Welche Prüfungen nimmt das Insolvenzgericht nach Antragstellung vor?",
+      "answer": "Das Insolvenzgericht prüft: (1) den Eröffnungsgrund (Zahlungsunfähigkeit, drohende Zahlungsunfähigkeit oder Überschuldung, nicht nur vorübergehend) gemäß §§16ff. InsO und (2) die hinreichende Masse (ob Kosten für Gericht und Insolvenzverwalter gedeckt sind) gemäß §26 InsO.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q307",
+      "question": "Was sind die neun Schritte eines Insolvenzverfahrens nach deutschem Recht?",
+      "answer": "Die Schritte sind: (1) Antrag, (2) Prüfung durch Insolvenzgericht, (3) Eröffnungsbeschluss, (4) Ernennung Insolvenzverwalter, (5) Sichtung/Verwaltung/Verwertung, (6) Feststellung Gläubiger, (7) Erlösverteilung, (8) Aufhebung Verfahren, (9) Restschuldbefreiung.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q308",
+      "question": "Welcher Insolvenzgrund hat zur Folge, dass der Schuldner Antragsrecht (aber keine Pflicht) hat?",
+      "answer": "Die drohende Zahlungsunfähigkeit (§18 Abs. 2 InsO) gibt dem Schuldner ein Antragsrecht. Er kann einen Insolvenzantrag stellen, ist dazu aber nicht verpflichtet.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q309",
+      "question": "Welcher Wirtschaftsbereich zeigte 2023/2024 den höchsten prozentualen Anstieg der Insolvenzen?",
+      "answer": "Das Baugewerbe zeigte einen Anstieg von 27,5% (von 1.380 auf 1.760), gefolgt von Dienstleistungen mit 34,9%. Dienstleistungen hatten den höchsten absoluten Anstieg mit 1.680 zusätzlichen Insolvenzen.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q310",
+      "question": "Was versteht man unter 'drohender Zahlungsunfähigkeit' im Insolvenzrecht?",
+      "answer": "Drohende Zahlungsunfähigkeit (§18 Abs. 2 InsO) liegt vor, wenn absehbar ist, dass der Schuldner zukünftig seine Zahlungsverpflichtungen nicht erfüllen kann. Der Schuldner hat ein Antragsrecht (nicht Pflicht), einen Insolvenzantrag zu stellen.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q311",
+      "question": "Welche Sanierungsmöglichkeiten bestehen laut Turnaround-Management?",
+      "answer": "Es gibt drei Hauptmöglichkeiten: (1) Sanierung (Sofortmaßnahmen zur Existenzsicherung), (2) Restrukturierung (kontinuierliche Ausrichtung auf neues Unternehmenskonzept) und (3) Sanierende Übertragung (Übertragung auf neuen Rechtsträger).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q312",
+      "question": "Erkläre die vier Krisenstadien und deren Merkmale.",
+      "answer": "Die vier Stadien sind: (1) Strategische Krise (frühe Phase, großer Handlungsspielraum), (2) Ergebniskrise (mittlere Phase, Ergebnisverschlechterung), (3) Liquiditätskrise (späte Phase, wenig Spielraum), (4) Insolvenz (Endphase, kaum Spielraum). Handlungsdruck steigt, Spielraum sinkt.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q313",
+      "question": "Was ist der Hauptunterschied zwischen Sanierung und Restrukturierung?",
+      "answer": "Sanierung umfasst Sofortmaßnahmen in akuter Krise, während Restrukturierung eine kontinuierliche, langfristige Ausrichtung auf ein neues Unternehmenskonzept ist. Die Grenzen zwischen beiden sind fließend.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q314",
+      "question": "Wie lange dauert die Konzeptphase im Turnaround-Prozess und was wird darin geleistet?",
+      "answer": "Die Konzeptphase dauert 2-6 Wochen. Sie umfasst Bestandsaufnahme (Ist-Situation, Markt-, Wettbewerbssituation, Branchenentwicklung) und Grobkonzept (operative, strategische und finanzielle Restrukturierung plus Businessplanung).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q315",
+      "question": "Was sind die Maßnahmen in der Umsetzungsphase des Turnaround-Prozesses?",
+      "answer": "Die Maßnahmen sind: Detailkonzept-Erstellung, Maßnahmenpläne, Verbesserung von Schlüsselprozessen, Maßnahmencontrolling, Realisierungscontrolling, Kontrolle durch Lenkungsausschüsse und Taskforces.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q316",
+      "question": "Wie lange dauert typischerweise die Umsetzungsphase im Turnaround-Prozess?",
+      "answer": "Die Umsetzungsphase dauert 6-24 Monate. Sie ist deutlich länger als die Konzeptphase und erfordert persistente Umsetzung der entwickelten Maßnahmen unter ständigem Controlling.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q317",
+      "question": "Nenne die drei wesentlichen Restrukturierungselemente im Grobkonzept.",
+      "answer": "Die drei Elemente sind: (1) Operative Restrukturierung (Prozesse und Kosten optimieren), (2) Strategische Restrukturierung (Grundausrichtung neu überdenken), (3) Finanzielle Restrukturierung (finanzielle Basis stabilisieren).",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q318",
+      "question": "Welche Auslöser für Überschuldung zeigten laut 'Big Six' von 2008-2023 den stärksten Rückgang?",
+      "answer": "Arbeitslosigkeit zeigte mit -45% den stärksten Rückgang (1,07 Mio. Fälle 2023). Gescheiterte Selbstständigkeit folgte mit -26% Rückgang.",
+      "topic": "2.4 Sättigungsphase"
+    },
+    {
+      "id": "q319",
+      "question": "Was ist der Unterschied zwischen der Antragsbefugnis bei drohender Zahlungsunfähigkeit vs. Zahlungsunfähigkeit?",
+      "answer": "Bei drohender Zahlungsunfähigkeit hat nur der Schuldner Antragsrecht (freiwillig). Bei Zahlungsunfähigkeit haben Gläubiger und Schuldner Antragsbefugnis, und Kapitalgesellschaften unterliegen einer Antragspflicht.",
+      "topic": "2.4 Sättigungsphase"
+    }
+  ]
+}

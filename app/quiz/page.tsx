@@ -8,27 +8,13 @@ interface Message {
   content: string;
 }
 
-interface QuizQuestion {
-  id: string;
-  question: string;
-  answer: string;
-  topic: string;
-}
+// Only keep last 5 Q&A pairs = 10 messages sent to API
+const MAX_PAIRS = 5;
 
-const USAGE_MARKER = '\x00USAGE:';
-
-function extractUsage(text: string): { clean: string; cents?: number } {
-  const idx = text.indexOf(USAGE_MARKER);
-  if (idx === -1) return { clean: text };
-  const clean = text.slice(0, idx).replace(/\n$/, '');
-  const cents = parseFloat(text.slice(idx + USAGE_MARKER.length));
-  return { clean, cents: isNaN(cents) ? undefined : cents };
-}
-
-function pickRandom(bank: QuizQuestion[], asked: Set<string>): QuizQuestion {
-  const available = bank.filter(q => !asked.has(q.id));
-  const pool = available.length > 0 ? available : bank;
-  return pool[Math.floor(Math.random() * pool.length)];
+function trimHistory(messages: Message[]): Message[] {
+  const maxMessages = MAX_PAIRS * 2;
+  if (messages.length <= maxMessages) return messages;
+  return messages.slice(messages.length - maxMessages);
 }
 
 function TypingDots() {
@@ -56,19 +42,10 @@ function SendIcon() {
 
 export default function QuizPage() {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [costs, setCosts] = useState<Record<number, number>>({});
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [started, setStarted] = useState(false);
   const [questionCount, setQuestionCount] = useState(0);
-  const [totalCents, setTotalCents] = useState(0);
-
-  const [quizBank, setQuizBank] = useState<QuizQuestion[]>([]);
-  const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion | null>(null);
-  const [askedIds, setAskedIds] = useState<Set<string>>(new Set());
-  const [bankLoading, setBankLoading] = useState(false);
-  const [bankError, setBankError] = useState<string | null>(null);
-
   const bottomRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -83,89 +60,43 @@ export default function QuizPage() {
     ta.style.height = `${Math.min(ta.scrollHeight, 120)}px`;
   }, [input]);
 
-  const startQuiz = useCallback(async () => {
-    setBankLoading(true);
-    setBankError(null);
-    try {
-      const res = await fetch('/api/quiz-bank');
-      const data = await res.json() as { questions?: QuizQuestion[]; error?: string };
-      if (!res.ok || data.error) throw new Error(data.error ?? 'Failed to load quiz bank');
-
-      const bank = data.questions!;
-      const firstQuestion = pickRandom(bank, new Set());
-
-      setQuizBank(bank);
-      setAskedIds(new Set([firstQuestion.id]));
-      setCurrentQuestion(firstQuestion);
-      setStarted(true);
-      setQuestionCount(1);
-      setMessages([{ role: 'assistant', content: firstQuestion.question }]);
-    } catch (err) {
-      setBankError(err instanceof Error ? err.message : 'Error loading quiz bank');
-    } finally {
-      setBankLoading(false);
-    }
-  }, []);
-
-  const sendAnswer = useCallback(async () => {
-    const text = input.trim();
-    if (!text || loading || !currentQuestion) return;
-
-    const userMsg: Message = { role: 'user', content: text };
-    const messagesWithUser = [...messages, userMsg];
-    setMessages(messagesWithUser);
-    setInput('');
+  const sendToApi = useCallback(async (msgs: Message[]) => {
     setLoading(true);
-
-    const assistantIdx = messagesWithUser.length;
-    setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
+    setMessages((prev) => [...prev, { role: 'assistant', content: '' }]);
 
     try {
-      const res = await fetch('/api/quiz-evaluate', {
+      const res = await fetch('/api/quiz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          question: currentQuestion.question,
-          correctAnswer: currentQuestion.answer,
-          userAnswer: text,
-        }),
+        // Only send last 5 Q&A pairs to the API
+        body: JSON.stringify({ messages: trimHistory(msgs) }),
       });
 
       if (!res.body) throw new Error('No response body');
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
-      let accumulated = '';
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
-        accumulated += decoder.decode(value);
-        const { clean, cents } = extractUsage(accumulated);
-        setMessages(prev => {
+        const chunk = decoder.decode(value);
+        setMessages((prev) => {
           const updated = [...prev];
-          updated[updated.length - 1] = { role: 'assistant', content: clean };
+          updated[updated.length - 1] = {
+            role: 'assistant',
+            content: updated[updated.length - 1].content + chunk,
+          };
           return updated;
         });
-        if (cents !== undefined) {
-          setCosts(prev => ({ ...prev, [assistantIdx]: cents }));
-          setTotalCents(t => t + cents);
-        }
       }
 
-      // Pick next question locally — no API call
-      const newAsked = new Set([...askedIds, currentQuestion.id]);
-      const next = pickRandom(quizBank, newAsked);
-      setAskedIds(new Set([...newAsked, next.id]));
-      setCurrentQuestion(next);
-      setQuestionCount(n => n + 1);
-      setMessages(prev => [...prev, { role: 'assistant', content: next.question }]);
-
+      setQuestionCount((n) => n + 1);
     } catch (err) {
-      setMessages(prev => {
+      setMessages((prev) => {
         const updated = [...prev];
         updated[updated.length - 1] = {
           role: 'assistant',
-          content: `Fehler: ${err instanceof Error ? err.message : 'Unbekannter Fehler'}`,
+          content: `Error: ${err instanceof Error ? err.message : 'Something went wrong'}`,
         };
         return updated;
       });
@@ -173,7 +104,25 @@ export default function QuizPage() {
       setLoading(false);
       textareaRef.current?.focus();
     }
-  }, [input, loading, currentQuestion, messages, quizBank, askedIds]);
+  }, []);
+
+  const startQuiz = useCallback(async () => {
+    setStarted(true);
+    const kickoff: Message[] = [{ role: 'user', content: 'Start the quiz. Ask me the first question.' }];
+    setMessages(kickoff);
+    await sendToApi(kickoff);
+  }, [sendToApi]);
+
+  const sendAnswer = useCallback(async () => {
+    const text = input.trim();
+    if (!text || loading) return;
+
+    const userMsg: Message = { role: 'user', content: text };
+    const nextMessages = [...messages, userMsg];
+    setMessages(nextMessages);
+    setInput('');
+    await sendToApi(nextMessages);
+  }, [input, loading, messages, sendToApi]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -187,18 +136,16 @@ export default function QuizPage() {
       {/* Header */}
       <header className="flex-none flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm">
         <div className="flex flex-col">
-          <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Quiz</span>
+          <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Quiz Mode</span>
           <span className="text-xs text-zinc-400 dark:text-zinc-500">
-            {questionCount > 0
-              ? `${questionCount}Q · ${totalCents.toFixed(2)}¢ gesamt`
-              : 'Management Grundlagen'}
+            {questionCount > 0 ? `${questionCount} question${questionCount !== 1 ? 's' : ''} so far` : 'Management Grundlagen'}
           </span>
         </div>
         <Link
-          href="/chat"
+          href="/"
           className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
         >
-          Chat →
+          ← Chat
         </Link>
       </header>
 
@@ -210,51 +157,43 @@ export default function QuizPage() {
               🎯
             </div>
             <div className="flex flex-col gap-1">
-              <p className="font-semibold text-zinc-800 dark:text-zinc-200">Quiz dich ab</p>
+              <p className="font-semibold text-zinc-800 dark:text-zinc-200">Quiz yourself</p>
               <p className="text-sm text-zinc-400 dark:text-zinc-500 max-w-xs">
-                Eine Frage. Kein Erbarmen. Endlos.
+                One question at a time. No mercy. Endless.
               </p>
             </div>
-            {bankError && (
-              <p className="text-xs text-red-500 max-w-xs">{bankError}</p>
-            )}
             <button
               onClick={startQuiz}
-              disabled={bankLoading}
-              className="mt-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all disabled:opacity-40"
+              className="mt-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all"
             >
-              {bankLoading ? 'Lade Quiz…' : 'Quiz starten'}
+              Start Quiz
             </button>
           </div>
         ) : (
           <div className="flex flex-col gap-3 px-4 py-4 max-w-3xl mx-auto w-full">
             {messages.map((msg, i) => {
               const isUser = msg.role === 'user';
+              // Hide the kickoff message
+              if (i === 0 && msg.content === 'Start the quiz. Ask me the first question.') return null;
+
               return (
-                <div key={i} className={`flex flex-col ${isUser ? 'items-end' : 'items-start'}`}>
+                <div key={i} className={`flex w-full ${isUser ? 'justify-end' : 'justify-start'}`}>
                   {msg.content === '' && loading && i === messages.length - 1 ? (
                     <div className="bg-zinc-100 dark:bg-zinc-800 rounded-2xl rounded-bl-sm px-4 py-3">
                       <TypingDots />
                     </div>
                   ) : (
-                    <>
-                      <div
-                        className={`
-                          max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap break-words
-                          ${isUser
-                            ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-br-sm'
-                            : 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 rounded-bl-sm'
-                          }
-                        `}
-                      >
-                        {msg.content}
-                      </div>
-                      {!isUser && costs[i] !== undefined && (
-                        <span className="mt-1 text-[10px] text-zinc-300 dark:text-zinc-600 px-1">
-                          {costs[i].toFixed(3)}¢
-                        </span>
-                      )}
-                    </>
+                    <div
+                      className={`
+                        max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap break-words
+                        ${isUser
+                          ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-br-sm'
+                          : 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 rounded-bl-sm'
+                        }
+                      `}
+                    >
+                      {msg.content}
+                    </div>
                   )}
                 </div>
               );
@@ -264,7 +203,7 @@ export default function QuizPage() {
         )}
       </main>
 
-      {/* Input */}
+      {/* Input — only shown after quiz started */}
       {started && (
         <footer
           className="flex-none border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 pt-3"
@@ -276,7 +215,7 @@ export default function QuizPage() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Deine Antwort…"
+              placeholder="Your answer..."
               rows={1}
               disabled={loading}
               className="
@@ -303,7 +242,7 @@ export default function QuizPage() {
             </button>
           </div>
           <p className="text-center text-xs text-zinc-300 dark:text-zinc-600 mt-2 max-w-3xl mx-auto">
-            Enter zum Absenden · Shift+Enter für neue Zeile
+            Enter to submit · Shift+Enter for new line
           </p>
         </footer>
       )}
