@@ -31,6 +31,32 @@ function pickRandom(bank: QuizQuestion[], asked: Set<string>): QuizQuestion {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
+// Strip "### " prefix and parent prefix from a topic string for display
+function displayLabel(topic: string): string {
+  const sep = topic.indexOf(' › ');
+  if (sep !== -1) {
+    return topic.slice(sep + 3).replace(/^### /, '');
+  }
+  return topic;
+}
+
+// Group topics: Map<parentLabel, subtopicFullStrings[]>
+// Topics without › are stored as Map<topic, []>
+function groupTopics(topics: string[]): Map<string, string[]> {
+  const map = new Map<string, string[]>();
+  for (const t of topics) {
+    const sep = t.indexOf(' › ');
+    if (sep !== -1) {
+      const parent = t.slice(0, sep);
+      if (!map.has(parent)) map.set(parent, []);
+      map.get(parent)!.push(t);
+    } else {
+      if (!map.has(t)) map.set(t, []);
+    }
+  }
+  return map;
+}
+
 function TypingDots() {
   return (
     <div className="flex items-center gap-1 py-1">
@@ -64,14 +90,29 @@ export default function QuizPage() {
   const [totalCents, setTotalCents] = useState(0);
 
   const [quizBank, setQuizBank] = useState<QuizQuestion[]>([]);
+  const [activeBank, setActiveBank] = useState<QuizQuestion[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion | null>(null);
   const [askedIds, setAskedIds] = useState<Set<string>>(new Set());
-  const [bankLoading, setBankLoading] = useState(false);
+  const [bankLoading, setBankLoading] = useState(true);
   const [bankError, setBankError] = useState<string | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null); // null = alle Themen
 
   const bottomRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [vp, setVp] = useState<{ height: number; top: number } | null>(null);
+
+  // Load bank eagerly so topic counts show before quiz starts
+  useEffect(() => {
+    fetch('/api/quiz-bank')
+      .then(r => r.json())
+      .then((data: { questions?: QuizQuestion[]; error?: string }) => {
+        if (data.error) throw new Error(data.error);
+        setQuizBank(data.questions ?? []);
+        setBankError(null);
+      })
+      .catch(err => setBankError(err instanceof Error ? err.message : 'Fehler beim Laden'))
+      .finally(() => setBankLoading(false));
+  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -98,29 +139,31 @@ export default function QuizPage() {
     ta.style.height = `${Math.min(ta.scrollHeight, 120)}px`;
   }, [input]);
 
-  const startQuiz = useCallback(async () => {
-    setBankLoading(true);
+  const startQuiz = useCallback(() => {
     setBankError(null);
-    try {
-      const res = await fetch('/api/quiz-bank');
-      const data = await res.json() as { questions?: QuizQuestion[]; error?: string };
-      if (!res.ok || data.error) throw new Error(data.error ?? 'Failed to load quiz bank');
-
-      const bank = data.questions!;
-      const firstQuestion = pickRandom(bank, new Set());
-
-      setQuizBank(bank);
-      setAskedIds(new Set([firstQuestion.id]));
-      setCurrentQuestion(firstQuestion);
-      setStarted(true);
-      setQuestionCount(1);
-      setMessages([{ role: 'assistant', content: firstQuestion.question }]);
-    } catch (err) {
-      setBankError(err instanceof Error ? err.message : 'Error loading quiz bank');
-    } finally {
-      setBankLoading(false);
+    const bank = quizBank;
+    if (bank.length === 0) {
+      setBankError('Quiz Bank ist leer.');
+      return;
     }
-  }, []);
+
+    const filtered = selectedTopic ? bank.filter(q => q.topic === selectedTopic) : bank;
+    if (filtered.length === 0) {
+      setBankError('Keine Fragen für dieses Thema.');
+      return;
+    }
+
+    const firstQuestion = pickRandom(filtered, new Set());
+
+    setActiveBank(filtered);
+    setAskedIds(new Set([firstQuestion.id]));
+    setCurrentQuestion(firstQuestion);
+    setStarted(true);
+    setQuestionCount(1);
+    setMessages([{ role: 'assistant', content: firstQuestion.question }]);
+    setTotalCents(0);
+    setCosts({});
+  }, [quizBank, selectedTopic]);
 
   const sendAnswer = useCallback(async () => {
     const text = input.trim();
@@ -169,7 +212,7 @@ export default function QuizPage() {
 
       // Pick next question locally — no API call
       const newAsked = new Set([...askedIds, currentQuestion.id]);
-      const next = pickRandom(quizBank, newAsked);
+      const next = pickRandom(activeBank, newAsked);
       setAskedIds(new Set([...newAsked, next.id]));
       setCurrentQuestion(next);
       setQuestionCount(n => n + 1);
@@ -188,7 +231,7 @@ export default function QuizPage() {
       setLoading(false);
       textareaRef.current?.focus();
     }
-  }, [input, loading, currentQuestion, messages, quizBank, askedIds]);
+  }, [input, loading, currentQuestion, messages, activeBank, askedIds]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -196,6 +239,19 @@ export default function QuizPage() {
       sendAnswer();
     }
   };
+
+  // Derived topic data for the selector
+  const uniqueTopics = [...new Set(quizBank.map(q => q.topic))].sort();
+  const grouped = groupTopics(uniqueTopics);
+  const activeCount = selectedTopic
+    ? quizBank.filter(q => q.topic === selectedTopic).length
+    : quizBank.length;
+  const activeTopicLabel = selectedTopic ? displayLabel(selectedTopic) : 'Alle Themen';
+
+  // Header subtitle
+  const headerSub = started
+    ? `${activeTopicLabel} · ${questionCount}Q · ${totalCents.toFixed(2)}¢`
+    : 'Management Grundlagen';
 
   return (
     <div
@@ -212,11 +268,7 @@ export default function QuizPage() {
       <header className="flex-none flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm">
         <div className="flex flex-col">
           <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Quiz</span>
-          <span className="text-xs text-zinc-400 dark:text-zinc-500">
-            {questionCount > 0
-              ? `${questionCount}Q · ${totalCents.toFixed(2)}¢ gesamt`
-              : 'Management Grundlagen'}
-          </span>
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">{headerSub}</span>
         </div>
         <Link
           href="/chat"
@@ -226,29 +278,108 @@ export default function QuizPage() {
         </Link>
       </header>
 
-      {/* Messages */}
+      {/* Messages / Pre-start */}
       <main className="flex-1 overflow-y-auto overscroll-y-contain">
         {!started ? (
-          <div className="flex flex-col items-center justify-center h-full gap-4 px-6 text-center">
-            <div className="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-3xl">
-              🎯
+          <div className="h-full flex flex-col md:flex-row">
+
+            {/* Left column — start area */}
+            <div className="flex flex-col items-center justify-center gap-4 px-8 py-8 text-center md:w-2/5 md:border-r border-zinc-100 dark:border-zinc-800">
+              <div className="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-3xl">
+                🎯
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="font-semibold text-zinc-800 dark:text-zinc-200">Quiz dich ab</p>
+                <p className="text-sm text-zinc-400 dark:text-zinc-500 max-w-xs">
+                  Eine Frage. Kein Erbarmen. Endlos.
+                </p>
+              </div>
+              {bankError && (
+                <p className="text-xs text-red-500 max-w-xs">{bankError}</p>
+              )}
+              <button
+                onClick={startQuiz}
+                disabled={bankLoading || quizBank.length === 0}
+                className="mt-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all disabled:opacity-40"
+              >
+                {bankLoading ? 'Lade Quiz…' : `Quiz starten`}
+              </button>
+              {!bankLoading && quizBank.length > 0 && (
+                <span className="text-xs text-zinc-400 dark:text-zinc-500">
+                  {activeCount} {activeCount === 1 ? 'Frage' : 'Fragen'} verfügbar
+                </span>
+              )}
             </div>
-            <div className="flex flex-col gap-1">
-              <p className="font-semibold text-zinc-800 dark:text-zinc-200">Quiz dich ab</p>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500 max-w-xs">
-                Eine Frage. Kein Erbarmen. Endlos.
-              </p>
+
+            {/* Right column — topic selector */}
+            <div className="flex flex-col md:w-3/5 overflow-hidden border-t border-zinc-100 dark:border-zinc-800 md:border-t-0">
+              <div className="px-4 pt-4 pb-2">
+                <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
+                  Thema wählen
+                </p>
+              </div>
+              <div className="flex-1 overflow-y-auto px-3 pb-4 flex flex-col gap-0.5">
+
+                {/* Alle Themen */}
+                <TopicRow
+                  label="Alle Themen"
+                  count={quizBank.length}
+                  selected={selectedTopic === null}
+                  onClick={() => setSelectedTopic(null)}
+                />
+
+                {bankLoading && (
+                  <p className="text-xs text-zinc-400 dark:text-zinc-500 px-2 py-4 text-center">
+                    Lade Themen…
+                  </p>
+                )}
+
+                {/* Grouped topics */}
+                {[...grouped.entries()].map(([parent, subtopics]) => {
+                  const parentCount = quizBank.filter(q => {
+                    if (subtopics.length > 0) return subtopics.includes(q.topic);
+                    return q.topic === parent;
+                  }).length;
+
+                  if (subtopics.length === 0) {
+                    // Standalone topic — directly selectable
+                    return (
+                      <TopicRow
+                        key={parent}
+                        label={parent}
+                        count={parentCount}
+                        selected={selectedTopic === parent}
+                        onClick={() => setSelectedTopic(parent)}
+                      />
+                    );
+                  }
+
+                  // Parent with subtopics — header (not selectable) + indented children
+                  return (
+                    <div key={parent}>
+                      <div className="flex items-center justify-between px-3 py-1.5 mt-1">
+                        <span className="text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+                          {parent}
+                        </span>
+                        <span className="text-[10px] text-zinc-400 dark:text-zinc-500">
+                          {parentCount}
+                        </span>
+                      </div>
+                      {subtopics.map(sub => (
+                        <TopicRow
+                          key={sub}
+                          label={displayLabel(sub)}
+                          count={quizBank.filter(q => q.topic === sub).length}
+                          selected={selectedTopic === sub}
+                          onClick={() => setSelectedTopic(sub)}
+                          indented
+                        />
+                      ))}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-            {bankError && (
-              <p className="text-xs text-red-500 max-w-xs">{bankError}</p>
-            )}
-            <button
-              onClick={startQuiz}
-              disabled={bankLoading}
-              className="mt-2 px-6 py-3 rounded-2xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all disabled:opacity-40"
-            >
-              {bankLoading ? 'Lade Quiz…' : 'Quiz starten'}
-            </button>
           </div>
         ) : (
           <div className="flex flex-col gap-3 px-4 pt-4 pb-6 max-w-3xl mx-auto w-full">
@@ -333,5 +464,40 @@ export default function QuizPage() {
         </footer>
       )}
     </div>
+  );
+}
+
+// ─── Topic Row ────────────────────────────────────────────────────────────────
+
+function TopicRow({
+  label,
+  count,
+  selected,
+  onClick,
+  indented = false,
+}: {
+  label: string;
+  count: number;
+  selected: boolean;
+  onClick: () => void;
+  indented?: boolean;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`
+        w-full flex items-center justify-between rounded-xl px-3 py-2 text-left transition-colors
+        ${indented ? 'pl-6' : ''}
+        ${selected
+          ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+          : 'hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300'
+        }
+      `}
+    >
+      <span className="text-sm truncate">{label}</span>
+      <span className={`ml-2 flex-none text-[11px] tabular-nums ${selected ? 'text-zinc-400 dark:text-zinc-600' : 'text-zinc-400 dark:text-zinc-500'}`}>
+        {count}
+      </span>
+    </button>
   );
 }

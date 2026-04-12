@@ -4,24 +4,6 @@
   "totalQuestions": 319,
   "questions": [
     {
-      "id": "q001",
-      "question": "Was ist die zentrale Rolle von Management Basics im Studium?",
-      "answer": "Management Basics ist das Fundament für alle Folgemodule im Studium. Es bildet die Grundlage, auf der alle Semester 2–7 aufbauen, bis zur abschließenden Bachelor Thesis.",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q002",
-      "question": "Aus welchen drei Bereichen setzt sich Management zusammen?",
-      "answer": "Management vereint drei Bereiche: Betriebswirtschaftslehre (BWL – Unternehmensmanagement und interne Prozesse), Volkswirtschaftslehre (VWL – gesamtwirtschaftliche Zusammenhänge und Märkte) und Recht (rechtliche Rahmenbedingungen und Gesetze). Diese drei Disziplinen bilden zusammen die Grundlage für gesunden Menschenverstand im Management.",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q003",
-      "question": "Welcher konzeptionelle Rahmen dient als roter Faden durch das Modul Management Basics?",
-      "answer": "Der Produkt-/Unternehmenslebenszyklus dient als roter Faden durch das Modul. Dieser durchläuft vier Phasen: Einführung (Verluste), Wachstum (steigende Gewinne), Reife (maximale Gewinne) und Sättigung (fallende Gewinne bis zur Liquidation).",
-      "topic": "0 - Einleitung"
-    },
-    {
       "id": "q004",
       "question": "Welche vier Phasen durchläuft der Produkt-/Unternehmenslebenszyklus?",
       "answer": "Die vier Phasen sind: 1. Einführung (hohe Kosten, Verluste, kein Umsatz), 2. Wachstum (Umsatz und Gewinn steigen), 3. Reife (Gewinnmaximum wird erreicht – wichtig: vor dem Umsatzmaximum), 4. Sättigung (Umsatz und Gewinn fallen, zweiter Break-even-Punkt).",
@@ -64,30 +46,6 @@
       "topic": "0 - Einleitung"
     },
     {
-      "id": "q011",
-      "question": "Was ist Bloom'sche Lerntaxonomie und wie ist sie aufgebaut?",
-      "answer": "Bloom'sche Lerntaxonomie (entwickelt von Benjamin Bloom) ist ein Klassifizierungssystem für Lernziele, das sechs Stufen hierarchisch von einfachen zu komplexen kognitiven Fähigkeiten anordnet. Sie hilft dabei, Lernergebnisse auf verschiedenen Kompetenzniveaus zu formulieren und zu bewerten.",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q012",
-      "question": "Nenne alle sechs Stufen der Bloom'schen Lerntaxonomie in aufsteigender Reihenfolge und erkläre kurz jede.",
-      "answer": "Die sechs Stufen von unten nach oben sind: 1. Wissen (Faktenwissen abrufen und wiedergeben), 2. Verstehen (Zusammenhänge erfassen und erklären), 3. Anwenden (Gelerntes in neuen Situationen nutzen), 4. Analysieren (Inhalte zerlegen und Beziehungen erkennen), 5. Synthetisieren (neuen Strukturen und Konzepte zusammenfügen) und 6. Evaluieren (Werte kritisch beurteilen und Urteile begründen).",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q013",
-      "question": "Bis zu welcher Stufe der Bloom'schen Lerntaxonomie reicht ein Bachelor-Studium?",
-      "answer": "Ein Bachelor-Studium reicht bis zur fünften Stufe, dem Synthetisieren – Absolventen können Gelerntes zu neuen Strukturen und Konzepten zusammenfügen. Die Lernziele im Bachelor werden auf verschiedenen Ebenen dieser fünf Stufen formuliert.",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q014",
-      "question": "Bis zu welcher Stufe der Bloom'schen Lerntaxonomie reicht ein Master-Studium?",
-      "answer": "Ein Master-Studium reicht bis zur sechsten und höchsten Stufe, dem Evaluieren – Absolventen können wissenschaftliche Konzepte und Methoden kritisch bewerten und Urteile begründen. Dies zeigt die tiefere wissenschaftliche Auseinandersetzung auf Master-Niveau.",
-      "topic": "0 - Einleitung"
-    },
-    {
       "id": "q015",
       "question": "Wie unterscheiden sich die Anforderungen zwischen Bachelor- und Master-Niveau bezüglich der Bloom'schen Lerntaxonomie?",
       "answer": "Der Bachelor verlangt bis Stufe 5 (Synthetisieren – neues Wissen und neue Konzepte zusammenfügen), während der Master bis Stufe 6 (Evaluieren – wissenschaftliche Standards, Methoden und Ergebnisse kritisch bewerten und reflektieren) reicht. Master-Absolventen können damit über die Synthese hinaus auch eigenständig wissenschaftliche Qualität und Relevanz beurteilen.",
@@ -112,39 +70,9 @@
       "topic": "0 - Einleitung"
     },
     {
-      "id": "q019",
-      "question": "Wie wird Management in einfachen Worten definiert und welche Disziplinen umfasst es?",
-      "answer": "**Management** wird als \"gesunder Menschenverstand\" definiert und vereint drei Bereiche: **BWL** (Betriebswirtschaftslehre – innere Unternehmensaspekte wie Produktion und Organisation), **VWL** (Volkswirtschaftslehre – externe Marktaspekte wie Angebot und Nachfrage) und **Recht** (rechtliche Rahmenbedingungen wie Vertragsrecht und Unternehmensrecht).",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q020",
-      "question": "Welche Pflichtliteratur wird für das Modul Management Basics verwendet?",
-      "answer": "Die Pflichtliteratur für das Modul ist **\"Management Basics\" von Clemens Jäger und Thomas Heupel**, ISBN: 978-3658112288. Dieses Lehrbuch bietet eine ganzheitliche Einführung in Managementfundamentale und behandelt alle Inhalte des Moduls.",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q021",
-      "question": "Wer sind die Autoren des Pflichtlehrbuches für Management Basics?",
-      "answer": "Die Autoren des Pflichtlehrbuches sind **Clemens Jäger** und **Thomas Heupel**. Ihr Buch deckt alle wesentlichen Aspekte der Management Basics ab und dient als zentrale Referenz für das Modul.",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q022",
-      "question": "Wie werden Lernergebnisse mithilfe der Bloom'schen Lerntaxonomie auf verschiedenen Absclussstufen formuliert?",
-      "answer": "Nach der **Bloom'schen Lerntaxonomie** werden Lernergebnisse auf 6 Stufen formuliert: 1) Wissen (Fakten kennen), 2) Verstehen (Zusammenhänge erklären), 3) Anwenden (Wissen in Situationen nutzen), 4) Analysieren (Strukturen erkennen), 5) Synthetisieren (neue Kombinationen schaffen), 6) Evaluieren (bewerten und urteilen). **Bachelor-Abschlüsse** erreichen maximal Stufe 5, **Master-Abschlüsse** bis Stufe 6.",
-      "topic": "0 - Einleitung"
-    },
-    {
       "id": "q023",
       "question": "Welche Faktoren tragen zur Komplexität des modernen Unternehmensumfelds bei?",
       "answer": "Mehrere Faktoren tragen zur Komplexität bei: **intensive Wettbewerbe und disruptive Innovationen** (schnelle technologische Veränderungen verdrängen etablierte Geschäftsmodelle), **Globalisierung** (weltweite Lieferketten und Märkte), **kurze Produktlebenszyklen** (schnellere Veralterung von Produkten), **schnell wechselnde Konsumentenpräferenzen** (durch Informationstechnologie und digitale Vernetzung).",
-      "topic": "0 - Einleitung"
-    },
-    {
-      "id": "q024",
-      "question": "Warum ist Management Basics wie das Fundament eines Hauses?",
-      "answer": "**Management Basics ist wie das Fundament eines Hauses**, weil alle nachfolgenden Module im Studium (Semester 2–7) direkt darauf aufbauen. Ohne dieses fundamentale Verständnis von Management, BWL, VWL und Recht können spezialisierte Module nicht erfolgreich absolviert werden – ähnlich wie ein Haus ohne solides Fundament einstürzt.",
       "topic": "0 - Einleitung"
     },
     {
@@ -163,12 +91,6 @@
       "id": "q027",
       "question": "Nenne vier bekannte Unternehmer und ihre Unternehmen aus der Vorlesung.",
       "answer": "Elon Musk (Tesla/SpaceX) – Elektromobilität und Raumfahrt, Bill Gates (Microsoft) – Softwareentwicklung, Mark Zuckerberg (Facebook) – Social Media, Jeff Bezos (Amazon) – E-Commerce. Diese Beispiele zeigen verschiedene Branchen und unterschiedliche Geschäftsmodelle.",
-      "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
-    },
-    {
-      "id": "q028",
-      "question": "Welcher Aktienkurs von Berkshire Hathaway wurde am 28.07.2023 genannt und warum ist dieser so hoch?",
-      "answer": "Der Aktienkurs betrug 484.500 Euro pro Aktie. Dieser außergewöhnlich hohe Preis resultiert daraus, dass Berkshire Hathaway traditionell keine Aktiensplits durchführt – die Aktie steigt kontinuierlich mit der Unternehmenswertsteigerung an, wodurch ein einzelner Aktienanteil sehr wertvoll wird.",
       "topic": "1 - Management Basics: Unternehmerische Fragestellungen"
     },
     {
