@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import Link from 'next/link';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -161,8 +160,6 @@ export default function QuizPage() {
     setStarted(true);
     setQuestionCount(1);
     setMessages([{ role: 'assistant', content: firstQuestion.question }]);
-    setTotalCents(0);
-    setCosts({});
   }, [quizBank, selectedTopic]);
 
   const sendAnswer = useCallback(async () => {
@@ -270,12 +267,14 @@ export default function QuizPage() {
           <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Quiz</span>
           <span className="text-xs text-zinc-400 dark:text-zinc-500">{headerSub}</span>
         </div>
-        <Link
-          href="/chat"
-          className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
-        >
-          Chat →
-        </Link>
+        {started && (
+          <button
+            onClick={() => setStarted(false)}
+            className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+          >
+            ← Themen
+          </button>
+        )}
       </header>
 
       {/* Messages / Pre-start */}
