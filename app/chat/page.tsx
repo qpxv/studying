@@ -54,8 +54,23 @@ export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [vp, setVp] = useState<{ height: number; top: number } | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const update = () => {
+      const vv = window.visualViewport;
+      setVp({ height: vv ? vv.height : window.innerHeight, top: vv ? vv.offsetTop : 0 });
+    };
+    update();
+    window.visualViewport?.addEventListener('resize', update);
+    window.visualViewport?.addEventListener('scroll', update);
+    return () => {
+      window.visualViewport?.removeEventListener('resize', update);
+      window.visualViewport?.removeEventListener('scroll', update);
+    };
+  }, []);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -126,7 +141,16 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex flex-col h-dvh bg-white dark:bg-zinc-950">
+    <div
+      className="flex flex-col bg-white dark:bg-zinc-950"
+      style={{
+        position: 'fixed',
+        top: vp ? vp.top : 0,
+        left: 0,
+        right: 0,
+        height: vp ? vp.height : '100dvh',
+      }}
+    >
       <header className="flex-none flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-sm">
         <div className="flex flex-col">
           <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Management Grundlagen</span>
@@ -140,7 +164,7 @@ export default function ChatPage() {
         </Link>
       </header>
 
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto overscroll-y-contain">
         {messages.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full gap-3 px-6 text-center">
             <div className="w-12 h-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-2xl">
@@ -152,7 +176,7 @@ export default function ChatPage() {
             </p>
           </div>
         ) : (
-          <div className="flex flex-col gap-3 px-4 py-4 max-w-3xl mx-auto w-full">
+          <div className="flex flex-col gap-3 px-4 pt-4 pb-6 max-w-3xl mx-auto w-full">
             {messages.map((msg, i) => (
               <div key={i}>
                 {msg.content === '' && loading && i === messages.length - 1 ? (
@@ -181,6 +205,7 @@ export default function ChatPage() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
+            onFocus={() => bottomRef.current?.scrollIntoView({ behavior: 'smooth' })}
             placeholder="Message..."
             rows={1}
             disabled={loading}
@@ -188,7 +213,7 @@ export default function ChatPage() {
               flex-1 resize-none rounded-2xl border border-zinc-200 dark:border-zinc-700
               bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100
               placeholder-zinc-400 dark:placeholder-zinc-500
-              px-4 py-3 text-sm leading-relaxed outline-none
+              px-4 py-3 text-base leading-relaxed outline-none
               focus:border-zinc-400 dark:focus:border-zinc-500
               disabled:opacity-50 transition-colors
             "
@@ -207,7 +232,7 @@ export default function ChatPage() {
             <SendIcon />
           </button>
         </div>
-        <p className="text-center text-xs text-zinc-300 dark:text-zinc-600 mt-2 max-w-3xl mx-auto">
+        <p className="hidden sm:block text-center text-xs text-zinc-300 dark:text-zinc-600 mt-2 max-w-3xl mx-auto">
           Enter to send · Shift+Enter for new line
         </p>
       </footer>
