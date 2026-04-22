@@ -10,7 +10,7 @@ export default async function FeedbackPage() {
     prisma.feedback.findMany({ orderBy: { createdAt: "desc" } }),
   ]);
 
-  if (!session) redirect("/signin");
+  if (!session) redirect("/sign-in");
   return (
     <div className="flex flex-col gap-4 px-4 py-6 max-w-sm mx-auto w-full">
       <FeedbackForm initialEntries={entries} userName={session.user.name} />
