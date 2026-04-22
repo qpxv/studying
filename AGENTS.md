@@ -93,3 +93,10 @@ flex items-center gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zi
 ```
 Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 
+# Prisma + Next.js Gotchas
+
+## Stale build cache after adding new models
+After running `npx prisma migrate dev` + `npx prisma generate` to add new models, Next.js can serve a cached bundle that only knows about the models that existed when the cache was last built. Symptoms: Prisma adapter errors like "Model X does not exist in the database" even though `prisma generate` succeeded and the model is in the schema.
+
+**Fix:** `rm -rf .next` then restart the dev server. Always do this after adding new Prisma models mid-project.
+
