@@ -8,7 +8,8 @@ const ROUTES = [
     name: "Management Grundlagen",
     desc: "Flashcard quiz · KI-Feedback",
     tag: "Online",
-    tagColor: "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/50",
+    tagColor:
+      "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/50",
     dot: "bg-green-400",
   },
   {
@@ -16,16 +17,16 @@ const ROUTES = [
     icon: Construction,
     name: "AP1",
     desc: "Coming soon",
-    tag: "Offline",
-    tagColor: "text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800",
-    dot: "bg-zinc-400",
+    tag: "Partial",
+    tagColor:
+      "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/50",
+    dot: "bg-yellow-400",
   },
 ];
 
 export default function Hub() {
   return (
     <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
-
       <div className="flex flex-col items-center gap-1.5 text-center">
         <h1 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
           Select Mode
@@ -60,7 +61,9 @@ export default function Hub() {
               <div className="flex items-center gap-2.5 flex-none">
                 <div className="flex items-center gap-1.5">
                   <span className={`w-1.5 h-1.5 rounded-full ${r.dot}`} />
-                  <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${r.tagColor}`}>
+                  <span
+                    className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${r.tagColor}`}
+                  >
                     {r.tag}
                   </span>
                 </div>
@@ -71,7 +74,9 @@ export default function Hub() {
         })}
       </div>
 
-      <p className="text-[11px] text-zinc-300 dark:text-zinc-700">Lernhub v0.1</p>
+      <p className="text-[11px] text-zinc-300 dark:text-zinc-700">
+        Lernhub v0.1
+      </p>
     </div>
   );
 }
