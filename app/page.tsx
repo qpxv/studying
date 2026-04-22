@@ -20,7 +20,7 @@ const ROUTES = [
     tag: "Partial",
     tagColor:
       "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/50",
-    dot: "bg-yellow-400 ",
+    dot: "bg-yellow-400",
   },
 ];
 
