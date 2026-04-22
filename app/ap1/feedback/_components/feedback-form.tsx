@@ -21,8 +21,7 @@ function timeAgo(date: Date): string {
   return `vor ${days} Tag${days !== 1 ? 'en' : ''}`;
 }
 
-export function FeedbackForm({ initialEntries }: { initialEntries: Entry[] }) {
-  const [author, setAuthor] = useState('');
+export function FeedbackForm({ initialEntries, userName }: { initialEntries: Entry[]; userName: string | null }) {
   const [content, setContent] = useState('');
   const [entries, setEntries] = useState<Entry[]>(initialEntries);
   const [confirmed, setConfirmed] = useState(false);
@@ -35,15 +34,14 @@ export function FeedbackForm({ initialEntries }: { initialEntries: Entry[] }) {
 
     startTransition(async () => {
       try {
-        await createFeedback(author || undefined, content);
+        await createFeedback(userName ?? undefined, content);
         const optimistic: Entry = {
           id: crypto.randomUUID(),
-          author: author.trim() || null,
+          author: userName,
           content: content.trim(),
           createdAt: new Date(),
         };
         setEntries(prev => [optimistic, ...prev]);
-        setAuthor('');
         setContent('');
         setConfirmed(true);
         setTimeout(() => setConfirmed(false), 3000);
@@ -68,15 +66,6 @@ export function FeedbackForm({ initialEntries }: { initialEntries: Entry[] }) {
         <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
           Idee einreichen
         </p>
-
-        <input
-          type="text"
-          value={author}
-          onChange={e => setAuthor(e.target.value)}
-          placeholder="Dein Name (optional)"
-          disabled={isPending}
-          className="w-full rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 px-4 py-2.5 text-sm outline-none focus:border-zinc-400 dark:focus:border-zinc-500 transition-colors disabled:opacity-50"
-        />
 
         <textarea
           value={content}
