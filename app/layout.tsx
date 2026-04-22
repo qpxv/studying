@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Management Grundlagen",
-  description: "Study assistant for management fundamentals",
+  title: "Lern-App",
+  description: "Lern-App für die GOATs für alles mögliche",
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  viewportFit: 'cover',
-  interactiveWidget: 'resizes-content',
+  viewportFit: "cover",
+  interactiveWidget: "resizes-content",
 };
 
 export default function RootLayout({
