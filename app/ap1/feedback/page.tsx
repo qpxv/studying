@@ -1,22 +1,14 @@
-import { MessageCircle } from 'lucide-react';
+import { prisma } from '@/lib/prisma';
+import { FeedbackForm } from './_components/feedback-form';
 
-export default function FeedbackPage() {
+export default async function FeedbackPage() {
+  const entries = await prisma.feedback.findMany({
+    orderBy: { createdAt: 'desc' },
+  });
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-full px-4 py-10">
-      <div className="w-full max-w-sm rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 p-6 flex flex-col gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-            <MessageCircle className="w-5 h-5 text-zinc-500 dark:text-zinc-400" />
-          </div>
-          <div>
-            <p className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Feedback</p>
-            <p className="text-xs text-zinc-400 dark:text-zinc-500">In Planung</p>
-          </div>
-        </div>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-          Detailliertes KI-Feedback zu deinen Antworten — kommt bald.
-        </p>
-      </div>
+    <div className="flex flex-col gap-4 px-4 py-6 max-w-sm mx-auto w-full">
+      <FeedbackForm initialEntries={entries} />
     </div>
   );
 }
