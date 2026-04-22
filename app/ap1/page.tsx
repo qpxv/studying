@@ -4,7 +4,7 @@ import { Construction, Sparkles, Ticket, TicketCheckIcon } from "lucide-react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
-export default function AP1Page() {
+export default function Ap1Page() {
   return (
     <div className="flex flex-col items-center justify-center h-full px-4 gap-4">
       <Link
