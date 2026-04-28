@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BrainCircuit, Construction, ArrowRight } from "lucide-react";
+import { BrainCircuit, Construction, ArrowRight, BookText } from "lucide-react";
 
 const ROUTES = [
   {
@@ -14,13 +14,13 @@ const ROUTES = [
   },
   {
     href: "/ap1",
-    icon: Construction,
+    icon: BookText,
     name: "AP1",
-    desc: "Coming soon",
-    tag: "Partial",
+    desc: "Notizen · Karteikarten · Quiz",
+    tag: "Online",
     tagColor:
-      "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/50",
-    dot: "bg-yellow-400",
+      "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/50",
+    dot: "bg-green-400",
   },
 ];
 
