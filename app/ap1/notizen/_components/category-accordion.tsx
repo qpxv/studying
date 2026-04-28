@@ -193,7 +193,13 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
                 [&_code]:font-mono [&_code]:text-xs [&_code]:bg-zinc-100 [&_code]:dark:bg-zinc-800 [&_code]:px-1 [&_code]:rounded
                 [&_pre]:bg-zinc-100 [&_pre]:dark:bg-zinc-800 [&_pre]:rounded-xl [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:mb-3 [&_pre_code]:bg-transparent [&_pre_code]:px-0
                 [&_blockquote]:border-l-2 [&_blockquote]:border-zinc-300 [&_blockquote]:dark:border-zinc-700 [&_blockquote]:pl-4 [&_blockquote]:text-zinc-500 [&_blockquote]:mb-3
-                [&_a]:underline [&_hr]:border-zinc-200 [&_hr]:dark:border-zinc-800 [&_hr]:my-4"
+                [&_a]:underline [&_hr]:border-zinc-200 [&_hr]:dark:border-zinc-800 [&_hr]:my-4
+                [&_table]:w-full [&_table]:mb-4 [&_table]:border-collapse [&_table]:overflow-hidden [&_table]:rounded-xl
+                [&_thead]:bg-zinc-100 [&_thead]:dark:bg-zinc-800
+                [&_th]:px-4 [&_th]:py-2.5 [&_th]:text-left [&_th]:text-xs [&_th]:font-semibold [&_th]:text-zinc-900 [&_th]:dark:text-zinc-100 [&_th]:uppercase [&_th]:tracking-wider [&_th]:border-b [&_th]:border-zinc-200 [&_th]:dark:border-zinc-700
+                [&_td]:px-4 [&_td]:py-2.5 [&_td]:text-sm [&_td]:text-zinc-700 [&_td]:dark:text-zinc-300 [&_td]:border-b [&_td]:border-zinc-100 [&_td]:dark:border-zinc-800
+                [&_tr:last-child_td]:border-0
+                [&_tbody_tr:hover]:bg-zinc-50 [&_tbody_tr:hover]:dark:bg-zinc-800/50"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           ) : (
