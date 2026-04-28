@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Layers, HelpCircle, MessageCircle } from 'lucide-react';
+import { Layers, HelpCircle, MessageCircle, NotebookPen } from 'lucide-react';
 
 const NAV_ITEMS = [
   { href: '/ap1/karteikarten', label: 'Karteikarten', icon: Layers },
   { href: '/ap1/quiz',         label: 'Quiz',         icon: HelpCircle },
+  { href: '/ap1/notizen',      label: 'Notizen',      icon: NotebookPen },
   { href: '/ap1/feedback',     label: 'Feedback',     icon: MessageCircle },
 ];
 
