@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Folder, FolderOpen, ChevronDown, Pencil, Trash2, Upload, Check, X, Eye, FileText } from 'lucide-react';
+import { Folder, FolderOpen, ChevronDown, Pencil, Trash2, Upload, Check, X } from 'lucide-react';
 import { marked } from 'marked';
 
 interface Category {
@@ -46,37 +46,22 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const [contentMode, setContentMode] = useState<'view' | 'edit'>('view');
-  const [editTab, setEditTab] = useState<'write' | 'preview'>('write');
   const [draft, setDraft] = useState(category.markdownContent ?? '');
   const [isSaving, setIsSaving] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // Keep draft in sync when content changes from outside (file upload / server revalidation)
-  // but only when not actively editing
   useEffect(() => {
     if (contentMode === 'view') setDraft(category.markdownContent ?? '');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category.markdownContent]);
 
-  // Auto-resize textarea
-  useEffect(() => {
-    const ta = textareaRef.current;
-    if (!ta) return;
-    ta.style.height = 'auto';
-    ta.style.height = `${ta.scrollHeight}px`;
-  }, [draft, contentMode, editTab]);
-
   function handleToggleOpen() {
     if (isEditing) return;
     const next = !isOpen;
     setIsOpen(next);
-    if (next && !category.markdownContent) {
-      setContentMode('edit');
-      setEditTab('write');
-    }
+    if (next && !category.markdownContent) setContentMode('edit');
   }
 
   async function handleRename() {
@@ -104,7 +89,6 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
   function handleCancelContent() {
     setDraft(category.markdownContent ?? '');
     setContentMode(category.markdownContent ? 'view' : 'edit');
-    setEditTab('write');
   }
 
   async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -203,83 +187,51 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
         <div className="border-t border-zinc-200 dark:border-zinc-800">
 
           {contentMode === 'edit' ? (
-            /* ── Edit mode ── */
+            /* ── Edit mode (split view) ── */
             <div className="px-5 py-4 flex flex-col gap-3">
-              {/* Tab bar + actions */}
-              <div className="flex items-center justify-between gap-2">
-                {/* Tabs */}
-                <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 rounded-xl p-1">
-                  <button
-                    onClick={() => setEditTab('write')}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                      editTab === 'write'
-                        ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 shadow-sm'
-                        : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'
-                    }`}
-                  >
-                    <FileText className="w-3 h-3" />
-                    Schreiben
-                  </button>
-                  <button
-                    onClick={() => setEditTab('preview')}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                      editTab === 'preview'
-                        ? 'bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 shadow-sm'
-                        : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300'
-                    }`}
-                  >
-                    <Eye className="w-3 h-3" />
-                    Vorschau
-                  </button>
-                </div>
-
-                {/* Save / cancel / upload */}
-                <div className="flex items-center gap-2">
-                  <label className={`inline-flex items-center gap-1.5 text-xs transition-colors cursor-pointer ${busy ? 'opacity-50 pointer-events-none' : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300'}`}>
-                    <Upload className="w-3 h-3" />
-                    .md
-                    <input ref={fileInputRef} type="file" accept=".md,text/markdown" className="sr-only" onChange={handleFileChange} disabled={busy} />
-                  </label>
-                  <button
-                    onClick={handleCancelContent}
-                    disabled={busy}
-                    className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors disabled:opacity-40"
-                  >
-                    Abbrechen
-                  </button>
-                  <button
-                    onClick={handleSaveContent}
-                    disabled={busy}
-                    className="px-3 py-1.5 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-medium hover:opacity-80 active:scale-95 transition-all disabled:opacity-40"
-                  >
-                    {isSaving ? 'Speichern…' : 'Speichern'}
-                  </button>
-                </div>
+              {/* Actions */}
+              <div className="flex items-center justify-end gap-2 w-full">
+                <label className={`inline-flex items-center gap-1.5 text-xs transition-colors cursor-pointer ${busy ? 'opacity-50 pointer-events-none' : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300'}`}>
+                  <Upload className="w-3 h-3" />
+                  .md
+                  <input ref={fileInputRef} type="file" accept=".md,text/markdown" className="sr-only" onChange={handleFileChange} disabled={busy} />
+                </label>
+                <button
+                  onClick={handleCancelContent}
+                  disabled={busy}
+                  className="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors disabled:opacity-40"
+                >
+                  Abbrechen
+                </button>
+                <button
+                  onClick={handleSaveContent}
+                  disabled={busy}
+                  className="px-3 py-1.5 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-medium hover:opacity-80 active:scale-95 transition-all disabled:opacity-40"
+                >
+                  {isSaving ? 'Speichern…' : 'Speichern'}
+                </button>
               </div>
 
-              {/* Write tab */}
-              {editTab === 'write' && (
+              {/* Split panes */}
+              <div className="flex gap-4 min-h-[320px]">
                 <textarea
-                  ref={textareaRef}
                   value={draft}
                   onChange={(e) => setDraft(e.target.value)}
                   placeholder="Markdown hier eingeben…&#10;&#10;# Überschrift&#10;**fett**, *kursiv*, `code`&#10;&#10;| Spalte 1 | Spalte 2 |&#10;|---|---|&#10;| Wert | Wert |"
-                  className="w-full resize-none rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-300 dark:placeholder-zinc-600 px-4 py-3 text-sm font-mono leading-relaxed outline-none focus:border-zinc-400 dark:focus:border-zinc-500 transition-colors min-h-[200px]"
-                  style={{ overflow: 'hidden' }}
+                  className="flex-1 resize-none rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-300 dark:placeholder-zinc-600 px-4 py-3 text-sm font-mono leading-relaxed outline-none focus:border-zinc-400 dark:focus:border-zinc-500 transition-colors overflow-y-auto"
                 />
-              )}
-
-              {/* Preview tab */}
-              {editTab === 'preview' && (
-                previewHtml
-                  ? <div className={PROSE} dangerouslySetInnerHTML={{ __html: previewHtml }} />
-                  : <p className="text-sm text-zinc-400 dark:text-zinc-500 italic">Noch nichts zum Anzeigen.</p>
-              )}
+                <div className="w-px bg-zinc-200 dark:bg-zinc-700 flex-none" />
+                <div className="flex-1 overflow-y-auto py-1">
+                  {previewHtml
+                    ? <div className={PROSE} dangerouslySetInnerHTML={{ __html: previewHtml }} />
+                    : <p className="text-sm text-zinc-400 dark:text-zinc-500 italic">Noch nichts zum Anzeigen.</p>
+                  }
+                </div>
+              </div>
             </div>
           ) : (
             /* ── View mode ── */
             <div className="px-5 py-4">
-              {/* Toolbar */}
               <div className="flex items-center justify-between mb-4">
                 <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
                   Inhalt
@@ -291,7 +243,7 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
                     <input ref={fileInputRef} type="file" accept=".md,text/markdown" className="sr-only" onChange={handleFileChange} disabled={busy} />
                   </label>
                   <button
-                    onClick={() => { setContentMode('edit'); setEditTab('write'); }}
+                    onClick={() => setContentMode('edit')}
                     className="inline-flex items-center gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
                   >
                     <Pencil className="w-3 h-3" />

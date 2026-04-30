@@ -6,7 +6,7 @@ export default async function NotizenPage() {
     orderBy: { createdAt: 'asc' },
   });
   return (
-    <div className="flex flex-col gap-4 px-4 py-6 max-w-2xl mx-auto w-full">
+    <div className="flex flex-col gap-4 px-4 py-6 w-full">
       <NotizenList initialCategories={categories} />
     </div>
   );
