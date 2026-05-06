@@ -82,12 +82,26 @@ model Verification {
   @@map("verification")
 }
 
+model Kategorie {
+  id        String     @id @default(cuid())
+  name      String
+  order     Int        @default(0)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  themen    Category[]
+
+  @@map("kategorie")
+}
+
 model Category {
-  id              String   @id @default(cuid())
+  id              String     @id @default(cuid())
   name            String
   markdownContent String?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  order           Int        @default(0)
+  kategorieId     String?
+  kategorie       Kategorie? @relation(fields: [kategorieId], references: [id], onDelete: SetNull)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
 
   @@map("category")
 }

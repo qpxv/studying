@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo, memo } from 'react';
 import { Folder, FolderOpen, ChevronDown, Pencil, Trash2, Upload, Check, X } from 'lucide-react';
 import { marked } from 'marked';
 
@@ -39,7 +39,7 @@ const PROSE =
   '[&_tr:last-child_td]:border-0 ' +
   '[&_tbody_tr:hover]:bg-zinc-50 [&_tbody_tr:hover]:dark:bg-zinc-800/50';
 
-export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPending }: Props) {
+export const CategoryAccordion = memo(function CategoryAccordion({ category, onRename, onUpload, onDelete, isPending }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [editValue, setEditValue] = useState(category.name);
@@ -112,8 +112,14 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
     setShowDeleteConfirm(false);
   }
 
-  const viewHtml = category.markdownContent ? (marked.parse(category.markdownContent) as string) : null;
-  const previewHtml = draft ? (marked.parse(draft) as string) : null;
+  const viewHtml = useMemo(
+    () => category.markdownContent ? (marked.parse(category.markdownContent) as string) : null,
+    [category.markdownContent],
+  );
+  const previewHtml = useMemo(
+    () => draft ? (marked.parse(draft) as string) : null,
+    [draft],
+  );
   const busy = isSaving || isUploading || isPending;
 
   return (
@@ -262,4 +268,4 @@ export function CategoryAccordion({ category, onRename, onUpload, onDelete, isPe
       )}
     </div>
   );
-}
+});
