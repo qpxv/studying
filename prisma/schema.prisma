@@ -29,6 +29,7 @@ model User {
   updatedAt     DateTime  @updatedAt
   sessions      Session[]
   accounts      Account[]
+  scores        KarteikarteBewertung[]
 
   @@unique([email])
   @@map("user")
@@ -104,4 +105,27 @@ model Category {
   updatedAt       DateTime   @updatedAt
 
   @@map("category")
+}
+
+model Karteikarte {
+  id        Int                    @id
+  question  String
+  answer    String
+  scores    KarteikarteBewertung[]
+  createdAt DateTime               @default(now())
+
+  @@map("karteikarte")
+}
+
+model KarteikarteBewertung {
+  id            String      @id @default(cuid())
+  karteikarte   Karteikarte @relation(fields: [karteikarteId], references: [id])
+  karteikarteId Int
+  user          User        @relation(fields: [userId], references: [id])
+  userId        String
+  score         String
+  updatedAt     DateTime    @updatedAt
+
+  @@unique([karteikarteId, userId])
+  @@map("karteikarte_bewertung")
 }
