@@ -5,15 +5,7 @@ const SECTIONS = [
   {
     label: "FOM",
     routes: [
-      {
-        href: "/management",
-        icon: BrainCircuit,
-        name: "Management Grundlagen",
-        desc: "Flashcard quiz · KI-Feedback",
-        tag: "Online",
-        tagColor: "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/50",
-        dot: "bg-green-400",
-      },
+      // { href: "/management", icon: BrainCircuit, name: "Management Grundlagen", desc: "Flashcard quiz · KI-Feedback", tag: "Online", tagColor: "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/50", dot: "bg-green-400" },
       {
         href: "/sql",
         icon: Database,
