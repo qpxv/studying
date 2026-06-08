@@ -10,6 +10,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Tailwind CSS v4 (`@import "tailwindcss"` in globals.css)
 - Fonts: Geist Sans (`--font-sans`) + Geist Mono (`--font-mono`)
 - Icons: `lucide-react`
+- Markdown rendering: `marked` (used in SQL Praxis bubbles via `dangerouslySetInnerHTML` + `.sql-markdown` CSS class in globals.css)
 
 ## Color tokens (globals.css)
 | Token | Light | Dark |
@@ -75,10 +76,11 @@ bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900
 ```
 Unselected hover: `hover:bg-zinc-100 dark:hover:bg-zinc-800`
 
-## Chat bubbles (management quiz page)
+## Chat bubbles (quiz / praxis pages)
 - **AI bubble**: `bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 rounded-2xl rounded-bl-sm`
 - **User bubble**: `bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-2xl rounded-br-sm`
 - Both: `px-4 py-3 text-sm leading-relaxed max-w-[85%]`
+- AI bubbles that render markdown use the `.sql-markdown` CSS class + `dangerouslySetInnerHTML` with `marked.parse()`
 
 ## Layout patterns
 - Full-height locked layout: `position: fixed` with `visualViewport` tracking (handles iOS keyboard)
@@ -93,10 +95,76 @@ flex items-center gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zi
 ```
 Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 
+# App Structure
+
+## Routes
+| Path | Description |
+|---|---|
+| `/` | Hub — mode selector (Management, AP1, SQL) |
+| `/management` | Management Grundlagen theory quiz |
+| `/sql` | SQL mode selector (Quiz / Praxis) |
+| `/sql/quiz` | SQL theory quiz (same QuizPage component as management) |
+| `/sql/praxis` | SQL Praxis — AI generates fresh tables + task each round |
+| `/ap1` | AP1 hub |
+| `/ap1/notizen` | AP1 notes (Kategorien + Markdown editor) |
+| `/ap1/karteikarten` | AP1 flashcards (Lernen / Fragen / Stats) |
+| `/ap1/quiz` | AP1 quiz |
+| `/ap1/feedback` | Feedback form |
+| `/sign-in` `/sign-up` | Auth pages |
+
+## Shared components
+- `app/_components/quiz-page.tsx` — shared quiz UI used by `/management` and `/sql/quiz`. Subject-aware: fetches from `/api/<subject>/quiz-bank` and `/api/<subject>/quiz-evaluate`. Add new subjects to the `ICONS` map at the top.
+
+## API routes
+| Route | Method | Description |
+|---|---|---|
+| `/api/[subject]/quiz-bank` | GET | Serves `subjects/<subject>/notes/quiz-bank.json` |
+| `/api/[subject]/quiz-evaluate` | POST | Streams Claude evaluation for a quiz answer |
+| `/api/sql/praxis-generate` | POST | Streams AI-generated markdown tables + task |
+| `/api/sql/praxis-evaluate` | POST | Streams Claude evaluation of a SQL query |
+| `/api/karteikarten/evaluate` | POST | Non-streaming evaluation for AP1 flashcards |
+| `/api/auth/[...all]` | * | Better Auth handler |
+
+# Subject / Content Pipeline
+
+## Folder structure
+```
+subjects/
+  mimick/              ← shared writing style examples (used by all subjects)
+  management/
+    assets/            ← drop lecture PDFs here
+    notes/
+      generated-notes.md
+      quiz-bank.json
+  sql/
+    assets/            ← drop lecture PDFs here
+    notes/
+      generated-notes.md
+      quiz-bank.json
+```
+To add a new subject: create `subjects/<name>/assets/` and `subjects/<name>/notes/`, add its icon to `ICONS` in `quiz-page.tsx`, add a route entry in `app/page.tsx`.
+
+## Scripts (all require `.env` with `ANTHROPIC_API_KEY`)
+```bash
+npm run create-notes -- <subject>      # PDF → generated-notes.md  (Sonnet)
+npm run generate -- <subject>          # notes → quiz-bank.json     (Haiku)
+npm run improve-context -- <subject>   # enrich quiz bank answers   (Haiku)
+npm run quiz -- <subject>              # interactive CLI quiz        (Opus)
+```
+Pass subject as a positional arg after `--`, e.g. `npm run create-notes -- sql`.
+
+`create-notes` uses **claude-sonnet-4-6** (heavy PDF vision work).
+`generate` and `improve-context` use **claude-haiku-4-5-20251001** (cheap structured JSON).
+
+## SQL Praxis mode (no static files)
+`/sql/praxis` requires no pre-generated content. Each round:
+1. `POST /api/sql/praxis-generate` → Haiku streams markdown tables + task
+2. User writes SQL in a monospace textarea
+3. `POST /api/sql/praxis-evaluate` → Haiku evaluates the query, renders markdown feedback (code blocks for correct SQL)
+
 # Prisma + Next.js Gotchas
 
 ## Stale build cache after adding new models
 After running `npx prisma migrate dev` + `npx prisma generate` to add new models, Next.js can serve a cached bundle that only knows about the models that existed when the cache was last built. Symptoms: Prisma adapter errors like "Model X does not exist in the database" even though `prisma generate` succeeded and the model is in the schema.
 
 **Fix:** `rm -rf .next` then restart the dev server. Always do this after adding new Prisma models mid-project.
-
