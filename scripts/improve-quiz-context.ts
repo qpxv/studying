@@ -2,9 +2,15 @@ import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 
-const BANK_FILE = path.resolve('./notes/quiz-bank.json');
-const NOTES_FILE = path.resolve('./notes/generated-notes.md');
-const PROGRESS_FILE = path.resolve('./notes/.improve-context-progress.json');
+const subject = process.argv[2];
+if (!subject) {
+  console.error('Usage: npm run improve-context -- <subject>  (e.g. management, sql)');
+  process.exit(1);
+}
+
+const BANK_FILE = path.resolve(`./subjects/${subject}/notes/quiz-bank.json`);
+const NOTES_FILE = path.resolve(`./subjects/${subject}/notes/generated-notes.md`);
+const PROGRESS_FILE = path.resolve(`./subjects/${subject}/notes/.improve-context-progress.json`);
 const MODEL = 'claude-haiku-4-5-20251001';
 const BATCH_SIZE = 15;
 
@@ -24,7 +30,7 @@ interface QuizBank {
 
 interface Progress {
   completedBatches: number[];
-  improved: Record<string, { question: string; answer: string }>; // id -> improved q+a
+  improved: Record<string, { question: string; answer: string }>;
 }
 
 // ─── Pricing ─────────────────────────────────────────────────────────────────
@@ -75,19 +81,19 @@ function parseImproved(raw: string): Array<{ id: string; question: string; answe
 
 // ─── Processing ───────────────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `Du bist ein Lernmaterial-Verbesserer für einen deutschen Universitätskurs in Management Grundlagen.
+const SYSTEM_PROMPT = `Du bist ein Lernmaterial-Verbesserer für einen deutschen Universitätskurs.
 
 AUFGABE: Verbessere sowohl die FRAGE als auch die ANTWORT jedes Eintrags, damit ein Studierender den Inhalt ohne Vorwissen verstehen kann.
 
 FRAGEN verbessern wenn:
-- Die Frage zu allgemein ist und ohne Kontext nicht einordbar ("Welche Beispiele werden genannt?" → besser: "Welche konkreten Beispiele für politische Risiken wie Enteignung oder Kapitaltransfer werden im Risikomanagement genannt?")
-- Der Bezug zum Thema fehlt ("Was sind die vier Stufen?" → besser: "Was sind die vier Stufen der risikopolitischen Gegenmaßnahmen im Risikomanagement?")
+- Die Frage zu allgemein ist und ohne Kontext nicht einordbar ("Welche Beispiele werden genannt?" → besser: "Welche konkreten Beispiele für X werden im Kontext von Y genannt?")
+- Der Bezug zum Thema fehlt ("Was sind die vier Stufen?" → besser: "Was sind die vier Stufen von Z?")
 - Abkürzungen oder Fachbegriffe in der Frage nicht erklärt sind
 
 ANTWORTEN verbessern wenn:
-- Fachbegriffe ohne Erklärung stehen (z.B. "Enteignungsrisiko", "Transferrisiko", "Avalkredit")
-- Beispiele kontextlos wirken (z.B. "z.B. Russland" ohne Erklärung was dort passierte)
-- Statistiken ohne Hintergrund stehen (z.B. warum sanken Insolvenzen 2020-2022?)
+- Fachbegriffe ohne Erklärung stehen
+- Beispiele kontextlos wirken
+- Statistiken ohne Hintergrund stehen
 - Gesetze/Paragraphen erwähnt werden ohne kurze Erklärung was sie bedeuten
 - Historische Ereignisse oder Personen ohne Hintergrund referenziert werden
 
@@ -155,7 +161,6 @@ async function processBatch(
   } catch (err) {
     console.error(`    ✗ JSON parse fehlgeschlagen: ${err instanceof Error ? err.message : err}`);
     console.error(`    Raw (erste 300 Zeichen): ${raw.slice(0, 300)}`);
-    // Fallback: return originals unchanged
     improved = questions.map(q => ({ id: q.id, question: q.question, answer: q.answer }));
   }
 
@@ -174,17 +179,18 @@ async function main() {
   }
 
   if (!fs.existsSync(BANK_FILE)) {
-    console.error(`Quiz-Bank nicht gefunden: ${BANK_FILE}\nFühre zuerst "npm run generate" aus.`);
+    console.error(`Quiz-Bank nicht gefunden: ${BANK_FILE}\nFühre zuerst "npm run generate -- ${subject}" aus.`);
     process.exit(1);
   }
 
   if (!fs.existsSync(NOTES_FILE)) {
-    console.error(`Notizen-Datei nicht gefunden: ${NOTES_FILE}\nFühre zuerst "npm run create-notes" aus.`);
+    console.error(`Notizen-Datei nicht gefunden: ${NOTES_FILE}\nFühre zuerst "npm run create-notes -- ${subject}" aus.`);
     process.exit(1);
   }
 
   const client = new Anthropic({ apiKey });
 
+  console.log(`Subject: ${subject}`);
   console.log('Lade Quiz-Bank...');
   const bank: QuizBank = JSON.parse(fs.readFileSync(BANK_FILE, 'utf-8'));
   console.log(`  ${bank.questions.length} Fragen geladen\n`);
@@ -193,7 +199,6 @@ async function main() {
   const notes = fs.readFileSync(NOTES_FILE, 'utf-8').replace(/^<!--.*?-->\n\n/s, '').trim();
   console.log(`  ${notes.length} Zeichen\n`);
 
-  // Group questions by topic into batches
   const batches: QuizQuestion[][] = [];
   let currentBatch: QuizQuestion[] = [];
   let currentTopic = '';
@@ -238,7 +243,6 @@ async function main() {
     saveProgress(progress);
   }
 
-  // Apply improvements back to the bank
   const updatedQuestions = bank.questions.map(q => ({
     ...q,
     question: progress.improved[q.id]?.question ?? q.question,

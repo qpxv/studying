@@ -3,12 +3,19 @@ import fs from 'fs';
 import path from 'path';
 import { readAssetsFolder, readMimickFolder, type ContentBlock } from './lib/file-reader.js';
 
-const ASSETS_DIR = path.resolve('./assets');
-const MIMICK_DIR = path.resolve('./mimick');
-const NOTES_DIR = path.resolve('./notes');
+const subject = process.argv[2];
+if (!subject) {
+  console.error('Usage: npm run create-notes -- <subject>  (e.g. management, sql)');
+  process.exit(1);
+}
+
+const SUBJECTS_DIR = path.resolve('./subjects');
+const ASSETS_DIR = path.join(SUBJECTS_DIR, subject, 'assets');
+const MIMICK_DIR = path.join(SUBJECTS_DIR, 'mimick');
+const NOTES_DIR = path.join(SUBJECTS_DIR, subject, 'notes');
 const NOTES_FILE = path.join(NOTES_DIR, 'generated-notes.md');
 const PROGRESS_FILE = path.join(NOTES_DIR, '.progress.json');
-const MODEL = 'claude-opus-4-6';
+const MODEL = 'claude-sonnet-4-6';
 
 interface Progress {
   totalChunks: number;
@@ -146,6 +153,7 @@ async function main() {
 
   const client = new Anthropic({ apiKey });
 
+  console.log(`Subject: ${subject}`);
   console.log('Reading assets/...');
   const assets = await readAssetsFolder(ASSETS_DIR);
 
@@ -186,7 +194,6 @@ async function main() {
     const chunks: string[] = [];
     for (let i = 0; i < text.length; i += CHUNK_SIZE) chunks.push(text.slice(i, i + CHUNK_SIZE));
 
-    // Load or init progress
     let progress = loadProgress();
     if (progress && progress.totalChunks !== chunks.length) {
       console.log('Chunk count changed — starting fresh.');
@@ -243,7 +250,7 @@ async function main() {
     process.exit(1);
   }
 
-  const header = `<!-- Generated: ${new Date().toISOString()} | Model: ${MODEL} -->\n\n`;
+  const header = `<!-- Generated: ${new Date().toISOString()} | Subject: ${subject} | Model: ${MODEL} -->\n\n`;
   fs.writeFileSync(NOTES_FILE, header + notes, 'utf-8');
   console.log(`\nNotes saved to: ${NOTES_FILE}`);
 }

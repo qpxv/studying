@@ -2,9 +2,15 @@ import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
 import path from 'path';
 
-const NOTES_FILE = path.resolve('./notes/generated-notes.md');
-const BANK_FILE = path.resolve('./notes/quiz-bank.json');
-const PROGRESS_FILE = path.resolve('./notes/.quiz-bank-progress.json');
+const subject = process.argv[2];
+if (!subject) {
+  console.error('Usage: npm run generate -- <subject>  (e.g. management, sql)');
+  process.exit(1);
+}
+
+const NOTES_FILE = path.resolve(`./subjects/${subject}/notes/generated-notes.md`);
+const BANK_FILE = path.resolve(`./subjects/${subject}/notes/quiz-bank.json`);
+const PROGRESS_FILE = path.resolve(`./subjects/${subject}/notes/.quiz-bank-progress.json`);
 const MODEL = 'claude-haiku-4-5-20251001';
 const MAX_SECTION_CHARS = 12000;
 
@@ -64,7 +70,6 @@ function splitIntoSections(notes: string): Array<{ heading: string; content: str
       const content = parts[i + 1]?.trim() ?? '';
       i++;
 
-      // If section is too large, split further at ### boundaries
       if (content.length > MAX_SECTION_CHARS) {
         const subParts = content.split(/^(### .+)$/m).filter(Boolean);
         let currentHeading = heading;
@@ -91,9 +96,8 @@ function splitIntoSections(notes: string): Array<{ heading: string; content: str
     }
   }
 
-  // Fallback: if no ## headings found, treat entire notes as one section
   if (sections.length === 0) {
-    sections.push({ heading: 'Management Grundlagen', content: notes.trim() });
+    sections.push({ heading: subject.toUpperCase(), content: notes.trim() });
   }
 
   return sections.filter(s => s.content.length > 50);
@@ -102,7 +106,6 @@ function splitIntoSections(notes: string): Array<{ heading: string; content: str
 // ─── JSON parsing ─────────────────────────────────────────────────────────────
 
 function parseJsonQuestions(raw: string): Array<{ question: string; answer: string }> {
-  // Strip markdown fences
   const stripped = raw.replace(/^```(?:json)?\s*/m, '').replace(/\s*```\s*$/m, '').trim();
   const start = stripped.indexOf('[');
   const end = stripped.lastIndexOf(']');
@@ -117,7 +120,7 @@ function parseJsonQuestions(raw: string): Array<{ question: string; answer: stri
 
 // ─── Generation ───────────────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `Du bist ein Quiz-Generator für einen deutschen Universitätskurs in Management Grundlagen.
+const SYSTEM_PROMPT = `Du bist ein Quiz-Generator für einen deutschen Universitätskurs.
 
 Deine Aufgabe: Generiere 20–30 Frage-Antwort-Paare aus dem gegebenen Abschnitt der Vorlesungsnotizen.
 
@@ -179,12 +182,13 @@ async function main() {
   }
 
   if (!fs.existsSync(NOTES_FILE)) {
-    console.error(`Notes file not found: ${NOTES_FILE}\nRun "npm run create-notes" first.`);
+    console.error(`Notes file not found: ${NOTES_FILE}\nRun "npm run create-notes -- ${subject}" first.`);
     process.exit(1);
   }
 
   const client = new Anthropic({ apiKey });
 
+  console.log(`Subject: ${subject}`);
   console.log('Reading notes...');
   const notes = fs.readFileSync(NOTES_FILE, 'utf-8').replace(/^<!--.*?-->\n\n/s, '').trim();
 
@@ -224,7 +228,6 @@ async function main() {
     saveProgress(progress);
   }
 
-  // Flatten all batches and assign sequential IDs
   const allQuestions: QuizQuestion[] = [];
   for (let i = 0; i < sections.length; i++) {
     const batch = progress.batchQuestions[i] ?? [];
@@ -236,6 +239,7 @@ async function main() {
 
   const bank = {
     generated: new Date().toISOString(),
+    subject,
     model: MODEL,
     totalQuestions: allQuestions.length,
     questions: allQuestions,

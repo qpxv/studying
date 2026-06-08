@@ -3,7 +3,13 @@ import readline from 'readline';
 import path from 'path';
 import { readNotesFile } from './lib/file-reader.js';
 
-const NOTES_FILE = path.resolve('./notes/generated-notes.md');
+const subject = process.argv[2];
+if (!subject) {
+  console.error('Usage: npm run quiz -- <subject>  (e.g. management, sql)');
+  process.exit(1);
+}
+
+const NOTES_FILE = path.resolve(`./subjects/${subject}/notes/generated-notes.md`);
 const MODEL = 'claude-opus-4-6';
 const MAX_HISTORY = 40; // 20 Q&A pairs — sliding window to avoid context overflow
 
