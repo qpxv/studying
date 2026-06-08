@@ -73,24 +73,40 @@ export function RangeSelector({ totalCards }: Props) {
         </div>
       )}
 
-      {/* Mode navigation buttons */}
-      <div className="flex gap-3">
-        <button
-          onClick={() => router.push(`/ap1/karteikarten/lernen${buildParams()}`)}
-          disabled={mode === 'bereich' && (!von || !bis)}
-          className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          <Layers className="w-4 h-4" />
-          Lernen
-        </button>
-        <button
-          onClick={() => router.push(`/ap1/karteikarten/fragen${buildParams()}`)}
-          disabled={mode === 'bereich' && (!von || !bis)}
-          className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-800 active:scale-95 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          <HelpCircle className="w-4 h-4" />
-          Fragen
-        </button>
+      {/* Mode cards */}
+      <div className="grid grid-cols-2 gap-3">
+        {[
+          {
+            href: `/ap1/karteikarten/lernen`,
+            icon: <Layers className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />,
+            label: 'Lernen',
+            description: 'Karte aufdecken und Antwort selbst bewerten',
+          },
+          {
+            href: `/ap1/karteikarten/fragen`,
+            icon: <HelpCircle className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />,
+            label: 'Abfragen',
+            description: 'Antwort tippen — KI bewertet sofort',
+          },
+        ].map(({ href, icon, label, description }) => {
+          const disabled = mode === 'bereich' && (!von || !bis);
+          return (
+            <button
+              key={label}
+              onClick={() => router.push(`${href}${buildParams()}`)}
+              disabled={disabled}
+              className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 flex flex-col gap-3 text-left hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm active:scale-[0.98] transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:border-zinc-200 disabled:hover:shadow-none"
+            >
+              <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
+                {icon}
+              </div>
+              <div>
+                <p className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">{label}</p>
+                <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5 leading-relaxed">{description}</p>
+              </div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

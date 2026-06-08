@@ -65,6 +65,36 @@ export async function importKarteikarten(
   return { imported, errors };
 }
 
+export async function deleteKarteikarte(id: number): Promise<{ success: true } | { error: string }> {
+  try {
+    await prisma.karteikarte.delete({ where: { id } });
+    revalidatePath('/ap1/karteikarten');
+    return { success: true };
+  } catch {
+    return { error: 'Karte konnte nicht gelöscht werden' };
+  }
+}
+
+export async function updateKarteikarte(
+  id: number,
+  question: string,
+  answer: string,
+): Promise<{ success: true } | { error: string }> {
+  if (!question.trim()) return { error: 'Frage darf nicht leer sein' };
+  if (!answer.trim()) return { error: 'Antwort darf nicht leer sein' };
+
+  try {
+    await prisma.karteikarte.update({
+      where: { id },
+      data: { question: question.trim(), answer: answer.trim() },
+    });
+    revalidatePath('/ap1/karteikarten');
+    return { success: true };
+  } catch {
+    return { error: 'Karte konnte nicht gespeichert werden' };
+  }
+}
+
 // ── Bewertungen ────────────────────────────────────────────────────────────
 
 export async function saveScore(karteikarteId: number, score: string): Promise<void> {
