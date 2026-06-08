@@ -3,6 +3,16 @@ import { ArrowLeft } from 'lucide-react';
 import { prisma } from '@/lib/prisma';
 import { ScoreBadge } from '../_components/score-badge';
 
+function timeAgo(date: Date): string {
+  const mins = Math.floor((Date.now() - date.getTime()) / 60000);
+  if (mins < 1) return 'gerade eben';
+  if (mins < 60) return `vor ${mins} Min.`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `vor ${hours} Std.`;
+  const days = Math.floor(hours / 24);
+  return `vor ${days} Tag${days === 1 ? '' : 'en'}`;
+}
+
 export default async function StatsPage() {
   const cards = await prisma.karteikarte.findMany({
     include: { scores: { include: { user: true } } },
@@ -79,10 +89,15 @@ export default async function StatsPage() {
                     {card.question.length > 60 ? `${card.question.slice(0, 60)}…` : card.question}
                   </td>
                   {users.map((u) => {
-                    const score = card.scores.find((s) => s.userId === u.id)?.score ?? null;
+                    const entry = card.scores.find((s) => s.userId === u.id) ?? null;
                     return (
                       <td key={u.id} className="px-4 py-2.5 whitespace-nowrap">
-                        {score ? <ScoreBadge score={score} size="sm" /> : (
+                        {entry ? (
+                          <div className="flex flex-col gap-0.5">
+                            <ScoreBadge score={entry.score} size="sm" />
+                            <span className="text-[10px] text-zinc-400 dark:text-zinc-500">{timeAgo(entry.updatedAt)}</span>
+                          </div>
+                        ) : (
                           <span className="text-xs text-zinc-300 dark:text-zinc-600">—</span>
                         )}
                       </td>
