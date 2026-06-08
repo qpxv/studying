@@ -10,7 +10,8 @@
     "create-notes": "tsx --env-file=.env scripts/create-notes.ts",
     "generate": "tsx --env-file=.env scripts/generate-quiz-bank.ts",
     "quiz": "tsx --env-file=.env scripts/quiz.ts",
-    "improve-context": "tsx --env-file=.env scripts/improve-quiz-context.ts"
+    "improve-context": "tsx --env-file=.env scripts/improve-quiz-context.ts",
+    "curate": "tsx --env-file=.env scripts/curate-quiz-bank.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",

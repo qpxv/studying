@@ -1,0 +1,2600 @@
+{
+  "generated": "2026-06-08T18:17:41.815Z",
+  "subject": "sql",
+  "model": "claude-haiku-4-5-20251001",
+  "totalQuestions": 432,
+  "questions": [
+    {
+      "id": "q001",
+      "question": "Erkläre die n:m-Beziehung zwischen Suppliers und Parts.",
+      "answer": "Ein Lieferant (Supplier) kann mehrere Teile (Parts) liefern und ein Teil kann von mehreren Lieferanten geliefert werden. Diese n:m-Beziehung wird durch die Zwischentabelle Supp_Parts aufgelöst, die beide Fremdschlüssel enthält.",
+      "topic": "1 Grundbegriffe"
+    },
+    {
+      "id": "q002",
+      "question": "Warum ist eine Zwischentabelle wie Supp_Parts für n:m-Beziehungen notwendig?",
+      "answer": "Eine Zwischentabelle ist notwendig, weil relationale Datenbanken nur 1:1 und 1:n Beziehungen direkt darstellen können. Die Zwischentabelle referenziert beide Seiten der Beziehung über Fremdschlüssel und ermöglicht damit die n:m-Auflösung.",
+      "topic": "1 Grundbegriffe"
+    },
+    {
+      "id": "q003",
+      "question": "Auf welcher mathematischen Theorie basiert das relationale Datenmodell nach Codd?",
+      "answer": "Das relationale Datenmodell basiert auf der mathematischen Theorie der Relationen und der Prädikatenlogik 1. Ordnung.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q004",
+      "question": "Welche zwei aufbauenden Verfahren entstanden aus Codds Kernideen?",
+      "answer": "Aus Codds Kernideen entstanden die Normalisierungstheorie und die relationale Abfragesprache.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q005",
+      "question": "Wie werden die nicht notwendigerweise disjunkten Mengen in einer mathematischen Relation genannt?",
+      "answer": "Diese Mengen werden Domänen genannt und mit D1, D2, …, Dn bezeichnet.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q006",
+      "question": "Was versteht man unter dem 'Grad' einer Relation?",
+      "answer": "Der Grad einer Relation ist die Anzahl der Attribute (n), also die Anzahl der Elemente in den geordneten n-Tupeln.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q007",
+      "question": "Was versteht man unter 'Kardinalität' einer Relation?",
+      "answer": "Die Kardinalität ist die Anzahl der Tupel (Zeilen) in einer Relation zu einem bestimmten Zeitpunkt.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q008",
+      "question": "Was ist ein Relationenschema und aus welchen Komponenten besteht es?",
+      "answer": "Ein Relationenschema R(A1, A2, ..., An) besteht aus dem Relationennamen R und der Attributliste. Es definiert die Struktur einer Relation.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q009",
+      "question": "Was ordnet die Funktion 'dom' zu?",
+      "answer": "Die Funktion 'dom' ordnet jedem Attribut Ai seinen entsprechenden Wertebereich Di zu: Di = dom(Ai).",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q010",
+      "question": "Was ist ein n-Tupel und wie wird es dargestellt?",
+      "answer": "Ein n-Tupel t = (v1, v2, ..., vn) ist eine geordnete Liste von n Werten, wobei jeder Wert vi aus seinem entsprechenden Wertebereich Di stammt oder ein Null-Wert ist.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q011",
+      "question": "Wie wird auf einen Wert im Tupel t zugegriffen?",
+      "answer": "Auf einen Wert im Tupel wird mittels t[Ai] oder t.Ai zugegriffen, was den i-ten Wert im Tupel t bezeichnet.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q012",
+      "question": "Wie wird eine Relation r(R) mathematisch definiert?",
+      "answer": "Eine Relation r(R) ist eine Menge von m n-Tupeln: r(R) ⊆ dom(A1) × dom(A2) × ... × dom(An), also eine Teilmenge des kartesischen Produkts der Wertebereiche.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q013",
+      "question": "Welche Eigenschaft muss jedes Attribut im relationalen Datenmodell besitzen?",
+      "answer": "Jedes Attribut muss einen eindeutigen Namen besitzen und wird ausschließlich durch seinen Namen referenziert.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q014",
+      "question": "Sind Attribute in einer relationalen Tabelle geordnet?",
+      "answer": "Nein, Attribute unterliegen keiner Ordnung im relationalen Datenmodell.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q015",
+      "question": "Was versteht man unter 'Atomarität' von Attributen?",
+      "answer": "Attribute in einer Tabelle müssen atomar sein, das heißt sie dürfen nicht in weitere Komponenten zerlegbar sein.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q016",
+      "question": "Welche Eigenschaft haben Zeilen (Tupel) in einer relationalen Tabelle?",
+      "answer": "Jede Zeile (Tupel) in einer Tabelle ist eindeutig, das heißt es gibt keine identischen Zeilen in einer Relation.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q017",
+      "question": "Warum existiert in jeder Relation immer ein Schlüssel?",
+      "answer": "Wegen der Eindeutigkeit jeder Zeile in einer Relation existiert immer ein Schlüssel, der die Zeile eindeutig identifiziert.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q018",
+      "question": "Welche Rolle spielen Primärschlüssel im relationalen Datenmodell?",
+      "answer": "Primärschlüssel dienen zur eindeutigen Identifikation von Tupeln und zur Modellierung von Beziehungen zwischen verschiedenen Relationen.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q019",
+      "question": "Nennen Sie die verschiedenen Schlüsseltypen im relationalen Datenmodell.",
+      "answer": "Die Schlüsseltypen sind: Primärschlüssel, Fremdschlüssel, zusammengesetzter Primärschlüssel, zusammengesetzter Fremdschlüssel und Schlüsselkandidat.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q020",
+      "question": "Warum kann der Primärschlüssel einer Relation aus mehreren Attributen zusammengesetzt sein? Nennen Sie ein Beispiel.",
+      "answer": "Ein zusammengesetzter Primärschlüssel ist nötig, wenn kein einzelnes Attribut die Eindeutigkeit garantiert. Beispiel: In der Relation FLUGGAST(Nation, PassNr, VName, NName, Titel) identifiziert erst die Kombination aus Nation und PassNr jeden Fluggast eindeutig, da Passnummern verschiedener Länder gleich sein können.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q021",
+      "question": "Was bedeutet es, dass Domänen 'nicht notwendigerweise disjunkt' sind?",
+      "answer": "Das bedeutet, dass die verschiedenen Domänen D1, D2, ..., Dn überlappende Wertemengen haben können, also gemeinsame Elemente enthalten dürfen.",
+      "topic": "2 Das Relationale Datenmodell"
+    },
+    {
+      "id": "q022",
+      "question": "Was versteht man unter Direktem SQL?",
+      "answer": "Direktes SQL bezeichnet die interaktive Eingabe und Ausführung von SQL-Anweisungen direkt auf der Datenbankschnittstelle ohne Einbettung in ein Programm.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q023",
+      "question": "Erklären Sie das Konzept von Modulsprache im Kontext von SQL.",
+      "answer": "Modulsprache ermöglicht die Verwendung von SQL-Anweisungen in Programmen in getrennter Form, d.h. SQL-Code ist vom Programmcode räumlich getrennt organisiert.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q024",
+      "question": "Was ist Call Level Interface (CLI)?",
+      "answer": "Call Level Interface (CLI) ist eine SQL-Implementierungsmethode, bei der SQL-Anweisungen durch eine Bibliothek für Programmiersprachen in den Programmcode eingebettet werden.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q025",
+      "question": "Was ist Embedded SQL?",
+      "answer": "Embedded SQL ist eine Implementierungsmethode, bei der SQL-Anweisungen direkt innerhalb des Quellcodes einer Programmiersprache integriert sind und vor der Kompilierung durch einen Precompiler verarbeitet werden.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q026",
+      "question": "Wie unterscheiden sich Embedded SQL und Call Level Interface (CLI)?",
+      "answer": "Embedded SQL integriert SQL direkt in die Programmiersprache und wird durch einen Precompiler verarbeitet, während CLI SQL-Anweisungen zur Laufzeit über eine externe Bibliothek (z.B. ODBC, JDBC) aufruft, ohne Precompiler-Schritt.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q027",
+      "question": "Was ist Data Definition Language (DDL)?",
+      "answer": "DDL umfasst SQL-Befehle zur Definition und Strukturierung des Datenbankschemas, wie CREATE, ALTER und DROP Anweisungen.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q028",
+      "question": "Welche Aufgaben erfüllt Data Manipulation Language (DML)?",
+      "answer": "DML umfasst Befehle zur Datenmanipulation wie Abfragen (SELECT), Ändern (UPDATE), Einfügen (INSERT) und Löschen (DELETE) von Daten.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q029",
+      "question": "Was ist Data Control Language (DCL)?",
+      "answer": "DCL ist eine Komponente von SQL, die Befehle für die Verwaltung von Benutzerrechten und Zugriffskontrolle in der Datenbank bereitstellt (z.B. GRANT, REVOKE).",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q030",
+      "question": "Was bedeutet dynamisches SQL?",
+      "answer": "Dynamisches SQL ermöglicht die Konstruktion und Ausführung von SQL-Anweisungen zur Laufzeit, anstatt sie zur Compile-Zeit festzulegen. Dies erlaubt flexible Abfragen, deren Struktur erst während der Programmausführung bekannt ist.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q031",
+      "question": "Was bewirkt der INTERSECT-Operator in SQL?",
+      "answer": "Der INTERSECT-Operator gibt alle Zeilen zurück, die in beiden Abfrageergebnismengen vorkommen – also die Schnittmenge zweier SELECT-Ergebnisse.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q032",
+      "question": "Was bewirkt der EXCEPT- bzw. MINUS-Operator in SQL?",
+      "answer": "Der EXCEPT- (bzw. MINUS-)Operator gibt alle Zeilen der ersten Abfrage zurück, die nicht in der zweiten Abfrage vorkommen – also die Differenzmenge zweier SELECT-Ergebnisse.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q033",
+      "question": "Welche drei Hauptkategorien von Befehlen umfasst SQL?",
+      "answer": "SQL umfasst DDL (Data Definition Language) für Schemadefinition, DML (Data Manipulation Language) für Datenmanipulation und -abfrage sowie DCL (Data Control Language) für Rechteverwaltung.",
+      "topic": "3 SQL-Anweisung"
+    },
+    {
+      "id": "q034",
+      "question": "Was ist der Unterschied zwischen integer4 und integer2?",
+      "answer": "integer4 belegt 4 Byte Speicher, während integer2 nur 2 Byte Speicher belegt. integer4 kann daher einen größeren Zahlenwertbereich abbilden als integer2.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q035",
+      "question": "Erklären Sie den Unterschied zwischen numeric(p, q) und decimal(p, q).",
+      "answer": "numeric(p, q) hat genau p Stellen mit q Stellen nach dem Dezimalzeichen. decimal(p, q) hat mindestens p Stellen mit q Stellen nach dem Dezimalzeichen und ist daher flexibler.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q036",
+      "question": "Was ist der Unterschied zwischen real und double?",
+      "answer": "real ist eine einfach genaue Gleitpunktzahl mit 4 Byte, während double eine doppelt genaue Gleitpunktzahl mit 8 Byte ist. double bietet höhere Präzision.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q037",
+      "question": "Was ist der Unterschied zwischen char(n) und varchar(n)?",
+      "answer": "char(n) speichert genau n Zeichen und benötigt immer n Byte. varchar(n) speichert höchstens n Zeichen und benötigt nur so viele Byte wie tatsächliche Zeichen vorhanden sind – ist also speichereffizienter bei variabel langen Werten.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q038",
+      "question": "Nennen Sie drei erweiterte Datentypen aus der SQL-Spezifikation und erläutern Sie deren Zweck.",
+      "answer": "Drei erweiterte Datentypen sind: date (für Datumsangaben), blob/Binary Large Object (für große binäre Daten wie Bilder) und clob/Character Large Object (für große Textmengen). Weitere sind time, timestamp und stream.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q039",
+      "question": "Was ist der Unterschied zwischen blob und clob?",
+      "answer": "blob (Binary Large Object) speichert große binäre Datenmengen wie Bilder oder Videos, während clob (Character Large Object) große Textdatenmengen speichert.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q040",
+      "question": "Was ist der Unterschied zwischen expliziter und impliziter Typkonversion in SQL?",
+      "answer": "Explizite Konversion erfordert eine manuelle Umwandlung mittels CONVERT- oder CAST-Funktion. Implizite Konversion findet automatisch durch das Datenbanksystem statt, wenn Datentypen kompatibel sind. Einige Konversionen sind grundsätzlich nicht möglich.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q041",
+      "question": "Was ist der Unterschied zwischen datetime und smalldatetime in MS SQL Server?",
+      "answer": "datetime und smalldatetime sind beide Datumsdatentypen in MS SQL Server, wobei smalldatetime eine kompaktere Speicherdarstellung mit geringerer Zeitgenauigkeit bietet.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q042",
+      "question": "Was sind binary und varbinary Datentypen?",
+      "answer": "binary und varbinary speichern binäre Daten. binary(n) speichert genau n Bytes, während varbinary(n) höchstens n Bytes speichert und speichereffizienter ist.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q043",
+      "question": "Wofür wird der sql_variant Datentyp in MS SQL Server verwendet?",
+      "answer": "sql_variant ist ein spezialisierter Datentyp, der Werte verschiedener SQL Server Datentypen speichern kann, bietet aber eingeschränkte Funktionalität im Vergleich zu typisierten Spalten.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q044",
+      "question": "Was ist der image Datentyp in MS SQL Server und warum ist er veraltet?",
+      "answer": "image ist ein veralteter Datentyp in MS SQL Server für die Speicherung großer binärer Daten wie Bildern. Er sollte durch varbinary(max) ersetzt werden, da image in neueren SQL-Server-Versionen als deprecated gilt.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q045",
+      "question": "Erklären Sie, warum numeric(10, 2) gegenüber decimal(10, 2) präziser definiert ist.",
+      "answer": "numeric(10, 2) garantiert genau 10 Stellen mit 2 Dezimalstellen, während decimal(10, 2) mindestens 10 Stellen mit 2 Dezimalstellen hat. numeric ist daher bei der Genauigkeit konsistenter und vorhersehbarer.",
+      "topic": "3 SQL-Anweisung › ### 3.2 Datentypen"
+    },
+    {
+      "id": "q046",
+      "question": "Welche arithmetischen Operatoren können in SQL für Zahlen verwendet werden?",
+      "answer": "Die arithmetischen Operatoren für Zahlen sind: + (Addition), - (Subtraktion), * (Multiplikation), / (Division) und % (Modulo). Mit diesen können mathematische Berechnungen in SQL-Abfragen durchgeführt werden.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q047",
+      "question": "Was ist der Modulo-Operator (%) in SQL?",
+      "answer": "Der Modulo-Operator (%) gibt den Rest einer Divisionsoperation zurück. Er wird verwendet, um zu bestimmen, ob eine Zahl durch eine andere teilbar ist oder welcher Rest bei der Division übrigbleibt. Nützlich z.B. um gerade/ungerade Zahlen zu filtern.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q048",
+      "question": "Wie funktioniert die Addition (+) und Subtraktion (-) mit Datum-/Zeitangaben in SQL?",
+      "answer": "Mit + können Tage oder Zeitintervalle zu einem Datum addiert werden, mit - entsprechend subtrahiert. Außerdem kann die Differenz zwischen zwei Datumswerten berechnet werden. Die anderen arithmetischen Operatoren (*, /, %) sind für Datums-/Zeittypen nicht sinnvoll.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q049",
+      "question": "Welche arithmetischen Operatoren sind für Zeichenketten in SQL verfügbar?",
+      "answer": "Standardmäßige arithmetische Operatoren (+, -, *, /, %) sind für Zeichenketten nicht vorgesehen. Zur Verknüpfung (Konkatenation) von Zeichenketten dienen je nach SQL-Dialekt der ||-Operator oder die CONCAT-Funktion.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q050",
+      "question": "Was ist Typkonversion in SQL und warum ist sie relevant für Operatoren?",
+      "answer": "Typkonversion ist die Umwandlung von Daten eines Datentyps in einen anderen. Sie ist relevant für Operatoren, da bestimmte Operatoren nur auf spezifische Datentypen angewendet werden können. Implizite Konversion kann zu unerwartetem Verhalten führen, weshalb explizite Konversion via CAST oder CONVERT empfohlen wird.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q051",
+      "question": "Welche Vergleichsoperatoren gibt es in SQL?",
+      "answer": "Die Vergleichsoperatoren in SQL sind: = (gleich), > (größer als), < (kleiner als), >= (größer oder gleich), <= (kleiner oder gleich) und <> (ungleich).",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q052",
+      "question": "Wie funktionieren die booleschen Operatoren AND, OR und NOT in SQL?",
+      "answer": "AND gibt true zurück, wenn alle verknüpften Bedingungen erfüllt sind. OR gibt true zurück, wenn mindestens eine Bedingung erfüllt ist. NOT negiert den Wahrheitswert einer Bedingung. AND hat dabei höhere Priorität als OR; Klammern können die Auswertungsreihenfolge explizit steuern.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q053",
+      "question": "Was ist der Zweck von Vergleichsoperatoren in SQL?",
+      "answer": "Vergleichsoperatoren dienen dazu, zwei Werte miteinander zu vergleichen und ein boolesches Ergebnis (true oder false) zurückzugeben. Sie sind essentiell für WHERE-Klauseln und die Filterung von Datensätzen.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q054",
+      "question": "Kann die Division (/) in SQL mit ganzen Zahlen zu Dezimalzahlen führen?",
+      "answer": "Ja, die Division (/) kann Dezimalzahlen liefern, wenn der Dividend nicht vollständig durch den Divisor teilbar ist. Das Ergebnis wird je nach SQL-Dialekt gerundet oder mit Dezimalstellen dargestellt. Bei Integer-Division (z.B. in manchen Dialekten) wird abgeschnitten.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q055",
+      "question": "In welchen SQL-Kontexten werden boolesche Operatoren typischerweise verwendet?",
+      "answer": "Boolesche Operatoren (AND, OR, NOT) werden in WHERE-Klauseln, HAVING-Klauseln und JOIN-Bedingungen verwendet, um mehrere Filterkriterien zu kombinieren und Daten präzise einzuschränken.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q056",
+      "question": "Gibt es eine Auswertungsreihenfolge bei AND und OR in SQL?",
+      "answer": "Ja, AND hat eine höhere Priorität als OR. Das bedeutet, AND-Bedingungen werden vor OR-Bedingungen ausgewertet. Durch Klammern kann die Reihenfolge explizit gesteuert werden, was in komplexen Bedingungen wichtig ist.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q057",
+      "question": "Kann man Zeichenketten mit Vergleichsoperatoren vergleichen?",
+      "answer": "Ja, Zeichenketten können mit Vergleichsoperatoren wie =, >, <, >=, <=, <> verglichen werden. Der Vergleich erfolgt alphabetisch (lexikographisch) gemäß der Sortierfolge (Collation) der Datenbank.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q058",
+      "question": "Was ist der praktische Unterschied zwischen den Operatoren '>' und '>=' in SQL?",
+      "answer": "Der Operator '>' gibt nur Werte zurück, die streng größer sind als der Vergleichswert. Der Operator '>=' schließt auch Werte ein, die genau gleich dem Vergleichswert sind.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q059",
+      "question": "Wie fragt man einen Datumsbereich in SQL mit Operatoren ab?",
+      "answer": "Ein Datumsbereich wird mit zwei Vergleichsoperatoren und AND abgefragt, z.B.: WHERE Datum >= '2024-01-01' AND Datum <= '2024-12-31'. Alternativ kann BETWEEN verwendet werden: WHERE Datum BETWEEN '2024-01-01' AND '2024-12-31'.",
+      "topic": "3 SQL-Anweisung › ### 3.3 Operatoren"
+    },
+    {
+      "id": "q060",
+      "question": "Was ist die Grundsyntax einer SELECT-Anweisung in SQL?",
+      "answer": "Die Grundsyntax ist: SELECT <Spalten> FROM <Tabelle> [WHERE <Bedingung>] [GROUP BY <Spalten>] [HAVING <Bedingung>] [ORDER BY <Spalten>]. Die Klauseln WHERE, GROUP BY, HAVING und ORDER BY sind optional und müssen in dieser Reihenfolge angegeben werden.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q061",
+      "question": "Warum ist es besser, Spaltennamen explizit zu nennen statt SELECT * zu verwenden?",
+      "answer": "Explizite Spaltennamen machen die Abfrage lesbarer und wartbarer. Sie reduzieren Netzwerk- und Speicheraufwand, da nur benötigte Daten übertragen werden. Außerdem ist die Abfrage robuster gegenüber Schemaänderungen (z.B. neue Spalten in der Tabelle).",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q062",
+      "question": "Was ist eine Projektion in SQL?",
+      "answer": "Eine Projektion ist die Auswahl nur bestimmter Spalten aus einer Tabelle, z.B. SELECT pname, color FROM parts;. Das Ergebnis enthält nur die gewählten Spalten, nicht alle Spalten der Tabelle. Sie ist eines der grundlegenden relationalen Operationen.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q063",
+      "question": "Was ist die DISTINCT-Klausel und wann wird sie verwendet?",
+      "answer": "Die DISTINCT-Klausel eliminiert Duplikate aus dem Abfrageergebnis. Sie wird verwendet, wenn man nur eindeutige Werte einer oder mehrerer Spalten sehen möchte. Beispiel: SELECT DISTINCT color FROM parts; liefert jeden Farbwert nur einmal.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q064",
+      "question": "Was bewirkt das AS-Schlüsselwort in einer SELECT-Anweisung?",
+      "answer": "Das AS-Schlüsselwort erstellt einen Alias für eine Spalte oder Tabelle. Es ändert die Spaltenüberschrift im Ergebnis, ohne die eigentliche Tabelle zu verändern. Beispiel: SELECT pno AS part_no FROM parts; zeigt die Spalte unter dem Namen 'part_no'.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q065",
+      "question": "Was ist der Zweck der ORDER BY-Klausel?",
+      "answer": "Die ORDER BY-Klausel sortiert die Ergebnismenge nach einer oder mehreren Spalten. Sie steht am Ende einer SELECT-Anweisung und kann aufsteigend (ASC, Standard) oder absteigend (DESC) sortieren.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q066",
+      "question": "Wie funktioniert mehrfache Sortierung mit ORDER BY in SQL?",
+      "answer": "Mehrfache Sortierung wird durch kommagetrennte Spaltenangaben nach ORDER BY erreicht. Die erste Spalte hat die höchste Priorität; bei gleichen Werten wird nach der nächsten Spalte sortiert. Beispiel: ORDER BY color DESC, pno ASC sortiert primär nach Farbe absteigend, bei gleicher Farbe nach pno aufsteigend.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q067",
+      "question": "Was bedeuten DESC und ASC in der ORDER BY-Klausel?",
+      "answer": "DESC (descending) sortiert absteigend, also größere/spätere Werte zuerst. ASC (ascending) sortiert aufsteigend, also kleinere/frühere Werte zuerst. ASC ist der Standardwert und muss nicht explizit angegeben werden.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q068",
+      "question": "Was ist der Unterschied zwischen SELECT color FROM parts; und SELECT DISTINCT color FROM parts;?",
+      "answer": "SELECT color FROM parts; gibt alle Zeilen inklusive Duplikate zurück – bei 6 Zeilen in der Tabelle also 6 Zeilen. SELECT DISTINCT color FROM parts; eliminiert Duplikate und gibt nur jeden einzigartigen Farbwert einmal zurück.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q069",
+      "question": "Was ist die Funktion der Klauseln WHERE, GROUP BY, HAVING und ORDER BY in der SELECT-Syntax?",
+      "answer": "WHERE filtert einzelne Zeilen vor der Gruppierung nach Bedingungen. GROUP BY fasst Zeilen mit gleichen Werten zu Gruppen zusammen. HAVING filtert diese Gruppen nach Bedingungen (oft mit Aggregatfunktionen). ORDER BY sortiert die Ergebnismenge. Sie werden stets in dieser Reihenfolge angewendet.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q070",
+      "question": "Warum muss die Reihenfolge der Klauseln in einer SELECT-Anweisung eingehalten werden?",
+      "answer": "Die Reihenfolge SELECT-FROM-WHERE-GROUP BY-HAVING-ORDER BY ist syntaktisch und logisch vorgegeben: Erst wird die Datenquelle bestimmt (FROM), dann gefiltert (WHERE), dann gruppiert (GROUP BY), dann die Gruppen gefiltert (HAVING), dann die Ausgabespalten bestimmt (SELECT) und schließlich sortiert (ORDER BY). Abweichungen führen zu Syntaxfehlern.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q071",
+      "question": "Kann man in einer SELECT-Anweisung eine Spalte referenzieren, die nicht in der FROM-Tabelle existiert?",
+      "answer": "Nein, alle referenzierten Spalten müssen in den angegebenen Tabellen oder Joins vorhanden sein. Ausnahmen sind berechnete Ausdrücke (z.B. 1+1) oder konstante Werte, die keine Tabellenreferenz benötigen. Andernfalls gibt das DBMS einen Fehler aus.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q072",
+      "question": "Kann ORDER BY mit Spalten arbeiten, die nicht in SELECT aufgelistet sind?",
+      "answer": "Ja, ORDER BY kann nach Spalten sortieren, die nicht in SELECT aufgelistet sind. Beispiel: SELECT pno FROM parts ORDER BY color; sortiert nach color, auch wenn color nicht in der SELECT-Liste steht.",
+      "topic": "3 SQL-Anweisung › ### 3.4 SELECT-Anweisung"
+    },
+    {
+      "id": "q073",
+      "question": "Was ist die Funktion der WHERE-Klausel in einer SQL SELECT-Anweisung?",
+      "answer": "Die WHERE-Klausel wird verwendet, um Zeilen aus einer Tabelle zu filtern und nur diejenigen zurückzugeben, die eine oder mehrere Bedingungen erfüllen.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q074",
+      "question": "Schreibe eine SQL-Anweisung, die alle Teile mit dem Namen und der Farbe aus der Tabelle 'parts' auswählt, bei denen die Stadt 'Paris' ist.",
+      "answer": "SELECT pname, color FROM parts WHERE city = 'Paris';",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q075",
+      "question": "Was ist der Zweck des BETWEEN-Operators in SQL?",
+      "answer": "Der BETWEEN-Operator wird verwendet, um zu prüfen, ob ein Wert innerhalb eines bestimmten Bereichs liegt, einschließlich der Grenzen. Er ist äquivalent zu >= untere_Grenze AND <= obere_Grenze.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q076",
+      "question": "Schreibe eine SQL-Anweisung mit BETWEEN, die alle Teile mit der Farbe 'red' und einem Gewicht zwischen 13 und 20 auswählt.",
+      "answer": "SELECT pname, weight FROM parts WHERE color = 'red' AND weight BETWEEN 13 AND 20;",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q077",
+      "question": "Wie lautet die äquivalente WHERE-Bedingung ohne den BETWEEN-Operator für 'weight BETWEEN 13 AND 20'?",
+      "answer": "Die äquivalente Bedingung ist: weight >= 13 AND weight <= 20",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q078",
+      "question": "Was ist LIKE in SQL und wofür wird es verwendet?",
+      "answer": "LIKE ist ein Operator für Pattern-Matching (Mustererkennung), der verwendet wird, um Zeichenketten zu suchen, die einem bestimmten Muster entsprechen. Platzhalter: '_' steht für genau ein beliebiges Zeichen, '%' für beliebig viele Zeichen (auch null).",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q079",
+      "question": "Was bedeutet der Unterstrich '_' im SQL LIKE-Operator?",
+      "answer": "Der Unterstrich '_' ist ein Platzhalter, der genau ein beliebiges Zeichen darstellt.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q080",
+      "question": "Was bedeutet das Prozentzeichen '%' im SQL LIKE-Operator?",
+      "answer": "Das Prozentzeichen '%' ist ein Platzhalter, der eine beliebige Anzahl von Zeichen (einschließlich null Zeichen) darstellt.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q081",
+      "question": "Erkläre das Muster 'C_%' im Kontext von LIKE-Abfragen.",
+      "answer": "Das Muster 'C_%' findet alle Zeichenketten, die mit 'C' beginnen und mindestens 2 Zeichen lang sind. Das 'C' steht für den Anfang, '_' für genau ein weiteres Zeichen und '%' für beliebig viele weitere Zeichen.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q082",
+      "question": "Schreibe eine SQL-Anweisung mit LIKE, die alle Teile findet, deren Namen mit 'C' beginnen und mindestens 2 Zeichen lang sind.",
+      "answer": "SELECT pno, pname FROM parts WHERE pname LIKE 'C_%';",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q083",
+      "question": "Was ist der Unterschied zwischen 'BETWEEN 13 AND 20' und '>= 13 AND < 20'?",
+      "answer": "BETWEEN 13 AND 20 ist inklusive beider Grenzen (äquivalent zu >= 13 AND <= 20), während >= 13 AND < 20 die Obergrenze ausschließt.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q084",
+      "question": "Wie würde eine LIKE-Bedingung aussehen, die alle Namen findet, die mit 'S' beginnen?",
+      "answer": "WHERE pname LIKE 'S%' würde alle Namen finden, die mit 'S' beginnen.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q085",
+      "question": "Was ist der Unterschied zwischen '%ABC' und 'ABC%' in einem LIKE-Muster?",
+      "answer": "'%ABC' findet Zeichenketten, die mit ABC enden, während 'ABC%' Zeichenketten findet, die mit ABC beginnen.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q086",
+      "question": "Wie würde ein LIKE-Muster aussehen, das alle Namen mit genau 4 Zeichen findet?",
+      "answer": "Das Muster wäre '____' (genau vier Unterstriche), da jeder Unterstrich genau ein beliebiges Zeichen repräsentiert.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q087",
+      "question": "Kann man LIKE und BETWEEN in einer einzigen WHERE-Klausel kombinieren?",
+      "answer": "Ja, man kann LIKE und BETWEEN mit AND oder OR kombinieren, um mehrere komplexe Bedingungen in einer Abfrage zu erfüllen. Beispiel: WHERE pname LIKE 'S%' AND weight BETWEEN 10 AND 20.",
+      "topic": "3 SQL-Anweisung › ### 3.5 Restriktion"
+    },
+    {
+      "id": "q088",
+      "question": "Warum muss eine Berechnung wie 'weight / 0.4536' in manchen SQL-Anweisungen zweimal geschrieben werden (einmal in SELECT, einmal in WHERE)?",
+      "answer": "Der in SELECT definierte Alias ist in der WHERE-Klausel noch nicht bekannt, weil WHERE vor der Projektion (SELECT) ausgeführt wird. Deshalb muss die Berechnung sowohl in SELECT (mit Alias) als auch in WHERE explizit aufgeführt werden.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q089",
+      "question": "Welche Rolle spielen berechnete Spalten in einer SELECT-Anweisung?",
+      "answer": "Berechnete Spalten ermöglichen es, Ausdrücke direkt in der SELECT-Liste zu verwenden und das Ergebnis unter einem Alias (AS) zu benennen. Dies erlaubt mathematische Operationen, Umrechnungen oder Transformationen von Daten direkt in der Abfrage.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q090",
+      "question": "In welcher Reihenfolge werden die Klauseln einer SQL-Anweisung ausgeführt?",
+      "answer": "Die logische Ausführungsreihenfolge ist: FROM → WHERE → GROUP BY → HAVING → Mengenbildung → ORDER BY → SELECT (Projektion). Die WHERE-Klausel wird vor der SELECT-Klausel (und damit vor der Alias-Definition) ausgeführt.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q091",
+      "question": "Wie wird ein Alias für eine berechnete Spalte in SQL definiert?",
+      "answer": "Mit dem Schlüsselwort AS wird ein Alias nach der Berechnung angegeben. Syntax: Berechnung AS Aliasname. Beispiel: weight / 0.4536 AS wgt_lbs.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q092",
+      "question": "Können Aliase aus der SELECT-Liste in der WHERE-Klausel verwendet werden?",
+      "answer": "Nein, Aliase aus der SELECT-Liste können in der WHERE-Klausel nicht verwendet werden, da WHERE vor SELECT ausgeführt wird. Die zugrundeliegende Berechnung oder Spalte muss stattdessen direkt referenziert werden.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q093",
+      "question": "Was ist der Unterschied zwischen einer konstanten Spalte und einer berechneten Spalte in SQL?",
+      "answer": "Eine konstante Spalte (z.B. 'lbs' AS unit) zeigt für jede Zeile denselben festen Wert an. Eine berechnete Spalte führt Operationen auf Spaltenwerten durch (z.B. weight / 0.4536 AS wgt) und erzeugt zeilenabhängig unterschiedliche Werte.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q094",
+      "question": "Was versteht man unter einer berechneten Spalte in SQL?",
+      "answer": "Eine berechnete Spalte ist eine Spalte in der SELECT-Liste, die nicht direkt aus der Tabelle stammt, sondern durch einen Ausdruck, eine Berechnung oder Transformation erzeugt wird. Sie kann arithmetische Operationen, Funktionen oder konstante Werte beinhalten und per AS benannt werden.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q095",
+      "question": "Gibt es einen Unterschied zwischen dem Ausdruck 'weight / 0.4536 AS wgt' in SELECT und 'weight / 0.4536' in WHERE?",
+      "answer": "Funktional führen beide Ausdrücke dieselbe Berechnung durch. Der Unterschied liegt nur darin, dass in SELECT der Alias definiert wird, während in WHERE der Ausdruck ohne Alias verwendet werden muss, da Aliase dort noch nicht bekannt sind.",
+      "topic": "3 SQL-Anweisung › ### 3.6 Berechnete Spalten"
+    },
+    {
+      "id": "q096",
+      "question": "Warum kann man einen Alias aus der SELECT-Klausel nicht in der WHERE-Klausel verwenden?",
+      "answer": "Weil die WHERE-Klausel (Restriktion) in der logischen Verarbeitungsreihenfolge vor der Projektion (SELECT) ausgeführt wird. Aliase werden erst bei der Projektion definiert und sind daher in WHERE noch nicht bekannt.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q097",
+      "question": "Beschreibe den ersten Schritt der logischen Verarbeitungsreihenfolge einer SQL-Anweisung.",
+      "answer": "Der erste Schritt ist das Kreuzprodukt über alle Tabellen, die in der FROM-Klausel genannt werden. Dies erzeugt eine Kombinationstabelle mit allen möglichen Zeilenkombinationen aus den beteiligten Tabellen.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q098",
+      "question": "Was ist der zweite Schritt in der SQL-Verarbeitungsreihenfolge?",
+      "answer": "Der zweite Schritt ist die Restriktion, bei der mithilfe der WHERE-Klausel Zeilen gefiltert werden, die die angegebenen Bedingungen erfüllen.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q099",
+      "question": "Was passiert im dritten Schritt der SQL-Verarbeitungsreihenfolge?",
+      "answer": "Der dritte Schritt ist die Gruppenbildung: Zeilen werden anhand von Attributwerten in Gruppen zusammengefasst, üblicherweise durch GROUP BY.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q100",
+      "question": "Was geschieht im vierten Schritt der SQL-Verarbeitungsreihenfolge?",
+      "answer": "Im vierten Schritt erfolgt die Gruppen-Restriktion: Gruppen werden anhand von Bedingungen gefiltert, üblicherweise über die HAVING-Klausel.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q101",
+      "question": "Welcher Schritt folgt nach der Gruppen-Restriktion (HAVING) in der Verarbeitungsreihenfolge?",
+      "answer": "Nach der Gruppen-Restriktion folgt die Mengenbildung, bei der Duplikate entfernt oder Mengenoperationen durchgeführt werden (z.B. bei DISTINCT, UNION, INTERSECT, EXCEPT).",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q102",
+      "question": "Was ist der letzte Schritt in der SQL-Verarbeitungsreihenfolge?",
+      "answer": "Der letzte Schritt ist die Projektion, bei der die Spalten gemäß der SELECT-Klausel ausgewählt und ausgegeben werden. Hier werden auch Aliase definiert.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q103",
+      "question": "Erkläre, warum die logische Verarbeitungsreihenfolge für das Schreiben von SQL-Abfragen wichtig ist.",
+      "answer": "Die Verarbeitungsreihenfolge bestimmt, welche Elemente verfügbar sind, wenn eine bestimmte Klausel ausgeführt wird. Zum Beispiel können WHERE-Bedingungen nur auf Originalspaltennamen zugreifen (keine SELECT-Aliase), und Aggregatfunktionen dürfen nicht in WHERE, sondern nur in HAVING verwendet werden.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q104",
+      "question": "Welche Klausel wird typischerweise für die Gruppenbildung (3. Schritt) verwendet?",
+      "answer": "Die GROUP BY-Klausel wird verwendet, um Zeilen nach bestimmten Spalten zu gruppieren.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q105",
+      "question": "Welche Klausel wird für die Gruppen-Restriktion (4. Schritt) verwendet, und warum kann dafür nicht WHERE genutzt werden?",
+      "answer": "Die HAVING-Klausel wird für die Gruppen-Restriktion verwendet. WHERE kann dafür nicht genutzt werden, weil WHERE vor der Gruppenbildung (GROUP BY) ausgeführt wird und daher keine Aggregatwerte kennt.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q106",
+      "question": "Nenne die sieben Schritte der logischen SQL-Verarbeitungsreihenfolge in der richtigen Reihenfolge.",
+      "answer": "1. Kreuzprodukt (FROM), 2. Restriktion (WHERE), 3. Gruppenbildung (GROUP BY), 4. Gruppen-Restriktion (HAVING), 5. Mengenbildung (DISTINCT/UNION etc.), 6. Sortieren (ORDER BY), 7. Projektion (SELECT).",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q107",
+      "question": "Warum kann man in der ORDER BY-Klausel typischerweise Aliase aus SELECT verwenden, in WHERE aber nicht?",
+      "answer": "ORDER BY wird nach der Projektion (SELECT) ausgeführt, sodass die dort definierten Aliase bekannt sind. WHERE hingegen wird vor SELECT ausgeführt, weshalb Aliase dort noch nicht existieren.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q108",
+      "question": "Was ist das Kreuzprodukt im Kontext von SQL?",
+      "answer": "Das Kreuzprodukt ist eine Operation, die alle möglichen Kombinationen von Zeilen aus zwei oder mehr Tabellen erzeugt. In SQL wird es im ersten Verarbeitungsschritt durch die FROM-Klausel initiiert. Bei n Zeilen in Tabelle A und m Zeilen in Tabelle B entstehen n×m Kombinationen.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q109",
+      "question": "An welchem Punkt der Verarbeitungsreihenfolge werden Duplikate entfernt (z.B. durch DISTINCT)?",
+      "answer": "Duplikate werden im fünften Schritt der Mengenbildung entfernt, nach der Filterung und Gruppierung, aber vor dem Sortieren.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q110",
+      "question": "Kann man in einer WHERE-Bedingung Aggregatfunktionen (z.B. SUM, COUNT) verwenden?",
+      "answer": "Nein. Aggregatfunktionen können nicht in der WHERE-Klausel verwendet werden, da WHERE im zweiten Schritt ausgeführt wird, bevor Gruppierungen und Aggregationen stattfinden. Für Bedingungen auf Aggregatwerte muss HAVING verwendet werden.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q111",
+      "question": "Was ist der Unterschied zwischen WHERE und HAVING in Bezug auf die SQL-Verarbeitungsreihenfolge?",
+      "answer": "WHERE wird vor GROUP BY ausgeführt und filtert einzelne Zeilen. HAVING wird nach GROUP BY ausgeführt und filtert Gruppen anhand von Bedingungen, die auch Aggregatfunktionen enthalten können.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q112",
+      "question": "Was geschieht, wenn mehrere Tabellen in der FROM-Klausel ohne JOIN-Bedingung genannt werden?",
+      "answer": "Es wird ein Kreuzprodukt erzeugt, das alle möglichen Zeilenkombinationen der Tabellen enthält. Dies kann zu sehr großen temporären Ergebnismengen führen und ist in der Regel unerwünscht; eine JOIN-Bedingung sollte verwendet werden.",
+      "topic": "3 SQL-Anweisung › ### 3.7 Verarbeitungsreihenfolge von SQL-Anweisungen"
+    },
+    {
+      "id": "q113",
+      "question": "Was ist eine skalare Unterabfrage (Unterabfrage mit genau einer Ergebniszeile) und wie wird sie verwendet?",
+      "answer": "Eine skalare Unterabfrage liefert genau einen Wert und kann direkt mit einem Attribut der Hauptabfrage verglichen werden. Beispiel: WHERE city = (SELECT city FROM suppliers WHERE sno = 'S1'). Der Wert der Unterabfrage ersetzt den Vergleichswert in der WHERE-Bedingung.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q114",
+      "question": "Nenne die wichtigsten Mengenoperatoren, die bei Unterabfragen mit mehreren Ergebniszeilen verwendet werden können.",
+      "answer": "Die wichtigsten Operatoren sind: IN (prüft Zugehörigkeit zur Ergebnismenge), NOT IN (prüft Nicht-Zugehörigkeit), EXISTS (prüft ob Ergebnismenge nicht leer ist), ANY/SOME (Bedingung gilt für mindestens eine Zeile) und ALL (Bedingung gilt für alle Zeilen der Unterabfrage).",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q115",
+      "question": "Was ist der Unterschied zwischen einer skalaren Unterabfrage und einer Unterabfrage mit mehreren Ergebniszeilen?",
+      "answer": "Eine skalare Unterabfrage liefert genau einen Wert und kann direkt mit = verglichen werden. Eine Unterabfrage mit mehreren Ergebniszeilen liefert eine Menge von Werten und benötigt Mengenoperatoren wie IN, EXISTS, ANY oder ALL für den Vergleich.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q116",
+      "question": "Erkläre die Funktion des IN-Operators bei Unterabfragen und gib ein Beispiel.",
+      "answer": "Der IN-Operator prüft, ob ein Wert in der Ergebnismenge der Unterabfrage enthalten ist. Er gibt TRUE zurück, wenn der Wert in mindestens einer Zeile vorkommt. Beispiel: SELECT pname FROM parts WHERE city IN (SELECT city FROM suppliers);",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q117",
+      "question": "Was bewirkt der ALL-Operator in einer Unterabfrage und wann gibt er TRUE zurück?",
+      "answer": "Der ALL-Operator prüft, ob eine Bedingung für ALLE Zeilen der Unterabfrage erfüllt ist. Beispiel: WHERE weight > ALL (SELECT weight FROM parts WHERE color = 'blue') gibt nur Teile zurück, die schwerer als das schwerste blaue Teil sind.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q118",
+      "question": "Was ist der Unterschied zwischen den Unterabfrage-Operatoren ANY und ALL?",
+      "answer": "ANY (auch SOME genannt) gibt TRUE zurück, wenn die Bedingung für mindestens eine Zeile der Unterabfrage erfüllt ist. ALL gibt TRUE zurück, wenn die Bedingung für alle Zeilen der Unterabfrage erfüllt ist.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q119",
+      "question": "Erkläre die Funktionsweise des EXISTS-Operators bei Unterabfragen.",
+      "answer": "Der EXISTS-Operator gibt TRUE zurück, wenn die Unterabfrage mindestens eine Zeile liefert. Der konkrete Inhalt der Zeilen spielt keine Rolle, nur ob die Ergebnismenge leer ist oder nicht. EXISTS wird häufig mit korrelierten Unterabfragen verwendet.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q120",
+      "question": "Warum ist die Qualifizierung von Spaltennamen mit dem Tabellennamen bei korrelierten Unterabfragen (z.B. mit EXISTS) wichtig?",
+      "answer": "Bei korrelierten Unterabfragen verweist die Unterabfrage auf Werte der äußeren Abfrage. Wenn ein Spaltenname in beiden Tabellen existiert, muss er mit dem Tabellennamen qualifiziert werden (z.B. suppliers.city), um eindeutig festzulegen, welche Tabelle gemeint ist.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q121",
+      "question": "Gib ein Beispiel für eine EXISTS-Unterabfrage und erkläre ihre Logik.",
+      "answer": "SELECT sname, city FROM suppliers WHERE EXISTS (SELECT * FROM parts WHERE city = suppliers.city); Diese Abfrage gibt alle Händler zurück, für die mindestens ein Teil in der gleichen Stadt existiert. Die Unterabfrage wird für jede Zeile der äußeren Abfrage neu ausgewertet (korrelierte Unterabfrage).",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q122",
+      "question": "Was ist der Unterschied zwischen IN und EXISTS?",
+      "answer": "IN vergleicht einen Wert mit einer Ergebnismenge und prüft Zugehörigkeit, während EXISTS prüft, ob die Unterabfrage überhaupt Ergebnisse liefert. EXISTS ist oft effizienter bei korrelierten Unterabfragen.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q123",
+      "question": "Was bewirkt die NOT IN-Klausel in einer Unterabfrage?",
+      "answer": "NOT IN gibt alle Zeilen zurück, für die der Wert NICHT in der Ergebnismenge der Unterabfrage enthalten ist. Beispiel: SELECT * FROM suppliers WHERE city NOT IN (SELECT city FROM parts) liefert alle Händler aus Städten, in denen keine Teile gelagert werden.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q124",
+      "question": "Beschreibe den Aufbau einer Unterabfrage mit IN anhand eines Beispiels.",
+      "answer": "Eine IN-Unterabfrage hat die Form: SELECT Spalten FROM Tabelle WHERE Spalte IN (SELECT Spalte FROM andere_Tabelle WHERE Bedingung). Die innere SELECT liefert eine Menge von Werten, gegen die die äußere WHERE-Bedingung geprüft wird.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q125",
+      "question": "Was bewirkt der Operator > ALL in Kombination mit einer Unterabfrage?",
+      "answer": "> ALL gibt alle Zeilen zurück, deren Wert größer ist als JEDER Wert in der Ergebnismenge der Unterabfrage. Dies entspricht einem Vergleich mit dem Maximum der Unterabfrage. Beispiel: SELECT * FROM parts WHERE weight > ALL (SELECT weight FROM parts WHERE color = 'Blue') liefert alle Teile, die schwerer sind als das schwerste blaue Teil.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q126",
+      "question": "Erkläre den Unterschied zwischen einer einfachen WHERE-Bedingung und einer Unterabfrage.",
+      "answer": "Eine einfache WHERE-Bedingung vergleicht mit konstanten oder bereits bekannten Werten, während eine Unterabfrage dynamisch Werte aus der Datenbank abruft und diese als Vergleichswerte verwendet.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q127",
+      "question": "Welche Θ-Operatoren können mit Unterabfragen verwendet werden?",
+      "answer": "Die Θ-Operatoren sind: Gleichheit (=), Kleiner (<), Kleiner oder gleich (<=), Größer (>), Größer oder gleich (>=) und Ungleich (<>).",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q128",
+      "question": "Wie können Θ-Operatoren zusammen mit ALL und ANY eingesetzt werden?",
+      "answer": "Θ-Operatoren werden mit ALL (> ALL, < ALL usw.) oder ANY (> ANY, < ANY usw.) kombiniert, um Vergleiche mit allen oder einigen Werten einer Unterabfrage durchzuführen. Beispiel: > ALL entspricht 'größer als jeder Wert', > ANY entspricht 'größer als mindestens ein Wert'.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q129",
+      "question": "Was ist eine korrelierte Unterabfrage und warum wird eine EXISTS-Unterabfrage oft so bezeichnet?",
+      "answer": "Eine korrelierte Unterabfrage referenziert Spalten aus der äußeren Hauptabfrage und wird daher für jede Zeile der Hauptabfrage neu ausgewertet. Eine EXISTS-Unterabfrage ist häufig korreliert, weil sie typischerweise auf ein Attribut der Hauptabfrage verweist (z.B. WHERE parts.city = suppliers.city), um zu prüfen, ob passende Zeilen existieren.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q130",
+      "question": "Was ist eine korrelierte Unterabfrage?",
+      "answer": "Eine korrelierte Unterabfrage referenziert Spalten oder Tabellen aus der Hauptabfrage. Sie wird nicht nur einmal ausgeführt, sondern für jede Zeile der Hauptabfrage neu bewertet.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q131",
+      "question": "Erkläre die Syntax und Semantik von NOT IN bei Unterabfragen.",
+      "answer": "NOT IN (SELECT ...) gibt alle Zeilen zurück, deren Wert NICHT in der Ergebnismenge der Unterabfrage vorkommt. Es ist die logische Negation des IN-Operators.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q132",
+      "question": "Wann sollte man EXISTS statt IN verwenden?",
+      "answer": "EXISTS ist effizienter bei großen Datenmengen und korrelierten Unterabfragen, da die Datenbank bei Existenzprüfung nach der ersten Übereinstimmung abbrechen kann, während IN alle Werte der Unterabfrage sammeln muss.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q133",
+      "question": "Erkläre die konzeptionellen Unterschiede zwischen IN und EXISTS bei Unterabfragen.",
+      "answer": "IN sammelt zunächst alle Ergebniswerte der Unterabfrage und prüft dann die Zugehörigkeit. EXISTS hingegen prüft nur, ob mindestens eine Zeile in der Unterabfrage die Bedingung erfüllt, und bricht dann ab. EXISTS ist flexibler bei komplexen korrelierten Bedingungen und kann effizienter sein, da es nicht die gesamte Ergebnismenge materialisieren muss.",
+      "topic": "3 SQL-Anweisung › ### 3.8 Unterabfragen"
+    },
+    {
+      "id": "q134",
+      "question": "Welche Kategorien von skalaren Funktionen werden in SQL unterschieden?",
+      "answer": "SQL unterscheidet drei Kategorien von skalaren Funktionen: mathematische Funktionen (wie ABS, SIN, SQRT), Zeichenketten-Funktionen (wie SUBSTRING, UPPER, LEN) und Zeit- und Datumsfunktionen (wie CURRENT_DATE, YEAR, TO_DATE).",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q135",
+      "question": "Nenne fünf mathematische Funktionen in SQL.",
+      "answer": "Fünf mathematische Funktionen sind: ABS (Absolutwert), SQRT (Quadratwurzel), POWER (Potenz), ROUND (Runden) und CEILING (Aufrunden).",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q136",
+      "question": "Welche Zeichenketten-Funktionen gibt es in SQL?",
+      "answer": "Die wichtigsten Zeichenketten-Funktionen sind: CHARINDEX/INSTR (findet Position eines Substrings), LEFT/RIGHT (extrahiert Zeichen von links/rechts), LEN (Länge), LOWER/UPPER (Groß-/Kleinschreibung), LTRIM/RTRIM (entfernt Leerzeichen) und SUBSTRING (extrahiert Teilstring).",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q137",
+      "question": "Was ist der Unterschied zwischen LEFT und RIGHT in SQL?",
+      "answer": "LEFT extrahiert eine angegebene Anzahl von Zeichen von der linken Seite eines Strings, während RIGHT dieselbe Operation von der rechten Seite durchführt. Beispiel: LEFT('Hello', 3) ergibt 'Hel', RIGHT('Hello', 3) ergibt 'llo'.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q138",
+      "question": "Welche Zeit- und Datumsfunktionen sind in SQL verfügbar?",
+      "answer": "Die Zeit- und Datumsfunktionen umfassen: CURRENT_DATE (aktuelles Datum), CURRENT_TIME (aktuelle Zeit), CURRENT_TIMESTAMP (Datum und Zeit), YEAR/MONTH/DAY (extrahieren Komponenten), SYSDATE (Systemdatum), TRUNC (trunciert auf Komponente) und TO_DATE (konvertiert zu Datum).",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q139",
+      "question": "Was ist der Unterschied zwischen CURRENT_TIMESTAMP und SYSDATE?",
+      "answer": "CURRENT_TIMESTAMP gibt das aktuelle Datum und die Uhrzeit nach SQL-Standard zurück, während SYSDATE die Systemzeit des Datenbankservers liefert. SYSDATE ist datenbankspezifisch (z.B. Oracle), CURRENT_TIMESTAMP ist standardisierter und portabler.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q140",
+      "question": "Welche Aggregatfunktionen existieren in SQL?",
+      "answer": "Die Aggregatfunktionen sind: AVG (Durchschnitt), MAX (Maximum), MIN (Minimum), SUM (Summe), COUNT (Anzahl) und STDEV (Standardabweichung).",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q141",
+      "question": "Worin besteht der Unterschied zwischen COUNT(*) und COUNT(spalte)?",
+      "answer": "COUNT(*) zählt alle Zeilen einer Tabelle, einschließlich derjenigen mit NULL-Werten. COUNT(spalte) zählt nur die Zeilen, in denen die Spalte einen nicht-NULL-Wert hat.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q142",
+      "question": "Wie behandelt die AVG-Funktion NULL-Werte?",
+      "answer": "Die AVG-Funktion ignoriert NULL-Werte bei der Berechnung des Durchschnitts. Sie berücksichtigt nur die nicht-NULL-Werte, was bedeutet, dass NULL-Einträge weder Zähler noch Nenner beeinflussen.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q143",
+      "question": "Warum ist die Syntax 'SELECT AVG(*) FROM tabelle' nicht erlaubt?",
+      "answer": "Die Syntax ist nicht erlaubt, weil AVG eine spezifische numerische Spalte benötigt, um den Durchschnitt zu berechnen. Das Wildcard (*) ist bei Aggregatfunktionen wie AVG, SUM, MIN und MAX nicht zulässig – nur COUNT(*) ist eine Ausnahme.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q144",
+      "question": "Was leistet die CAST-Funktion und wann ist sie bei Aggregatfunktionen sinnvoll?",
+      "answer": "CAST konvertiert einen Datentyp in einen anderen. Bei AVG auf einer Integer-Spalte kann CAST(spalte AS REAL) oder CAST(spalte AS FLOAT) verwendet werden, um eine Ganzzahldivision zu vermeiden und einen echten Dezimaldurchschnitt zu erhalten.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q145",
+      "question": "Was ist der Unterschied zwischen SQRT und SQUARE?",
+      "answer": "SQRT berechnet die Quadratwurzel einer Zahl (z.B. SQRT(9) = 3), während SQUARE das Quadrat einer Zahl berechnet (z.B. SQUARE(3) = 9).",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q146",
+      "question": "Was macht die Funktion RADIANS?",
+      "answer": "RADIANS konvertiert einen Winkel von Grad in Radiant (Bogenmaß), was für trigonometrische Funktionen wie SIN, COS und TAN notwendig ist, da diese Radiant erwarten.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q147",
+      "question": "Worin unterscheiden sich LTRIM und RTRIM?",
+      "answer": "LTRIM entfernt führende Leerzeichen von der linken Seite eines Strings, während RTRIM abschließende Leerzeichen von der rechten Seite entfernt.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q148",
+      "question": "Was ist die Funktion SUBSTRING in SQL?",
+      "answer": "SUBSTRING extrahiert einen Teil eines Strings anhand von Startposition und Länge. Beispiel: SUBSTRING('Hello World', 1, 5) ergibt 'Hello'.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q149",
+      "question": "Wie funktioniert die CHARINDEX-Funktion (oder INSTR)?",
+      "answer": "CHARINDEX/INSTR findet die Position eines Substrings innerhalb eines Strings und gibt die numerische Position zurück (1-basiert). Beispiel: CHARINDEX('lo', 'Hello') ergibt 4.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q150",
+      "question": "Was ist die Funktion TRUNC im Kontext von Zeit- und Datumsfunktionen?",
+      "answer": "TRUNC kürzt eine Datums- oder Zeitangabe auf eine bestimmte Komponente (z.B. auf Jahr, Monat oder Tag), wobei alle kleineren Zeitkomponenten auf ihren Anfangswert gesetzt werden.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q151",
+      "question": "Was macht die Funktion TO_DATE?",
+      "answer": "TO_DATE konvertiert einen Text- oder String-Wert in einen Datumswert gemäß einem angegebenen Format. Beispiel: TO_DATE('2024-01-15', 'YYYY-MM-DD').",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q152",
+      "question": "Was ist die Funktion LOG10 und worin unterscheidet sie sich von LOG?",
+      "answer": "LOG10 berechnet den Logarithmus zur Basis 10, während LOG den natürlichen Logarithmus (zur Basis e ≈ 2,71828) berechnet.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q153",
+      "question": "Was macht die CEILING-Funktion?",
+      "answer": "CEILING rundet eine Dezimalzahl immer aufwärts zur nächsten ganzen Zahl. Beispiel: CEILING(3.2) = 4, CEILING(-3.2) = -3.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q154",
+      "question": "Was macht die FLOOR-Funktion?",
+      "answer": "FLOOR rundet eine Dezimalzahl immer abwärts zur nächsten ganzen Zahl. Beispiel: FLOOR(3.9) = 3, FLOOR(-3.9) = -4.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q155",
+      "question": "Was ist die SIGN-Funktion und welche Werte gibt sie zurück?",
+      "answer": "SIGN gibt das Vorzeichen einer Zahl zurück: -1 für negative Zahlen, 0 für Null und 1 für positive Zahlen.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q156",
+      "question": "Was ist der Unterschied zwischen CURRENT_DATE, CURRENT_TIME und CURRENT_TIMESTAMP?",
+      "answer": "CURRENT_DATE gibt nur das aktuelle Datum zurück, CURRENT_TIME gibt nur die aktuelle Uhrzeit zurück, und CURRENT_TIMESTAMP kombiniert beide Informationen zu einem vollständigen Zeitstempel.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q157",
+      "question": "Wie funktioniert die ROUND-Funktion in SQL?",
+      "answer": "ROUND rundet eine Dezimalzahl auf eine angegebene Anzahl von Dezimalstellen. Beispiel: ROUND(3.14159, 2) ergibt 3.14, ROUND(3.145, 2) ergibt 3.15.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q158",
+      "question": "Wie verhalten sich Aggregatfunktionen bei NULL-Werten?",
+      "answer": "Aggregatfunktionen wie COUNT(spalte), SUM, AVG, MIN und MAX ignorieren NULL-Werte. Ausnahme: COUNT(*) zählt alle Zeilen inklusive NULL-Werte. Bei SUM und AVG werden NULL-Einträge einfach nicht in die Berechnung einbezogen.",
+      "topic": "3 SQL-Anweisung › ### 3.9 SQL integrierte Standardfunktionen"
+    },
+    {
+      "id": "q159",
+      "question": "Was ist die Funktion von GROUP BY in SQL?",
+      "answer": "GROUP BY fasst Zeilen mit gleichen Werten in einer oder mehreren Spalten zu Gruppen zusammen und ermöglicht so die Anwendung von Aggregatfunktionen (SUM, AVG, COUNT usw.) auf jede Gruppe separat.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q160",
+      "question": "Wozu dient die HAVING-Klausel in SQL?",
+      "answer": "HAVING filtert Gruppen nach der Aggregation. Es ermöglicht, Bedingungen auf Aggregatwerte anzuwenden (z.B. HAVING SUM(qty) > 500), was mit WHERE nicht möglich ist, da WHERE vor der Gruppierung wirkt.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q161",
+      "question": "Was ist der Unterschied zwischen WHERE und HAVING?",
+      "answer": "WHERE filtert einzelne Zeilen VOR der Gruppierung und kann keine Aggregatfunktionen verwenden. HAVING filtert Gruppen NACH der Aggregation und kann Aggregatfunktionen wie SUM, COUNT usw. als Bedingung nutzen.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q162",
+      "question": "In welcher Reihenfolge werden WHERE, GROUP BY und HAVING verarbeitet?",
+      "answer": "Die Verarbeitungsreihenfolge ist: 1. WHERE filtert Einzelzeilen, 2. GROUP BY gruppiert die verbleibenden Zeilen, 3. Aggregatfunktionen werden berechnet, 4. HAVING filtert die Gruppen anhand der Aggregatwerte.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q163",
+      "question": "Warum verwendet man HAVING anstatt WHERE bei Aggregatbedingungen?",
+      "answer": "WHERE kann nicht auf aggregierte Werte wie SUM(qty) oder COUNT(*) zugreifen, weil diese erst nach der Gruppierung berechnet werden. HAVING wird nach der Aggregation angewendet und ermöglicht daher das Filtern basierend auf Aggregationsergebnissen, z.B. HAVING COUNT(qty) > 1.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q164",
+      "question": "Kann HAVING ohne GROUP BY verwendet werden?",
+      "answer": "Technisch ist HAVING ohne GROUP BY möglich – die gesamte Tabelle wird dann als eine einzige Gruppe behandelt. In der Praxis ist dies unüblich und HAVING wird fast immer zusammen mit GROUP BY eingesetzt.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q165",
+      "question": "Was ist der Zweck der Spaltenaliasierung mit AS in der SELECT-Klausel?",
+      "answer": "Die Aliasierung mit AS gibt einer Spalte oder einem Ausdruck (z.B. einer Aggregatfunktion) einen aussagekräftigen Namen im Ergebnis, z.B. SELECT SUM(qty) AS total. Dies verbessert die Lesbarkeit und ermöglicht die Referenzierung in ORDER BY.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q166",
+      "question": "Was bedeutet COUNT(qty) > 1 in der HAVING-Klausel?",
+      "answer": "COUNT(qty) > 1 in der HAVING-Klausel bedeutet, dass nur Gruppen (z.B. Händler) berücksichtigt werden, bei denen mehr als ein nicht-NULL-Wert in der Spalte qty vorkommt – also Händler mit mindestens zwei Lieferungen.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q167",
+      "question": "Warum ist die Verarbeitungsreihenfolge WHERE → GROUP BY → HAVING wichtig?",
+      "answer": "Die Reihenfolge bestimmt, auf welche Datenmenge jede Klausel wirkt: WHERE reduziert zunächst die Einzelzeilen, GROUP BY aggregiert die gefilterten Zeilen, HAVING filtert danach die Gruppen. Eine falsche Reihenfolge würde zu fehlerhaften oder unmöglichen Ergebnissen führen, z.B. kann WHERE keine Aggregatwerte verwenden.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q168",
+      "question": "Kann eine WHERE-Klausel auf aggregierte Spalten wie SUM(qty) wirken?",
+      "answer": "Nein, WHERE kann nicht auf aggregierte Spalten wirken, da Aggregationen erst nach der WHERE-Filterung und Gruppierung berechnet werden. Für Bedingungen auf Aggregatwerte muss HAVING verwendet werden.",
+      "topic": "3 SQL-Anweisung › ### 3.10 Gruppierung"
+    },
+    {
+      "id": "q169",
+      "question": "Was ist die Hauptfunktion eines JOIN in SQL?",
+      "answer": "Ein JOIN verbindet zwei oder mehr Tabellen basierend auf einer gemeinsamen Bedingung, üblicherweise zwischen Primärschlüssel (PK) und Fremdschlüssel (FK). Dies ermöglicht es, verwandte Daten aus mehreren Tabellen in einem Ergebnis zu kombinieren.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q170",
+      "question": "Welche syntaktische Alternative zur modernen JOIN-Syntax existiert?",
+      "answer": "Die ältere SQL-Syntax verwendet kommagetrennte Tabellen in der FROM-Klausel und definiert die Verbindungsbedingung in der WHERE-Klausel: SELECT * FROM table1, table2 WHERE table1.key = table2.key. Die moderne Syntax verwendet dagegen explizit JOIN ... ON.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q171",
+      "question": "Erkläre die konzeptionellen Schritte der JOIN-Berechnung.",
+      "answer": "1. Kreuzprodukt: Alle Zeilenkombinationen der beteiligten Tabellen werden gebildet. 2. ON-Filter: Nur Zeilen, die die JOIN-Bedingung erfüllen, werden behalten. 3. WHERE-Filter: Die Ergebnismenge wird durch weitere Bedingungen eingeschränkt. 4. Projektion: Nur die gewünschten Spalten werden ausgewählt.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q172",
+      "question": "Was ist das Kreuzprodukt im Kontext der JOIN-Berechnung?",
+      "answer": "Das Kreuzprodukt (CROSS JOIN) kombiniert jede Zeile der ersten Tabelle mit jeder Zeile der zweiten Tabelle. Bei m Zeilen in Tabelle 1 und n Zeilen in Tabelle 2 entstehen m × n Zeilen. Es bildet die konzeptionelle Basis, auf der JOIN-Bedingungen angewendet werden.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q173",
+      "question": "Welche Funktion hat die ON-Klausel bei einem JOIN?",
+      "answer": "Die ON-Klausel definiert die Verbindungsbedingung zwischen den Tabellen. Sie filtert das Kreuzprodukt, sodass nur Zeilen erhalten bleiben, die die angegebene Bedingung erfüllen, z.B. ON s.sno = sp.sno verknüpft Lieferanten mit ihren Lieferungen über den gemeinsamen Schlüssel.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q174",
+      "question": "Welche Operatoren können in einer JOIN-Bedingung verwendet werden und was ist ein Equi-Join?",
+      "answer": "In JOIN-Bedingungen können die Operatoren =, >, <, >= und <= verwendet werden. Ein Equi-Join verwendet den Gleichheitsoperator (=) und ist der häufigste JOIN-Typ, bei dem Zeilen mit übereinstimmenden Schlüsselwerten verbunden werden.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q175",
+      "question": "Was ist ein Equi-Join?",
+      "answer": "Ein Equi-Join ist ein JOIN, der den Gleichheitsoperator (=) als Verbindungsbedingung verwendet. Dies ist die häufigste Form des Joins und verbindet Zeilen basierend auf gleichen Werten in den angegebenen Spalten.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q176",
+      "question": "Welche Anforderung besteht bezüglich der Spaltentypen beim JOIN?",
+      "answer": "Die Spaltentypen der verbundenen Spalten müssen kompatibel sein. Empfohlen wird die Verwendung identischer Typen, da dies zu schnellerer Verarbeitung führt.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q177",
+      "question": "Müssen Spaltennamen beim JOIN identisch sein?",
+      "answer": "Nein, Spaltennamen müssen nicht identisch sein. Es ist nur erforderlich, dass die Spaltentypen kompatibel sind und die Spalten in der ON-Bedingung explizit angegeben werden.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q178",
+      "question": "Was ist ein NATURAL JOIN und wie unterscheidet er sich von einem gewöhnlichen JOIN?",
+      "answer": "Ein NATURAL JOIN verbindet zwei Tabellen automatisch über alle Spalten mit identischen Namen, ohne dass eine explizite ON-Bedingung angegeben werden muss. Bei einem gewöhnlichen JOIN muss die Verbindungsbedingung hingegen explizit mit ON definiert werden.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q179",
+      "question": "Was sind kaskadierte Joins und wie werden sie geschrieben?",
+      "answer": "Kaskadierte Joins verbinden mehr als zwei Tabellen, indem mehrere JOIN-Operationen hintereinander ausgeführt werden. Beispiel: SELECT s.sname, p.pname FROM supp_parts sp INNER JOIN suppliers s ON sp.sno = s.sno INNER JOIN parts p ON sp.pno = p.pno WHERE qty > 300;",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q180",
+      "question": "Wie wird die WHERE-Klausel in Relation zur ON-Klausel bei JOINs ausgeführt?",
+      "answer": "Die ON-Klausel wird zuerst angewendet, um die Tabellen zu verbinden. Die WHERE-Klausel wird danach angewendet, um die verbundenen Zeilen weiter zu filtern. Die konzeptuelle Reihenfolge ist: (1) Kreuzprodukt, (2) ON-Bedingung anwenden, (3) WHERE-Bedingung anwenden, (4) Projektion (SELECT).",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q181",
+      "question": "Kann die JOIN-Bedingung mit mehreren Operatoren kombiniert werden?",
+      "answer": "Ja, die ON-Bedingung kann mehrere Bedingungen mit AND oder OR verknüpfen, z.B. ON s.sno = sp.sno AND s.city = 'London'. Restriktionsbedingungen sind in der ON-Klausel zulässig.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q182",
+      "question": "Was ist der Unterschied zwischen der modernen JOIN-Syntax und der alten Syntax?",
+      "answer": "Die moderne JOIN-Syntax (mit JOIN und ON) ist expliziter und besser lesbar, da die Verbindungsbedingung klar in der ON-Klausel angegeben ist. Die alte Syntax (Tabellen durch Komma getrennt in FROM, Verbindungsbedingung in WHERE) vermischt Verbindungs- und Filterbedingungen.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q183",
+      "question": "Welche Rolle spielt die Fremdschlüssel-Primärschlüssel-Beziehung beim JOIN?",
+      "answer": "Die PK-FK-Beziehung definiert, wie zwei Tabellen logisch verbunden sind. Der Primärschlüssel einer Tabelle entspricht dem Fremdschlüssel in der anderen Tabelle, und diese Beziehung wird in der ON-Klausel des JOINs angegeben.",
+      "topic": "3 SQL-Anweisung › ### 3.11 Verbünde (Joins)"
+    },
+    {
+      "id": "q184",
+      "question": "Was ist der Unterschied zwischen INNER JOIN und OUTER JOIN bezüglich NULL-Werte?",
+      "answer": "INNER JOIN verwirft alle Zeilen, bei denen die Join-Attribute keine Entsprechung in der anderen Tabelle haben. OUTER JOIN behält dagegen auch Zeilen ohne Entsprechung und füllt fehlende Spalten mit NULL auf.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q185",
+      "question": "Welche Arten von OUTER JOINs gibt es?",
+      "answer": "Es gibt drei Arten: LEFT OUTER JOIN (behält alle Zeilen der linken Tabelle, auch ohne Match rechts), RIGHT OUTER JOIN (behält alle Zeilen der rechten Tabelle, auch ohne Match links) und FULL OUTER JOIN (behält alle Zeilen aus beiden Tabellen).",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q186",
+      "question": "Was bedeutet LEFT OUTER JOIN?",
+      "answer": "LEFT OUTER JOIN behält alle Zeilen der linken Tabelle, auch wenn sie keine Entsprechung in der rechten Tabelle haben. Diese Zeilen werden mit NULL-Werten für die Spalten der rechten Tabelle aufgefüllt.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q187",
+      "question": "Was bedeutet RIGHT OUTER JOIN?",
+      "answer": "RIGHT OUTER JOIN behält alle Zeilen der rechten Tabelle, auch wenn sie keine Entsprechung in der linken Tabelle haben. Diese Zeilen werden mit NULL-Werten für die Spalten der linken Tabelle aufgefüllt.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q188",
+      "question": "Was bedeutet FULL OUTER JOIN?",
+      "answer": "FULL OUTER JOIN behält alle Zeilen aus beiden Tabellen. Zeilen ohne Entsprechung in der anderen Tabelle werden mit NULL-Werten für die fehlenden Spalten aufgefüllt.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q189",
+      "question": "Warum wird ein Lieferant ohne passende Teile nicht im INNER JOIN, aber im LEFT OUTER JOIN zurückgegeben?",
+      "answer": "INNER JOIN gibt nur Zeilen zurück, bei denen in beiden Tabellen eine Entsprechung existiert. Hat ein Lieferant kein passendes Teil, verwirft INNER JOIN diese Zeile. LEFT OUTER JOIN behält hingegen alle Zeilen der linken Tabelle (Lieferanten) und füllt die Spalten der rechten Tabelle (Teile) mit NULL.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q190",
+      "question": "Was passiert bei einem FULL OUTER JOIN, wenn kein Match vorhanden ist?",
+      "answer": "Bei FULL OUTER JOIN werden beide Seiten aufbewahrt: Zeilen ohne Match in der linken Tabelle erhalten NULL in den rechten Spalten, und Zeilen ohne Match in der rechten Tabelle erhalten NULL in den linken Spalten.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q191",
+      "question": "Warum ist FULL OUTER JOIN informativer als LEFT oder RIGHT OUTER JOIN allein?",
+      "answer": "FULL OUTER JOIN zeigt sowohl Zeilen aus der linken Tabelle ohne Match als auch Zeilen aus der rechten Tabelle ohne Match, während LEFT oder RIGHT OUTER JOIN jeweils nur eine Seite abdecken.",
+      "topic": "3 SQL-Anweisung › ### 3.12 Inner-/Outer-Join"
+    },
+    {
+      "id": "q192",
+      "question": "Was ist der Unterschied zwischen UNION und UNION ALL?",
+      "answer": "UNION eliminiert Duplikate aus der Vereinigungsmenge, während UNION ALL alle Zeilen inklusive Duplikate beibehält. UNION ist CPU-intensiver, da eine Deduplizierungsoperation durchgeführt wird. UNION ALL ist schneller und sinnvoll, wenn Duplikate gewünscht oder irrelevant sind.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q193",
+      "question": "Erkläre die INTERSECT-Operation in SQL.",
+      "answer": "INTERSECT gibt die Schnittmenge der Ergebniszeilen zweier SELECT-Anfragen zurück. Es werden nur jene Zeilen im Ergebnis angezeigt, die in beiden Zeilenmengen vorhanden sind. Beispiel: SELECT city FROM suppliers INTERSECT SELECT city FROM parts gibt nur Städte zurück, die sowohl in der Lieferanten- als auch in der Teile-Tabelle vorkommen.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q194",
+      "question": "Was ist die MINUS-Operation und wie funktioniert sie?",
+      "answer": "MINUS (in manchen DBMS auch EXCEPT) gibt die Differenzmenge zurück: Zeilen des ersten SELECT, die nicht im zweiten SELECT vorkommen. Beispiel: SELECT city FROM suppliers MINUS SELECT city FROM parts liefert Städte, in denen es Lieferanten, aber keine Teile gibt.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q195",
+      "question": "Welche Voraussetzungen müssen für Mengenoperationen (UNION, INTERSECT, MINUS) erfüllt sein?",
+      "answer": "Alle beteiligten SELECT-Anweisungen müssen (1) die gleiche Anzahl von Spalten haben und (2) kompatible Spaltentypen in den entsprechenden Positionen aufweisen. Spaltennamen können unterschiedlich sein; die Ergebnismenge übernimmt die Spaltennamen und -typen der ersten Zeilenmenge.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q196",
+      "question": "Gib ein Anwendungsbeispiel für UNION an.",
+      "answer": "Ein Beispiel ist die Abfrage aller Städte, in denen entweder Lieferanten oder Teile existieren: SELECT city FROM suppliers UNION SELECT city FROM parts. Das Ergebnis enthält jede Stadt nur einmal, auch wenn sie in beiden Tabellen vorkommt.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q197",
+      "question": "Erkläre den Unterschied zwischen MINUS und INTERSECT.",
+      "answer": "INTERSECT gibt die Schnittmenge zurück – Zeilen, die in beiden Mengen vorkommen. MINUS gibt die Differenzmenge zurück – Zeilen der ersten Menge, die nicht in der zweiten Menge vorkommen. MINUS ist zudem nicht kommutativ: A MINUS B ergibt ein anderes Ergebnis als B MINUS A.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q198",
+      "question": "Sind Mengenoperationen wie UNION kommutativ?",
+      "answer": "UNION und INTERSECT sind kommutativ (A UNION B = B UNION A). MINUS ist nicht kommutativ: A MINUS B ist nicht identisch mit B MINUS A, da die Reihenfolge bestimmt, welche Menge als Ausgangsmenge dient.",
+      "topic": "3 SQL-Anweisung › ### 3.13 Mengenoperationen"
+    },
+    {
+      "id": "q199",
+      "question": "Welche Syntax wird für die INSERT-Anweisung in SQL verwendet?",
+      "answer": "INSERT INTO <table_name> [(col1, col2, …, colN)] VALUES (val1, val2, …, valN). Die Anzahl der Spalten und Werte muss übereinstimmen, und die Reihenfolge bestimmt die Zuordnung. Nicht angegebene Spalten werden mit ihrem DEFAULT-Wert oder NULL belegt.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q200",
+      "question": "Wie kann man mittels INSERT Daten aus einer Abfrage kopieren?",
+      "answer": "Mit INSERT INTO <table> SELECT ... wird das Ergebnis einer SELECT-Abfrage direkt in eine Tabelle eingefügt. Dies ermöglicht das effiziente Kopieren von Daten mit optionalen Transformationen oder Filtern.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q201",
+      "question": "Was ist der Zweck von Transaktionen bei DML-Operationen (INSERT, UPDATE, DELETE)?",
+      "answer": "Transaktionen ermöglichen es, mehrere DML-Operationen als atomare Einheit auszuführen. Mit COMMIT werden alle Änderungen dauerhaft gespeichert, mit ROLLBACK werden alle Änderungen der Transaktion rückgängig gemacht. Dies schützt vor inkonsistenten Datenzuständen bei Fehlern.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q202",
+      "question": "Erkläre die DELETE-Anweisung und ihre Syntax.",
+      "answer": "DELETE FROM <table_name> [WHERE <search_condition>] entfernt Datensätze aus einer Tabelle. Die WHERE-Klausel schränkt die zu löschenden Datensätze ein. Ohne WHERE werden alle Zeilen der Tabelle gelöscht. Foreign-Key-Constraints müssen dabei beachtet werden.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q203",
+      "question": "Was ist die Auswirkung von CASCADE bei einer DELETE-Operation?",
+      "answer": "CASCADE entfernt abhängige Datensätze in anderen Tabellen, die auf die gelöschten Datensätze verweisen. Dies verhindert Constraint-Verletzungen.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q204",
+      "question": "Wie unterscheidet sich DELETE FROM von DROP TABLE?",
+      "answer": "DELETE FROM löscht Datensätze einer Tabelle, die Tabellenstruktur bleibt erhalten. DROP TABLE löscht die gesamte Tabelle inklusive ihrer Struktur und Daten.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q205",
+      "question": "Erkläre die Syntax der UPDATE-Anweisung.",
+      "answer": "UPDATE <table_name> SET col = val [ WHERE <search_condition> ] ändert Datensätze. Die WHERE-Klausel bestimmt, welche Datensätze aktualisiert werden; ohne WHERE werden alle Datensätze geändert.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q206",
+      "question": "Warum sollte UPDATE in einer Transaktion ausgeführt werden?",
+      "answer": "Transaktionen ermöglichen es, die Änderungen vor dem Commit zu überprüfen und bei Bedarf rückgängig zu machen, um Datenkonsistenz zu gewährleisten.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q207",
+      "question": "Wie können mehrere Spalten in einer UPDATE-Anweisung geändert werden?",
+      "answer": "Mit der SET-Klausel können mehrere Zuweisungen kommagetrennt aufgelistet werden, z.B. SET status = 15, city = 'Houston'.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q208",
+      "question": "Was sind die drei Hauptbefehle der Data Manipulation Language (DML)?",
+      "answer": "INSERT, DELETE und UPDATE. Sie werden verwendet, um Daten einzufügen, zu löschen und zu ändern.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q209",
+      "question": "Warum ist die Reihenfolge der Spalten in der INSERT-Anweisung wichtig?",
+      "answer": "Die Reihenfolge der Spalten in der ersten Klammer bestimmt die Zuordnung zu den Werten in der VALUES-Klausel. Eine falsche Reihenfolge führt zu fehlerhaften Dateneingaben.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q210",
+      "question": "Was ist der Unterschied zwischen DEFAULT-Wert und NULL bei INSERT?",
+      "answer": "Ein DEFAULT-Wert ist ein vordefinierter Wert, der automatisch eingefügt wird; NULL bedeutet, dass das Feld leer bleibt. Welcher Wert verwendet wird, hängt von der Spaltendefinition ab.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q211",
+      "question": "Warum sollte das Datenbankschema vor DELETE-Operationen bekannt sein?",
+      "answer": "Das Schema zeigt Foreign-Key-Beziehungen und Constraints. Ohne dieses Wissen können unerwartete Nebeneffekte auftreten, z.B. das Löschen abhängiger Datensätze durch Cascade-Regeln.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q212",
+      "question": "Was passiert, wenn DELETE FROM ohne WHERE-Klausel ausgeführt wird?",
+      "answer": "DELETE FROM <table_name> ohne WHERE-Klausel löscht alle Datensätze der Tabelle. Die Tabellenstruktur bleibt erhalten. Dies sollte mit Vorsicht und idealerweise nur in Transaktionen durchgeführt werden.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q213",
+      "question": "Was ist ein Anwendungsfall für INSERT mittels einer SELECT-Abfrage?",
+      "answer": "Datenmigration, Backup-Erstellung oder Datenduplizierung. Beispiel: INSERT INTO test_parts SELECT pno, 'TRN_' || pname FROM parts kopiert alle Teile mit einem Präfix 'TRN_' in eine Testtabelle.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q214",
+      "question": "Wie wird die Konsistenz bei mehreren DML-Operationen in einer Transaktion gewährleistet?",
+      "answer": "Alle Operationen (INSERT, UPDATE, DELETE) werden als atomare Einheit behandelt. Entweder werden alle erfolgreich ausgeführt und mit COMMIT bestätigt, oder alle werden mit ROLLBACK rückgängig gemacht.",
+      "topic": "4 Data Manipulation Language"
+    },
+    {
+      "id": "q215",
+      "question": "Was ist eine Sicht (View) in einer Datenbank?",
+      "answer": "Eine Sicht ist eine virtuelle Tabelle, deren Attribute und Datentypen von Basistabellen stammen. Die Tupel werden zur Laufzeit berechnet und nicht gespeichert.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q216",
+      "question": "Wann werden die Tupel einer Sicht berechnet?",
+      "answer": "Die Tupel einer Sicht werden zur Laufzeit bei jeder Abfrage berechnet und nicht in der Datenbank gespeichert.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q217",
+      "question": "Nenne drei Vorteile von Sichten.",
+      "answer": "Sichten ermöglichen die Adaption an verschiedene Benutzerklassen, zeigen nur relevante Daten an, präsentieren Spalten benutzerfreundlich und ermöglichen Schemaänderungen ohne Auswirkungen auf bestehende Abfragen.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q218",
+      "question": "Welchen Zweck haben Sichten bezüglich Datenschutz und Komplexität?",
+      "answer": "Sichten dienen der Anpassung an spezielle Benutzerbedürfnisse und zum Datenschutz. Sie verbergen komplexe Strukturen wie Join-Beziehungen vor den Benutzern.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q219",
+      "question": "Gib die SQL-Syntax zum Erstellen einer Sicht an.",
+      "answer": "CREATE VIEW <view_name> [(<column_name> [, <column_name> …] ) ] AS <query_expression> [ WITH CHECK OPTION ]",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q220",
+      "question": "Was bewirkt die WITH CHECK OPTION bei einer Sicht?",
+      "answer": "WITH CHECK OPTION verhindert das Einfügen oder Aktualisieren von Datensätzen, die die WHERE-Bedingung der Sicht verletzen. Ohne diese Option können Datensätze eingefügt werden, die dann nicht in der Sicht sichtbar sind.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q221",
+      "question": "Welches Problem tritt auf, wenn man ohne WITH CHECK OPTION in eine gefilterte Sicht einfügt?",
+      "answer": "Ein Datensatz wird in die Basistabelle eingefügt, erfüllt aber die Bedingungen der Sicht nicht. Der Datensatz ist somit in der Basistabelle vorhanden, erscheint aber nicht in der Sicht.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q222",
+      "question": "Was ist die erste Voraussetzung, damit eine Sicht änderbar (INSERT/UPDATE) ist?",
+      "answer": "Es darf nur eine Basisrelation verwendet werden. Die Sicht darf nicht mehrere Basistabellen zusammenfassen (kein Join).",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q223",
+      "question": "Was muss bezüglich des Schlüssels gelten, damit eine Sicht änderbar ist?",
+      "answer": "Der Primärschlüssel der Basistabelle muss komplett in der Sicht enthalten sein, damit Änderungen eindeutig einer Zeile der Basistabelle zugeordnet werden können.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q224",
+      "question": "Welche drei SQL-Konstrukte machen eine Sicht nicht änderbar?",
+      "answer": "Aggregate (SUM, COUNT, AVG etc.), Gruppierungen (GROUP BY) und Duplikateliminierung (DISTINCT) verhindern die Änderbarkeit einer Sicht.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q225",
+      "question": "Was unterscheidet eine Sicht von einer permanenten Tabelle?",
+      "answer": "Eine Sicht ist virtuell und berechnet ihre Tupel zur Laufzeit neu, während eine permanente Tabelle ihre Daten physisch speichert. Sichten benötigen daher weniger Speicherplatz.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q226",
+      "question": "Kann eine Sicht auf einer anderen Sicht basieren?",
+      "answer": "Ja, eine Sicht kann auf einer anderen Sicht basieren (geschachtelte Sichten). WITH CHECK OPTION erstreckt sich dann auf alle beteiligten Sichten.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q227",
+      "question": "Welcher Vorteil besteht darin, dass Spalten in einer Sicht umbenannt werden können?",
+      "answer": "Spalten können benutzerfreundlich präsentiert und an verschiedene Benutzergruppen angepasst werden, ohne die Basistabelle zu ändern.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q228",
+      "question": "Wie ermöglichen Sichten Schemaänderungen ohne Auswirkungen auf Benutzer?",
+      "answer": "Wenn die Basistabelle geändert wird, können Sichten weiterhin die alte Struktur für Benutzer anzeigen, indem sie die relevanten Spalten projizieren.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q229",
+      "question": "Warum ist Aggregation in änderbaren Sichten problematisch?",
+      "answer": "Aggregationen fassen mehrere Zeilen zu einer zusammen. Es ist unklar, in welche Zeilen der Basistabelle ein INSERT eingefügt werden sollte, daher sind Änderungen nicht möglich.",
+      "topic": "5 Sichten (Views)"
+    },
+    {
+      "id": "q230",
+      "question": "Was ist die Abkürzung DDL und welche drei Bereiche definiert sie?",
+      "answer": "DDL steht für Data Definition Language. Sie definiert die Datenbankstruktur (Tabellenerstellung), Speicherungsstrukturen (z.B. Heap) und Zugriffshilfsstrukturen (z.B. Indizes).",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q231",
+      "question": "Wie lautet die Syntax zum Erstellen einer Tabelle in SQL?",
+      "answer": "CREATE TABLE <table-name> (Spaltendefinition1, ..., SpaltendefinitionN [, Integritätsregel1, ..., IntegritätsregelM])",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q232",
+      "question": "Welche Eindeutigkeitsanforderungen gelten für Tabellen- und Spaltennamen?",
+      "answer": "Der Tabellenname muss innerhalb eines Schemas eindeutig sein, und der Spaltenname muss innerhalb einer Tabelle eindeutig sein.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q233",
+      "question": "Was bedeutet eine Spaltenintegritätsregel wie NOT NULL?",
+      "answer": "NOT NULL ist eine Spaltenintegritätsregel, die festlegt, dass ein Wert in dieser Spalte nicht leer (NULL) sein darf.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q234",
+      "question": "Unterscheide zwischen operationaler und semantischer Integrität.",
+      "answer": "Operationale Integrität gewährleistet die Funktion nach Hardwarefehlern und im Mehrbenutzerbetrieb. Semantische Integrität (Konsistenz zur Laufzeit) umfasst Entitäts-, Wertebereichs-, referentielle und benutzerdefinierte Integrität.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q235",
+      "question": "Was ist Entitäts-Integrität und welche SQL-Mittel unterstützen sie?",
+      "answer": "Entitäts-Integrität stellt sicher, dass jede Zeile in einer Tabelle eindeutig identifizierbar ist. Sie wird durch CREATE UNIQUE INDEX, UNIQUE oder PRIMARY KEY gewährleistet.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q236",
+      "question": "Was ist Wertebereichs-Integrität und welche Mittel implementieren sie?",
+      "answer": "Wertebereichs-Integrität beschränkt einen Wert auf eine gültige Domäne. Sie wird durch CHECK, DEFAULT und NOT NULL implementiert.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q237",
+      "question": "Definiere Referentielle-Integrität und deren Implementierungsmittel.",
+      "answer": "Referentielle-Integrität stellt sicher, dass Fremdschlüsselwerte in einer Tabelle stets auf existierende Primärschlüsselwerte in der referenzierten Tabelle verweisen. Sie wird durch die FOREIGN KEY-Klausel implementiert.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q238",
+      "question": "Was ist benutzerdefinierte Integrität und wie wird sie implementiert?",
+      "answer": "Benutzerdefinierte Integrität sind modellierte Bedingungen, die spezifische Geschäftsregeln durchsetzen, die sich nicht durch Standard-Constraints abbilden lassen. Sie werden durch Trigger implementiert.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q239",
+      "question": "Was ist ein Primärschlüssel und welche Integrität sichert er ab?",
+      "answer": "Ein Primärschlüssel ist ein Attribut (oder eine Attributkombination) einer Tabelle, das jeden Datensatz eindeutig identifiziert. Er sichert die Entitäts-Integrität ab.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q240",
+      "question": "Was ist ein zusammengesetzter Primärschlüssel und wann wird er benötigt?",
+      "answer": "Ein zusammengesetzter Primärschlüssel besteht aus mehreren Attributen und wird verwendet, wenn kein einzelnes Attribut allein zur eindeutigen Identifikation ausreicht. Beispiel: PRIMARY KEY (sno, pno) in einer Lieferant-Teil-Verbindungstabelle.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q241",
+      "question": "Erkläre das Konzept von UNIQUE-Attributen und deren Bezeichnung.",
+      "answer": "UNIQUE-Attribute sind Nicht-Primärschlüssel-Attribute, die auf Eindeutigkeit geprüft werden. Sie werden als Schlüsselkandidaten bezeichnet.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q242",
+      "question": "Was ist eine CHECK-Bedingung und wie wird sie formuliert?",
+      "answer": "Eine CHECK-Bedingung schränkt die erlaubten Werte eines Attributs ein. Sie wird analog zur WHERE-Klausel formuliert. Beispiel: CHECK (status BETWEEN 1 AND 100).",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q243",
+      "question": "Gib ein Beispiel für eine CHECK-Bedingung mit IN-Operator.",
+      "answer": "CHECK (anr IN ('Frau', 'Herr')) -- Diese Bedingung erlaubt nur die Werte 'Frau' oder 'Herr' in der Spalte 'anr'.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q244",
+      "question": "Was ist die DEFAULT-Bedingung und wie wird sie verwendet?",
+      "answer": "Die DEFAULT-Bedingung legt einen Standardwert fest, der automatisch verwendet wird, wenn beim INSERT kein Wert spezifiziert wird. Beispiel: DEFAULT current_user setzt den aktuellen Datenbankbenutzer als Standardwert.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q245",
+      "question": "Was bedeutet die FOREIGN KEY-Klausel?",
+      "answer": "Die FOREIGN KEY-Klausel definiert eine Referenzbeziehung zwischen zwei Tabellen. Ein Attribut oder eine Attributkombination einer Tabelle referenziert den Primärschlüssel einer anderen Tabelle.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q246",
+      "question": "Erkläre die Bedeutung von ON DELETE NO ACTION.",
+      "answer": "ON DELETE NO ACTION verweigert das Löschen eines Satzes in der referenzierten Tabelle, wenn abhängige Sätze in der referenzierenden Tabelle existieren.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q247",
+      "question": "Was bewirkt ON DELETE CASCADE?",
+      "answer": "ON DELETE CASCADE löscht automatisch alle abhängigen Sätze in der referenzierenden Tabelle, wenn der referenzierte Satz in der Herkunftstabelle gelöscht wird.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q248",
+      "question": "Erläutere ON DELETE SET NULL.",
+      "answer": "ON DELETE SET NULL setzt das Fremdschlüssel-Attribut der abhängigen Zeilen auf NULL, wenn der referenzierte Satz in der Herkunftstabelle gelöscht wird. Die abhängigen Zeilen bleiben erhalten.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q249",
+      "question": "Was ist der Unterschied zwischen ON DELETE CASCADE und ON DELETE SET NULL?",
+      "answer": "ON DELETE CASCADE löscht abhängige Zeilen automatisch, während ON DELETE SET NULL nur das Fremdschlüssel-Attribut auf NULL setzt und die Zeile selbst beibehält.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q250",
+      "question": "Erkläre ON DELETE SET DEFAULT.",
+      "answer": "ON DELETE SET DEFAULT setzt das Fremdschlüssel-Attribut der abhängigen Zeilen auf den definierten DEFAULT-Wert, wenn der referenzierte Satz in der Herkunftstabelle gelöscht wird.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q251",
+      "question": "Was bedeutet es, wenn sowohl ON DELETE CASCADE als auch ON UPDATE CASCADE aktiv sind?",
+      "answer": "Jede Löschung oder Änderung eines Primärschlüssels in der Herkunftstabelle wird automatisch an die abhängige Tabelle weitergegeben: Gelöschte Sätze werden mitgelöscht, geänderte Schlüsselwerte werden in den abhängigen Sätzen aktualisiert.",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q252",
+      "question": "Nenne die vier Typen von Integritätsbedingungen im relationalen Modell.",
+      "answer": "Die vier Typen sind: Entitäts-Integrität (Eindeutigkeit jeder Zeile), Wertebereichs-Integrität (gültige Domäne), Referentielle-Integrität (Fremdschlüsselkonsistenz) und Benutzerdefinierte-Integrität (Geschäftsregeln per Trigger).",
+      "topic": "6 Data Definition Language (DDL)"
+    },
+    {
+      "id": "q253",
+      "question": "Welcher Unterschied besteht zwischen Daten und Informationen?",
+      "answer": "Daten sind umfangreiche, strukturierte und zweckneutrale Darstellungen der Realität. Informationen entstehen durch Verkettung, Extraktion und Auswertung von Daten und sind zweckgerichtet sowie fallbezogen.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q254",
+      "question": "Nennen Sie die drei Funktionen von Informationen.",
+      "answer": "Die drei Funktionen sind: (1) Dokumentationsfunktion – dokumentieren Ergebnisse, (2) Entscheidungsunterstützungsfunktion – unterstützen Entscheidungen und (3) Steuerungsfunktion – steuern Handlungsabläufe.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q255",
+      "question": "Was ist der Kreislauf zwischen Daten, Informationen, Entscheidungen und Aktionen?",
+      "answer": "Daten werden durch Verkettung und Auswertung zu Informationen, Informationen unterstützen Entscheidungen, Entscheidungen führen zu Aktionen, und Aktionen generieren neue Informationen, wodurch der Kreislauf geschlossen wird.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q256",
+      "question": "Welche Technologien unterstützen die Entscheidungsfindung im strategischen Kontext?",
+      "answer": "Die Technologien sind: Datenbanken, Data Warehouse, OLAP, Data Mining, Management Information Systems (MIS), Knowledge Management und Customer Relationship Management (CRM).",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q257",
+      "question": "Beschreiben Sie die funktionsorientierte Sicht auf Systemgestaltung.",
+      "answer": "Die funktionsorientierte Sicht konzentriert sich auf Funktionen und Unterfunktionen, führt jedoch keine explizite programm-übergreifende Datenmodellierung durch.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q258",
+      "question": "Was zeichnet die datenorientierte Sicht aus?",
+      "answer": "Die datenorientierte Sicht nutzt das Entity-Relationship-Modell (ERM) und Data Dictionary zur Modellierung von Daten.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q259",
+      "question": "Welche Merkmale hat die objektorientierte Sicht?",
+      "answer": "Die objektorientierte Sicht arbeitet mit Klassen, Objekten, Attributen, Methoden, Kapselung und Vererbung und ermöglicht die gleichzeitige Modellierung von Daten und Funktionen.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q260",
+      "question": "Was ist die prozessorientierte Sicht?",
+      "answer": "Die prozessorientierte Sicht konzentriert sich auf Ereignisse und Prozesse als zentrale Modellierungselemente.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q261",
+      "question": "Was sind die Merkmale strukturierter Datenspeicherung in Dateien (vor Datenbankzeitalter)?",
+      "answer": "Die Merkmale sind: (1) sequenzielle Abarbeitung von Dateien, (2) Verwendung von COBOL, FORTRAN oder PASCAL, (3) isolierte Datenspeicherung in applikationsspezifischen Files und (4) Datenzugriff nur durch spezielle Anwendungen. Probleme: Datenisolation und Redundanz.",
+      "topic": "7 Einführung"
+    },
+    {
+      "id": "q262",
+      "question": "Definieren Sie den Begriff Datenmodellierung.",
+      "answer": "Datenmodellierung ist die Beschreibung aller relevanten Informationen eines Systems, beispielsweise eines betrieblichen Funktionsbereiches. Sie verwendet eine Syntax, die den Sachverhalt einfach, mit wenigen Syntaxelementen aber hinreichend formal darstellt, um exakt zu sein.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q263",
+      "question": "Warum wird ein datenorientiertes Vorgehen in der Systemgestaltung bevorzugt?",
+      "answer": "Das wichtigste Argument ist, dass Daten viel länger bestehen als Hardware und Software. Hardware besteht einige Jahre, Software übersteht die Hardware, aber Daten überleben mehrere Softwarezyklen – Daten leben gewissermaßen ewig.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q264",
+      "question": "Nennen Sie die fünf Phasen der Datenmodellierung in der richtigen Reihenfolge.",
+      "answer": "Die fünf Phasen sind: (1) Reale Welt, (2) Betriebswirtschaftliche Modellierung (Istanalyse), (3) Semantische Modellierung (ERM), (4) Logische Modellierung (Normalisierung, Relationales Modell), (5) Physische Modellierung (Datenbank).",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q265",
+      "question": "Definieren Sie Homonyme im Kontext der Datenmodellierung und geben Sie ein Beispiel.",
+      "answer": "Homonyme sind Begriffe mit unterschiedlicher Bedeutung, die in der Modellierung zu Missverständnissen führen können. Beispiel: 'Bank' kann sowohl ein Möbelstück als auch eine Finanzinstitution bedeuten.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q266",
+      "question": "Was sind Äquipollenzen in der Datenmodellierung und geben Sie ein Beispiel.",
+      "answer": "Äquipollenzen sind unterschiedliche Sichtweisen auf dasselbe Objekt. Beispiel: Der Begriff 'Mitarbeiter' kann aus rechtlicher, organisatorischer und buchhalterischer Sicht unterschiedlich betrachtet werden.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q267",
+      "question": "Welche Charakteristiken hat die semantische Modellierung?",
+      "answer": "Semantische Modellierung ist unabhängig von Implementierung und Datenbanksystem. Sie verwendet wenige Symbole, ist daher wirklichkeitsnah und verständlich und fördert die Kommunikation zwischen IS-Entwicklern und Fachbereichen.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q268",
+      "question": "Welches Datenmodell ist in der logischen Modellierung das wichtigste und was erfordert es?",
+      "answer": "Das Relationale Modell ist das wichtigste logische Paradigma. Es erfordert die Auflösung von n:m-Beziehungen, Normalisierung und die Zuweisung von Felddatentypen.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q269",
+      "question": "Nennen Sie die vier logischen Paradigmen bei der Datenmodellierung.",
+      "answer": "Die vier logischen Paradigmen sind: (1) Netzwerkmodell, (2) Hierarchisches Modell, (3) Relationales Modell, (4) Objektorientiertes Modell.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q270",
+      "question": "Welche Aspekte werden in der physischen Modellierung festgelegt?",
+      "answer": "In der physischen Modellierung werden festgelegt: Zugriffsrechte (Insert, Update, Delete, Select), Optimierung des Datenbankzugriffs durch Indizes, Sicherung der Datenintegrität (Master/Detail), Trigger, Verteilung und Backup. Dies ist die Arbeit des Datenbank-Administrators.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q271",
+      "question": "Definieren Sie den Begriff Funktion im Kontext des Funktionsbaums.",
+      "answer": "Eine Funktion ist eine fachliche Aufgabe oder Tätigkeit an einem Objekt, die zur Unterstützung eines oder mehrerer Unternehmensziele dient. Sie wird bis zu Elementarfunktionen zerlegt, die betriebswirtschaftlich nicht mehr sinnvoll zerlegbar sind.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q272",
+      "question": "Nennen Sie die vier Prinzipien des Funktionsbaums.",
+      "answer": "Die Prinzipien sind: (1) Jede Funktion muss durch ihre Teilfunktionen vollständig repräsentiert werden, (2) keine Abläufe abbilden, (3) keine Reihenfolge angeben, (4) keine Organisationsstrukturen abbilden.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q273",
+      "question": "Was ist der wichtigste Unterschied zwischen einer Funktion und einem Prozess?",
+      "answer": "Eine Funktion ist eine statische Aufgabe ohne zeitlichen Ablauf, Start- oder Endpunkt. Ein Prozess hingegen hat einen zeitlichen Ablauf mit definierten Start- und Endpunkten und stellt eine Abfolge von Aktivitäten dar.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q274",
+      "question": "Was ist ein Kontextdiagramm (Level 0) in der Datenflussmodellierung?",
+      "answer": "Ein Kontextdiagramm ist die oberste Ebene eines Datenflussdiagramms, die das gesamte System als eine einzige Funktion zeigt und dessen Schnittstellen mit externen Subjekten darstellt.",
+      "topic": "8 Datenmodellierung"
+    },
+    {
+      "id": "q275",
+      "question": "Was ist ein Entity-Relationship-Modell (ER-Modell)?",
+      "answer": "Das ER-Modell ist eine anschauliche und leicht kommunizierbare Beschreibung der Datenwelt. Es ist das Ergebnis der konzeptionellen Modellierung und stellt einen Ausschnitt der Realität dar, der für eine Problemstellung wichtig ist. Es beschreibt Objekte der Realwelt und ihre Beziehungen zueinander.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q276",
+      "question": "Welches Symbol wird im ER-Diagramm für Entitätsmengen verwendet?",
+      "answer": "Entitätsmengen werden im ER-Diagramm durch Rechtecke dargestellt, in denen der Name der Entitätsmenge eingetragen ist.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q277",
+      "question": "Mit welchem Symbol werden Beziehungstypen im ER-Diagramm dargestellt?",
+      "answer": "Beziehungstypen werden durch Rauten (Diamanten) dargestellt, in denen der Name des Beziehungstyps eingetragen ist.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q278",
+      "question": "Welches Symbol steht für Attribute im ER-Diagramm?",
+      "answer": "Attribute werden durch Ovale dargestellt, in denen der Name des Attributs eingetragen ist.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q279",
+      "question": "Nenne die 8 Schritte der Datenmodellierung im ERM.",
+      "answer": "1. Problemrahmen transparent machen, 2. Entitätsmengen ermitteln, 3. Beziehungen & Kardinalitäten festlegen, 4. Attribute definieren, 5. Schlüssel festlegen, 6. Überführen in das Relationenmodell mit Normalisierung, 7. Integritätsbedingungen beschreiben, 8. Überprüfung des Modells.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q280",
+      "question": "Was ist eine Entitätsmenge?",
+      "answer": "Eine Entitätsmenge ist eine Zusammenfassung von Entitäten mit gleichen Eigenschaften. Sie wird auch als Entity, Entitätstyp oder Objekttyp bezeichnet und muss ein Substantiv im Singular sein.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q281",
+      "question": "Was ist eine Entität?",
+      "answer": "Eine Entität ist ein individuelles, identifizierbares Exemplar von Dingen, Personen oder Begriffen der realen oder Vorstellungswelt. Sie wird durch Eigenschaften (Attribute) beschrieben und ist eine konkrete Ausprägung eines Entitätstyps.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q282",
+      "question": "Was sind schwache Entitäten?",
+      "answer": "Schwache Entitäten sind Entitäten, die nur in Abhängigkeit einer anderen Entität existieren können. Sie werden mit einem doppelten Rand gekennzeichnet und können ohne ihre übergeordnete Entitätsmenge nicht bestehen.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q283",
+      "question": "Was ist der Unterschied zwischen einem Mussfeld und einem Kannfeld im ERM?",
+      "answer": "Ein Mussfeld (gekennzeichnet mit *) muss bei jeder Entität ausgefüllt sein, während ein Kannfeld (gekennzeichnet mit O) optional ist und leer bleiben kann.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q284",
+      "question": "Was sind zusammengesetzte Attribute?",
+      "answer": "Zusammengesetzte Attribute sind Attribute, die durch eine Kombination von mehreren einfachen Attributen gebildet werden. Beispiel: Straße, Postleitzahl und Ort bilden zusammen das Attribut Adresse.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q285",
+      "question": "Was sind mehrwertige Attribute?",
+      "answer": "Mehrwertige Attribute sind Attribute, die mehr als einen Wert aus einer definierten Wertemenge annehmen können. Beispiel: Ein Attribut 'Arbeitszeit' kann die Werte 2, 4 oder 6 Stunden annehmen. Eine Plausibilitätsprüfung im Anwendungsprogramm ist erforderlich.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q286",
+      "question": "Was versteht man unter einer Domäne im ERM?",
+      "answer": "Eine Domäne legt den Wertebereich eines Attributs fest. Die Elemente müssen atomar sein. Domänen sind entitätsmengenübergreifend und dienen der Beschränkung von Attributausprägungen sowie der Sicherung vor falschen Eingaben.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q287",
+      "question": "Was ist ein Beziehungstyp im ERM?",
+      "answer": "Ein Beziehungstyp ist eine Relation zwischen zwei oder mehr Entitätsmengen. Der Name eines Beziehungstyps muss ein Verb im Singular sein und gibt die Art der Verbindung zwischen Entitäten an.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q288",
+      "question": "Was ist eine rekursive Beziehung im ERM?",
+      "answer": "Eine rekursive Beziehung ist eine Beziehung, bei der eine Entitätsmenge zu sich selbst in Beziehung steht. Beispiel: Ein Mitarbeiter kann Vorgesetzter von anderen Mitarbeitern sein – der Beziehungspfeil verweist von der Entitätsmenge auf sich selbst.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q289",
+      "question": "Was ist Kardinalität im ERM?",
+      "answer": "Kardinalität (auch Komplexitätsgrad) gibt an, mit wie vielen Entitäten der einen Menge eine Entität der anderen Menge in Verbindung stehen kann. Sie muss immer von beiden Seiten betrachtet werden und kann 1:1, 1:n oder n:m sein.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q290",
+      "question": "Erkläre eine 1:1 Beziehung mit einem Beispiel.",
+      "answer": "Bei einer 1:1 Beziehung steht eine Entität der einen Menge mit genau einer Entität der anderen Menge in Verbindung. Beispiel: Ein Direktor leitet eine Schule, und eine Schule wird von genau einem Direktor geleitet.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q291",
+      "question": "Erkläre eine 1:n Beziehung mit einem Beispiel.",
+      "answer": "Bei einer 1:n Beziehung steht eine Entität der einen Menge mit mehreren Entitäten der anderen Menge in Verbindung. Beispiel: Ein Auftrag besteht aus n Auftragspositionen, aber jede Auftragsposition gehört zu genau einem Auftrag.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q292",
+      "question": "Erkläre eine n:m Beziehung mit einem Beispiel.",
+      "answer": "Bei einer n:m Beziehung können mehrere Entitäten der einen Menge mit mehreren Entitäten der anderen Menge in Verbindung stehen. Beispiel: Ein Student nimmt an mehreren Klausuren teil, und an einer Klausur nehmen mehrere Studenten teil. Die Beziehung kann zusätzliche Attribute wie Semester und Note enthalten.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q293",
+      "question": "Wie wird eine n:m Beziehung in das Relationenmodell überführt?",
+      "answer": "Eine n:m Beziehung wird durch eine Zwischentabelle aufgelöst. Diese Zwischentabelle enthält die Fremdschlüssel beider beteiligter Entitätsmengen sowie ggf. zusätzliche Attribute der Beziehung. Der Primärschlüssel der Zwischentabelle ist zusammengesetzt aus beiden Fremdschlüsseln.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q294",
+      "question": "Was ist Generalisierung im ERM?",
+      "answer": "Generalisierung ist die Vererbung von gemeinsamen Attributen von spezialisierten Entitäten zu einer gemeinsamen übergeordneten Entität. Es handelt sich um eine 'ist-ein'-Beziehung. Beispiel: Kunde und Mitarbeiter erben gemeinsame Attribute von der übergeordneten Entität Person.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q295",
+      "question": "Was ist Aggregation im ERM?",
+      "answer": "Aggregation ist eine 'hat-ein'-Beziehung mit Über- und Unterordnung zwischen Entitäten. Ein übergeordnetes Objekt besteht aus mehreren untergeordneten Objekten. Beispiel: Ein Motorrad besteht aus Motor, Felge und Rahmen.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q296",
+      "question": "Was ist der Unterschied zwischen Generalisierung und Aggregation im ERM?",
+      "answer": "Generalisierung ist eine 'ist-ein'-Beziehung, bei der spezialisierte Entitäten Attribute von einer übergeordneten Entität erben (z.B. Kunde und Mitarbeiter sind Personen). Aggregation ist eine 'hat-ein'-Beziehung, bei der ein übergeordnetes Objekt aus untergeordneten Objekten besteht (z.B. ein Motorrad hat einen Motor).",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q297",
+      "question": "Welche Kontrollen sollten nach der Erstellung eines ERM durchgeführt werden?",
+      "answer": "Nach der Erstellung sollte überprüft werden, ob: (1) jede Entitätsmenge mindestens ein Attribut besitzt, (2) Entitätsmengen als Substantive und Beziehungstypen als Verben im Singular benannt sind, (3) Attribute im Singular beschrieben sind, (4) identische Entitätsmengen erkannt und zusammengefasst werden, und (5) jede Entitätsmenge bzw. jeder Beziehungstyp neue Informationen bringt.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q298",
+      "question": "Was ist ein Primärschlüssel?",
+      "answer": "Ein Primärschlüssel ist ein Attribut oder eine Kombination von Attributen, das jede Entität in einer Entitätsmenge eindeutig identifiziert. Er wird in Diagrammen unterstrichen dargestellt und darf keine Duplikate oder NULL-Werte enthalten.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q299",
+      "question": "Was ist ein Fremdschlüssel?",
+      "answer": "Ein Fremdschlüssel ist ein Attribut in einer Tabelle, das auf den Primärschlüssel einer anderen Tabelle verweist. Er stellt die Verbindung zwischen zwei Relationen her und sichert die referenzielle Integrität.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q300",
+      "question": "Was sind Integritätsbedingungen im ERM?",
+      "answer": "Integritätsbedingungen sind Regeln, die sicherstellen, dass die Daten konsistent und gültig sind. Sie beschreiben Bedingungen, die die Datenbank erfüllen muss, wie beispielsweise die referenzielle Integrität durch Fremdschlüssel.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q301",
+      "question": "Warum werden Attribute im ERM oft nicht dargestellt?",
+      "answer": "Attribute werden häufig aufgrund der Übersichtlichkeit nicht im ER-Diagramm dargestellt. Um die Lesbarkeit zu verbessern, werden oft nur die Primärschlüssel und Fremdschlüssel angezeigt.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q302",
+      "question": "Was ist der Unterschied zwischen einem Entitätstyp und einer Entitätsausprägung?",
+      "answer": "Ein Entitätstyp ist die abstrakte Klasse oder Kategorie (z.B. Student), während eine Entitätsausprägung ein konkretes Exemplar ist (z.B. ein bestimmter Student). Eine Entitätsmenge enthält alle Ausprägungen eines Entitätstyps.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q303",
+      "question": "Was bedeutet ein doppelter Rand bei einer Entitätsmenge im ER-Diagramm?",
+      "answer": "Ein doppelter Rand kennzeichnet einen voll partizipierenden Entitätstyp oder einen schwachen Entitätstyp. Ein schwacher Entitätstyp kann nur in Abhängigkeit einer anderen Entitätsmenge existieren.",
+      "topic": "9 Entity-Relationship-Modell"
+    },
+    {
+      "id": "q304",
+      "question": "Was ist das Grundelement des relationalen Datenmodells?",
+      "answer": "Das Grundelement des relationalen Datenmodells ist die Tabelle (Relation). Sie bildet die Basis für die Speicherung und Verwaltung von Daten.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q305",
+      "question": "Nennen Sie drei Anforderungen an den Datenbank-Entwurf.",
+      "answer": "Die drei Anforderungen sind: Redundanzfreiheit (Vermeidung von Mehrfachspeicherungen), Datenintegrität (Vollständigkeit und Nutzbarkeit der Daten) und Datenkonsistenz (Widerspruchsfreiheit).",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q306",
+      "question": "Was versteht man unter Integrität in Datenbanken?",
+      "answer": "Integrität bedeutet Unversehrtheit der Daten – also das Fehlen widersprüchlicher Daten. Sie sichert NICHT die Richtigkeit der eingetragenen Daten, sondern deren Widerspruchsfreiheit.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q307",
+      "question": "Erklären Sie das Konzept der Entity Integrität.",
+      "answer": "Entity Integrität bedeutet, dass keine Datenobjekte ohne einen eindeutigen Schlüssel eingegeben werden dürfen. Jedes Tupel muss eine eindeutige Identifikation haben, d.h. der Primärschlüssel darf nicht NULL sein.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q308",
+      "question": "Was ist referenzielle Integrität und geben Sie ein Beispiel für eine Verletzung.",
+      "answer": "Referenzielle Integrität besagt, dass Beziehungen zwischen Entitäten unversehrt bleiben müssen. Eine Verletzung liegt vor, wenn ein Datensatz gelöscht wird, auf den noch ein Fremdschlüssel eines anderen Datensatzes verweist.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q309",
+      "question": "Was besagt Codd-Regel 3?",
+      "answer": "Codd-Regel 3 besagt, dass der Wert 'Null' (fehlender oder unbekannter Wert) darstellbar sein muss.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q310",
+      "question": "Was ist logische Unabhängigkeit nach Codd-Regel 9?",
+      "answer": "Logische Unabhängigkeit bedeutet, dass logische Einzelsichten auf die Daten unabhängig von der logischen Gesamtheit sind. Views können verändert werden, ohne dass die Anwendungen beeinträchtigt werden.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q311",
+      "question": "Wie wird ein Datensatz im relationalen Modell bezeichnet, und was gibt der Grad an?",
+      "answer": "Ein Datensatz wird als Tupel bezeichnet. Der Grad n eines Tupels gibt die Anzahl der Attribute an. Ein Tupel stellt eine Zeile in einer Relation dar.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q312",
+      "question": "Darf es zwei Tupel mit identischen Attributwerten in einer Relation geben?",
+      "answer": "Nein, zu keinem Zeitpunkt darf es zwei Tupel mit identischen Attributwerten geben. Dies würde die Eindeutigkeit und den Primärschlüssel verletzen.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q313",
+      "question": "Ist die Reihenfolge der Tupel und Attribute in einer Relation definiert?",
+      "answer": "Nein, weder die Reihenfolge der Tupel noch die Reihenfolge der Attribute ist definiert. Das relationale Modell ist ordnungsunabhängig.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q314",
+      "question": "Welche Eigenschaft müssen Attribute bezüglich ihrer Werte haben?",
+      "answer": "Attribute müssen atomar sein, d.h. nicht zusammengesetzt und nicht weiter zerlegbar. Jedes Attribut darf nur einen unteilbaren Wert enthalten (Voraussetzung für die 1. Normalform).",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q315",
+      "question": "Nennen Sie die vier Typen von Attributen mit je einem Beispiel.",
+      "answer": "Identifizierende Attribute (z.B. Personalnummer), klassifizierende Attribute (z.B. Kostenart), chronologische Attribute (z.B. Zeitraum einer Bearbeitung) und deskriptive Attribute (z.B. Beschreibung von Eigenschaften).",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q316",
+      "question": "Erklären Sie die drei Ebenen der ANSI-SPARC-Architektur von oben nach unten.",
+      "answer": "Externes Schema (Benutzersicht, ermöglicht logische Datenunabhängigkeit), Konzeptionelles Schema (logische Gesamtsicht, ermöglicht physische Datenunabhängigkeit) und Internes Schema (physische Speicherung und Zugriffspfade).",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q317",
+      "question": "Welche Aufgaben erfüllt das externe Schema im ANSI-SPARC-Modell?",
+      "answer": "Das externe Schema (Benutzersicht) bietet Teilausschnitte des logischen Schemas für verschiedene Anwender, ermöglicht Datenschutz und Sicherheit und reduziert die Komplexität durch Einschränkung auf notwendige Daten.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q318",
+      "question": "Was regelt das interne Schema im ANSI-SPARC-Modell?",
+      "answer": "Das interne Schema regelt, wie und wo Daten gespeichert werden. Es definiert Zugriffspfade, physische Datenstrukturen, Dateien und die Datenverteilung.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q319",
+      "question": "Beschreiben Sie das konzeptionelle Schema im ANSI-SPARC-Modell.",
+      "answer": "Das konzeptionelle Schema beschreibt sämtliche Datenobjekte, ihre Beziehungen zueinander und die Integritätsbedingungen. Es ist unabhängig vom verwendeten Datenbanksystem und bildet die logische Gesamtsicht.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q320",
+      "question": "Was ist ein Data Dictionary und nennen Sie Synonyme.",
+      "answer": "Ein Data Dictionary ist strukturiertes, zweckbezogenes Wissen zur Dokumentation von Datenstrukturen, -feldern und -verwendung (Metadaten). Synonyme sind Meta-Datenbank, Repository und Datenkatalog.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q321",
+      "question": "Wie wird eine 1:n-Beziehung ins Relationenmodell überführt?",
+      "answer": "Der Primärschlüssel der '1'-Seite wandert als Fremdschlüssel in die Tabelle der 'n'-Seite. Eine separate Beziehungstabelle ist nicht nötig.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q322",
+      "question": "Wie wird eine n:m-Beziehung ins Relationenmodell überführt?",
+      "answer": "Für n:m-Beziehungen wird eine zusätzliche Beziehungstabelle erstellt. Der Primärschlüssel dieser Tabelle setzt sich aus den beiden Fremdschlüsseln der beteiligten Tabellen zusammen.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q323",
+      "question": "Definieren Sie Normalisierung und nennen Sie ihr Ziel.",
+      "answer": "Normalisierung ist ein Prozess zur Verbesserung der Datenbankstruktur. Das Ziel ist, die Qualitätskriterien der Normalformen zu erfüllen und Anomalien wie Einfüge-, Lösch- und Änderungsanomalien zu verhindern.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q324",
+      "question": "Was ist eine Einfügeanomalie?",
+      "answer": "Eine Einfügeanomalie liegt vor, wenn ein Tupel nur eingegeben werden kann, wenn alle Teile des zusammengesetzten Schlüssels vorliegen. Neue Datensätze ohne vollständige Schlüsselwerte können nicht eingetragen werden.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q325",
+      "question": "Erklären Sie die Änderungsanomalie.",
+      "answer": "Eine Änderungsanomalie liegt vor, wenn eine Änderung eines Attributwerts in mehreren Tupeln vorgenommen werden muss. Werden nicht alle betroffenen Tupel aktualisiert, entstehen Inkonsistenzen in der Datenbank.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q326",
+      "question": "Wie viele Normalformen gibt es nach Boyce/Codd und wie bauen sie aufeinander auf?",
+      "answer": "Es gibt drei Normalformen (1. NF, 2. NF, 3. NF), die hierarchisch aufeinander aufbauen. Eine höhere Normalform setzt die Erfüllung aller niedrigeren voraus. Je höher die Normalform, desto besser die Datenqualität.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q327",
+      "question": "Was ist funktionale Abhängigkeit?",
+      "answer": "Ein Attribut Z ist funktional abhängig von Attribut Y, wenn zu einem bestimmten Wert von Y höchstens ein Wert von Z existiert. Dies wird notiert als Y → Z.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q328",
+      "question": "Erklären Sie volle funktionale Abhängigkeit und grenzen Sie sie von partieller Abhängigkeit ab.",
+      "answer": "Volle funktionale Abhängigkeit liegt vor, wenn Z vom gesamten Primärschlüssel abhängt, aber NICHT von einem einzelnen Teil eines zusammengesetzten Schlüssels. Partielle Abhängigkeit liegt vor, wenn Z bereits von einem Teil des zusammengesetzten Schlüssels bestimmt wird – dies verletzt die 2. Normalform.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q329",
+      "question": "Definieren Sie die 1. Normalform (1. NF).",
+      "answer": "Eine Relation ist in 1. NF, wenn alle Attribute klar definiert sind und nur atomare (nicht weiter zerlegbare) Werte enthalten. Wiederholungsgruppen und Mehrfachwerte in einem Attribut müssen aufgelöst sein.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q330",
+      "question": "Definieren Sie die 2. Normalform (2. NF).",
+      "answer": "Eine Relation ist in 2. NF, wenn sie in 1. NF ist und jedes Nicht-Schlüssel-Attribut voll funktional vom gesamten Primärschlüssel abhängig ist. Partielle Abhängigkeiten (Abhängigkeit nur von einem Teil eines zusammengesetzten Schlüssels) sind nicht erlaubt.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q331",
+      "question": "Definieren Sie die 3. Normalform (3. NF).",
+      "answer": "Eine Relation ist in 3. NF, wenn sie in 2. NF ist und kein Nicht-Schlüssel-Attribut transitiv vom Primärschlüssel abhängt. Transitive Abhängigkeiten müssen durch Auslagern in separate Tabellen aufgelöst sein.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q332",
+      "question": "Was ist eine transitive Abhängigkeit? Geben Sie ein Beispiel.",
+      "answer": "Transitive Abhängigkeit liegt vor, wenn ein Attribut Z indirekt über ein zwischenliegendes Nicht-Schlüssel-Attribut Y vom Primärschlüssel abhängt (Schlüssel → Y → Z). Beispiel: Seminar → FBNr. → Fachbereichsname. Dies verletzt die 3. Normalform.",
+      "topic": "10 Relationen Modell"
+    },
+    {
+      "id": "q333",
+      "question": "Wie lautet die Definition einer Datenbank?",
+      "answer": "Eine Datenbank ist ein zentral verwalteter Datenbestand, der über anwendungsunabhängige Zugriffsverfahren nutzbar gemacht wird.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q334",
+      "question": "Was ist der Unterschied zwischen einer Datenbank (DB) und einem Datenbanksystem (DBS)?",
+      "answer": "Eine Datenbank ist der Datenbestand selbst. Ein Datenbanksystem (DBS) besteht aus einem DBMS, einer Datenbank sowie zusätzlichen Programmen, die die Bearbeitung, Verwaltung und Auswertung gespeicherter Daten vereinfachen.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q335",
+      "question": "Welche Komponenten hat ein DBMS?",
+      "answer": "Ein DBMS besteht aus einem Data Dictionary, einer Datenmanipulationssprache (DML), einer Datendefinitionssprache (DDL), einer Datenkontrollsprache (DCL) sowie Werkzeugen für Reports, Masken und Grafiken.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q336",
+      "question": "Was ist die Hauptaufgabe eines DBMS?",
+      "answer": "Das DBMS verwaltet den Datenbestand und ermöglicht den gleichzeitigen Zugriff mehrerer Anwendungsprogramme und Nutzer auf die Datenbank, während Integrität und Konsistenz gewährleistet werden.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q337",
+      "question": "Was ist ein Trigger in einer Datenbank?",
+      "answer": "Ein Trigger ist ein Mechanismus, der automatisch ausgelöst wird, wenn ein definiertes Ereignis eintritt (z.B. Einfügen, Ändern oder Löschen eines Datensatzes). Er dient zur Automatisierung von Reaktionen auf Datenänderungen.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q338",
+      "question": "Was versteht man unter einem Constraint in einer Datenbank?",
+      "answer": "Ein Constraint (Einschränkung) wird verwendet, um den Wertebereich eines Attributs einzuschränken und damit Datenintegrität sicherzustellen (z.B. NOT NULL, UNIQUE, CHECK, FOREIGN KEY).",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q339",
+      "question": "Welches Hauptproblem entsteht bei dateiorientierter Datenorganisation?",
+      "answer": "Bei dateiorientierter Datenorganisation entsteht Redundanz, da mehrere Anwendungen die gleichen Daten in separaten Dateien speichern. Dies führt zu Inkonsistenzen, wenn Daten in einer Datei aktualisiert werden, in einer anderen aber nicht.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q340",
+      "question": "Wie löst eine datenbankorientierte Datenorganisation das Redundanzproblem?",
+      "answer": "Bei datenbankorientierter Datenorganisation greifen alle Anwendungen auf ein zentrales Datenbanksystem zu. Dadurch werden Daten nur einmal gespeichert, und Änderungen wirken sich konsistent für alle Anwendungen aus.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q341",
+      "question": "Was versteht man unter Datenunabhängigkeit in einem relationalen Datenbanksystem?",
+      "answer": "Datenunabhängigkeit bedeutet, dass Datenstrukturen geändert werden können, ohne dass Anwendungsprogramme angepasst werden müssen. Sie wird durch die Trennung in externes, konzeptionelles und physisches Schema (ANSI-SPARC) sowie durch Views erreicht.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q342",
+      "question": "Nenne drei Vorteile eines Datenbanksystems gegenüber einem reinen Dateisystem.",
+      "answer": "Vorteile sind: geringe Redundanz durch zentrale Datenhaltung, Konsistenzerhaltung durch Transaktionen, inhaltsbezogener Zugriffsschutz auf Satz- und Feldebene, Datenunabhängigkeit durch Schemas, Beziehungen durch Fremdschlüssel und verbesserte Datensicherheit durch Logging.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q343",
+      "question": "Was ist das ANSI-SPARC-Dreischichtenmodell?",
+      "answer": "Das ANSI-SPARC-Dreischichtenmodell besteht aus drei Schichten: dem Externen Schema (Benutzersichten), dem Konzeptionellen Schema (logische Gesamtstruktur) und dem Internen Schema (physische Speicherung). Diese Trennung ermöglicht logische und physische Datenunabhängigkeit.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q344",
+      "question": "Was versteht man unter logischer Datenunabhängigkeit?",
+      "answer": "Logische Datenunabhängigkeit bezeichnet die Abschirmung des Externen Schemas (Benutzersichten) vom Konzeptionellen Schema. Änderungen an der logischen Gesamtstruktur erfordern keine Anpassung der Benutzersichten.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q345",
+      "question": "Was versteht man unter physischer Datenunabhängigkeit?",
+      "answer": "Physische Datenunabhängigkeit bezeichnet die Abschirmung des Konzeptionellen Schemas vom Internen Schema. Änderungen an der physischen Speicherung (z.B. neue Indexstrukturen) erfordern keine Anpassung des konzeptionellen Schemas oder der Anwendungen.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q346",
+      "question": "Was ist Datenverteilung in einem Datenbanksystem?",
+      "answer": "Datenverteilung bedeutet, dass logisch zusammenhängende Datenbestände physisch auf mehrere Orte verteilt werden, während die übergeordnete Verwaltung durch das DBMS erfolgt. Gründe dafür sind Verfügbarkeit, Sicherheit, Effizienz und Skalierbarkeit.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q347",
+      "question": "Welche Datenbankmodelle werden heute unterschieden?",
+      "answer": "Es werden vier Datenbankmodelle unterschieden: das hierarchische Modell (Baumstruktur), das Netzwerk-Modell (beliebige Verknüpfungen), das relationale Modell (Tabellen) und das objektorientierte Modell (Objekte mit Methoden).",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q348",
+      "question": "Wie ist die Struktur des hierarchischen Datenbankmodells aufgebaut?",
+      "answer": "Das hierarchische Datenbankmodell hat eine Baumstruktur, in der jeder Entitytyp nur einen Vorgänger hat (außer auf der ersten Ebene) und mehrere Nachfolger haben kann. Dadurch sind nur 1:n-Beziehungen direkt darstellbar.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q349",
+      "question": "Nenne zwei Nachteile des hierarchischen Datenbankmodells.",
+      "answer": "Nachteile sind: Der Benutzer muss die Datenstruktur genau kennen, und n:m-Beziehungen sind nicht direkt möglich, was zu Redundanzen durch Mehrfachspeicherung führt.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q350",
+      "question": "Warum entsteht Redundanz im hierarchischen Modell bei n:m-Beziehungen?",
+      "answer": "Im hierarchischen Modell können n:m-Beziehungen nicht direkt abgebildet werden. Ein Datensatz, der mehreren übergeordneten Entitäten zugeordnet ist (z.B. ein Mitarbeiter in mehreren Projekten), muss mehrfach in verschiedenen Hierarchieästen gespeichert werden.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q351",
+      "question": "Wie unterscheidet sich das Netzwerk-Datenbankmodell vom hierarchischen Modell?",
+      "answer": "Im Netzwerk-Modell können Entitytypen mehrere Vorgänger und Nachfolger haben, und n:m-Beziehungen sind direkt möglich. Dies vermeidet Redundanzen des hierarchischen Modells, führt aber zu größerer struktureller Komplexität.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q352",
+      "question": "Welche objektorientierten Konzepte werden in einem objektorientierten Datenbankmodell verwendet?",
+      "answer": "Das objektorientierte Datenbankmodell nutzt Kapselung (Zusammenfassung von Daten und Methoden in einem Objekt), Vererbung (Weitergabe von Eigenschaften an Unterklassen) und Polymorphismus (gleiche Schnittstelle für verschiedene Objekttypen).",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q353",
+      "question": "Welche vier grundlegenden SQL-Benutzerrechte werden in einer Datenbank vergeben?",
+      "answer": "Die vier Benutzerrechte sind: INSERT (Datensätze einfügen), UPDATE (Datensätze aktualisieren), DELETE (Datensätze löschen) und SELECT (Datensätze lesen/anzeigen).",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q354",
+      "question": "Was versteht man unter Locks in einem Datenbanksystem?",
+      "answer": "Locks sind Sperrmechanismen, die Datenbankobjekte für eine Transaktion sperren, um Konflikte bei gleichzeitigem Zugriff mehrerer Benutzer zu vermeiden. Sie können auf Felder, Datensätze, Tabellen oder die gesamte Datenbank angewendet werden.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q355",
+      "question": "Nennen Sie die beiden Arten von Locks und erklären Sie deren Unterschied.",
+      "answer": "Exclusive Locks sperren ein Datenbankobjekt komplett – kein Zugriff ist möglich. Shared Locks ermöglichen Lesezugriffe, verbieten aber Schreibzugriffe (Manipulationen).",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q356",
+      "question": "Welche Aufgabe erfüllen Logfiles in einem Datenbanksystem?",
+      "answer": "Logfiles protokollieren alle durchgeführten Änderungen an der Datenbank. Im Falle eines Ausfalls ermöglichen sie die Rekonstruktion des Datenbankzustands zu einem beliebigen Zeitpunkt.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q357",
+      "question": "Nennen Sie mindestens drei Maßnahmen, die bei der Erstellung eines Sicherheitskonzepts für eine Datenbank erforderlich sind.",
+      "answer": "Erforderliche Maßnahmen sind: Views als Sicherheitsmedium einrichten, Zugriffsregelung konzipieren und vergeben, Backup-Strategie konzipieren, Sicherheitsverfahren festlegen, Datenbankmengen inkl. Puffer berechnen und Eingabefehler durch Plausibilitätsprüfungen vermeiden.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q358",
+      "question": "Definieren Sie die sequenzielle Speicherung und nennen Sie einen Anwendungsfall.",
+      "answer": "Bei sequenzieller Speicherung werden Datensätze unmittelbar nacheinander abgespeichert und können nur in dieser gespeicherten Folge verarbeitet werden. Anwendungsfall: Backup-Medien wie Magnetbänder.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q359",
+      "question": "Welche Suchverfahren sind bei adressierbaren Speichern möglich?",
+      "answer": "Bei adressierbaren Speichern (z.B. Festplatte, RAM) sind das sequenzielle Suchverfahren, die indizierte Organisation (Index) und die gestreute Organisation (Hashing) möglich.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q360",
+      "question": "Geben Sie eine Definition des Index (indizierte Organisation).",
+      "answer": "Ein Index ist eine Hilfsdatei oder -tabelle, deren Einträge neben den Schlüsseln der Haupttabelle die Adressen der zugehörigen Datensätze enthalten. Er ermöglicht schnellen, direkten Zugriff ohne vollständige sequenzielle Suche.",
+      "topic": "11 Datenbank-Systeme (DBS)"
+    },
+    {
+      "id": "q361",
+      "question": "Aus welchen zwei Komponenten besteht ein Indexsystem?",
+      "answer": "Das Indexsystem besteht aus der Hauptdatei (mit den tatsächlichen Daten) und der Indexdatei (mit Schlüsseln und Adressenverweisen zur Hauptdatei).",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q362",
+      "question": "Was ist der Adressverweis in einer indizierten Organisation?",
+      "answer": "Der Adressverweis ist die Verbindung zwischen Indexdatei und Hauptdatei, die den Index auf die physische Adresse des entsprechenden Datensatzes in der Hauptdatei verweist.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q363",
+      "question": "Unterscheiden Sie zwischen unsortiertem und sortiertem Index.",
+      "answer": "Bei einem unsortierten Index muss der gesamte Index durchsucht werden. Bei einem sortierten Index wird der Suchprozess verkürzt, da die Daten in sortierter Reihenfolge vorliegen.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q364",
+      "question": "Welche Merkmale charakterisieren einen physisch sortierten Index?",
+      "answer": "Die Reihenfolge der Speicherung entspricht der Sortierreihenfolge, der Index wird physisch auf dem Datenspeicher gespeichert und muss ständig aktualisiert werden.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q365",
+      "question": "Wozu dient der Überlaufbereich bei physisch sortierten Indizes?",
+      "answer": "Der Überlaufbereich speichert neue Einträge, die noch nicht einsortiert sind, um zu vermeiden, dass die Daten bei jedem neuen Datensatz komplett neu sortiert werden müssen.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q366",
+      "question": "Beschreiben Sie das Suchverfahren bei einem physisch sortierten Index mit Überlaufbereich.",
+      "answer": "Bei der Suche wird zunächst im sortierten Hauptbereich per Index gesucht, danach erfolgt eine sequenzielle Suche im Überlaufbereich. Regelmäßige Reorganisation sorgt dafür, dass alle Daten wieder vollständig sortiert sind.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q367",
+      "question": "Warum muss ein physisch sortierter Index regelmäßig reorganisiert werden?",
+      "answer": "Durch kontinuierliche Einfügungen im Überlaufbereich verlängern sich die Suchzeiten, da der Überlaufbereich sequenziell durchsucht werden muss. Regelmäßige Reorganisation stellt die vollständige Sortierung wieder her.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q368",
+      "question": "Erklären Sie das Prinzip der binären Suche.",
+      "answer": "Die binäre Suche funktioniert durch wiederholtes Halbieren der sortierten Datenmenge. Durch Vergleich des Suchschlüssels mit dem Mittelpunkt wird entschieden, in welcher Hälfte die weitere Suche fortgesetzt wird, bis das Ergebnis gefunden ist.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q369",
+      "question": "Welche Voraussetzung muss für die binäre Suche erfüllt sein?",
+      "answer": "Die Daten müssen sortiert vorliegen, damit die binäre Suche funktioniert.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q370",
+      "question": "Was ist die Grundidee der M-Wege-Suche?",
+      "answer": "Die M-Wege-Suche ist eine Alternative zur binären Suche, bei der der sortierte Datenbestand in Blöcke eingeteilt wird. Der Suchschlüssel wird zunächst mit dem letzten Element des ersten Blockes verglichen, um den relevanten Block zu identifizieren, und dann innerhalb des Blocks weitergesucht.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q371",
+      "question": "Beschreiben Sie den Ablauf der M-Wege-Suche.",
+      "answer": "Der Suchschlüssel wird mit dem letzten Element des ersten Blockes verglichen. Ist er größer, erfolgt ein Übergang zum nächsten Block. Ist er kleiner oder gleich, wird die binäre Suche innerhalb des aktuellen Blockes angewendet.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q372",
+      "question": "Nennen Sie das zentrale Problem bei physisch sortierten Datenbeständen.",
+      "answer": "Das zentrale Problem ist das Abwägen zwischen Reorganisationshäufigkeit und Suchleistung: Häufige Reorganisation kostet erhebliche Rechenzeit, während seltene Reorganisation durch wachsende Überlaufbereiche die Suchzeiten verlängert.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q373",
+      "question": "Was ist der Hauptvorteil eines logisch sortierten Index gegenüber einem physisch sortierten Index?",
+      "answer": "Bei einem logisch sortierten Index ist keine Reorganisation notwendig, da die logische Sortierfolge unabhängig von der physischen Speicherreihenfolge ist.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q374",
+      "question": "Nennen Sie die zwei Methoden zur Implementierung logisch sortierter Indizes.",
+      "answer": "Die zwei Methoden sind die Kette (verkettete Liste) und der Baum.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q375",
+      "question": "Vergleichen Sie die Reorganisationsanforderungen logisch und physisch sortierter Indizes.",
+      "answer": "Physisch sortierte Indizes benötigen regelmäßige Reorganisation, was erhebliche Rechnerzeiten kostet. Logisch sortierte Indizes benötigen keine Reorganisation, da die Sortierreihenfolge logisch durch Verkettungen oder Baumstrukturen aufrechterhalten wird.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### 11.2 Relationenmodell"
+    },
+    {
+      "id": "q376",
+      "question": "Was ist eine Kette als logisch sortierter Index in einem Datenbank-System?",
+      "answer": "Eine Kette ist eine Indexstruktur, bei der jeder Datensatz einen Pointer enthält, der auf den nächsten Datensatz in der Sortierreihenfolge zeigt. Dies ermöglicht eine logische Ordnung von Datensätzen unabhängig von ihrer physischen Speicherposition.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q377",
+      "question": "Was versteht man unter einem Pointer in der Ketten-Struktur?",
+      "answer": "Ein Pointer ist die gespeicherte Adresse des in der Sortierreihenfolge nachfolgenden Datensatzes. Jeder Datensatz speichert in sich selbst die Adresse des nächsten Datensatzes in der logischen Kette.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q378",
+      "question": "Was ist ein Anker in einer Ketten-Struktur?",
+      "answer": "Der Anker ist der Zeiger, der auf den ersten Datensatz der Kette zeigt. Er markiert den Einstiegspunkt in die logisch sortierte Sequenz.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q379",
+      "question": "Erkläre das Einfügen eines neuen Datensatzes in eine Kette.",
+      "answer": "Der neue Datensatz wird ans Ende des physischen Datenbestandes geschrieben. Dann wird der Zeiger des logischen Vorgängers so umgeleitet, dass er auf den neuen Datensatz zeigt, und der neue Datensatz zeigt auf den bisherigen Nachfolger. Es müssen nur Zeigeradressen geändert, keine Datensätze verschoben werden.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q380",
+      "question": "Wie wird das Löschen eines Datensatzes in einer Kette durchgeführt?",
+      "answer": "Der zu löschende Datensatz wird als gelöscht markiert. Die Zeigeradressen werden angepasst: der logische Vorgänger zeigt nun direkt auf den Nachfolger des gelöschten Datensatzes. Der Speicherplatz wird als überschreibbar gekennzeichnet.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q381",
+      "question": "Was ist der Hauptvorteil einer Ketten-Struktur?",
+      "answer": "Der Hauptvorteil ist der einfache Änderungsdienst. Einfügungen und Löschungen erfordern nur Änderungen der Zeigeradressen, nicht das Verschieben von Datensätzen im Speicher.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q382",
+      "question": "Was ist der Hauptnachteil einer Ketten-Struktur?",
+      "answer": "Der Hauptnachteil ist, dass nur sequenzielles Suchen möglich ist. Man muss vom Anker aus Adresse für Adresse folgen und kann nicht direkt zu einem bestimmten Datensatz springen, was die Suchgeschwindigkeit bei großen Datenbeständen reduziert.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q383",
+      "question": "Ist die physische Reihenfolge der Datensätze in einer Kette identisch mit ihrer logischen Reihenfolge?",
+      "answer": "Nein, die physische Reihenfolge kann sich von der logischen unterscheiden. Die logische Reihenfolge wird ausschließlich durch die Pointer definiert, die physische Speicherposition spielt keine Rolle.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q384",
+      "question": "Welche klassische Datenstruktur entspricht einer Kette in einem DBS?",
+      "answer": "Eine Kette entspricht einer einfach verketteten Liste (singly linked list), bei der jedes Element einen Verweis auf das nächste Element in der logischen Reihenfolge enthält.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q385",
+      "question": "In welchen Kontexten ist eine Ketten-Struktur besonders geeignet bzw. ungeeignet?",
+      "answer": "Ketten-Strukturen sind besonders geeignet, wenn häufig Datensätze eingefügt oder gelöscht werden, da dies nur Zeigeränderungen erfordert. Sie sind weniger geeignet, wenn schnelle direkte Zugriffe auf beliebige Datensätze erforderlich sind, da nur sequenzielle Suche möglich ist.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q386",
+      "question": "Wie unterscheidet sich eine Kette von einem Array bei der Speicherung von Daten?",
+      "answer": "Eine Kette speichert Datensätze an beliebigen physischen Positionen und verbindet sie logisch durch Pointer; Einfügen/Löschen erfordert nur Zeigeränderungen. Ein Array speichert Daten sequenziell und ermöglicht direkten Indexzugriff, erfordert aber beim Einfügen/Löschen das Verschieben von Elementen.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Kette (logisch sortierter Index)"
+    },
+    {
+      "id": "q387",
+      "question": "Was ist die Definition einer Baumstruktur in einem Datenbank-System?",
+      "answer": "Eine Baumstruktur besteht aus einer Menge von Knoten und Kanten mit drei Eigenschaften: es gibt genau einen Knoten ohne Vorgänger (Wurzel), jeder andere Knoten hat genau einen unmittelbaren Vorgänger, und von der Wurzel zu jedem Nichtwurzelknoten existiert genau ein Weg.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q388",
+      "question": "Was ist die Wurzel eines Baumes?",
+      "answer": "Die Wurzel ist der einzige Knoten in einem Baum, der keinen Vorgänger hat. Sie ist der Ausgangspunkt für alle Wege zu anderen Knoten im Baum.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q389",
+      "question": "Welche zwei Fälle werden beim Löschen von Knoten in einem binären Suchbaum unterschieden?",
+      "answer": "1) Löschen eines Knotens ohne oder mit nur einem Nachfolger: Der Knoten wird einfach entfernt und der Vorgänger zeigt direkt auf den verbleibenden Nachfolger. 2) Löschen eines Knotens mit zwei Nachfolgern: Eine Vertauschoperation ist notwendig – der nächstkleinere oder nächstgrößere Knoten ersetzt den gelöschten Knoten, um die Baum-Sortierordnung zu erhalten.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q390",
+      "question": "Was ist eine Vertauschoperation beim Löschen von Knoten in einem Baum?",
+      "answer": "Eine Vertauschoperation ist ein Prozess beim Löschen eines Knotens mit zwei Nachfolgern, bei dem der nächstkleinere (In-order-Vorgänger) oder nächstgrößere (In-order-Nachfolger) Knoten den zu löschenden Knoten ersetzt, um die Sortierordnung des Baumes zu bewahren.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q391",
+      "question": "Was ist das Hauptproblem von unausgeglichenen Bäumen?",
+      "answer": "Unausgeglichene Bäume können je nach Einfügungsreihenfolge sehr einseitig werden (im Extremfall einer linearen Liste ähneln). Dies führt zu degradierter Suchleistung und kann eine Reorganisation notwendig machen.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q392",
+      "question": "Wie wird die Effizienz eines einfachen (unausgeglichenen) Baumes im Vergleich zu anderen Suchstrukturen bewertet?",
+      "answer": "Ein einfacher Baum ist in der Regel effizienter als eine Kette (lineare Suche), aber schlechter als ausgeglichene Strukturen wie B-Bäume oder balancierte binäre Suchbäume, da keine Balancierungsgarantie besteht.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q393",
+      "question": "Warum ist das Löschen eines Blattknotens in einem Baum einfacher als das Löschen eines inneren Knotens mit zwei Nachfolgern?",
+      "answer": "Ein Blattknoten hat keine Nachfolger und kann einfach entfernt werden – der Zeiger des Vorgängers wird auf null gesetzt. Ein innerer Knoten mit zwei Nachfolgern erfordert eine aufwendige Vertauschoperation, um die Sortierordnung des Baumes zu erhalten.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q394",
+      "question": "Was versteht man unter der Tiefe (Höhe) eines Baumes und warum ist sie für die Suchleistung relevant?",
+      "answer": "Die Tiefe (Höhe) eines Baumes ist die maximale Anzahl von Kanten vom Wurzelknoten zu einem Blattknoten. Sie ist direkt relevant für die Suchleistung, da jede Ebene einem Vergleich entspricht. Ein ausgewogener Baum hat eine geringere Tiefe (O(log n)) als ein unausgewogener (im schlechtesten Fall O(n)).",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Baum (logisch sortierter Index)"
+    },
+    {
+      "id": "q395",
+      "question": "Was ist das Grundprinzip der gestreuten Organisation (Hashing) in Datenbank-Systemen?",
+      "answer": "Bei der gestreuten Organisation wird direkt aus dem Schlüssel eines Datensatzes durch eine Hash-Funktion die Speicheradresse des zugehörigen Datensatzes berechnet. Dies ermöglicht einen direkten Zugriff ohne sequenzielle Suche.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q396",
+      "question": "Welches Hauptproblem entsteht bei der gestreuten Organisation (Hashing)?",
+      "answer": "Da die Anzahl der verfügbaren Speicherplätze in der Regel geringer ist als die Menge der möglichen Schlüssel, können mehrere Schlüssel auf die gleiche Adresse abgebildet werden. Diese Situation wird als Kollision bezeichnet.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q397",
+      "question": "Was ist eine Kollision bei der gestreuten Organisation und wie beeinflusst sie die Performance?",
+      "answer": "Eine Kollision tritt auf, wenn zwei unterschiedliche Schlüssel durch die Hash-Funktion auf die gleiche Speicheradresse abgebildet werden. Die Art der Kollisionsbehandlung beeinflusst die Zugriffsdauer wesentlich – häufige Kollisionen erzwingen sequenzielle Suche im Überlaufbereich.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q398",
+      "question": "Wie werden Kollisionen bei der gestreuten Organisation typischerweise gelöst?",
+      "answer": "Bei Kollisionen werden die betroffenen Datensätze sequenziell in einen Überlaufbereich geschrieben. Bei der Suche wird zunächst die berechnete Adresse geprüft; falls der Datensatz dort nicht liegt, wird der Überlaufbereich sequenziell durchsucht.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q399",
+      "question": "Was ist eine Hash-Funktion und welche Anforderungen stellt sie?",
+      "answer": "Eine Hash-Funktion berechnet aus einem Schlüssel (alphabetisch, numerisch oder alphanumerisch) eine Speicheradresse. Sie bildet eine große Menge möglicher Schlüssel auf einen kleineren, praktikablen Adressbereich ab. Eine gute Hash-Funktion minimiert Kollisionen und verteilt Datensätze gleichmäßig.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q400",
+      "question": "Was ist der Überlaufbereich bei der Hash-Organisation?",
+      "answer": "Der Überlaufbereich ist ein Speicherbereich, in den Datensätze geschrieben werden, deren berechnete Hash-Adresse bereits belegt ist (Kollision). Er muss bei der Suche sequenziell durchsucht werden, was die Zugriffszeit erhöht.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q401",
+      "question": "Was ist die Schlüsseltransformationsfunktion (Hash-Funktion) und wozu dient sie?",
+      "answer": "Die Schlüsseltransformationsfunktion bildet die (potenziell sehr große) numerische Repräsentation eines Schlüssels auf einen praktikablen Adressbereich ab. Typisch ist eine Modulo-Division durch die Größe des Adressraums, wobei der Rest als Speicheradresse verwendet wird.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q402",
+      "question": "Wie einfach ist das Einfügen von Datensätzen bei der gestreuten Organisation (Hashing)?",
+      "answer": "Das Einfügen ist sehr einfach. Der Datensatz wird über die Hash-Formel direkt an die berechnete Adresse geschrieben, ohne weitere Suche oder Verwaltungsaufwand.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q403",
+      "question": "Wie einfach ist das Löschen von Datensätzen bei der gestreuten Organisation (Hashing)?",
+      "answer": "Das Löschen ist sehr einfach. Der Datensatz wird direkt aus dem Speicherraum gelöscht, da die Adresse über die Hash-Funktion bekannt ist.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q404",
+      "question": "Welchen Einfluss haben Kollisionen auf die Zugriffsdauer bei der gestreuten Organisation?",
+      "answer": "Kollisionen beeinflussen die Zugriffsdauer wesentlich. Bei Kollisionen müssen die Datensätze im Überlaufbereich sequenziell durchsucht werden, was zu längeren Zugriffszeiten führt.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q405",
+      "question": "Wie werden Positionen eines Schlüssels bei einer typischen Hash-Berechnung gewichtet?",
+      "answer": "Jede Position wird mit einer absteigenden Zweierpotenz gewichtet: Position 1 mit dem höchsten Wert, die letzte Position mit 2⁰. Dies entspricht einem Positionssystem für die numerische Repräsentation des Schlüssels.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q406",
+      "question": "Welche Anforderung muss eine Hash-Funktion bei der gestreuten Organisation erfüllen?",
+      "answer": "Eine Hash-Funktion muss eine riesige Anzahl von möglichen Schlüsseln auf eine akzeptable Menge von Adressen abbilden und dabei eine gleichmäßige Verteilung anstreben, um Kollisionen zu minimieren.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q407",
+      "question": "Unter welcher Bedingung ist das Suchen bei der gestreuten Organisation sehr effizient, und was passiert bei Kollisionen?",
+      "answer": "Das Suchen ist sehr effizient, wenn keine Kollisionen entstehen – die Adresse wird direkt über die Hash-Funktion berechnet. Bei Kollisionen müssen Datensätze im Überlaufbereich sequenziell durchsucht werden, was die Zugriffszeit erhöht.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q408",
+      "question": "Wie wird die Speicheradresse eines Schlüssels bei der gestreuten Organisation grundsätzlich ermittelt?",
+      "answer": "Die Speicheradresse wird direkt aus dem Schlüssel berechnet, indem dieser über eine Hash-Funktion transformiert wird. Dies ermöglicht einen direkten Zugriff ohne sequenzielle Suche.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q409",
+      "question": "Warum ist die Wahl der Hash-Funktion für die gestreute Organisation entscheidend?",
+      "answer": "Die Hash-Funktion muss gewährleisten, dass die Schlüssel gleichmäßig auf die verfügbaren Adressen verteilt werden. Eine schlechte Hash-Funktion führt zu vielen Kollisionen und damit zu längeren Zugriffszeiten.",
+      "topic": "11 Datenbank-Systeme (DBS) › ### Gestreute Organisation (Hash)"
+    },
+    {
+      "id": "q410",
+      "question": "Was sind Managementunterstützungssysteme?",
+      "answer": "Managementunterstützungssysteme sind die Summe aller Informationssysteme zur Unterstützung sämtlicher Managementebenen. Sie ermöglichen es Managern auf verschiedenen Ebenen, ihre Aufgaben durch Informationstechnologie zu unterstützen.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q411",
+      "question": "Welche drei Managementebenen werden typischerweise in einem Pyramidenmodell der Managementunterstützung unterschieden, und welche Systeme sind ihnen zugeordnet?",
+      "answer": "Die drei Ebenen sind: (1) Operatives Management / Mittleres Management mit Management Information System (MIS), (2) Stäbe & Assistenten mit Decision Support System (DSS), (3) Top Management mit Executive Information System (EIS).",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q412",
+      "question": "Beschreibe die Hauptmerkmale eines Management Information Systems (MIS).",
+      "answer": "MIS unterstützen Mitarbeiter bei täglichen Routineaufgaben, orientieren sich auf operative und interne Informationen (harte Informationen), haben eine Berichtsorientierung mit Standardberechnungen wie Summen- und Durchschnittsbildung und dienen als Basis für DSS und EIS.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q413",
+      "question": "Was ist ein Decision Support System (DSS) und welche Art von Entscheidungen unterstützt es?",
+      "answer": "Ein DSS ist ein computergestütztes Informationssystem, das einen oder mehrere Entscheidungsträger bei semistrukturierten Entscheidungsprozessen unterstützt. Es nutzt eine algorithmische Orientierung und verfügt über Modell- und Methodendatenbanken sowie Sensitivitätsbetrachtungen.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q414",
+      "question": "Nenne vier Kategorien von Methoden, die in einem Decision Support System (DSS) verwendet werden.",
+      "answer": "Die vier Kategorien sind: Finanzmathematische Methoden (Kapitalwertmethode, Annuitätenberechnungen, Interne Zinsfußmethode), Statistische Methoden (Risiko-Analyse, Regressionsanalysen, Forecasting), What-if-Methoden (Sensitivitätsbetrachtungen, Zielwertanalysen, Signifikanztests) und Umfassende Modelle (Konsolidierungen, Investitionsanalyse, Marketing-Auswertungen).",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q415",
+      "question": "Was ist ein Executive Information System (EIS) und für wen ist es bestimmt?",
+      "answer": "Ein EIS ist ein computergestütztes Informationssystem für Top Manager (Executives), das es ihnen erlaubt, auf einfache Art und Weise auf externe und interne Daten zuzugreifen. Es berücksichtigt ihre individuellen kritischen Erfolgsfaktoren (Critical Success Factors).",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q416",
+      "question": "Gib eine prägnante Definition eines Data Warehouse.",
+      "answer": "Ein Data Warehouse ist ein umfassendes Konzept zur Entscheidungsunterstützung mit einer integrierten Datenbank von entscheidungsrelevanten Informationen. Diese Daten werden aus operativen Datenbanken und externen Quellen bedarfsgerecht destilliert und durch einen Informationskatalog sowie Softwarewerkzeuge zum Abfragen, Transformieren, Analysieren und Präsentieren bereitgestellt.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q417",
+      "question": "Was ist Data Mining?",
+      "answer": "Data Mining bezeichnet die softwaregestützte Ermittlung bisher unbekannter Zusammenhänge, Muster und Trends in sehr großen Datenbanken. Das System kann dabei vordefinierte Ziele verfolgen oder automatisch Objekte in Cluster aufteilen.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q418",
+      "question": "Erläutere das Merkmal 'Subjektorientierung' eines Data Warehouse.",
+      "answer": "Subjektorientierung bedeutet, dass das Data Warehouse Daten aus der Perspektive des Entscheidungsträgers (Manager) organisiert – nicht aus der Sicht von Applikationen. Die Daten werden so aufbereitet, dass sie zur Unterstützung von Managemententscheidungen geeignet sind.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q419",
+      "question": "Erkläre das Merkmal 'Integration' im Data Warehouse.",
+      "answer": "Integration bedeutet, dass das Data Warehouse Daten aus verschiedenen Quellen (operative Systeme, externe Quellen) zusammenführt und für die Auswertung neu formalisiert. Dies schafft eine konsistente und vereinheitlichte Datenbasis für Berichte und Analysen.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q420",
+      "question": "Was bedeutet das Merkmal 'Zeitbezogenheit' beim Data Warehouse?",
+      "answer": "Zeitbezogenheit bedeutet, dass das Data Warehouse nicht nur den aktuellen Stand, sondern auch historische Daten speichert. Dispositive Anwendungen benötigen Vergangenheitsdaten für Trend- und Vergleichsanalysen, die operative Systeme typischerweise nicht vorhalten.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q421",
+      "question": "Beschreibe das Merkmal 'Beständigkeit' eines Data Warehouse.",
+      "answer": "Beständigkeit bedeutet, dass Daten im Data Warehouse nur gelesen und nicht überschrieben werden. Im Gegensatz dazu werden operative Daten laufend durch Anwendungen aktualisiert. Dies gewährleistet die Integrität und Stabilität der gespeicherten Daten.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q422",
+      "question": "Nenne drei Gründe, warum ein Data Warehouse notwendig ist.",
+      "answer": "Drei wichtige Gründe sind: (1) Beantwortung strategischer Unternehmensfragen wie 'Wie laufen unsere Kerngeschäfte?', (2) Bedarf nach sofortigen Informationen durch Ad-hoc-Abfragen ohne Einbindung der EDV-Abteilung, (3) Zugriff auf historische und subjektorientierte Daten aus verschiedenen Quellen in einer konsistenten Datenbasis.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q423",
+      "question": "Welche drei Hauptziele verfolgt ein Data Warehouse?",
+      "answer": "Die Ziele sind: (1) Unternehmensweite konsistente Daten als eine Datenquelle für Berichte und Analysen, (2) bessere Performance bei Ad-hoc-Anfragen durch Trennung von OLTP- und Abfragesystem-Tabellen, (3) einfache Zugriffsmöglichkeiten für Endbenutzer durch leistungsfähige Werkzeuge ohne EDV-Abteilungs-Einmischung.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q424",
+      "question": "Was ist der Unterschied zwischen OLTP und OLAP hinsichtlich Transaktionsvolumen, Antwortzeit und Update-Frequenz?",
+      "answer": "OLTP hat hohes Transaktionsvolumen, sehr schnelle Antwortzeiten (Sekundenbereich) und hohe Update-Frequenz (permanente Aktualisierungen). OLAP hat mittleres bis niedriges Transaktionsvolumen, längere Antwortzeiten (bis zu Minuten) und niedrige Update-Frequenz (nur nach geplanten Ladevorgängen).",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q425",
+      "question": "Was ist der Unterschied in der Betrachtungsperiode und dem Abfragetyp zwischen OLTP und OLAP?",
+      "answer": "OLTP betrachtet die aktuelle Periode und führt vorhersehbare, periodische Abfragen durch. OLAP betrachtet Vergangenheit und Zukunft für Trend- und Prognoseanalysen und führt unvorhersehbare, flexible Ad-hoc-Abfragen durch.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q426",
+      "question": "Wie unterscheiden sich OLTP und OLAP in ihrer Dimensionalität der Datenverarbeitung?",
+      "answer": "OLTP verarbeitet Datensätze eindimensional (eine Transaktion betrifft typischerweise einzelne Datensätze). OLAP verarbeitet Daten multidimensional als Matrizen (Arrays/Hypercubes), um komplexe Datenbeziehungen über mehrere Dimensionen gleichzeitig zu analysieren.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q427",
+      "question": "Was sind die Hauptkennzeichen von OLAP?",
+      "answer": "OLAP-Kennzeichen sind: mehrdimensionale Sichten auf Daten, flexibles Bewegen durch verschiedene Verdichtungsebenen, Slice & Dice Funktionalität, Drill-Down und Drill-Up Navigationen, wenige gleichzeitige Benutzer und Zugriff auf historische Daten.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q428",
+      "question": "Was ist Slice & Dice in OLAP?",
+      "answer": "Slice & Dice ermöglicht es Benutzern, einen bestimmten Ausschnitt der im Hypercube aggregierten Daten entlang jeder vorgesehenen Dimension zu 'schneiden' oder zu 'drehen', um Überblicke aus verschiedenen Blickwinkeln zu erhalten.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q429",
+      "question": "Erkläre den Unterschied zwischen Drill-Down und Drill-Up in OLAP.",
+      "answer": "Drill-Down ermöglicht dem Benutzer die Auffächerung aggregierter Informationen, um mehr Details zu erfahren (z.B. von Jahresumsatz zu Monatsumsatz). Drill-Up ist das Gegenteil: Daten werden von der Detailebene auf eine höhere Aggregationsebene zusammengefasst.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q430",
+      "question": "Was sind die Hauptkennzeichen von OLTP?",
+      "answer": "OLTP-Kennzeichen sind: viele gleichzeitige Benutzer, die vordefinierte SQL-Anweisungen ausführen, kurze Transaktionen und schnelle Verarbeitung. Typische Anwendungsbeispiele sind Auftragsverwaltungs- oder Reservierungssysteme.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q431",
+      "question": "Wie wird das Data Warehouse aus operativen Systemen versorgt?",
+      "answer": "Operative Systeme übergeben ihre Daten an das Data Warehouse, das diese mit Hilfe der im Data Dictionary gespeicherten Definitionen (Meta-Daten) transformiert und für Geschäftsmanagement-Anfragen bereitstellt.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    },
+    {
+      "id": "q432",
+      "question": "Welche Rolle spielen Meta-Daten im Data Warehouse?",
+      "answer": "Meta-Daten halten die benötigten Definitionen fest und beschreiben Inhalte, Formate und Auswertungsmöglichkeiten des Data Warehouse. Sie ermöglichen es Endbenutzern, die verfügbaren Daten zu verstehen und richtig zu nutzen.",
+      "topic": "11.3 Online Transaction Processing (OLTP), Data Warehouse (DWH) und Data Mining"
+    }
+  ]
+}
