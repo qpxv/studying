@@ -3,9 +3,9 @@
 import { useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 import { EditorView, basicSetup } from 'codemirror';
 import { sql } from '@codemirror/lang-sql';
-import { oneDark } from '@codemirror/theme-one-dark';
 import { keymap } from '@codemirror/view';
 import { Compartment } from '@codemirror/state';
+import { tal7aouy } from './theme-tal7aouy';
 
 export interface SqlEditorHandle {
   getValue: () => string;
@@ -47,7 +47,7 @@ const SqlEditor = forwardRef<SqlEditorHandle, SqlEditorProps>(({ onSubmit, disab
       extensions: [
         basicSetup,
         sql(),
-        oneDark,
+        ...tal7aouy,
         keymap.of([
           {
             key: 'Mod-Enter',
@@ -58,16 +58,7 @@ const SqlEditor = forwardRef<SqlEditorHandle, SqlEditorProps>(({ onSubmit, disab
           },
         ]),
         editableCompartment.current.of(EditorView.editable.of(true)),
-        EditorView.theme({
-          '&': { height: '100%', backgroundColor: '#282c34' },
-          '.cm-scroller': {
-            overflow: 'auto',
-            fontFamily: 'var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace',
-            fontSize: '13px',
-          },
-          '.cm-content': { padding: '12px 0' },
-          '.cm-focused': { outline: 'none' },
-        }),
+        EditorView.theme({ '&': { height: '100%' } }),
       ],
     });
 
