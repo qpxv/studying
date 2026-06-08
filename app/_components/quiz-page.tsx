@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { Send, ArrowLeft, Home, BrainCircuit, Terminal, type LucideIcon } from 'lucide-react';
+import { Send, ArrowLeft, Home, BrainCircuit, Terminal, Database, type LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
 const ICONS: Record<string, LucideIcon> = {

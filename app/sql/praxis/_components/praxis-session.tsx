@@ -2,8 +2,9 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { marked } from 'marked';
-import { Terminal, Play, ArrowRight, Home, ArrowLeft } from 'lucide-react';
+import { Terminal, Play, ArrowLeft, Home, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import SqlEditor, { type SqlEditorHandle } from './sql-editor';
 
 type Phase = 'idle' | 'generating' | 'ready' | 'evaluating' | 'evaluated';
 
@@ -70,7 +71,6 @@ function TypingDots() {
 export default function PraxisSession() {
   const [phase, setPhase] = useState<Phase>('idle');
   const [exercise, setExercise] = useState('');
-  const [query, setQuery] = useState('');
   const [submittedQuery, setSubmittedQuery] = useState('');
   const [feedback, setFeedback] = useState('');
   const [totalCents, setTotalCents] = useState(0);
@@ -78,7 +78,7 @@ export default function PraxisSession() {
   const [vp, setVp] = useState<{ height: number; top: number } | null>(null);
 
   const bottomRef = useRef<HTMLDivElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const editorRef = useRef<SqlEditorHandle>(null);
 
   useEffect(() => {
     const update = () => {
@@ -98,29 +98,13 @@ export default function PraxisSession() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [exercise, feedback, phase]);
 
-  const generateExercise = useCallback(async () => {
-    setExercise('');
-    setFeedback('');
-    setSubmittedQuery('');
-    setQuery('');
-    setPhase('generating');
-    setRoundCount(n => n + 1);
-    try {
-      const cents = await streamToState('/api/sql/praxis-generate', {}, (text) => setExercise(text));
-      setTotalCents(t => t + cents);
-      setPhase('ready');
-      setTimeout(() => textareaRef.current?.focus(), 50);
-    } catch (err) {
-      setExercise(`Fehler: ${err instanceof Error ? err.message : 'Unbekannter Fehler'}`);
-      setPhase('ready');
-    }
-  }, []);
-
   const submitQuery = useCallback(async () => {
-    const q = query.trim();
-    if (!q || phase !== 'ready') return;
+    if (phase !== 'ready') return;
+    const q = editorRef.current?.getValue().trim() ?? '';
+    if (!q) return;
     setSubmittedQuery(q);
-    setQuery('');
+    editorRef.current?.clear();
+    setFeedback('');
     setPhase('evaluating');
     try {
       const cents = await streamToState(
@@ -128,22 +112,34 @@ export default function PraxisSession() {
         { exercise, userQuery: q },
         (text) => setFeedback(text)
       );
-      setTotalCents(t => t + cents);
+      setTotalCents((t) => t + cents);
       setPhase('evaluated');
     } catch (err) {
       setFeedback(`Fehler: ${err instanceof Error ? err.message : 'Unbekannter Fehler'}`);
       setPhase('evaluated');
     }
-  }, [query, phase, exercise]);
+  }, [phase, exercise]);
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
-      e.preventDefault();
-      submitQuery();
+  const generateExercise = useCallback(async () => {
+    setExercise('');
+    setFeedback('');
+    setSubmittedQuery('');
+    editorRef.current?.clear();
+    setPhase('generating');
+    setRoundCount((n) => n + 1);
+    try {
+      const cents = await streamToState('/api/sql/praxis-generate', {}, (text) => setExercise(text));
+      setTotalCents((t) => t + cents);
+      setPhase('ready');
+      setTimeout(() => editorRef.current?.focus(), 50);
+    } catch (err) {
+      setExercise(`Fehler: ${err instanceof Error ? err.message : 'Unbekannter Fehler'}`);
+      setPhase('ready');
     }
-  };
+  }, []);
 
   const headerSub = roundCount > 0 ? `Runde ${roundCount} · ${totalCents.toFixed(2)}¢` : undefined;
+  const isActive = phase !== 'idle';
 
   return (
     <div
@@ -164,11 +160,13 @@ export default function PraxisSession() {
           </div>
           <div className="flex flex-col">
             <span className="font-semibold text-sm text-zinc-900 dark:text-zinc-100 leading-tight">SQL Praxis</span>
-            {headerSub && <span className="text-xs text-zinc-400 dark:text-zinc-500 leading-tight">{headerSub}</span>}
+            {headerSub && (
+              <span className="text-xs text-zinc-400 dark:text-zinc-500 leading-tight">{headerSub}</span>
+            )}
           </div>
         </div>
         <div className="flex items-center gap-3">
-          {phase !== 'idle' && (
+          {isActive && (
             <Link
               href="/sql"
               className="flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
@@ -176,48 +174,55 @@ export default function PraxisSession() {
               <ArrowLeft className="w-3 h-3" /> Zurück
             </Link>
           )}
-          <Link href="/" className="flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">
+          <Link
+            href="/"
+            className="flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
+          >
             <Home className="w-3 h-3" />
           </Link>
         </div>
       </header>
 
-      {/* Main */}
-      <main className="flex-1 overflow-y-auto overscroll-y-contain">
-        {phase === 'idle' ? (
-          <div className="flex flex-col items-center justify-center h-full gap-4 px-6">
-            <div className="flex flex-col items-center gap-1.5 text-center">
-              <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">SQL Praxis</p>
-              <p className="text-xs text-zinc-400 dark:text-zinc-500">KI generiert frische Tabellen und eine Aufgabe</p>
-            </div>
-            <button
-              onClick={generateExercise}
-              className="px-6 py-2.5 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all"
-            >
-              Los geht's
-            </button>
+      {/* Idle start screen */}
+      {!isActive && (
+        <div className="flex-1 flex flex-col items-center justify-center gap-4 px-6">
+          <div className="flex flex-col items-center gap-1.5 text-center">
+            <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">SQL Praxis</p>
+            <p className="text-xs text-zinc-400 dark:text-zinc-500">
+              KI generiert frische Tabellen und eine Aufgabe
+            </p>
           </div>
-        ) : (
-          <div className="flex flex-col gap-3 px-4 pt-4 pb-6 max-w-3xl mx-auto w-full">
+          <button
+            onClick={generateExercise}
+            className="px-6 py-2.5 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 active:scale-95 transition-all"
+          >
+            Los geht&apos;s
+          </button>
+        </div>
+      )}
 
-            {/* Exercise bubble */}
-            {phase === 'generating' && !exercise
-              ? <TypingDots />
-              : exercise && <MarkdownBubble content={exercise} />
-            }
+      {/* Active split layout */}
+      {isActive && (
+        <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+          {/* Left: conversation */}
+          <div className="flex-1 overflow-y-auto overscroll-y-contain px-4 py-4 flex flex-col gap-3">
+            {phase === 'generating' && !exercise ? (
+              <TypingDots />
+            ) : (
+              exercise && <MarkdownBubble content={exercise} />
+            )}
 
-            {/* Submitted SQL bubble */}
             {submittedQuery && (
               <div className="self-end max-w-[85%] bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-2xl rounded-br-sm px-4 py-3">
-                <pre className="text-sm font-mono leading-relaxed whitespace-pre-wrap break-words">{submittedQuery}</pre>
+                <pre className="text-sm font-mono leading-relaxed whitespace-pre-wrap break-words">
+                  {submittedQuery}
+                </pre>
               </div>
             )}
 
-            {/* Feedback */}
             {phase === 'evaluating' && !feedback && <TypingDots />}
             {feedback && <MarkdownBubble content={feedback} />}
 
-            {/* Next round */}
             {phase === 'evaluated' && (
               <button
                 onClick={generateExercise}
@@ -229,51 +234,28 @@ export default function PraxisSession() {
 
             <div ref={bottomRef} />
           </div>
-        )}
-      </main>
 
-      {/* SQL input footer */}
-      {phase === 'ready' && (
-        <footer
-          className="flex-none border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 pt-3"
-          style={{ paddingBottom: 'max(12px, env(safe-area-inset-bottom))' }}
-        >
-          <div className="flex items-end gap-2 max-w-3xl mx-auto">
-            <textarea
-              ref={textareaRef}
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={handleKeyDown}
-              onFocus={() => bottomRef.current?.scrollIntoView({ behavior: 'smooth' })}
-              placeholder="SELECT ..."
-              rows={3}
-              className="
-                flex-1 resize-none rounded-2xl border border-zinc-200 dark:border-zinc-700
-                bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100
-                placeholder-zinc-400 dark:placeholder-zinc-500
-                px-4 py-3 text-sm font-mono leading-relaxed outline-none
-                focus:border-zinc-400 dark:focus:border-zinc-500
-                transition-colors
-              "
-              style={{ maxHeight: '160px' }}
-            />
-            <button
-              onClick={submitQuery}
-              disabled={!query.trim()}
-              className="
-                flex-none w-10 h-10 rounded-full flex items-center justify-center
-                bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900
-                disabled:opacity-30 disabled:cursor-not-allowed
-                hover:opacity-80 active:scale-95 transition-all
-              "
-            >
-              <Play className="w-4 h-4" />
-            </button>
+          {/* Right: editor panel */}
+          <div className="flex-none md:w-[420px] w-full h-56 md:h-auto border-t md:border-t-0 md:border-l border-zinc-200 dark:border-zinc-800 flex flex-col">
+            <div className="flex-1 overflow-hidden">
+              <SqlEditor
+                ref={editorRef}
+                onSubmit={submitQuery}
+                disabled={phase !== 'ready'}
+              />
+            </div>
+            <div className="flex-none border-t border-zinc-200 dark:border-zinc-800 px-3 py-2 flex items-center justify-between bg-[#21252b]">
+              <span className="text-xs text-zinc-500">Cmd+Enter</span>
+              <button
+                onClick={submitQuery}
+                disabled={phase !== 'ready'}
+                className="w-8 h-8 rounded-lg flex items-center justify-center bg-zinc-700 text-zinc-100 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-zinc-600 active:scale-95 transition-all"
+              >
+                <Play className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
-          <p className="hidden sm:block text-center text-xs text-zinc-300 dark:text-zinc-600 mt-2 max-w-3xl mx-auto">
-            Cmd+Enter zum Absenden
-          </p>
-        </footer>
+        </div>
       )}
     </div>
   );
