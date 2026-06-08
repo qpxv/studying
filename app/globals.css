@@ -29,3 +29,59 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* Markdown rendering for SQL Praxis bubbles */
+.sql-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+}
+.sql-markdown th,
+.sql-markdown td {
+  border: 1px solid #d4d4d8;
+  padding: 0.3rem 0.6rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.sql-markdown th {
+  font-weight: 600;
+}
+.sql-markdown code {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.8em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background: rgba(0,0,0,0.06);
+}
+.sql-markdown pre {
+  border-radius: 0.625rem;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  background: rgba(0,0,0,0.06);
+}
+.sql-markdown pre code {
+  background: transparent;
+  padding: 0;
+}
+.sql-markdown strong {
+  font-weight: 600;
+}
+.sql-markdown p {
+  margin: 0.25rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sql-markdown th,
+  .sql-markdown td {
+    border-color: #3f3f46;
+  }
+  .sql-markdown code {
+    background: rgba(255,255,255,0.08);
+  }
+  .sql-markdown pre {
+    background: rgba(255,255,255,0.06);
+  }
+}
