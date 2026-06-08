@@ -1,8 +1,4 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+@AGENTS.md
 
 # Design System
 
@@ -11,6 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Fonts: Geist Sans (`--font-sans`) + Geist Mono (`--font-mono`)
 - Icons: `lucide-react`
 - Markdown rendering: `marked` (used in SQL Praxis bubbles via `dangerouslySetInnerHTML` + `.sql-markdown` CSS class in globals.css)
+- Code editor: `codemirror` v6 + `@codemirror/lang-sql` (SQL Praxis editor panel)
 
 ## Color tokens (globals.css)
 | Token | Light | Dark |
@@ -100,11 +97,11 @@ Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 ## Routes
 | Path | Description |
 |---|---|
-| `/` | Hub — mode selector (Management, AP1, SQL) |
+| `/` | Hub — two sections: FOM (Management, SQL) and Advantage (AP1) |
 | `/management` | Management Grundlagen theory quiz |
 | `/sql` | SQL mode selector (Quiz / Praxis) |
 | `/sql/quiz` | SQL theory quiz (same QuizPage component as management) |
-| `/sql/praxis` | SQL Praxis — AI generates fresh tables + task each round |
+| `/sql/praxis` | SQL Praxis — split layout: AI exercise left, CodeMirror editor right |
 | `/ap1` | AP1 hub |
 | `/ap1/notizen` | AP1 notes (Kategorien + Markdown editor) |
 | `/ap1/karteikarten` | AP1 flashcards (Lernen / Fragen / Stats) |
@@ -114,6 +111,11 @@ Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 
 ## Shared components
 - `app/_components/quiz-page.tsx` — shared quiz UI used by `/management` and `/sql/quiz`. Subject-aware: fetches from `/api/<subject>/quiz-bank` and `/api/<subject>/quiz-evaluate`. Add new subjects to the `ICONS` map at the top.
+
+## SQL Praxis components
+- `app/sql/praxis/_components/praxis-session.tsx` — split layout (`flex-1 flex flex-col md:flex-row`). Left panel: scrollable AI conversation (exercise bubble, submitted SQL bubble, feedback bubble, next-round button). Right panel: `w-[420px]` CodeMirror editor + submit bar.
+- `app/sql/praxis/_components/sql-editor.tsx` — CodeMirror 6 wrapper with `forwardRef`. Exposes `SqlEditorHandle` (`getValue`, `clear`, `focus`). Uses `basicSetup` + `sql()` + custom `tal7aouy` theme + `Mod-Enter` keymap. `Compartment` disables editing during generate/evaluate phases.
+- `app/sql/praxis/_components/theme-tal7aouy.ts` — CodeMirror 6 theme built from the exact hex values in `Theme.json` by Mhammed Talhaouy (tal7aouy.theme v3.1.0). Exports `tal7aouy: Extension[]`.
 
 ## API routes
 | Route | Method | Description |
@@ -149,18 +151,20 @@ To add a new subject: create `subjects/<name>/assets/` and `subjects/<name>/note
 npm run create-notes -- <subject>      # PDF → generated-notes.md  (Sonnet)
 npm run generate -- <subject>          # notes → quiz-bank.json     (Haiku)
 npm run improve-context -- <subject>   # enrich quiz bank answers   (Haiku)
+npm run curate -- <subject>            # filter/improve quiz-bank.json (Sonnet)
 npm run quiz -- <subject>              # interactive CLI quiz        (Opus)
 ```
 Pass subject as a positional arg after `--`, e.g. `npm run create-notes -- sql`.
 
 `create-notes` uses **claude-sonnet-4-6** (heavy PDF vision work).
 `generate` and `improve-context` use **claude-haiku-4-5-20251001** (cheap structured JSON).
+`curate` uses **claude-sonnet-4-6** — reads the existing quiz-bank.json, removes low-value questions (slide-specific trivia, diagram-dependent questions, near-duplicates, example-output memorization) and improves question context. Processes in chunks of 80.
 
 ## SQL Praxis mode (no static files)
 `/sql/praxis` requires no pre-generated content. Each round:
 1. `POST /api/sql/praxis-generate` → Haiku streams markdown tables + task
-2. User writes SQL in a monospace textarea
-3. `POST /api/sql/praxis-evaluate` → Haiku evaluates the query, renders markdown feedback (code blocks for correct SQL)
+2. User writes SQL in the CodeMirror editor (right panel) — SQL syntax highlighting, auto-close brackets, Cmd+X cut line, Cmd+Enter to submit
+3. `POST /api/sql/praxis-evaluate` → Haiku evaluates the query, renders markdown feedback in left panel
 
 # Prisma + Next.js Gotchas
 
