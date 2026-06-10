@@ -9,12 +9,12 @@ import { FragenSession } from './_components/fragen-session';
 export default async function FragenPage({
   searchParams,
 }: {
-  searchParams: Promise<{ von?: string; bis?: string }>;
+  searchParams: Promise<{ von?: string; bis?: string; zufaellig?: string }>;
 }) {
   const session = await auth.api.getSession({ headers: await headers() });
   if (!session) redirect('/sign-in');
 
-  const { von, bis } = await searchParams;
+  const { von, bis, zufaellig } = await searchParams;
   const vonN = von ? parseInt(von) : undefined;
   const bisN = bis ? parseInt(bis) : undefined;
 
@@ -65,5 +65,5 @@ export default async function FragenPage({
     );
   }
 
-  return <FragenSession cards={cards} />;
+  return <FragenSession cards={cards} shuffle={zufaellig === '1'} />;
 }

@@ -67,6 +67,7 @@ export async function importKarteikarten(
 
 export async function deleteKarteikarte(id: number): Promise<{ success: true } | { error: string }> {
   try {
+    await prisma.karteikarteBewertung.deleteMany({ where: { karteikarteId: id } });
     await prisma.karteikarte.delete({ where: { id } });
     revalidatePath('/ap1/karteikarten');
     return { success: true };

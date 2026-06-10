@@ -6,7 +6,7 @@
 - Tailwind CSS v4 (`@import "tailwindcss"` in globals.css)
 - Fonts: Geist Sans (`--font-sans`) + Geist Mono (`--font-mono`)
 - Icons: `lucide-react`
-- Markdown rendering: `marked` (used in SQL Praxis bubbles via `dangerouslySetInnerHTML` + `.sql-markdown` CSS class in globals.css)
+- Markdown rendering: `marked` (used in SQL Praxis bubbles and AP1 Karteikarten card faces via `dangerouslySetInnerHTML` + `.sql-markdown` CSS class in globals.css)
 - Code editor: `codemirror` v6 + `@codemirror/lang-sql` (SQL Praxis editor panel)
 
 ## Color tokens (globals.css)
@@ -112,6 +112,12 @@ Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 ## Shared components
 - `app/_components/quiz-page.tsx` — shared quiz UI used by `/management` and `/sql/quiz`. Subject-aware: fetches from `/api/<subject>/quiz-bank` and `/api/<subject>/quiz-evaluate`. Add new subjects to the `ICONS` map at the top.
 
+## AP1 Karteikarten components
+- `app/ap1/karteikarten/_components/range-selector.tsx` — Kartenauswahl card: Alle/Bereich toggle, range inputs, shuffle toggle (persisted to `localStorage` under `karteikarten-zufaellig`). Appends `?zufaellig=1` to the lernen/fragen URL when active.
+- `app/ap1/karteikarten/_components/karten-verwaltung.tsx` — collapsible card list with inline edit/delete. Delete first wipes `KarteikarteBewertung` rows then deletes the card to avoid FK constraint failures.
+- `app/ap1/karteikarten/lernen/_components/lern-session.tsx` — flip-card session. Uses CSS grid stacking (`row-start-1 col-start-1`) on both faces so card height is dynamic. Both question and answer render markdown via `.sql-markdown`. Accepts `shuffle` prop; applies Fisher-Yates in `useEffect` after hydration (avoids SSR mismatch from `Math.random()`).
+- `app/ap1/karteikarten/fragen/_components/fragen-session.tsx` — AI quiz session. Question and Musterlösung render markdown. "Erklärung anzeigen" button fetches from `/api/karteikarten/explain` on first click only (on-demand, not bundled with evaluation). Same `shuffle` + `useEffect` pattern as LernSession.
+
 ## SQL Praxis components
 - `app/sql/praxis/_components/praxis-session.tsx` — split layout (`flex-1 flex flex-col md:flex-row`). Left panel: scrollable AI conversation (exercise bubble, submitted SQL bubble, feedback bubble, next-round button). Right panel: `w-[420px]` CodeMirror editor + submit bar.
 - `app/sql/praxis/_components/sql-editor.tsx` — CodeMirror 6 wrapper with `forwardRef`. Exposes `SqlEditorHandle` (`getValue`, `clear`, `focus`). Uses `basicSetup` + `sql()` + custom `tal7aouy` theme + `Mod-Enter` keymap. `Compartment` disables editing during generate/evaluate phases.
@@ -124,7 +130,8 @@ Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 | `/api/[subject]/quiz-evaluate` | POST | Streams Claude evaluation for a quiz answer |
 | `/api/sql/praxis-generate` | POST | Streams AI-generated markdown tables + task |
 | `/api/sql/praxis-evaluate` | POST | Streams Claude evaluation of a SQL query |
-| `/api/karteikarten/evaluate` | POST | Non-streaming evaluation for AP1 flashcards |
+| `/api/karteikarten/evaluate` | POST | Haiku evaluation (score + reasoning) for AP1 flashcard answers |
+| `/api/karteikarten/explain` | POST | Haiku on-demand explanation of a flashcard answer — called only when user clicks "Erklärung anzeigen" |
 | `/api/auth/[...all]` | * | Better Auth handler |
 
 # Subject / Content Pipeline

@@ -6,9 +6,9 @@ import { LernSession } from './_components/lern-session';
 export default async function LernenPage({
   searchParams,
 }: {
-  searchParams: Promise<{ von?: string; bis?: string }>;
+  searchParams: Promise<{ von?: string; bis?: string; zufaellig?: string }>;
 }) {
-  const { von, bis } = await searchParams;
+  const { von, bis, zufaellig } = await searchParams;
   const vonN = von ? parseInt(von) : undefined;
   const bisN = bis ? parseInt(bis) : undefined;
 
@@ -50,5 +50,5 @@ export default async function LernenPage({
     );
   }
 
-  return <LernSession cards={cards} />;
+  return <LernSession cards={cards} shuffle={zufaellig === '1'} />;
 }

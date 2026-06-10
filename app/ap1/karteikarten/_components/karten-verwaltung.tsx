@@ -19,6 +19,7 @@ function CardRow({ card }: { card: Card }) {
   const [question, setQuestion] = useState(card.question);
   const [answer, setAnswer] = useState(card.answer);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
   function handleSave() {
@@ -38,10 +39,15 @@ function CardRow({ card }: { card: Card }) {
   function handleDeleteClick() {
     if (!confirmDelete) {
       setConfirmDelete(true);
+      setDeleteError(null);
       return;
     }
     startTransition(async () => {
-      await deleteKarteikarte(card.id);
+      const result = await deleteKarteikarte(card.id);
+      if ('error' in result) {
+        setDeleteError(result.error);
+        setConfirmDelete(false);
+      }
     });
   }
 
@@ -92,7 +98,11 @@ function CardRow({ card }: { card: Card }) {
   }
 
   return (
-    <div className="group flex items-center gap-3 py-3 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
+    <div className="flex flex-col gap-0.5 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
+      {deleteError && (
+        <p className="text-xs text-red-500 px-0 pt-2">{deleteError}</p>
+      )}
+      <div className="group flex items-center gap-3 py-3">
       <span className="text-xs text-zinc-400 dark:text-zinc-500 w-8 shrink-0">#{card.id}</span>
       <p className="flex-1 text-sm text-zinc-700 dark:text-zinc-300 truncate min-w-0">{card.question}</p>
       <div className={`flex items-center gap-0.5 shrink-0 transition-opacity ${confirmDelete ? '' : 'opacity-0 group-hover:opacity-100'}`}>
@@ -128,6 +138,7 @@ function CardRow({ card }: { card: Card }) {
             </button>
           </>
         )}
+      </div>
       </div>
     </div>
   );

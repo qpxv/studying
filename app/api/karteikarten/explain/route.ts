@@ -12,13 +12,8 @@ export async function POST(req: Request) {
 
     const message = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 256,
-      system: `Du bist ein fairer AP1-Prüfer für Fachinformatiker. Antworte AUSSCHLIESSLICH mit validem JSON (kein Markdown, keine Codeblöcke, nur reines JSON).
-Pflichtfelder: {"score":"gut"|"mittel"|"schlecht","reasoning":"string"}
-Bewertungsregeln:
-- "gut": Kernaussage korrekt erfasst, auch bei abweichender Formulierung
-- "mittel": Teilweise richtig oder wichtige Aspekte fehlen
-- "schlecht": Inhaltlich falsch, unvollständig oder leer`,
+      max_tokens: 512,
+      system: 'Du bist ein AP1-Lerncoach. Erkläre die Musterlösung klar und verständlich auf Deutsch. Antworte AUSSCHLIESSLICH mit validem JSON ohne Markdown-Codeblöcke: {"explanation":"string"}',
       messages: [
         {
           role: 'user',
@@ -28,12 +23,8 @@ Bewertungsregeln:
     });
 
     const rawText = message.content[0].type === 'text' ? message.content[0].text.trim() : '';
-    const cleaned = rawText
-      .replace(/^```(?:json)?\s*/i, '')
-      .replace(/\s*```\s*$/i, '')
-      .trim();
-
-    const parsed = JSON.parse(cleaned) as { score: string; reasoning: string };
+    const cleaned = rawText.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+    const parsed = JSON.parse(cleaned) as { explanation: string };
     return Response.json(parsed);
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Unbekannter Fehler';

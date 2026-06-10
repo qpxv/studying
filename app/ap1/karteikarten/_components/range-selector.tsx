@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Layers, HelpCircle } from 'lucide-react';
+import { Layers, HelpCircle, Shuffle } from 'lucide-react';
 
 interface Props {
   totalCards: number;
@@ -13,12 +13,25 @@ export function RangeSelector({ totalCards }: Props) {
   const [mode, setMode] = useState<'alle' | 'bereich'>('alle');
   const [von, setVon] = useState('');
   const [bis, setBis] = useState('');
+  const [zufaellig, setZufaellig] = useState(false);
+
+  useEffect(() => {
+    setZufaellig(localStorage.getItem('karteikarten-zufaellig') === '1');
+  }, []);
+
+  function toggleZufaellig() {
+    const next = !zufaellig;
+    setZufaellig(next);
+    localStorage.setItem('karteikarten-zufaellig', next ? '1' : '0');
+  }
 
   function buildParams() {
+    const params: string[] = [];
     if (mode === 'bereich' && von && bis) {
-      return `?von=${von}&bis=${bis}`;
+      params.push(`von=${von}`, `bis=${bis}`);
     }
-    return '';
+    if (zufaellig) params.push('zufaellig=1');
+    return params.length ? `?${params.join('&')}` : '';
   }
 
   return (
@@ -72,6 +85,28 @@ export function RangeSelector({ totalCards }: Props) {
           </div>
         </div>
       )}
+
+      {/* Shuffle toggle */}
+      <button
+        onClick={toggleZufaellig}
+        className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl border transition-colors text-sm font-medium ${
+          zufaellig
+            ? 'border-zinc-900 dark:border-zinc-100 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+            : 'border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+        }`}
+      >
+        <Shuffle className="w-4 h-4 shrink-0" />
+        Zufällige Reihenfolge
+        <div className={`ml-auto w-8 h-4 rounded-full transition-colors flex items-center px-0.5 ${
+          zufaellig ? 'bg-white/30 dark:bg-zinc-900/30' : 'bg-zinc-200 dark:bg-zinc-700'
+        }`}>
+          <div className={`w-3 h-3 rounded-full transition-transform ${
+            zufaellig
+              ? 'translate-x-4 bg-white dark:bg-zinc-900'
+              : 'translate-x-0 bg-white dark:bg-zinc-400'
+          }`} />
+        </div>
+      </button>
 
       {/* Mode cards */}
       <div className="grid grid-cols-2 gap-3">

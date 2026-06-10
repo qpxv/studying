@@ -1,9 +1,28 @@
 'use client';
 
-import { useState, useTransition, useRef } from 'react';
+import { useState, useTransition, useEffect } from 'react';
 import { ChevronRight, ChevronDown, RotateCcw } from 'lucide-react';
+import { marked } from 'marked';
 import { ScoreBadge } from '../../_components/score-badge';
 import { saveScore } from '../../actions';
+
+function fisherYates<T>(arr: T[]): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function MarkdownContent({ text, className }: { text: string; className?: string }) {
+  const html = marked.parse(text) as string;
+  return (
+    <div
+      className={`sql-markdown text-sm leading-relaxed${className ? ` ${className}` : ''}`}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
+}
 
 interface CardWithScore {
   id: number;
@@ -14,6 +33,7 @@ interface CardWithScore {
 
 interface Props {
   cards: CardWithScore[];
+  shuffle?: boolean;
 }
 
 type Phase = 'idle' | 'loading' | 'evaluated' | 'saving';
@@ -21,7 +41,6 @@ type Phase = 'idle' | 'loading' | 'evaluated' | 'saving';
 interface EvalResult {
   score: string;
   reasoning: string;
-  explanation?: string;
 }
 
 const SCORES = ['gut', 'mittel', 'schlecht'] as const;
@@ -38,27 +57,35 @@ const SCORE_BTN_ACTIVE: Record<string, string> = {
   schlecht: 'bg-red-50 dark:bg-red-950/50 border-red-400 dark:border-red-600 text-red-600 dark:text-red-400',
 };
 
-export function FragenSession({ cards }: Props) {
+export function FragenSession({ cards, shuffle }: Props) {
+  const [orderedCards, setOrderedCards] = useState(cards);
   const [index, setIndex] = useState(0);
   const [userInput, setUserInput] = useState('');
-  const [includeExplanation, setIncludeExplanation] = useState(true);
   const [phase, setPhase] = useState<Phase>('idle');
   const [evalResult, setEvalResult] = useState<EvalResult | null>(null);
   const [selectedScore, setSelectedScore] = useState<string | null>(null);
   const [evalError, setEvalError] = useState<string | null>(null);
+  const [explanationText, setExplanationText] = useState<string | null>(null);
+  const [explanationLoading, setExplanationLoading] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [sessionScores, setSessionScores] = useState<Record<number, string>>({});
   const [finished, setFinished] = useState(false);
   const [isPending, startTransition] = useTransition();
 
-  const card = cards[index];
-  const total = cards.length;
+  useEffect(() => {
+    if (shuffle) setOrderedCards(fisherYates([...cards]));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const card = orderedCards[index];
+  const total = orderedCards.length;
 
   async function handleSubmit(e?: React.FormEvent) {
     e?.preventDefault();
     if (!userInput.trim()) return;
     setEvalError(null);
     setPhase('loading');
+    setExplanationText(null);
     setShowExplanation(false);
 
     try {
@@ -69,7 +96,6 @@ export function FragenSession({ cards }: Props) {
           question: card.question,
           answer: card.answer,
           userInput: userInput.trim(),
-          includeExplanation,
         }),
       });
       const data = await res.json() as EvalResult & { error?: string };
@@ -93,6 +119,33 @@ export function FragenSession({ cards }: Props) {
     });
   }
 
+  async function handleLoadExplanation() {
+    if (explanationText !== null) {
+      setShowExplanation((v) => !v);
+      return;
+    }
+    setExplanationLoading(true);
+    try {
+      const res = await fetch('/api/karteikarten/explain', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          question: card.question,
+          answer: card.answer,
+          userInput,
+        }),
+      });
+      const data = await res.json() as { explanation?: string; error?: string };
+      if (data.error) throw new Error(data.error);
+      setExplanationText(data.explanation ?? '');
+      setShowExplanation(true);
+    } catch (e) {
+      console.error('[erklärung] error=', e);
+    } finally {
+      setExplanationLoading(false);
+    }
+  }
+
   function advanceCard() {
     if (index < total - 1) {
       setIndex((i) => i + 1);
@@ -100,6 +153,9 @@ export function FragenSession({ cards }: Props) {
       setEvalResult(null);
       setSelectedScore(null);
       setEvalError(null);
+      setExplanationText(null);
+      setExplanationLoading(false);
+      setShowExplanation(false);
       setPhase('idle');
     } else {
       setFinished(true);
@@ -112,6 +168,9 @@ export function FragenSession({ cards }: Props) {
     setEvalResult(null);
     setSelectedScore(null);
     setEvalError(null);
+    setExplanationText(null);
+    setExplanationLoading(false);
+    setShowExplanation(false);
     setPhase('idle');
     setSessionScores({});
     setFinished(false);
@@ -156,15 +215,6 @@ export function FragenSession({ cards }: Props) {
         <span className="text-sm text-zinc-500 dark:text-zinc-400">
           Karte {index + 1} / {total}
         </span>
-        <label className="flex items-center gap-1.5 text-xs text-zinc-400 dark:text-zinc-500 cursor-pointer select-none">
-          <input
-            type="checkbox"
-            checked={includeExplanation}
-            onChange={(e) => setIncludeExplanation(e.target.checked)}
-            className="rounded"
-          />
-          Erklärung anzeigen
-        </label>
       </div>
 
       {/* Progress bar */}
@@ -178,9 +228,7 @@ export function FragenSession({ cards }: Props) {
       {/* Card */}
       <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 flex flex-col gap-4">
         <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.id}</span>
-        <p className="text-base font-medium text-zinc-900 dark:text-zinc-100 leading-relaxed">
-          {card.question}
-        </p>
+        <MarkdownContent text={card.question} className="font-medium text-zinc-900 dark:text-zinc-100" />
       </div>
 
       {/* Answer input (only in idle/loading) */}
@@ -228,26 +276,29 @@ export function FragenSession({ cards }: Props) {
           {/* Correct answer */}
           <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 flex flex-col gap-1.5">
             <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Musterlösung</p>
-            <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">{card.answer}</p>
+            <MarkdownContent text={card.answer} className="text-zinc-700 dark:text-zinc-300" />
           </div>
 
-          {/* Explanation collapsible */}
-          {evalResult.explanation && (
-            <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
-              <button
-                onClick={() => setShowExplanation((v) => !v)}
-                className="w-full flex items-center justify-between px-4 py-3 text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors"
-              >
-                <span>Erklärung</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${showExplanation ? 'rotate-180' : ''}`} />
-              </button>
-              {showExplanation && (
-                <div className="px-4 pb-4 border-t border-zinc-100 dark:border-zinc-800 pt-3">
-                  <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">{evalResult.explanation}</p>
-                </div>
+          {/* On-demand explanation */}
+          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 overflow-hidden">
+            <button
+              onClick={handleLoadExplanation}
+              disabled={explanationLoading || phase === 'saving'}
+              className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 active:bg-zinc-100 dark:active:bg-zinc-700 transition-colors disabled:opacity-50"
+            >
+              <span>{explanationLoading ? 'Generieren…' : 'Erklärung anzeigen'}</span>
+              {explanationText !== null ? (
+                <ChevronDown className={`w-4 h-4 text-zinc-400 transition-transform duration-200 ${showExplanation ? 'rotate-180' : ''}`} />
+              ) : (
+                <span className="text-xs text-zinc-400 dark:text-zinc-500">{explanationLoading ? '' : 'auf Anfrage'}</span>
               )}
-            </div>
-          )}
+            </button>
+            {showExplanation && explanationText !== null && (
+              <div className="px-4 pb-4 border-t border-zinc-100 dark:border-zinc-800 pt-3">
+                <MarkdownContent text={explanationText} className="text-zinc-600 dark:text-zinc-300" />
+              </div>
+            )}
+          </div>
 
           {/* Score confirmation */}
           <div className="flex flex-col gap-2">
