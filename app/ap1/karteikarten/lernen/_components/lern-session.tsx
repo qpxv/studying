@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
 import { marked } from 'marked';
+import { DifficultyDots } from '../../_components/difficulty-dots';
 
 interface Card {
   id: number;
   question: string;
   answer: string;
+  difficulty: number;
 }
 
 interface Props {
@@ -73,7 +75,7 @@ export function LernSession({ cards, shuffle }: Props) {
   if (done) {
     return (
       <div className="flex flex-col items-center justify-center h-full px-4 gap-6">
-        <div className="w-full max-w-sm flex flex-col items-center gap-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-8">
+        <div className="w-full flex flex-col items-center gap-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-8">
           <p className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">Ende erreicht</p>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">
             Du hast alle {total} {total === 1 ? 'Karte' : 'Karten'} durchgearbeitet.
@@ -93,7 +95,7 @@ export function LernSession({ cards, shuffle }: Props) {
   return (
     <div className="flex flex-col items-center h-full px-4 py-6 gap-6">
       {/* Progress */}
-      <div className="w-full max-w-sm flex items-center justify-between">
+      <div className="w-full flex items-center justify-between">
         <span className="text-sm text-zinc-500 dark:text-zinc-400">
           Karte {index + 1} / {total}
         </span>
@@ -103,7 +105,7 @@ export function LernSession({ cards, shuffle }: Props) {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full max-w-sm h-1 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+      <div className="w-full h-1 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
         <div
           className="h-full rounded-full bg-zinc-900 dark:bg-zinc-100 transition-all duration-300"
           style={{ width: `${((index + 1) / total) * 100}%` }}
@@ -112,7 +114,7 @@ export function LernSession({ cards, shuffle }: Props) {
 
       {/* Flip card — grid stacking gives natural height from the taller face */}
       <div
-        className="w-full max-w-sm [perspective:1000px] cursor-pointer"
+        className="w-full [perspective:1000px] cursor-pointer"
         onClick={() => setFlipped((f) => !f)}
       >
         <div
@@ -122,9 +124,10 @@ export function LernSession({ cards, shuffle }: Props) {
         >
           {/* Front */}
           <div className="row-start-1 col-start-1 [backface-visibility:hidden] rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 flex flex-col gap-3">
-            <span className="text-xs text-zinc-400 dark:text-zinc-500 flex-none">
-              #{card.id}
-            </span>
+            <div className="flex items-center gap-2 flex-none">
+              <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.id}</span>
+              <DifficultyDots difficulty={card.difficulty} />
+            </div>
             <MarkdownContent
               text={card.question}
               className="text-base font-medium text-zinc-900 dark:text-zinc-100"
@@ -151,7 +154,7 @@ export function LernSession({ cards, shuffle }: Props) {
       </div>
 
       {/* Navigation */}
-      <div className="w-full max-w-sm flex items-center gap-3">
+      <div className="w-full flex items-center gap-3">
         <button
           onClick={prev}
           disabled={index === 0}

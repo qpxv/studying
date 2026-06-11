@@ -3,21 +3,47 @@
 import { useState, useTransition } from 'react';
 import { ChevronDown, Trash2, Pencil, Check, X } from 'lucide-react';
 import { deleteKarteikarte, updateKarteikarte } from '../actions';
+import { DifficultyDots } from './difficulty-dots';
 
 interface Card {
   id: number;
   question: string;
   answer: string;
+  difficulty: number;
 }
 
 interface Props {
   cards: Card[];
 }
 
+const DIFFICULTY_LABELS: Record<number, string> = { 1: 'Leicht', 2: 'Mittel', 3: 'Schwer' };
+
+function DifficultyPills({ value, onChange }: { value: number; onChange: (v: number) => void }) {
+  return (
+    <div className="flex rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-700">
+      {[1, 2, 3].map((level) => (
+        <button
+          key={level}
+          type="button"
+          onClick={() => onChange(level)}
+          className={`flex-1 py-1.5 text-xs font-medium transition-colors ${
+            value === level
+              ? 'bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900'
+              : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800'
+          }`}
+        >
+          {DIFFICULTY_LABELS[level]}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function CardRow({ card }: { card: Card }) {
   const [editing, setEditing] = useState(false);
   const [question, setQuestion] = useState(card.question);
   const [answer, setAnswer] = useState(card.answer);
+  const [difficulty, setDifficulty] = useState(card.difficulty);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -25,7 +51,7 @@ function CardRow({ card }: { card: Card }) {
   function handleSave() {
     if (!question.trim() || !answer.trim()) return;
     startTransition(async () => {
-      await updateKarteikarte(card.id, question, answer);
+      await updateKarteikarte(card.id, question, answer, difficulty);
       setEditing(false);
     });
   }
@@ -33,6 +59,7 @@ function CardRow({ card }: { card: Card }) {
   function handleCancelEdit() {
     setQuestion(card.question);
     setAnswer(card.answer);
+    setDifficulty(card.difficulty);
     setEditing(false);
   }
 
@@ -93,6 +120,10 @@ function CardRow({ card }: { card: Card }) {
             className="w-full rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-3 py-2 text-sm outline-none focus:border-zinc-400 dark:focus:border-zinc-500 transition-colors resize-none"
           />
         </div>
+        <div className="flex flex-col gap-1">
+          <label className="text-xs text-zinc-400 dark:text-zinc-500">Schwierigkeit</label>
+          <DifficultyPills value={difficulty} onChange={setDifficulty} />
+        </div>
       </div>
     );
   }
@@ -103,42 +134,43 @@ function CardRow({ card }: { card: Card }) {
         <p className="text-xs text-red-500 px-0 pt-2">{deleteError}</p>
       )}
       <div className="group flex items-center gap-3 py-3">
-      <span className="text-xs text-zinc-400 dark:text-zinc-500 w-8 shrink-0">#{card.id}</span>
-      <p className="flex-1 text-sm text-zinc-700 dark:text-zinc-300 truncate min-w-0">{card.question}</p>
-      <div className={`flex items-center gap-0.5 shrink-0 transition-opacity ${confirmDelete ? '' : 'opacity-0 group-hover:opacity-100'}`}>
-        {confirmDelete ? (
-          <>
-            <button
-              onClick={handleDeleteClick}
-              disabled={isPending}
-              className="text-xs text-red-500 hover:text-red-600 font-medium px-2 py-1 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors disabled:opacity-40"
-            >
-              {isPending ? 'Löschen…' : 'Löschen?'}
-            </button>
-            <button
-              onClick={() => setConfirmDelete(false)}
-              className="p-1.5 rounded-lg text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          </>
-        ) : (
-          <>
-            <button
-              onClick={() => setEditing(true)}
-              className="p-1.5 rounded-lg text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            >
-              <Pencil className="w-3.5 h-3.5" />
-            </button>
-            <button
-              onClick={handleDeleteClick}
-              className="p-1.5 rounded-lg text-zinc-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
-            >
-              <Trash2 className="w-3.5 h-3.5" />
-            </button>
-          </>
-        )}
-      </div>
+        <span className="text-xs text-zinc-400 dark:text-zinc-500 w-8 shrink-0">#{card.id}</span>
+        <DifficultyDots difficulty={card.difficulty} />
+        <p className="flex-1 text-sm text-zinc-700 dark:text-zinc-300 truncate min-w-0">{card.question}</p>
+        <div className={`flex items-center gap-0.5 shrink-0 transition-opacity ${confirmDelete ? '' : 'opacity-0 group-hover:opacity-100'}`}>
+          {confirmDelete ? (
+            <>
+              <button
+                onClick={handleDeleteClick}
+                disabled={isPending}
+                className="text-xs text-red-500 hover:text-red-600 font-medium px-2 py-1 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors disabled:opacity-40"
+              >
+                {isPending ? 'Löschen…' : 'Löschen?'}
+              </button>
+              <button
+                onClick={() => setConfirmDelete(false)}
+                className="p-1.5 rounded-lg text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => setEditing(true)}
+                className="p-1.5 rounded-lg text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              >
+                <Pencil className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={handleDeleteClick}
+                className="p-1.5 rounded-lg text-zinc-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

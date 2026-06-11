@@ -12,13 +12,16 @@ export async function createKarteikarte(
   id: number,
   question: string,
   answer: string,
+  difficulty = 2,
 ): Promise<{ success: true } | { error: string }> {
   if (!Number.isInteger(id) || id < 1) return { error: 'Ungültige Karten-ID' };
   if (!question.trim()) return { error: 'Frage darf nicht leer sein' };
   if (!answer.trim()) return { error: 'Antwort darf nicht leer sein' };
 
   try {
-    await prisma.karteikarte.create({ data: { id, question: question.trim(), answer: answer.trim() } });
+    await prisma.karteikarte.create({
+      data: { id, question: question.trim(), answer: answer.trim(), difficulty },
+    });
     revalidatePath('/ap1/karteikarten');
     return { success: true };
   } catch (err) {
@@ -30,7 +33,7 @@ export async function createKarteikarte(
 }
 
 export async function importKarteikarten(
-  cards: { id: number; question: string; answer: string }[],
+  cards: { id: number; question: string; answer: string; difficulty?: number }[],
 ): Promise<{ imported: number; errors: string[] }> {
   let imported = 0;
   const errors: string[] = [];
@@ -48,11 +51,12 @@ export async function importKarteikarten(
       errors.push(`id=${card.id}: Antwort fehlt`);
       continue;
     }
+    const difficulty = card.difficulty ?? 2;
     try {
       await prisma.karteikarte.upsert({
         where: { id: card.id },
-        update: { question: card.question.trim(), answer: card.answer.trim() },
-        create: { id: card.id, question: card.question.trim(), answer: card.answer.trim() },
+        update: { question: card.question.trim(), answer: card.answer.trim(), difficulty },
+        create: { id: card.id, question: card.question.trim(), answer: card.answer.trim(), difficulty },
       });
       imported++;
     } catch (e) {
@@ -80,6 +84,7 @@ export async function updateKarteikarte(
   id: number,
   question: string,
   answer: string,
+  difficulty?: number,
 ): Promise<{ success: true } | { error: string }> {
   if (!question.trim()) return { error: 'Frage darf nicht leer sein' };
   if (!answer.trim()) return { error: 'Antwort darf nicht leer sein' };
@@ -87,7 +92,11 @@ export async function updateKarteikarte(
   try {
     await prisma.karteikarte.update({
       where: { id },
-      data: { question: question.trim(), answer: answer.trim() },
+      data: {
+        question: question.trim(),
+        answer: answer.trim(),
+        ...(difficulty !== undefined ? { difficulty } : {}),
+      },
     });
     revalidatePath('/ap1/karteikarten');
     return { success: true };

@@ -4,6 +4,7 @@ import { useState, useTransition, useEffect } from 'react';
 import { ChevronRight, ChevronDown, RotateCcw } from 'lucide-react';
 import { marked } from 'marked';
 import { ScoreBadge } from '../../_components/score-badge';
+import { DifficultyDots } from '../../_components/difficulty-dots';
 import { saveScore } from '../../actions';
 
 function fisherYates<T>(arr: T[]): T[] {
@@ -28,6 +29,7 @@ interface CardWithScore {
   id: number;
   question: string;
   answer: string;
+  difficulty: number;
   existingScore: string | null;
 }
 
@@ -185,7 +187,7 @@ export function FragenSession({ cards, shuffle }: Props) {
 
     return (
       <div className="flex flex-col items-center justify-center h-full px-4 gap-6">
-        <div className="w-full max-w-sm rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 flex flex-col gap-5">
+        <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 flex flex-col gap-5">
           <p className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">Sitzung abgeschlossen</p>
           <div className="flex gap-3">
             {SCORES.map((s) => (
@@ -209,7 +211,7 @@ export function FragenSession({ cards, shuffle }: Props) {
 
   // ── Main card view ─────────────────────────────────────────────────────────
   return (
-    <div className="flex flex-col items-center px-4 py-6 gap-5 w-full max-w-lg mx-auto">
+    <div className="flex flex-col px-4 py-6 gap-5 w-full mx-auto">
       {/* Progress */}
       <div className="w-full flex items-center justify-between">
         <span className="text-sm text-zinc-500 dark:text-zinc-400">
@@ -227,7 +229,10 @@ export function FragenSession({ cards, shuffle }: Props) {
 
       {/* Card */}
       <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 flex flex-col gap-4">
-        <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.id}</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.id}</span>
+          <DifficultyDots difficulty={card.difficulty} />
+        </div>
         <MarkdownContent text={card.question} className="font-medium text-zinc-900 dark:text-zinc-100" />
       </div>
 

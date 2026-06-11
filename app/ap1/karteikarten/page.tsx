@@ -6,7 +6,7 @@ import { KartenVerwaltung } from './_components/karten-verwaltung';
 
 export default async function KarteikartenPage() {
   const cards = await prisma.karteikarte.findMany({
-    select: { id: true, question: true, answer: true },
+    select: { id: true, question: true, answer: true, difficulty: true },
     orderBy: { id: 'asc' },
   });
 

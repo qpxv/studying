@@ -17,7 +17,7 @@ export default async function LernenPage({
       ? { id: { gte: vonN, lte: bisN } }
       : undefined,
     orderBy: { id: 'asc' },
-    select: { id: true, question: true, answer: true },
+    select: { id: true, question: true, answer: true, difficulty: true },
   });
 
   if (cards.length === 0) {

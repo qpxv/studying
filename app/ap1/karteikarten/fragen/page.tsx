@@ -32,6 +32,7 @@ export default async function FragenPage({
     id: c.id,
     question: c.question,
     answer: c.answer,
+    difficulty: c.difficulty,
     existingScore: c.scores[0]?.score ?? null,
   }));
 
