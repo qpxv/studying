@@ -59,6 +59,20 @@ const SqlEditor = forwardRef<SqlEditorHandle, SqlEditorProps>(({ onSubmit, disab
               return true;
             },
           },
+          {
+            key: 'Enter',
+            run: (view) => {
+              const { state } = view;
+              const { from } = state.selection.main;
+              const line = state.doc.lineAt(from);
+              const indent = line.text.match(/^(\s*)/)?.[1] ?? '';
+              view.dispatch({
+                changes: { from, insert: '\n' + indent },
+                selection: { anchor: from + 1 + indent.length },
+              });
+              return true;
+            },
+          },
           indentWithTab,
         ])),
         editableCompartment.current.of(EditorView.editable.of(true)),
