@@ -272,7 +272,7 @@ export default function PraxisSession() {
           </div>
 
           {/* Right: editor panel */}
-          <div className="flex-none md:w-[420px] w-full h-56 md:h-auto border-t md:border-t-0 md:border-l border-zinc-200 dark:border-zinc-800 flex flex-col">
+          <div className="flex-none md:w-[580px] w-full h-56 md:h-auto border-t md:border-t-0 md:border-l border-zinc-200 dark:border-zinc-800 flex flex-col">
             <div className="flex-1 overflow-hidden">
               <SqlEditor
                 ref={editorRef}
