@@ -1,12 +1,20 @@
 'use client';
 
 import { useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
-import { EditorView, basicSetup } from 'codemirror';
+import {
+  EditorView, keymap,
+  lineNumbers, highlightActiveLineGutter, highlightSpecialChars,
+  drawSelection, dropCursor, rectangularSelection, crosshairCursor, highlightActiveLine,
+} from '@codemirror/view';
+import { EditorState, Prec, Compartment } from '@codemirror/state';
+import { history, defaultKeymap, historyKeymap, indentWithTab } from '@codemirror/commands';
+import {
+  indentUnit, indentOnInput, syntaxHighlighting, defaultHighlightStyle,
+  bracketMatching, foldGutter, foldKeymap,
+} from '@codemirror/language';
+import { closeBrackets, closeBracketsKeymap } from '@codemirror/autocomplete';
+import { highlightSelectionMatches, searchKeymap } from '@codemirror/search';
 import { sql } from '@codemirror/lang-sql';
-import { keymap } from '@codemirror/view';
-import { Prec, Compartment } from '@codemirror/state';
-import { indentUnit } from '@codemirror/language';
-import { indentWithTab } from '@codemirror/commands';
 import { tal7aouy } from './theme-tal7aouy';
 
 export interface SqlEditorHandle {
@@ -47,7 +55,29 @@ const SqlEditor = forwardRef<SqlEditorHandle, SqlEditorProps>(({ onSubmit, disab
     const view = new EditorView({
       parent: containerRef.current,
       extensions: [
-        basicSetup,
+        lineNumbers(),
+        highlightActiveLineGutter(),
+        highlightSpecialChars(),
+        history(),
+        foldGutter(),
+        drawSelection(),
+        dropCursor(),
+        EditorState.allowMultipleSelections.of(true),
+        indentOnInput(),
+        syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+        bracketMatching(),
+        closeBrackets(),
+        rectangularSelection(),
+        crosshairCursor(),
+        highlightActiveLine(),
+        highlightSelectionMatches(),
+        keymap.of([
+          ...closeBracketsKeymap,
+          ...defaultKeymap,
+          ...searchKeymap,
+          ...historyKeymap,
+          ...foldKeymap,
+        ]),
         sql(),
         ...tal7aouy,
         indentUnit.of('  '),
