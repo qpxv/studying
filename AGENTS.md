@@ -119,7 +119,7 @@ Uses `<ArrowLeft className="w-3 h-3" />` or `<Home className="w-3 h-3" />`
 - `app/ap1/karteikarten/fragen/_components/fragen-session.tsx` — AI quiz session. Question and Musterlösung render markdown. "Erklärung anzeigen" button fetches from `/api/karteikarten/explain` on first click only (on-demand, not bundled with evaluation). Same `shuffle` + `useEffect` pattern as LernSession.
 
 ## SQL Praxis components
-- `app/sql/praxis/_components/praxis-session.tsx` — split layout (`flex-1 flex flex-col md:flex-row`). Left panel: scrollable AI conversation (exercise bubble, submitted SQL bubble, feedback bubble, next-round button). Right panel: `w-[420px]` CodeMirror editor + submit bar.
+- `app/sql/praxis/_components/praxis-session.tsx` — split layout (`flex-1 flex flex-col md:flex-row`). Idle screen has a difficulty selector (Einfach / Mittel / Schwer, default Mittel) before starting. Selected difficulty is sent to `/api/sql/praxis-generate` and shown in the header subtitle during a session. Left panel: scrollable AI conversation (exercise bubble, submitted SQL bubble, feedback bubble, next-round button). Right panel: `w-[420px]` CodeMirror editor + submit bar.
 - `app/sql/praxis/_components/sql-editor.tsx` — CodeMirror 6 wrapper with `forwardRef`. Exposes `SqlEditorHandle` (`getValue`, `clear`, `focus`). Uses `basicSetup` + `sql()` + custom `tal7aouy` theme + `Mod-Enter` keymap. `Compartment` disables editing during generate/evaluate phases.
 - `app/sql/praxis/_components/theme-tal7aouy.ts` — CodeMirror 6 theme built from the exact hex values in `Theme.json` by Mhammed Talhaouy (tal7aouy.theme v3.1.0). Exports `tal7aouy: Extension[]`.
 
@@ -169,9 +169,13 @@ Pass subject as a positional arg after `--`, e.g. `npm run create-notes -- sql`.
 
 ## SQL Praxis mode (no static files)
 `/sql/praxis` requires no pre-generated content. Each round:
-1. `POST /api/sql/praxis-generate` → Haiku streams markdown tables + task
-2. User writes SQL in the CodeMirror editor (right panel) — SQL syntax highlighting, auto-close brackets, Cmd+X cut line, Cmd+Enter to submit
-3. `POST /api/sql/praxis-evaluate` → Haiku evaluates the query, renders markdown feedback in left panel
+1. User selects difficulty (Einfach / Mittel / Schwer) on the idle screen
+2. `POST /api/sql/praxis-generate` with `{ difficulty }` → Haiku streams markdown tables + task scoped to that difficulty:
+   - **Einfach**: 1 table, SELECT/WHERE/ORDER BY only
+   - **Mittel**: 2 tables, INNER JOIN + simple aggregation/GROUP BY
+   - **Schwer**: 2–3 tables, multiple JOINs and/or subqueries, GROUP BY/HAVING
+3. User writes SQL in the CodeMirror editor (right panel) — SQL syntax highlighting, auto-close brackets, Cmd+X cut line, Cmd+Enter to submit
+4. `POST /api/sql/praxis-evaluate` → Haiku evaluates the query, renders markdown feedback in left panel
 
 # Prisma + Next.js Gotchas
 

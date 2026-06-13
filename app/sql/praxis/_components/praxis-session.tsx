@@ -7,6 +7,19 @@ import Link from 'next/link';
 import SqlEditor, { type SqlEditorHandle } from './sql-editor';
 
 type Phase = 'idle' | 'generating' | 'ready' | 'evaluating' | 'evaluated';
+type Difficulty = 'easy' | 'medium' | 'hard';
+
+const DIFFICULTIES: { value: Difficulty; label: string; desc: string }[] = [
+  { value: 'easy', label: 'Einfach', desc: '1 Tabelle · SELECT/WHERE' },
+  { value: 'medium', label: 'Mittel', desc: '2 Tabellen · JOIN · GROUP BY' },
+  { value: 'hard', label: 'Schwer', desc: '2–3 Tabellen · JOINs · Subqueries' },
+];
+
+const DIFFICULTY_LABEL: Record<Difficulty, string> = {
+  easy: 'Einfach',
+  medium: 'Mittel',
+  hard: 'Schwer',
+};
 
 const USAGE_MARKER = '\x00USAGE:';
 
@@ -70,6 +83,7 @@ function TypingDots() {
 
 export default function PraxisSession() {
   const [phase, setPhase] = useState<Phase>('idle');
+  const [difficulty, setDifficulty] = useState<Difficulty>('medium');
   const [exercise, setExercise] = useState('');
   const [submittedQuery, setSubmittedQuery] = useState('');
   const [feedback, setFeedback] = useState('');
@@ -128,7 +142,7 @@ export default function PraxisSession() {
     setPhase('generating');
     setRoundCount((n) => n + 1);
     try {
-      const cents = await streamToState('/api/sql/praxis-generate', {}, (text) => setExercise(text));
+      const cents = await streamToState('/api/sql/praxis-generate', { difficulty }, (text) => setExercise(text));
       setTotalCents((t) => t + cents);
       setPhase('ready');
       setTimeout(() => editorRef.current?.focus(), 50);
@@ -136,9 +150,9 @@ export default function PraxisSession() {
       setExercise(`Fehler: ${err instanceof Error ? err.message : 'Unbekannter Fehler'}`);
       setPhase('ready');
     }
-  }, []);
+  }, [difficulty]);
 
-  const headerSub = roundCount > 0 ? `Runde ${roundCount} · ${totalCents.toFixed(2)}¢` : undefined;
+  const headerSub = roundCount > 0 ? `Runde ${roundCount} · ${DIFFICULTY_LABEL[difficulty]} · ${totalCents.toFixed(2)}¢` : undefined;
   const isActive = phase !== 'idle';
 
   return (
@@ -185,12 +199,34 @@ export default function PraxisSession() {
 
       {/* Idle start screen */}
       {!isActive && (
-        <div className="flex-1 flex flex-col items-center justify-center gap-4 px-6">
+        <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
           <div className="flex flex-col items-center gap-1.5 text-center">
             <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">SQL Praxis</p>
             <p className="text-xs text-zinc-400 dark:text-zinc-500">
               KI generiert frische Tabellen und eine Aufgabe
             </p>
+          </div>
+          <div className="flex flex-col gap-2 w-full max-w-xs">
+            <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-center">Schwierigkeitsgrad</p>
+            <div className="flex gap-2">
+              {DIFFICULTIES.map((d) => {
+                const selected = difficulty === d.value;
+                return (
+                  <button
+                    key={d.value}
+                    onClick={() => setDifficulty(d.value)}
+                    className={`flex-1 flex flex-col items-center gap-0.5 rounded-xl px-2 py-3 border text-center transition-all active:scale-95 ${
+                      selected
+                        ? 'bg-zinc-900 dark:bg-zinc-100 border-zinc-900 dark:border-zinc-100 text-white dark:text-zinc-900'
+                        : 'border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-700'
+                    }`}
+                  >
+                    <span className="text-xs font-semibold leading-tight">{d.label}</span>
+                    <span className={`text-[10px] leading-tight ${selected ? 'opacity-70' : 'text-zinc-400 dark:text-zinc-500'}`}>{d.desc}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
           <button
             onClick={generateExercise}

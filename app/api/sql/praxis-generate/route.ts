@@ -11,17 +11,33 @@ function calcCostCents(usage: { input_tokens: number; output_tokens: number }): 
   ) * 100;
 }
 
-const SYSTEM_PROMPT = `Du bist ein SQL-Übungsgenerator für einen deutschen Datenbankgrundlagen-Kurs.
+const DIFFICULTY_INSTRUCTIONS: Record<string, string> = {
+  easy: `Schwierigkeitsgrad: EINFACH
+- Genau 1 Tabelle, 5–6 Datenzeilen
+- Aufgabe nur mit SELECT, WHERE, ORDER BY oder LIMIT lösbar — keine JOINs, keine Aggregatfunktionen`,
+  medium: `Schwierigkeitsgrad: MITTEL
+- Genau 2 zusammenhängende Tabellen, je 5–6 Datenzeilen
+- Aufgabe erfordert einen INNER JOIN sowie eine einfache Aggregatfunktion (COUNT, SUM oder AVG) oder GROUP BY`,
+  hard: `Schwierigkeitsgrad: SCHWER
+- 2–3 zusammenhängende Tabellen, je 5–7 Datenzeilen
+- Aufgabe erfordert mehrere JOINs (mind. 2) und/oder eine Subquery sowie GROUP BY/HAVING oder komplexe Filterbedingungen`,
+};
 
-Erstelle eine neue SQL-Übungsaufgabe. Variiere das Szenario bei jeder Aufgabe (z.B. Online-Shop, Bibliothek, Schule, HR-System, Krankenhaus, Videoverleih, Restaurant, Flughafen, Sportstudio, etc.) und den SQL-Schwerpunkt (SELECT/WHERE, JOINs, GROUP BY/HAVING, Aggregatfunktionen, Subqueries, ORDER BY/LIMIT, etc.).
+const BASE_SYSTEM_PROMPT = `Du bist ein SQL-Übungsgenerator für einen deutschen Datenbankgrundlagen-Kurs.
+
+Erstelle eine neue SQL-Übungsaufgabe. Variiere das Szenario bei jeder Aufgabe (z.B. Online-Shop, Bibliothek, Schule, HR-System, Krankenhaus, Videoverleih, Restaurant, Flughafen, Sportstudio, etc.).
 
 Format (strikt einhalten):
-- 1–3 zusammenhängende Markdown-Tabellen mit je 5–7 realistischen Datenzeilen
+- Markdown-Tabellen mit realistischen Datenzeilen (Anzahl laut Schwierigkeitsgrad)
 - Danach eine Zeile: **Aufgabe:** [klare Aufgabenstellung auf Deutsch]
 
 Kein Preamble, keine Erklärungen, keine Überschriften außer den Tabellennamen — nur Tabellen und Aufgabe.`;
 
-export async function POST() {
+export async function POST(req: Request) {
+  const body = await req.json().catch(() => ({})) as { difficulty?: string };
+  const difficulty = body.difficulty && body.difficulty in DIFFICULTY_INSTRUCTIONS ? body.difficulty : 'medium';
+  const systemPrompt = `${DIFFICULTY_INSTRUCTIONS[difficulty]}\n\n${BASE_SYSTEM_PROMPT}`;
+
   const readable = new ReadableStream({
     async start(controller) {
       const enc = new TextEncoder();
@@ -29,7 +45,7 @@ export async function POST() {
         const stream = client.messages.stream({
           model: 'claude-haiku-4-5-20251001',
           max_tokens: 1024,
-          system: SYSTEM_PROMPT,
+          system: systemPrompt,
           messages: [{ role: 'user', content: 'Generiere eine neue Aufgabe.' }],
         });
         for await (const chunk of stream) {
