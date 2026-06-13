@@ -1,4 +1,4 @@
-<!-- Generated: 2026-06-08T17:22:15.773Z | Subject: sql | Model: claude-sonnet-4-6 -->
+<!-- Generated: 2026-06-13T16:13:04.755Z | Subject: sql | Model: claude-sonnet-4-6 -->
 
 # Datenbankmanagement – Komplette Lernnotizen
 
@@ -2478,3 +2478,367 @@ die wichtigsten dinge die man kennen muss:
 - **OLAP vs OLTP** = die vergleichstabelle ist prüfungsrelevant! OLTP = viele benutzer, kurze transaktionen, aktuell. OLAP = wenig benutzer, historisch, multidimensional, ad-hoc
 - **Slice & Dice** = ausschnitt aus hypercube "schneiden" oder "drehen"
 - **Drill-Down** = von aggregiert auf detail runterzoomen. Drill-Up = umgekehrt, von detail auf aggregiert hochzoomen
+
+## 12 NULL-Werte der Datenbank
+
+### 12.1 Grundlagen
+
+**Was NULL überhaupt ist:**
+- **NULL-Werte sind entgegen ihrem Namen eben keine Werte**
+- NULL zeigt an, dass ein Wert **fehlt** – zum Beispiel weil zur Zeit der Datenerfassung der Wert unbekannt war
+- NULL führt zu einer **dreiwertigen Logik** (wahr, falsch, **unbekannt**)
+- diese dreiwertige Logik führt zu Missverständnissen und bei unvorsichtigem Arbeiten z.B. mit SELECT zu "falschen" Ergebnissen
+- Quelle: teilweise aus dem Artikel "Nulls: Nothing to Worry About" von Lex de Haan und Jonathan Gennick im Oracle Magazine, Juli/August 2005
+
+Das Bild auf der ersten Slide zeigt die arbeitsagentur.de Website mit einem Screenshot, der für Januar 2005 bei Arbeitslose, ± zum Vorjahresmonat, Arbeitslosenquote, Vorjahresmonat, Gemeldete Stellen und ± zum Vorjahresmonat alle **NULL** als Wert anzeigt. Das ist ein reales Beispiel dafür, dass Daten zum Erhebungszeitpunkt einfach noch nicht vorhanden waren.
+
+### 12.2 Beispieltabellen
+
+**Tabelle DEPT_M:**
+```
+DEPTNO  DNAME           LOC
+------  -----           ---
+10      HQ              UTRECHT
+20      SALES           MUNISING
+30      MANUFACTURING   NOVOSIBIRSK
+```
+
+**Tabelle EMP_M (mit NULL-Werten explizit ausgewiesen):**
+```
+EMPNO  ENAME     JOB        MGR   SAL   COMM  DEPTNO
+-----  -----     ---        ---   ---   ----  ------
+100    NORGAARD  PRESIDENT  NULL  5000  NULL  10
+122    LEWIS     SALESREP   120   1100  NULL  NULL
+199    GENNICK   NULL       NULL  2200  NULL  10
+111    DE HAAN   CLERK      110   2000  NULL  NULL
+112    MILLSAP   SALESREP   110   1250  1400  20
+110    ADAMS     MANAGER    100   NULL  1700  20
+120    KOLK      MANAGER    100   2450  NULL  10
+113    MCDONALD  SALESREP   110   1500  NULL  20
+121    WOOD      CLERK      120   1300  NULL  10
+130    MORLE     CLERK      100   NULL  NULL  10
+```
+
+wichtig: NORGAARD hat keinen Manager (NULL bei MGR weil er PRESIDENT ist), ADAMS und MORLE haben kein bekanntes Gehalt (NULL bei SAL), LEWIS und andere haben keine COMM und kein DEPTNO
+
+### 12.3 NULL-Werte und skalare Ausdrücke
+
+**Grundregel: Skalare Ausdrücke, die eine NULL umfassen, sind ihrerseits NULL.**
+
+**Beispiel:** Was passiert wenn jeder Angestellte 1000 € mehr bekommt?
+
+```sql
+SELECT EMPNO, ENAME, SAL, SAL + 1000
+FROM EMP_M;
+```
+
+Resultat:
+```
+EMPNO  ENAME     SAL   SAL+1000
+-----  -----     ---   --------
+100    Norgaard  5000  6000
+110    Adams     NULL  NULL      ← bleibt NULL!
+111    Dehaan    2000  3000
+...
+122    Lewis     1100  2100
+130    Morle     NULL  NULL      ← bleibt NULL!
+199    Gennick   2200  3200
+```
+
+→ Adams und Morle haben weiterhin ein **unbekanntes** Gehalt, also NULL. Der DB-Server kann nicht wissen ob:
+- Gehalt grundsätzlich nicht für diese Person existiert, oder
+- die Person ein Gehalt von 0,00 EUR hat, oder
+- die Person ein unbekanntes Gehalt hat, das aber auch um 1000 € erhöht werden soll
+
+**Der DB-Server kann dies nicht wissen!** → man muss die geschäftliche Bedeutung des NULL-Werts beim Design kennen
+
+### 12.4 COALESCE-Funktion
+
+wenn man weiß, dass NULL für ein Gehalt von 0,00 € steht, kann man mit **COALESCE** dem NULL-Wert eine Bedeutung geben:
+
+```sql
+SELECT EMPNO, ENAME, SAL, COALESCE(SAL,0) + 1000
+FROM EMP_M;
+```
+
+Resultat:
+```
+EMPNO  ENAME     SAL   SAL+1000
+-----  -----     ---   --------
+100    Norgaard  5000  6000
+110    Adams     NULL  1000      ← jetzt 1000!
+111    Dehaan    2000  3000
+...
+122    Lewis     1100  2100
+130    Morle     NULL  1000      ← jetzt 1000!
+199    Gennick   2200  3200
+```
+
+**COALESCE-Definition:**
+- wählt aus seiner Parameterliste (die auch **mehr als 2 Argumente** haben kann) von links den **ersten Wert aus, der nicht NULL ist**
+- englisch "to coalesce" = vereinigen, zusammenfügen, zusammenwachsen, sich verbinden
+
+### 12.5 Dreiwertige Logik
+
+**NULL-Werte sind insbesondere bei booleschen Ausdrücken tückisch:**
+- WHERE-Bedingungen
+- HAVING-Bedingungen
+- ON-Bedingungen
+
+sie stellen einen **dritten Wert** neben WAHR und FALSCH dar: **UNBEKANNT**
+
+**wichtiger Unterschied: NULL != UNKNOWN**
+- `SAL + NULL` ergibt **NULL** (arithmetischer Ausdruck)
+- `SAL < NULL` ergibt **UNKNOWN** (Vergleich)
+
+**NOT-Tabelle:**
+
+| x | NOT(x) |
+|---|--------|
+| FALSE | TRUE |
+| TRUE | FALSE |
+| UNKNOWN | UNKNOWN |
+
+**Logisches UND (AND):**
+
+| x\y | TRUE | FALSE | UNKNOWN |
+|-----|------|-------|---------|
+| TRUE | TRUE | FALSE | UNKNOWN |
+| FALSE | FALSE | FALSE | FALSE |
+| UNKNOWN | UNKNOWN | FALSE | UNKNOWN |
+
+**Logisches ODER (OR):**
+
+| x\y | TRUE | FALSE | UNKNOWN |
+|-----|------|-------|---------|
+| TRUE | TRUE | TRUE | TRUE |
+| FALSE | TRUE | FALSE | UNKNOWN |
+| UNKNOWN | TRUE | UNKNOWN | UNKNOWN |
+
+wichtig für die Prüfung: FALSE AND UNKNOWN = **FALSE** (weil wenn einer FALSE ist, ist das ganze AND immer FALSE). TRUE OR UNKNOWN = **TRUE** (weil wenn einer TRUE ist, ist das ganze OR immer TRUE).
+
+### 12.6 Dreiwertige Logik und WHERE-Restriktion
+
+**Jeder Vergleich mit NULL führt zum Wahrheitswert UNKNOWN!**
+
+Das führt zu seltsamen Ergebnissen, wenn man nicht aufpasst:
+
+```sql
+SELECT ENAME, COMM
+FROM EMP_M
+WHERE COMM = COMM;
+```
+
+Resultat: **nur Adams und Millsap!** Nicht alle 10 Mitarbeiter!
+
+Warum? → `NULL = NULL` ergibt nicht TRUE sondern **UNKNOWN**. Die WHERE-Bedingung wählt nur Zeilen aus, bei denen TRUE rauskommt. Zeilen mit FALSE **und** Zeilen mit UNKNOWN werden gleichermaßen **gefiltert** (nicht ausgegeben)!
+
+**weiteres Beispiel – alle Angestellten mit weniger als 1500 € Kommission:**
+
+```sql
+SELECT ENAME, COMM
+FROM EMP_M
+WHERE COMM < 1500;
+```
+
+Resultat: **nur Millsap (1400)** → aber eigentlich sollten alle Mitarbeiter ohne Kommission auch angezeigt werden, wenn NULL für "0 € Provision" steht!
+
+**Lösung mit IS NULL:**
+
+```sql
+SELECT ENAME, COMM
+FROM EMP_M
+WHERE (COMM < 1500) OR (COMM IS NULL);
+```
+
+Resultat: Norgaard NULL, Dehaan NULL, Millsap 1400, ... → jetzt kommen auch die NULL-Werte rein!
+
+**WARNUNG:** ob IS NULL angebracht ist oder nicht, ist eine **Geschäftsentscheidung, keine technische Entscheidung!** Einfach immer IS NULL dazuzufügen kann genauso falsch sein, wenn NULL "wirklich unbekannt" bedeutet und nicht "0 €".
+
+### 12.7 Dreiwertige Logik und CHECK-Constraints
+
+**Wichtiger Unterschied zwischen WHERE und CHECK:**
+
+- **WHERE-Restriktionen** filtern Zeilen mit UNKNOWN **heraus** (kommen nicht ins Ergebnis)
+- **CHECK-Constraints** lassen Zeilen mit UNKNOWN **durch**! Sie lehnen nur Zeilen ab, deren Bedingung **FALSE** ergibt!
+
+Beispiel:
+```sql
+CHECK (DEPTNO IN(10, 20, 30))
+```
+
+→ Wenn DEPTNO NULL ist, ergibt die Bedingung UNKNOWN → das CHECK lässt die Zeile durch! das ist kontraintuitiv aber so ist der SQL-Standard.
+
+### 12.8 OUTER-Joins können NULL erzeugen
+
+```sql
+SELECT E.ENAME, E.DEPTNO, D.DNAME
+FROM EMP_M E
+RIGHT OUTER JOIN DEPT_M D ON E.DEPTNO = D.DEPTNO;
+```
+
+Resultat (Ausschnitt):
+```
+ENAME     DEPTNO  DNAME
+----------  ------  -------------
+Norgaard    10      HQ
+Kolk        10      HQ
+...
+Mcdonald    20      Sales
+NULL        NULL    Manufacturing
+```
+
+→ Wegen des Schlüsselworts OUTER werden automatisch NULL an Stellen eingefügt, die keinen Partner haben. Interessant: in der letzten Zeile ist DEPTNO NULL, während DNAME nicht NULL ist. Das liegt daran dass die Abteilung Manufacturing (DEPTNO=30) keinen Mitarbeiter zugeordnet hat – sie erscheint trotzdem weil RIGHT OUTER alle Abteilungen zeigen soll.
+
+### 12.9 NULL-Werte und Aggregatfunktionen
+
+**Grundregel: NULL-Werte werden bei Aggregatfunktionen ignoriert!**
+
+Das ist der große Unterschied zu skalaren Ausdrücken:
+- skalare Ausdrücke: NULL + X = **NULL**
+- Aggregatfunktionen: SUM(X1...Xn) ignoriert NULL-Werte einfach
+
+**Prüfungsrelevantes Beispiel:**
+
+```sql
+SELECT SUM(SAL+COMM) AS 'SUM(SAL+COMM)', 
+       SUM(SAL)+SUM(COMM) AS 'SUM(SAL)+SUM(COMM)'
+FROM EMP_M;
+```
+
+Resultat:
+```
+SUM(SAL+COMM)  SUM(SAL)+SUM(COMM)
+-------------  ------------------
+2650           19900
+```
+
+→ **unterschiedliche Ergebnisse!** warum?
+
+- `SUM(SAL+COMM)`: erst wird SAL+COMM für jede Zeile berechnet → wenn einer von beiden NULL ist, ergibt der Ausdruck NULL → diese Zeile trägt 0 bei
+- `SUM(SAL)+SUM(COMM)`: erst werden SAL-Werte summiert (NULLs ignoriert), dann COMM-Werte summiert (NULLs ignoriert), dann addiert → berücksichtigt mehr Daten
+
+also gilt: **SUM(A) + SUM(B) != SUM(A+B)** wenn NULL-Werte im Spiel sind!
+
+**Regel:** Man muss sich **immer** Gedanken machen, was passiert wenn NULL-Werte mitspielen. Vor Berechnungen mit `SELECT ... WHERE ... IS NULL` prüfen ob NULLs mitspielen. Welcher Ansatz richtig ist hängt von der geschäftlichen Bedeutung der NULL ab – die kann sogar von Spalte zu Spalte verschieden sein!
+
+### 12.10 Was ist die Summe von 0 Zeilen?
+
+```sql
+SELECT COUNT(EMPNO), AVG(EMPNO), SUM(EMPNO), 
+       MAX(EMPNO), MIN(EMPNO)
+FROM EMP_M
+WHERE 1 = 2;
+```
+
+Resultat:
+```
+COUNT(EMPNO)  AVG(EMPNO)  SUM(EMPNO)  MAX(EMPNO)  MIN(EMPNO)
+------------  ----------  ----------  ----------  ----------
+0             NULL        NULL        NULL        NULL
+```
+
+Erklärung:
+- COUNT von 0 Zeilen = **0** → klar
+- MAX und MIN von 0 Zeilen = **UNKNOWN (NULL)** → klar, gibt kein Maximum wenn keine Zeilen da
+- SUM von 0 Zeilen = **UNKNOWN (NULL)** und **nicht 0** → nicht klar und nicht intuitiv, steht aber so im **SQL-Standard!**
+
+### 12.11 NULL-Werte und NOT IN
+
+**Unterabfragen sind besonders tückisch wenn die Unterabfrage NULL-Werte liefert!**
+
+wenn die Unterabfrage einen NULL-Wert enthält, kann NOT IN zum Ergebnis UNKNOWN führen → **keine einzige Zeile** der Hauptabfrage passiert die WHERE-Restriktion
+
+**Beispiel – alle Angestellten, die keine Untergebenen haben:**
+
+**Falsch (gibt 0 Zeilen zurück!):**
+```sql
+SELECT E1.ENAME
+FROM EMP_M E1
+WHERE E1.EMPNO NOT IN
+    (SELECT E2.MGR
+     FROM EMP_M E2);
+```
+
+Resultat: **(0 row(s) affected)** → weil die Unterabfrage auch NULL liefert (Morle hat MGR=100, aber MORLE selbst hat NULL als SAL... nein – das Problem ist dass GENNICK NULL im JOB-Feld hat und NORGAARD NULL im MGR-Feld hat. Die Unterabfrage `SELECT E2.MGR FROM EMP_M E2` enthält mindestens einen NULL-Wert (Norgaard hat MGR=NULL). Das führt dazu dass `EMPNO NOT IN (... NULL ...)` für jeden möglichen EMPNO UNKNOWN ergibt!
+
+**Richtig (mit IS NOT NULL in der Unterabfrage):**
+```sql
+SELECT E1.ENAME
+FROM EMP_M E1
+WHERE E1.EMPNO NOT IN
+    (SELECT E2.MGR
+     FROM EMP_M E2
+     WHERE E2.MGR IS NOT NULL);
+```
+
+Resultat: Dehaan, Millsap, ..., Morle, Gennick **(7 row(s) affected)** → jetzt kommt das richtige Ergebnis!
+
+**Alternative mit NOT EXISTS (funktioniert ohne IS NOT NULL korrekt):**
+```sql
+SELECT E1.ENAME
+FROM EMP_M E1
+WHERE NOT EXISTS
+    (SELECT *
+     FROM EMP_M E2
+     WHERE E2.MGR = E1.EMPNO);
+```
+
+Resultat: Dehaan, Millsap, ..., Morle, Gennick **(7 row(s) affected)**
+
+→ NOT EXISTS behandelt NULL anders als NOT IN und liefert das korrekte Ergebnis ohne extra IS NOT NULL!
+
+**Merke:** Bei NOT IN immer prüfen ob die Unterabfrage NULL-Werte enthalten kann → wenn ja, dann `WHERE ... IS NOT NULL` in die Unterabfrage, oder NOT EXISTS verwenden!
+
+### 12.12 Unterabfragen die die leere Menge liefern
+
+**Unterabfragen mit Aggregatfunktionen die keine Zeilen finden:**
+
+```sql
+SELECT E1.ENAME
+FROM EMP_M E1
+WHERE E1.SAL >
+    (SELECT MAX(E2.SAL)
+     FROM EMP_M E2
+     WHERE E2.DEPTNO = 10
+     AND E2.JOB='SALESREP');
+```
+
+Resultat: **(0 row(s) affected)** → weil es in Abteilung 10 keinen SALESREP gibt! MAX() einer leeren Menge = NULL. Dann ist jeder Vergleich `SAL > NULL` → UNKNOWN → keine Zeile kommt durch!
+
+**Lösung: ALL statt Aggregatfunktion verwenden:**
+
+```sql
+SELECT E1.ENAME
+FROM EMP_M E1
+WHERE E1.SAL > ALL
+    (SELECT E2.SAL
+     FROM EMP_M E2
+     WHERE E2.DEPTNO = 10
+     AND E2.JOB = 'SALESREP');
+```
+
+Resultat: Norgaard, Adams, ..., Gennick **(10 row(s) affected)** → `SAL > ALL (leere Menge)` ergibt **TRUE** für alle Zeilen – das ist das SQL-Standard-Verhalten für den Vergleich mit einer leeren Menge!
+
+→ also: `x > ALL (leere Menge)` = **TRUE** für alle x. Das ist kontraintuitiv aber wichtig zu wissen!
+
+---
+
+## Wichtigste Zusammenfassung für die Prüfung
+
+**NULL – die wichtigsten Regeln:**
+
+- **NULL ist kein Wert** – es bedeutet "unbekannt" oder "fehlt"
+- jeder **arithmetische Ausdruck** mit NULL ergibt NULL
+- jeder **Vergleich** mit NULL ergibt UNKNOWN (nicht TRUE, nicht FALSE)
+- **WHERE/HAVING/ON** filtert sowohl FALSE als auch UNKNOWN → nur TRUE kommt durch
+- **CHECK** lässt UNKNOWN durch → lehnt nur FALSE ab
+- **Aggregatfunktionen** (SUM, AVG, COUNT, MAX, MIN) ignorieren NULL-Werte
+- **COUNT(*)** zählt alle Zeilen inkl. NULL, **COUNT(spalte)** nur non-NULL
+- SUM von 0 Zeilen = NULL (nicht 0!) → SQL-Standard
+- **COALESCE(a, b, c)** = erster non-NULL-Wert von links
+- **NOT IN** mit NULL in Unterabfrage → 0 Ergebnisse! Immer IS NOT NULL sicherstellen oder NOT EXISTS verwenden
+- `x > ALL (leere Menge)` = TRUE
+- `MAX(leere Menge)` = NULL → Vergleich damit = UNKNOWN
+- **ob IS NULL sinnvoll ist** ist eine Geschäftsentscheidung, keine technische!
+- NULL = NULL ergibt **UNKNOWN**, nicht TRUE → deshalb für NULL-Test immer IS NULL / IS NOT NULL verwenden, niemals = NULL!
