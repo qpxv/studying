@@ -6,6 +6,7 @@ import { sql } from '@codemirror/lang-sql';
 import { keymap } from '@codemirror/view';
 import { Prec, Compartment } from '@codemirror/state';
 import { indentUnit } from '@codemirror/language';
+import { indentWithTab } from '@codemirror/commands';
 import { tal7aouy } from './theme-tal7aouy';
 
 export interface SqlEditorHandle {
@@ -58,6 +59,7 @@ const SqlEditor = forwardRef<SqlEditorHandle, SqlEditorProps>(({ onSubmit, disab
               return true;
             },
           },
+          indentWithTab,
         ])),
         editableCompartment.current.of(EditorView.editable.of(true)),
         EditorView.theme({ '&': { height: '100%' } }),
