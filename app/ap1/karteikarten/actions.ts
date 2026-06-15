@@ -20,7 +20,7 @@ export async function createKarteikarte(
 
   try {
     await prisma.karteikarte.create({
-      data: { id, question: question.trim(), answer: answer.trim(), difficulty },
+      data: { id, karteikartenNr: id, question: question.trim(), answer: answer.trim(), difficulty },
     });
     revalidatePath('/ap1/karteikarten');
     return { success: true };
@@ -56,7 +56,7 @@ export async function importKarteikarten(
       await prisma.karteikarte.upsert({
         where: { id: card.id },
         update: { question: card.question.trim(), answer: card.answer.trim(), difficulty },
-        create: { id: card.id, question: card.question.trim(), answer: card.answer.trim(), difficulty },
+        create: { id: card.id, karteikartenNr: card.id, question: card.question.trim(), answer: card.answer.trim(), difficulty },
       });
       imported++;
     } catch (e) {
@@ -85,6 +85,7 @@ export async function updateKarteikarte(
   question: string,
   answer: string,
   difficulty?: number,
+  karteikartenNr?: number,
 ): Promise<{ success: true } | { error: string }> {
   if (!question.trim()) return { error: 'Frage darf nicht leer sein' };
   if (!answer.trim()) return { error: 'Antwort darf nicht leer sein' };
@@ -96,6 +97,7 @@ export async function updateKarteikarte(
         question: question.trim(),
         answer: answer.trim(),
         ...(difficulty !== undefined ? { difficulty } : {}),
+        ...(karteikartenNr !== undefined ? { karteikartenNr } : {}),
       },
     });
     revalidatePath('/ap1/karteikarten');

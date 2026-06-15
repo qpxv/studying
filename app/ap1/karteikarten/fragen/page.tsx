@@ -20,16 +20,17 @@ export default async function FragenPage({
 
   const rawCards = await prisma.karteikarte.findMany({
     where: vonN !== undefined && bisN !== undefined
-      ? { id: { gte: vonN, lte: bisN } }
+      ? { karteikartenNr: { gte: vonN, lte: bisN } }
       : undefined,
     include: {
       scores: { where: { userId: session.user.id }, select: { score: true } },
     },
-    orderBy: { id: 'asc' },
+    orderBy: { karteikartenNr: 'asc' },
   });
 
   const cards = rawCards.map((c) => ({
     id: c.id,
+    karteikartenNr: c.karteikartenNr,
     question: c.question,
     answer: c.answer,
     difficulty: c.difficulty,

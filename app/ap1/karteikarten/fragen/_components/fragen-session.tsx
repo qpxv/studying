@@ -27,6 +27,7 @@ function MarkdownContent({ text, className }: { text: string; className?: string
 
 interface CardWithScore {
   id: number;
+  karteikartenNr: number;
   question: string;
   answer: string;
   difficulty: number;
@@ -230,7 +231,7 @@ export function FragenSession({ cards, shuffle }: Props) {
       {/* Card */}
       <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.id}</span>
+          <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.karteikartenNr}</span>
           <DifficultyDots difficulty={card.difficulty} />
         </div>
         <MarkdownContent text={card.question} className="font-medium text-zinc-900 dark:text-zinc-100" />

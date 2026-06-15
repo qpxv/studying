@@ -14,10 +14,10 @@ export default async function LernenPage({
 
   const cards = await prisma.karteikarte.findMany({
     where: vonN !== undefined && bisN !== undefined
-      ? { id: { gte: vonN, lte: bisN } }
+      ? { karteikartenNr: { gte: vonN, lte: bisN } }
       : undefined,
-    orderBy: { id: 'asc' },
-    select: { id: true, question: true, answer: true, difficulty: true },
+    orderBy: { karteikartenNr: 'asc' },
+    select: { id: true, karteikartenNr: true, question: true, answer: true, difficulty: true },
   });
 
   if (cards.length === 0) {

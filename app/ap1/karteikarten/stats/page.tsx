@@ -6,7 +6,7 @@ import { ScoreBadge } from '../_components/score-badge';
 export default async function StatsPage() {
   const cards = await prisma.karteikarte.findMany({
     include: { scores: { include: { user: true } } },
-    orderBy: { id: 'asc' },
+    orderBy: { karteikartenNr: 'asc' },
   });
 
   // Collect unique users across all scores
@@ -73,7 +73,7 @@ export default async function StatsPage() {
                   className="border-b border-zinc-100 dark:border-zinc-800 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
                 >
                   <td className="px-4 py-2.5 text-sm text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
-                    #{card.id}
+                    #{card.karteikartenNr}
                   </td>
                   <td className="px-4 py-2.5 text-sm text-zinc-700 dark:text-zinc-300">
                     {card.question.length > 60 ? `${card.question.slice(0, 60)}…` : card.question}

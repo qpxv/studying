@@ -7,6 +7,7 @@ import { DifficultyDots } from '../../_components/difficulty-dots';
 
 interface Card {
   id: number;
+  karteikartenNr: number;
   question: string;
   answer: string;
   difficulty: number;
@@ -125,7 +126,7 @@ export function LernSession({ cards, shuffle }: Props) {
           {/* Front */}
           <div className="row-start-1 col-start-1 [backface-visibility:hidden] rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 flex flex-col gap-3">
             <div className="flex items-center gap-2 flex-none">
-              <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.id}</span>
+              <span className="text-xs text-zinc-400 dark:text-zinc-500">#{card.karteikartenNr}</span>
               <DifficultyDots difficulty={card.difficulty} />
             </div>
             <MarkdownContent

@@ -108,12 +108,13 @@ model Category {
 }
 
 model Karteikarte {
-  id         Int                    @id
-  question   String
-  answer     String
-  difficulty Int                    @default(2)
-  scores     KarteikarteBewertung[]
-  createdAt  DateTime               @default(now())
+  id             Int                    @id
+  karteikartenNr Int                    @default(0)
+  question       String
+  answer         String
+  difficulty     Int                    @default(2)
+  scores         KarteikarteBewertung[]
+  createdAt      DateTime               @default(now())
 
   @@map("karteikarte")
 }
