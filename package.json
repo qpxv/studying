@@ -11,7 +11,8 @@
     "generate": "tsx --env-file=.env scripts/generate-quiz-bank.ts",
     "quiz": "tsx --env-file=.env scripts/quiz.ts",
     "improve-context": "tsx --env-file=.env scripts/improve-quiz-context.ts",
-    "curate": "tsx --env-file=.env scripts/curate-quiz-bank.ts"
+    "curate": "tsx --env-file=.env scripts/curate-quiz-bank.ts",
+    "import-karteikarten": "tsx --env-file=.env scripts/import-karteikarten.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.82.0",
