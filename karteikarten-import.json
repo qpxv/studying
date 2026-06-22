@@ -1,0 +1,1625 @@
+{
+  "generated": "2026-06-22T12:05:04.444Z",
+  "model": "claude-sonnet-4-6",
+  "totalCards": 48,
+  "incomplete": [
+    {
+      "karteikartenNr": 8,
+      "missingSide": "question",
+      "presentText": "Die richtige Lösung lautet:\n4 Subnetz:\nSubnetzmaske: 255.255.255.224 oder /27\nNetz-IP Adressen: 192.168.10.32, Neue Netz ID und\nHostadressen: 192.168.10.40",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 9,
+      "missingSide": "question",
+      "presentText": "Folgende Aspekte müsste der Kunde nach dem Vier-Ohren-\nModell vermissen:\n\nAppell - 1. Sie müssen pünktlich liefern.\nBeziehung - 2. Ich bin mit Ihrem Verhalten nicht zufrieden.\nSachebene - 3. Sie haben mir versprochen, Ihre Leistungen Jahr\nfür Jahr zu verbessern.\nSelbstoffenbarung - 4. Ich kontrollieren Ihre Leistungen sehr\ngenau.\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 12,
+      "missingSide": "question",
+      "presentText": "Vorteile:\n- geringe Dämpfung des Signals\n- geringe Signalverzerrung\n- große Distanzen überbrückbar\n- hohe Bandbreiten\n\nNachteile:\n- kleines Kerndurchmesser des Lichts notwendig\n- Kollern auf und Fokussierung des Lichts notwendig\n- Aufwand der sehr kleinen Faserkerne\n- höhere Präzision beim Verbinden der Glasfasern durch Stecker\n  oder Spleiß notwendig",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 13,
+      "missingSide": "question",
+      "presentText": "Beim FCGI-Verfahren: der Senders sendet eine Paketgruppe, bevor er auf eine Quittung wartet (pipelining). Die Fenstergröße (Anzahl der Pakete) wird dynamisch vom Empfänger festgelegt.\n\nEin FCGI Quittungs-Mechanismus: Jede Quittung bestätigt alle Pakete bis zur angegebenen Sequenznummer.\n\nVia TTY vom analog authentifizieren\n\nBei 2009: Es com-muswill bio-Synonyms\nbei häufig Answering Acknowledgements sendet,\ndes 2031 (d com-muswill Aufführbarkeitsm 18\ndie häufig gemeine ermöglicht zu",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 17,
+      "missingSide": "question",
+      "presentText": "Folgende Informationen werden durch DHCP (Naver zur Verfügung gestellt:\n- Jedem Gerät wird eine eindeutige IP-Adresse zugewiesen, um es\n  im Netzwerk zu identifizieren.\n- Die Subnetzmaske teilt dem Gerät mit, welche IP-Adressen sich im\n  gleichen Netzwerk befinden.\n- Der Standard-Gateway ist die IP-Adresse des Routers, über den\n  das Gerät auf andere Netzwerke, einschließlich des Internets,\n  zugreifen kann.\n- Die Adresse des DNS-Servers ermöglicht es dem Gerät,\n  Domänennamen in IP-Adressen aufzulösen.\n\nWeitere Optionen sind:\n- TFTP-Server: Informationen für das Netzwerk-Boot\n- Domänenname: Name der Domäne, in der das Gerät Mitglied ist",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 33,
+      "missingSide": "answer",
+      "presentText": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\n••\n\nErläutere die Vor- und Nachteile des Wasserfallmodells.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 34,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne Vor- und Nachteile von Multimodefasern.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 35,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne Vor- und Nachteile von Singlemode-Glasfasern.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 38,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgabe hat das Simple Network Management Protocol (SNMP)?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 39,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWofür nutzt man das Simple Network Management Protocol (SNMP)?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 41,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nKürze bitte die Schreibweise der IPv6 Adresse 2003:00c0:7f:b4a8:0000:0000:0000:0001 zusammen und definiere Voraussetzung für eine Interface-Adel.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 44,
+      "missingSide": "answer",
+      "presentText": "Informieren und Beraten von Kunden und Kundinnen\n\nFrage\n\nWelche Regeln sollte man im telefonischen Kundensupport beachten?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 60,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nWas ist ein Host-Bus-Adapter?\n\nModerne Storage-Systeme und sind sind mit Hilfe von Glasfaser und dem\nFibre-Channel-Protokoll an einen Dateiserver oder virtuellen\nServer angebunden. Die dazu erforderlichen Anschlüssen ist die Rede vom\nHost-Bus-Adapter.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 63,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nNenne die verschiedenen Cloud-Formen, die durch Cloud\nComputing angeboten werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 64,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nErkläre den Begriff des Servicemodells Infrastructure as a\nService IaaS.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 65,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nWas ist ein Host-Bus-Adapter?\n\nModerne Storage-Systeme und sind mit Hilfe von Glasfaser und dem\nFibre-Channel-Protokoll mit einem Dateiserver oder virtualisierten\nServer verbunden. Bei diesen Protokollen ist deren Anbindungen zu der Idee von\nHost-Bus-Adapter.\nModerne Storage-Systeme sind mit Hilfe von Glasfaser und dem",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 68,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nErkläre den Begriff des Servicemodels Infrastructure as a\nService (IaaS).",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 69,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nNenne die verschiedenen Cloud-Formen, die durch Cloud\nComputing angeboten werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 71,
+      "missingSide": "answer",
+      "presentText": "Informieren und Beraten von Kunden und Kundinnen\n\nFrage\n\nDas Controlling im Unternehmen wird als eine Funktion des Managements gesehen, dessen wird die Aufgabe der Planung, Steuerung sowie die Koordination der Unternehmensbereiche ist.\n\nWozu dient dabei eine ABC-Analyse?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 74,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nEine unterbrechungsfreie Stromversorgung (USV) wird nach der\nUSV-Klassifizierung IEC 62040-3 in 3 Klassen unterteilt.\nNenne die 3 Klassen und erkläre deren Wirkungsweise.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 92,
+      "missingSide": "answer",
+      "presentText": "Informieren und Beraten von Kunden und Kundinnen\n\nFrage\n\nEin Betriebsergebnis errechnet sich aus den Umsatzerlösen minus den Umsatzkosten. Welche Sachverhalte können das Betriebsergebnis positiv beeinflussen?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 98,
+      "missingSide": "question",
+      "presentText": "<table><tr><td>Abkürzung</td><td>Beschreibung</td></tr><tr><td>fe</td><td></td></tr><tr><td></td><td>Loopback-Adresse</td></tr><tr><td></td><td>Unique Local Addresses</td></tr><tr><td></td><td>Link-Local-Adressen</td></tr><tr><td></td><td>Multicast-Adressen</td></tr></table>\n\n1. 2001:0db8:07ac:0d7f:fda6:3d0:000:0ff\n2. 2001:0db8:f5c0:0d7f:fda6:3d0:40ff - erlaubt\n   2001:0db8:f5c0:0d7f:fda6:3d0:40ff - nicht erlaubt\n3. 2001:0db8:0f0c:0007:f6ab:030:0ff - nicht erlaubt",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 99,
+      "missingSide": "question",
+      "presentText": "Der Quality of Service (QoS) bezeichnet eine Reihe von Techniken bzw.\nspezielle Erweiterungen, welche die Qualität des Netzwerkbetriebs Ebene bzw.\ndie Qualitätskriterien einzuhalten, gibt es verschiedene\nMechanismen:\nQualitätssicherungen\n\nAn diesen Qualitätsmerkmalen/Anforderungen/Kriterien gibt es (Latenz, Jitter,\nPaketverlust, Bandbreite) Qualitäts-Merkmale für Video- oder\nSprachübertragungen zählen.\n\nDas Type of Service Feld an einem IP-Paket um den Link über das Ethernet\nFrame Datenverlust (ToS) an den IP-Paketen auf dem Link über das Ethernet\nwerden soll.\n\nDas Type of Service Feld gibt an, ob IP-Datenpakete priorisiert und ausgewertet\nwerden soll.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 101,
+      "missingSide": "question",
+      "presentText": "Das tagged VLAN kommt immer dann zum Einsatz, wenn sich\nVLAN-Informationen, welche die Zugehörigkeit zum\nso genannten Trunk. Damit werden die Ethernet Frames\nüber entsprechende Trunk-Switches hinweg erstrecken, zum Beispiel\nmit einer Art Markierung versehen, welche die Zugehörigkeit zum\njeweiligen VLAN kennzeichnet. Mit Hilfe von Tag (bsp. 8.1ae)\nwerden den Ethernet Frame VLAN-spezifische Informationen\nhinzugefügt, die dann durch VLAN-fähige Switches ausgewertet\nwerden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 102,
+      "missingSide": "question",
+      "presentText": "Das Client-Server-Modell (Client Server Modell) ist ein Konzept:\n\nBezeichnet ein Prinzip von Netzwerkes zu betreiben, Inhalte dieses\nNetzwerkes zu verfügbaren Aufgaben und Services\nModell: d.h. von ihren Servern bereitgestellten Aufgaben und Services\ndient dem Client zur Verfügung zu stellen, Beispielsweise\nkönnen das Webservices, Daten- und Managervices sein.\n\nTypische Merkmale eines Client Server Models sind:\n- Server stellen Dienste für Clients an\n- Clients fragen Dienste bei Servern an\n- Kommunikations- und Informationsaustausch\nzwischen Client und Server (über mehrere Protokolle)\n- die Server bedienen den oder die mehrere Clients\n- die Server- und Clientfunktionen sind nicht an eine physische\nHardware gebunden\n- die Server- und Client-Rollen können gleichzeitig Clients- als auch\nServeraufgaben ausführen\nphysische virtuelle Server können gleichzeitig Client- als auch\nServeraufgaben ausführen",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 103,
+      "missingSide": "question",
+      "presentText": "Das Domain Name System (DNS) stellt eines der wichtigsten\nSysteme dar der Namensauflösung von Adressen zu\nverwalten. Es übersetzt menschenlesbare Domain Namen\nin IP-Adressen und umgekehrt.\n\nDas System wird durch sog. Domain Name Server (DNS-Server)\nbetrieben, die die Anfragen aus dem Netzwerk beantworten.\nübersetzt und Ergebnisse der Anfrage an den Client zurück geliefert. In\nvielen Fällen enthält die Antwort eine IP-Adresse.\nLookup Anfragen, die Auflösung einer IP-Adresse zum Domain-Namen.\nNamen zu erhalten, um zum Beispiel Geräte.\nDiesen\nReverse Lookup mit dem die mit Hilfe von PTR Ressource Records in\nVervollständigung von Adressen und mithilfe von PTR Ressource Record der\nReverse Lookup Zone des Active Directory gewährleistet.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 104,
+      "missingSide": "question",
+      "presentText": "Unter der Skalierbarkeit versteht man die Fähigkeit einer Hardware oder Software, im laufenden Betrieb weiterhin zu funktionieren, wenn Größe, Anzahl oder Volumen verändert wird. Diese Skalierbarkeit dient zum Aufrechterhalten eines 24/7-Betriebes für die Kunden.\n\nAls Beispiel dienen hier die Volumenanpassung bei Storages oder die Anpassungen der Anzahl der CPU-Kerne oder des Arbeitsspeichers einer virtuellen Maschine. Mit Hilfe der Skalierbarkeit können im Rechenzentrum auch bedarfsgerecht oder automatisch Ressourcen je nach Leistungsanforderungen des Kunden bereitgestellt werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 105,
+      "missingSide": "question",
+      "presentText": "EULA steht für Endbenutzer-Lizenzvereinbarung (engl. End User License Agreement). Sie enthält Regelungen, welche bei der allgemeinen Benutzung einer Software eingehalten werden sollen.\n\nDie EULA wird häufig zu Beginn des Installationsprozesses angezeigt und ihr muss zugestimmt werden. Andernfalls kann der Installationsprozess nicht weitergeführt werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 107,
+      "missingSide": "question",
+      "presentText": "Mit folgenden Maßnahmen kann eine WLAN-Verbindung abgesichert werden:\n\n– Einsatz von Authentifizierungsmethoden wie WPA2/WPA3\n– Einsatz eines RADIUS-Servers\n– Aktivierung von Mac-Filtern mit einer White List\n– Einsatz eines Client Zertifikats\n– Nutzung von VPN-Verbindungen",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 108,
+      "missingSide": "question",
+      "presentText": "Das Pay-per-use Modell in der Informationstechnologie beschreibt ein Finanzierungsmodell für die Nutzung von Hard- und Software. Dabei bezahlt man nur für die tatsächliche Nutzung einer Hard- oder Software.\n\nBeim Pay-per-use Modell hat der Nutzer keine Anschaffungskosten, keine Kapitalbindung, keine Softwarepflege, keine Lizenzierungskosten und benutzt immer die aktuelle Version. Zusätzlich hat er die Vorteile der Skalierbarkeit, Flexibilität und der hohen Ausfallsicherheit, wenn es sich um einen Cloudanbieter handelt. So kann der Nutzer beispielsweise auch Schwankungen bei der Nutzung von eigenen Rechenzentren durch ein Pay-per-use Modell mit Hilfe eines Cloudanbieters kurzfristig ausgleichen. Die Nutzung der Ressourcen wird auf Basis der Nutzungsdauer stunden- oder minutengenau abgerechnet.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 110,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man unter den Begriffen CMS-, ERP- und CRM-System?\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 112,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nErmittle Vor- und Nachteile einer M.2-SSD.\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 113,
+      "missingSide": "answer",
+      "presentText": "Wie berechnet man die Wirkleistung von elektrischen Geräten?\n\n••",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 114,
+      "missingSide": "answer",
+      "presentText": "Nach Messung mit einem WLAN-Analyseprogramm vergleich ich den Raum 1 hat einen guten Empfang, Raum 13 hat guten Empfang und Raum 5 hat schlechten Empfang beim WLAN Empfangsqualität.\n\n[IMAGE: Floor plan diagram showing rooms with WLAN signal strength indicators]\n\n••",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 115,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nErläutere, welche Aufgabe die Wärmeleitpaste zwischen der CPU und dem Kühler hat.\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 116,
+      "missingSide": "answer",
+      "presentText": "Berechne die maximale Leistungsaufnahme an einer Mehrfachsteckdose, wenn maximal 16A zulässig sind.\n\n••",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 118,
+      "missingSide": "answer",
+      "presentText": "Berechne die Gesamtleistungsaufnahme für folgende IT-Landschaft für ein ganzes Jahr. Alle Geräte werden 24/7 betrieben. Gib das Ergebnis in Kilowatt an:\n350 Server\nLeistungsaufnahme 800 Watt\n200 Desktop-PCs\nLeistungsaufnahme 200 Watt\n2x Switch\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 124,
+      "missingSide": "question",
+      "presentText": "Folgende Kosten sind zu betrachten:\n– Kauf/Miete für Gebäude/Raum\n– Anschaffungskosten (IT-Hardware, Software, Kühlung)\n– evtl. Miet-/Leasinggebühren (Hardware/Software)\n– Lizenzgebühren (Betriebssystem/Anwendersoftware)\n– Energiekosten (Hardware/Kühlung/Sicherheitstechnik)\n– Wartung/Instandhaltung\n– Brandschutz\n– Sicherheitstechnik\n– Versicherungen",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 126,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man unter dem Begriff Maus 5500?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 127,
+      "missingSide": "question",
+      "presentText": "Die Set-Monitoring, Analysis and Reporting Technology\n(S.M.A.R.T.) ist ein standardisiertes Überwachungssystem und\nDiagnostiksystem für den standardisierten Überwachungszug\nvon Datenträgern (HDD,SSD). Es ermöglicht, gespeicherte\nDaten über den Zustand der Festplatte auszulesen. Einschaltzeit,\nDrehzahl, Bad-Block, etc. vom Datenträger auslesen welche\nLaufzeit, Bad-Block, etc. vom Datenträger auslesen werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 128,
+      "missingSide": "question",
+      "presentText": "Die Steckdosen sind einer Netzfrequenz von (dem Netz).\n16A für die maximale Leistung von 230 Volt (3,68 kW)\n\nRechnung:\nBei einer Netzspannung von 230 Volt und einer maximalen\nStromstärke von 16A können folgende Formel zum Einsatz:\nP = U × I (Leistung = Spannung × Stromstärke)\n\n230 Volt × 16 Ampere = 3.680 Watt",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 129,
+      "missingSide": "answer",
+      "presentText": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nUm welche Schnittstelle handelt es sich auf dem Bild?\n\n[IMAGE: A network switch or similar IT hardware device shown from the front]\n\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 130,
+      "missingSide": "question",
+      "presentText": "Bluetooth wird in Bluetooth Classic (Version 1.x-3.0) sowie Bluetooth Low Energy (Version 4.x/5) unterschieden.\n\nDie Reichweite wird in Klassen unterteilt, wie folgt:\n<table><tr><td>Klasse</td><td>max. Sendeleistung</td><td>Reichweite (im Freien)</td></tr><tr><td>1</td><td>100 mW / 20 dBm</td><td>200 m</td></tr><tr><td>2</td><td>2,5 mW / 4 dBm</td><td>20 m</td></tr><tr><td>3</td><td>1 mW / 0 dBm</td><td>10 m</td></tr></table>\n\nDatentransferraten werden nach Basic Rate und Enhanced Data Rate unterschieden, wie folgt:\n<table><tr><td>Datentransfer</td><td>Transferrate (Brutto)</td></tr><tr><td>Basic Rate</td><td>1 Mbit/s</td></tr><tr><td>Enhanced Data Rate</td><td>2-3 Mbit/s</td></tr></table>\n\nBluetooth 1.x - 5.x nutzt das lizenzfreie ISM-Band zwischen 2,402 und 2,480 GHz.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 132,
+      "missingSide": "question",
+      "presentText": "Serverkonsolidierung ist eine Form der Konsolidierung von Serverressourcen, bei der man auf die Möglichkeiten der Virtualisierung setzt. Mit Hilfe von virtuellen Maschinen (VM) oder virtuellen Umgebungen (Virtual Environment VE) soll eine Energie- und Raumeinparung durch Reduktion der physikalischen Serversysteme erreicht werden.\n\nKurz gefasst: z. B. 10 physische Server werden durch einen performanten Server ersetzt und die 10 Server virtualisiert.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 133,
+      "missingSide": "question",
+      "presentText": "Geschäftsanforderungen sind die Anforderungen, welche sich aus der Geschäftstätigkeit des Kunden und den Marktanforderungen ergeben. Die Geschäftsanforderungen werden durch das Management und das Marketing festgelegt.\n\nBenutzeranforderungen sind die für die Benutzer des Softwaresystems erforderlichen Anforderungen, um die Geschäftsanforderungen zu erfüllen. Die Benutzeranforderungen werden durch Geschäftsanalysten, durch Benutzer oder Vertreter der Benutzer, sowie Produktmanager definiert.\n\nFunktionale Anforderungen erfassen das Verhalten, welches eine Software erfüllen muss, um die Benutzeranforderungen zu gewährleisten. Funktionale Anforderungen werden durch Geschäftsanalysten und Produktmanager im Einklang mit der Softwareentwicklung und der Testabteilung definiert.\n\nProjektanforderungen sind die notwendigen Anforderungen, die den Erfolg eines Projekts sichern, um die Anforderungen des Projekts umzusetzen und das Produkt im Zuge des Application Lifecycle Managements (ALM) betreuen zu können.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 134,
+      "missingSide": "question",
+      "presentText": "Mit Hilfe von WLAN Access Points, die das Feature Multi-SSID\nunterstützen, können mehrere getrennte WLAN Bereiche als\nvirtuelle voneinander unabhängige Netzwerke realisiert werden.\nEinsatzgebiete: Unternehmensnetzwerke, in denen mehrere Access\nPoint taufen, Die WLAN Bereiche sind in der Regel durch\nVirtuelle LANs (VLANs) auf der Vermittlungsschicht\nvoreinander getrennt.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 142,
+      "missingSide": "question",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWähle entsprechend der Aufgabe in der Tabelle die möglichen Kommandozeilenwerkzeuge aus.\n\n<table><tr><td>Aufgabe</td><td>ntr</td><td>ping</td><td>ipconfig</td><td>nslookup</td><td>Aufgabe</td></tr><tr><td>Konfiguration des eigenen Netzwerkadapters</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>MAC-Adresse des IT-Arbeitsplatzes (IPv4)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Hinzufügen einer Firewall-Regel</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Verbindungstest zum einem Interface der (über-)nächsten Netzwerks</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Status der Netzwerkverbindung prüfen</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>IPv6(IP) des eigenen Netzwerkadapters ermitteln</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Anzeige, ob das eigene IT-Arbeitsplatzes mit DHCP arbeitet</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Hostnamen des eigenen IT-Arbeitsplatzes anzeigen</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>IPv6 MAC Adressen im Segment ermitteln</td><td></td><td></td><td></td><td></td><td></td></tr></table>\n\n●●●",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 146,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelche Vorteile bringt der Einsatz von Thin-Clients in einer\nIT-Landschaft, die auf Desktop-Virtualisierung setzt?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 147,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWas versteht man unter einem Pflichtenheft?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 148,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nErläutere die Vor- und Nachteile beim Lizenzmodell Pay-per-use.\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 149,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWas wird in einem Lastenheft beschrieben?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 150,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWas versteht man unter einem Convertible?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 151,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nNenne einige Vor- und Nachteile von Tablets.\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 158,
+      "missingSide": "question",
+      "presentText": "Als Standardsoftware bezeichnet man im Allgemeinen Software, die auf dem freien Markt angeboten wird. Im Gegensatz zur Individualsoftware ist sie vorgefertigt und muss in der Regel vom Anwender selbst installiert bzw. individuell angepasst werden. Standardsoftware kann On-Premise und als Software as a Service angeboten werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 161,
+      "missingSide": "question",
+      "presentText": "Unter proprietärer Software versteht man eine Software, deren Nutzung bzw. deren Nutzung durch Dritte und deren Veränderung sowie die Weitergabe aus patent- oder lizenzrechtlichen Gründen eingeschränkt oder verboten ist. Sie beinhaltet teilweise nichtveröffentlichte Standards oder nicht öffentlich dokumentierte Schnittstellen, sodass deren Anpassung ohne Offenlegung des Quellcodes nicht oder nur schwer möglich ist. Beispiele für proprietäre Software sind Microsoft Windows oder Adobe Produkte.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 162,
+      "missingSide": "question",
+      "presentText": "Die 3 charakteristischen Merkmale von Open Source Software sind:\n\n1. Quelltext liegt in einer für den Menschen lesbaren und verständlichen Form vor.\n2. Open Source Software darf beliebig kopiert, verbreitet und genutzt werden.\n3. Open Source Software darf verändert und in der veränderten Form weitergegeben werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 163,
+      "missingSide": "question",
+      "presentText": "OEM ist die englische Begriff für Original Equipment Manufacturer und wird übersetzt mit Originalausrüstungshersteller. Die OEM-Software oder OEM-Hardware wird vom Hersteller nicht direkt vertrieben. Stattdessen wird diese an ein anderes Unternehmen ausgeliefert und z. B. in Verbindung mit weiterer Software/Hardware vertrieben.\n\nOEM-Software kann in diesem Zusammenhang eine Vollversion sein, die sich durch einen geringeren Lieferumfang, eine eingeschränkte Funktionalität und/oder durch ein anderes Nutzungsrecht, vom Original unterscheidet.\n\nOEM-Hardware wird zum Beispiel von einem Markenunternehmen für ein anderes Unternehmen produziert. Dieses Unternehmen bietet die OEM-Hardware dann unter seinem eigenen Markennamen an. Ein Beispiel dafür sind IT-Produkte bei Discountern.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 167,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nMit welchen Maßnahmen kann eine drahtlose Netzwerkverbindung (WLAN/WiFi) abgesichert werden?\n\n●●○\n\nIT-Berufe · René Neumann",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 176,
+      "missingSide": "question",
+      "presentText": "Das Linux/Unix-Kommando chmod (englisch: change mode, dt. die\nZugriffsrechte ändern) ändert die Zugriffsrechte von Dateien und\nVerzeichnissen. Dabei gibt es 3 Gruppen: owner (u), group (g),\nothers (o). Zugriffsrechte: r (read), w (write), x (execute). Diese\nRechte können okttal (8er-System) oder symbolisch festgelegt\nwerden. Tabelle Berechtigungen:\n<table><tr><td>Oktal</td><td>Binär</td><td>Symbolisch</td><td>Beschreibung</td></tr><tr><td>0</td><td>000</td><td>---</td><td>Keine Rechte</td></tr><tr><td>1</td><td>001</td><td>--x</td><td>Ausführen</td></tr><tr><td>2</td><td>010</td><td>-w-</td><td>Schreiben</td></tr><tr><td>3</td><td>011</td><td>-wx</td><td>Schreiben, Ausführen</td></tr><tr><td>4</td><td>100</td><td>r--</td><td>Lesen</td></tr><tr><td>5</td><td>101</td><td>r-x</td><td>Lesen, Ausführen</td></tr><tr><td>6</td><td>110</td><td>rw-</td><td>Lesen, Schreiben</td></tr><tr><td>7</td><td>111</td><td>rwx</td><td>Lesen, Schreiben, Ausführen</td></tr></table>\nBeispiel für mit Zahlenwerten: chmod 766 /home/datei.txt\nBeispiel für mit Zahlenwerten: chmod (7)(6)(6)\nBenutzer (7) rwx117",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 177,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelche Aufgabe erfüllt das Befehlszeilenkommando ARP?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 178,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFachkräfte unterliegen verschiedenen Einflüssen welche Erfolgsfaktoren im Unternehmen von Dienstleister darstellen. Was bedeutet in diesem Zusammenhang S.M.A.R.T.?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 179,
+      "missingSide": "answer",
+      "presentText": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nBeschreibe die Aufgabe und Funktionsweise des Befehlszeilenkommandos (cmd) in einem Linux-Betriebssystem.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 185,
+      "missingSide": "question",
+      "presentText": "UML ist die Abkürzung für Unified Modeling Language (Vereinheitlichte Modellierungssprache). UML ist eine standardisierte grafische Modellierungssprache, die in der Softwareentwicklung und Systemmodellierung zum Einsatz kommt. Ziel ist es, komplexe Systeme in der Softwareentwicklung zu visualisieren, zu spezifizieren, zu konstruieren und zu dokumentieren.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 191,
+      "missingSide": "answer",
+      "presentText": "Qualitätssichernde Maßnahmen\n\nDein Ausbildungsbetrieb ist ISO 9001 zertifiziert.\nWas bedeutet diese Norm für deinen Ausbildungsbetrieb?\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 192,
+      "missingSide": "answer",
+      "presentText": "Qualitätssichernde Maßnahmen\n\nBeschreibe den PDCA-Zyklus im Bereich des Qualitätsmanagements.\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 193,
+      "missingSide": "question",
+      "presentText": "Der Energy Star bescheinigt z. B. elektrischen Geräten, dass sie die Stromsparkriterien der US-Umweltschutzbehörde EPA (Environmental Protection Agency) und des US-Energieministeriums erfüllen.\n\nWichtigstes Kriterium dabei ist, dass sich ein eingeschaltetes Gerät nach einiger Zeit selbstständig ausschaltet oder in den Stromsparmodus wechselt. Bei Computern muss die Prozessorleistung heruntergefahren und der Datenträger abgeschaltet werden. Dieser Standby-Modus hat einen sehr niedrigen Stromverbrauch zur Folge.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 194,
+      "missingSide": "question",
+      "presentText": "In einem Audit wird untersucht, ob Prozesse, Anforderungen, Normen und Richtlinien die geforderten Standards während eines Untersuchungsprozesses erfüllen, die im Rahmen eines Qualitätsmanagements turnusmäßig durchgeführt werden. Als Beispiel können hier die Zertifizierung bzw. Re-Zertifizierung der Normen ISO 9001 oder ISO 27001 genannt werden.\n\nDiese Audits werden in der Regel von speziell geschulten Auditoren durchgeführt und stellen oftmals die finale Phase beim Zertifizierungsprozess dar. Audits haben im Bereich des statischen Qualitätsmanagements Prüfungscharakter, im Bereich der dynamischen Qualitätssicherung dienen sie der Erfassung und der Erkennung von Entwicklungstrends, um anschließend die Wirksamkeit von Maßnahmen zu überprüfen.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 195,
+      "missingSide": "question",
+      "presentText": "Die Softwarequalitätskriterien werden in verschiedenen Modellen, zum Beispiel in der Norm ISO/IEC 9126, dargestellt. Die Qualitätssicherung (kurz: QS) dient dazu, sicherzustellen, dass die Software den vereinbarten Anforderungen/Kriterien entspricht.\n\nAllgemeine Kriterien, die eine Software erfüllen sollte, sind:\n- Funktionalität\n- Benutzbarkeit\n- Zuverlässigkeit\n- Effizienz\n- Übertragbarkeit\n- Änderbarkeit",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 197,
+      "missingSide": "question",
+      "presentText": "Eine Klasse definiert mithilfe von Kategorien Objekte, die gleiche Attribute haben und gleiche Methoden benutzen. Durch Vererbung können neue Subklassen geschaffen werden, bei denen eine Erweiterung oder eine Einschränkung der ursprünglichen Klasse enthalten sein kann.\n\nEin Objekt ist eine Instanz einer Klasse, die nach dem Bauplan der zugeordneten Klasse erschaffen wurde. Ein Objekt verfügt damit über die Attribute und Methoden, die in der Klasse festgelegt worden sind.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 204,
+      "missingSide": "question",
+      "presentText": "– Zutrittskontrolle: Unbefugten ist der Zutritt zu DV-Anlagen zu verwehren.\n– Zugangskontrolle: Unbefugte sollen keinen Zugang zu DV-Anlagen haben.\n– Zugriffskontrolle, Zugriffsberechigung: Durch ein Rechte- und Rollenmanagement können nur berechtigte Nutzer personenbezogene Daten einsehen. Der Zugriff wird protokolliert. Unbefugte Dritte werden ausgeschlossen und können sensible Daten nicht lesen, kopieren, verändern oder löschen.\n– Weitergabekontrolle: Sicherstellung, dass personenbezogene Daten beim Transport oder bei der Speicherung nicht durch Dritte gelesen, kopiert, verändert oder entfernt werden können.\n– Eingabekontrolle: Gewährleistung, dass nachträglich überprüft und festgestellt werden kann, ob Daten verändert oder entfernt werden sind.\n– Auftragskontrolle: Personenbezogene Daten werden nur nach der vertraglichen Regel der Auftragsverarbeitung verarbeitet.\n– Verfügbarkeitskontrolle: Personenbezogene Daten werden vor Verlust oder Zerstörung geschützt.\n– Trennungsgebot: Personenbezogene Daten werden ihrem Zweck nach getrennt verarbeitet und gespeichert.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 205,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nNenne die wesentlichen Vorteile einer ISO/IEC 27001 Zertifizierung für Unternehmen.\n\nIT-Berufe · René Neumann © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 206,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nIn der Informationssicherheit kommt es neben Sicherheits- und Datenschutzaspekten auch auf die Datenminimierung an.\n\nWelches sind die Ziele bei der Datenminimierung?\n\nIT-Berufe · René Neumann © 2025 u-form Verlag",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 207,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nDer Datenschutz ist auf europäischer Ebene in Verordnungen in der DSGVO beschrieben.\n\nWelche Rechte hat eine Person betreffend ihrer personenbezogenen Daten?\n\nIT-Berufe · René Neumann © 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 208,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWas ist eine PKI (Public Key Infrastructure)?\n\nIT-Berufe · René Neumann © 2025 u-form Verlag",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 209,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nDurch welche konkreten Maßnahmen können technisch organisatorischen Maßnahmen (TOM) DSGVO-konform umgesetzt werden?\n\n●●●",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 210,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWas ist eine SPI (Stateful Packet Inspection) Firewall?\n\nIT-Berufe · René Neumann © 2025 u-form Verlag",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 214,
+      "missingSide": "question",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nErgänze die fehlenden Werte in der Tabelle symmetrischer und asymmetrischer Verschlüsselung.\n\n<table><tr><td></td><td>Symmetrische Verschlüsselung</td><td>Asymmetrische Verschlüsselung</td></tr><tr><td>Anzahl der Schlüssel</td><td></td><td></td></tr><tr><td>Geschwindigkeit</td><td></td><td>langsam und rechenintensiver</td></tr><tr><td>Schlüsselaustausch</td><td>problematischer Schlüssel-austausch</td><td>-Schlüsselaustausch</td></tr><tr><td>Anwendungsfälle</td><td></td><td></td></tr><tr><td>Algorithmen</td><td></td><td>-RSA (Rivest-Shamir-Adleman)\n-ECC (Elliptic Curve Cryptography)\n-DSA (Digital Signature Algorithm)</td></tr><tr><td>Anwendungsfälle</td><td>-Verschlüsselung von Daten\n-Absicherung von VPNs</td><td></td></tr></table>",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 217,
+      "missingSide": "question",
+      "presentText": "Malware = Schadssoftware oder Schadprogramme. Es handelt sich hier um einen Oberbegriff für die Begriffe wie Adware, Spyware, Viren, Botnets, Trojaner, Würmer, Rootkits und Ransomware.\n\nRansomware = Erpressersoftware. Bei Ransomware werden Daten z.B. auf einem Computer in Geiselhaft genommen, durch bestimmte Verschlüsselungsmethoden verschlüsselt und es wird zur Zahlung eines Lösegelds (z.B. via Bitcoin) aufgefordert, wenn man diese Daten wieder entschlüsselt haben möchte.\n\nTrojaner = Harmlose wirkende Computerprogramme, welche im Hintergrund und ohne Wissen des Anwenders Schadsoftware nachlädt und beispielsweise Backdoorprogramme oder Rootkits installiert.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 220,
+      "missingSide": "question",
+      "presentText": "Der Begriff Security by Design bedeutet, dass die allgemeinen Sicherheitsanforderungen an Soft- und Hardware bereits während der Entwicklung dieser Produkte berücksichtigt werden sollen, um spätere nachträgliche Beseitigung von Sicherheitslücken, das Ausdrucken würde dann die Kosten dafür in die Höhe Projektfortschritt behindern und die Kosten dafür in die Höhe treiben.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 230,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\nBeschreibe die Schutzbedarf skategorien (normal, hoch, sehr hoch) lt. BSI IT-Grundschutz.\n●●○",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 231,
+      "missingSide": "question",
+      "presentText": "<table><tr><td>Bezeichnung</td><td>Schutzzie</td><td>Schutzbedarf</td><td>Begründung</td></tr><tr><td>Router</td><td>Verfüg-barkeit</td><td>normal</td><td rowspan='2'>Über eine externe Verbindung übertragen. Vertrauliche Kommunikation wechselseitige Kommunikation übertragen. Vertrauliche Daten überragen die manche die Begründung bei Kunden und Geschäftspartnern sehr hoch. Der Schutzbedarf auf der Router malweise lassen sich Daten und beeinträchtig-bar nicht sicher und beeinträchtig-Die Anzahl der Signatur der Router kann für eine kurze Zeit tsoliert werden, wenn die verfügbarkeit zusätzliche sicher höhe Kommunikation, z. B. der Schutzbedarf sehr hoch. Der fehlerhaften Daten können nur kaum unter unter Ansehen beim Router die betroffenen und auf das Ansehen bei Kunden und Geschäftspartnern, kaum wieder hergestellt wird</td></tr><tr><td></td><td>Integrität</td><td>hoch</td></tr><tr><td></td><td>Vertrau-lichkeit</td><td>normal</td></tr></table>",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 235,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\n●●\n○\n\nWelches sind die Inhalte einer Zertifizierung nach ISO 27001?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 236,
+      "missingSide": "answer",
+      "presentText": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\n●●●\n○\n\nWas sind die Vorteile einer Zertifizierung nach ISO 27001?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 237,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●\n○\n\nWas versteht man unter dem Begriff Eskalationsstufe im 3-stufigen IT-Kundensupport-Modell?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 238,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●\n○\n\nWas versteht man in der Informationstechnologie unter dem Begriff Service Level Agreement (SLA)?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 239,
+      "missingSide": "question",
+      "presentText": "Antwort\n\nMit den Service Level Agreements (SLA) werden die Prioritäten bei der\nBearbeitung von Service-Fällen zwischen Kunden und Anbieter definiert.\nService Level Agreements dienen der Qualitätssicherung und werden in einer\nVereinbarung zwischen Auftraggeber und Auftragnehmer festgelegt.\n\nZu diesen Vereinbarungen zählen beispielsweise:\n– Vertragsart, z. B. Gewährleistung von minimalen Ausfallzeiten\n– Servicedaten, z. B. Mo-Fr in der Zeit 07:00 - 18:00 Uhr\n– Verantwortlichkeiten von Auftraggeber und -abnehmer, z. B. Meldepflichten\n– Kommunikation zwischen allen Auftraggeber und -abnehmern, z. B. Mail, Fax,\n   vor Ort Einsatz\n– Vertragsstrafen, z. B. Gutschreibung innerhalb von 24 Stunden\n– Rabattierungen, z. B. Kabelverlegung innerhalb von 24 Stunden\n– Sanktionen bei Nichterfüllung des Vertrages",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 249,
+      "missingSide": "question",
+      "presentText": "Das Mehrliniensystem ist ein Begriff aus der klassischen Aufbauorganisation der Leitungssysteme. In einem Mehrliniensystem erhält die untergeordnete Stelle von mehreren übergeordneten Stellen Weisungen. Es gilt das Prinzip der Kürzesten Wege.\n[IMAGE: Organigramm mit Stelle 1, Stelle 2, Stelle 3, Abteilung 1, Abteilung 2, Leitung]",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 251,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nNenne 3 Methoden, mit der ein Kunde oder eine Kundin am\nIT-Arbeitsplatz eingewiesen werden kann.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 252,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nWelche Schritte sind notwendig nach Abschluss einer\nLeistungserbringung?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 254,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nWas versteht man unter dem Begriff Prokura?",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 255,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nErläutere den Begriff der doppelten Buchführung.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 256,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nWas versteht man unter den Begriffen berufliche Fortbildung und berufliche Umschulung?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 257,
+      "missingSide": "answer",
+      "presentText": "Frage\n\nWas bedeuten in der Anwendungsentwicklung die Begriffe\nBlack-Box-Test und White-Box-Test?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 258,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nIn der Anwendungsentwicklung sind Testverfahren unerlässlich.\nWelche Testverfahren kennst du?",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 259,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●●\n○\n\nWelche Vor- und Nachteile hat der Kauf von IT-Hardware für Unternehmen?\n\nIT-Berufe: René Neumann\n© 2025 u-form Verlag",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 263,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●\n○\n\nWas verbirgt sich hinter dem Begriff Rollout?\n\nIT-Berufe: René Neumann\n© 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 265,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●\n○\n\nWelche Unterscheidungsmerkmale haben Kauf, Miete und Leasing?\n\nIT-Berufe: René Neumann\n© 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 266,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●\n○\n\nWelche Prozesse müssen bei einem Software-Rollout beachtet werden?\n\nIT-Berufe: René Neumann\n© 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 267,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●●\n\nWelche Dinge müssen bei einem IT-Hardware-Rollout beachtet werden?\n\nIT-Berufe: René Neumann\n© 2025 u-form Verlag",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 270,
+      "missingSide": "answer",
+      "presentText": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●●\n○\n\nWelche Vor- und Nachteile hat ein Unternehmen beim Leasing von IT-Hardware?\n\nIT-Berufe: René Neumann\n© 2025 u-form Verlag",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 288,
+      "missingSide": "question",
+      "presentText": "Laut der WEEE-Richtlinie (Waste Electrical and Electronic Equipment), in der die Vorgaben für die Entsorgung von Elektro-Altgeräten (EAG) festlegt, gibt es ein grundlegendes Prinzip, welches besagt, dass der Hersteller in der abfallwirtschaftlichen Verantwortung für ihre Produkte während der gesamten Lebensdauer verantwortlich sind. Dabei wird in verschiedene Kategorien unterschieden, wie zum Beispiel:\n– Informations- und Kommunikationstechnik-Geräte: Computer, Notebooks, Tablets, Datenspeicher, Monitore, Drucker, Handys, Telefone, Netzteile, TK-Anlagen\n– Unterhaltungselektronik-Geräte (auch Braune Ware genannt): Fernseher, Videorecorder, Digitalkameras, Konsolen, HiFi-Anlagen, Boxen, Radios, CD-/DVD-/Blu-ray-Player\n\nMerke: Elektronische Geräte gehören nicht in den Hausmüll und müssen fachgerecht sowie umweltgerecht entsorgt werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 331,
+      "missingSide": "question",
+      "presentText": "Die ISO 9001 Norm legt die Anforderungen für Qualitätsmanagementsysteme fest. Ziel ist die Qualitätssicherung durch stetige Optimierung der Prozesse.\n\nDiese Zertifizierung ist weltweit anerkannt.\n\nISO 9001 orientiert sich unter anderem an diesen Grundprinzipien:\n– Kundenorientierung\n– Prozessorientierung\n– stetige Verbesserung\n– Risikomanagement",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 332,
+      "missingSide": "question",
+      "presentText": "Die vier Phasen des PDCA-Zyklus sind Planen (Plan), Umsetzen (Do), Überprüfen (Check) und Handeln (Act).\n\nP: In dieser Phase identifiziert man Probleme, analysiert den aktuellen Zustand und legt Ziele sowie Kennzahlen fest.\n\nD: Hier wird der Plan ausgeführt. Man führt die geplanten Aktivitäten durch und sammelt dabei relevante Daten und Informationen.\n\nC: In dieser Phase vergleicht man die erzielten Ergebnisse mit den geplanten Zielen und überprüft, ob die Maßnahmen erfolgreich waren.\n\nA: Das Ziel dieser Phase ist es, erfolgreiche Maßnahmen zu standardisieren oder den Plan für zukünftige Verbesserungen anzupassen.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 340,
+      "missingSide": "question",
+      "presentText": "Zu den wesentlichen Bestandteilen eines Abnahmeprotokolls\ngehören:\n- Betrifft Personen/ Firmen\n- Ort, Zeit und Datum der Abnahme des Produkts\n- Leistungserbrachte und Leistungsstand sowie Vollständigkeit und Qualität der\n- Prüfung der Anforderungen, der Leistungserbringung, des Sachverhalts\n- der Funktionsweise und damit funktionalen Anforderungen\nLeistungsumfang von je einem Vertreter des\nAuftraggebers sowie\nAuftraggeber von je einem offenen Punkten\n\nIm Umgang mit offenen Punkten",
+      "difficulty": 2
+    }
+  ],
+  "unmatched": [
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Unter dem Begriff Pre-Sales-Angebot sind die Dienstleistungen\nbzw. Aktivitäten beim Kunden im Rahmen der\nGeschäftsanbahnung oder dem Vertragsabschluss gemeint, den\nman dem Kunden anbietet, um die Hemmschwelle bei dem\nder Kunden- und Auftragsgewinnung, beispielsweise harter Anreize\nsein:\n- Kostenlose Probefahrten/ Fahrzeugkauf\n- Kostenlose Kataloge oder Probeprodukte\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgabe hat bei IPv4 eine Broadcast-Adresse?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBenennen Sie IPv4-Adressbereiche (IPv4-Address-Types):\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBeschreiben Sie Bestandteile einer IPv4-Adresse.\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man bei IPv6 unter einer Stateless-Address-Autoconfiguration?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nIn IPv6-Netzwerken ist man bestrebt, den Broadcast zu vermeiden. Welche Konzept wird stattdessen genutzt?\n\n•",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWorin unterscheiden sich die Lichtwellenleiter der Single- und Multimodefasern?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nAllgemein kann einem Thin-Client folgende Leistungsmerkmale\nzugeschrieben werden:\n\nDie virtuelle Desktop-Infrastruktur (VDI) setzt primär auf die\nVirtualisierung des Servers auf dem das Betriebssystem, die\nAnwendungen und Daten zentral konsolidiert auf der Seite der\nServer-Infrastruktur liegen. Daher auch die Clients bezeichnet, zum Bsp. als\nThin-Client-Lösungen.\n\nAudio- und Displayausgabe\nUnterstütze Displays welche über USB, über Netzwerkstandards\nübertragen werden. Die Konfigurationsmöglichkeiten dieser sind.\n\nDie zentrale Verwaltung (VDI) setzt primär auf die\nVirtualisierung der Desktop-Programme werden vom\nzentralen Server, die Konfiguration und\nZugriffe auf Verzeichnisse und\nBenutzerprofile, die Konfiguration und\nInstallierte Programme werden vom\nClients und umwelt-\ngesamtaufwendig und haben eine\nbeschränkende Leistungsaufnahme.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nMithilfe der Dual-Channel-Technik kann der Speichercontroller\nden Prozessor mit der doppelten Datenmenge versorgen.\n\nDadurch verdoppelt sich die Bandbreite des Speichermoduls\nDie Speichermodule müssen paarweise gleich vorhanden sein\nund müssen sich in den dafür vorgesehenen Steckplätzen\nbefinden, das die eigentliche Modulsgröße paarweise\npaarweise installiert werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDie Netzwertanalyse liefert im Allgemeinen eine Entscheidungs-\nhilfe, wie das komplexe Anforderungen, zum Beispiel die\nEntscheidungsfindung bei komplexen Problemen.\n\nDer Bewertungsansatz Zu ermitteln, die zum Beispiel die\nEntscheidungsfindung bei Verbesserung der verschiedenen\nServices meineiner wichtigen Plattformen, eines Netzwerkanalyse dem\nEinsatz einer geringen Moderell werden verschiedene\nParameter eines Scoring-Modells werden verschiedene\nMittels einer Netzwerkanalyse, eine Punktbewertung gibt\nAufschluss, wie die verschiedenen Netzwerkanalyse dient\nüber die gesamte Scoring-Wertanalyse zur Entscheidungs-\nhilfe, das die Leistungsmengen-Netzwerkanalyse-\nfertigung) werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nFolgende Aspekte sind allgemeinen Natur und sollten beim\nmethodischen Support Beratung zugrunde:\n\n- Vermeiden von Reizwörtern und Ausdrücke, die den Kunden reizen\nkönnen\n- Die Gesprächspartner ansprechen\n- Hier oben\n- Wörtlich ist hier eines Einwandes oder einer Beschwerde\nNachfragen mit den W-Fragen (wer, was, wann, ...)",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDie ABC-Analyse zielt in betriebswirtschaftlichen Analyse\nauf die Konzentration auf bestimmte Produkte oder Objekte in\nvertikale A, B und C ermittelt. Dabei wird A als Klasse mit der\nhöchsten Priorität für Ressourcen verwendet, welche\nKunden für die Hauptkunden des Unternehmens beispielsweise, welche\nin Klasse B können antragen, kommen die Klasse C.\nder Klasse A, B und C ermittelt. Dabei wird die Klasse C\nUmsatzanteil von Kunden als die Klasse\nSomit sind mit wenig in Ressource für den Umsatzanteil\nbehält.\n\nAnteile dem Pareto-Prinzip (80/20-Regel):\nUmsatzbeitrag beitragen.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nUm das Betriebsergebnis positiv zu verändern, gibt es folgende\nMöglichkeiten:\n\nUmsatz erhöhen (externe Werte ausbauen)\n- Herstellungskosten senken (günstigere Einkauf von günstigere\nRohstoffe)\n- Allgemeine Verwaltungskosten minimieren (spart Einsatz von\nSoftwaretools)\n- Personalkosten reduzieren durch Abgaben der\nSchwere)\n- Möglichkeit zur Nutzung von Social Media\n- Personalkosten reduzieren durch Abgaben der\nProduktivität)\n- Finanzieren (z. B. Nutzung von Fahrzeug-Leasing statt\nKauf)",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Die einfachste unterbrechungsfreie Stromversorgung der USV-Klasse 0 ist Standby-USV. Offline-USV (Standby) ist geeignet für preisgünstige-Schutzmaßnahmen und schützt kurzfristige Spannungsunterbrechungen. Wegen des relativ langen Umschaltzeitraums können nicht ausreichend werden, Wegen der doch zu langen Herstellungszeit ist Aufwands-Verhältnis zu bestehen. Spanungs-Spannungseinbrüchen können Spannungspitzen.\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "SSID (Service Set Identifier) ist laut IEEE (Institute of Electrical and Electronics Engineers) ein Begriff und wird auch oft als Netzwerkname bezeichnet. Eine SSID ist bis zu 32 Zeichen lang und dient zur Identifizierung eines Funknetzwerks (WLANs). Die SSID stellt sich auch wie At Broadcastdomäne für Funknetzwerke.\nDie SSID gibt sich als der Name (SSID), die mehrere Netzwerkmit gleichen Verhalten kann.\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Switch:\n- arbeitet auf Schicht 2 (Layer 2-Switch) im OSI-Referenzmodell\n- verarbeitet Ethernet-Frames nach IEEE 802.3\n- verbindet Geräte bis zu 4,5/10 physikalische Ports in einem Gerät\n\nRouter:\n- arbeitet auf Schicht 3 im OSI-Referenzmodell\n- verbindet Netzwerke miteinander\n- verarbeitet Protokolle wie OSPF, RIP, IS-IS und BGP\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Heidenrückliche unterbrechungsfreie Stromversorgungen\nUSV-Klasse 2 / können allgemein auch wie die Standby-USV Funktionsweise. Sie schützen allgemein vor dem Stromausfall, Spannungsunterbrechungen und schützen vor Überspannung durch Filter Spannungsschwankungen ausgleichen. Im Gegensatz zu Offline-USV liegt zwischen kurzen 2 bis 4 Millisekunden, die umschalten von Batteriebetrieb zum Netzbetrieb (8 Faktum verzögerung).\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "SMTPS (Simple Mail Transfer Protocol Secure) bezeichnet\ndas Protokoll für E-Mail-Transport und verwendet beim dem\nE-Mail-Transport via SMTP über SSL Port 465.\nSMTP ist ein Anwendungsprotokoll für die Übermittlung, den\nEmpfang und die Weiterleitung von Textnachrichten sowie Integrität\nund Vertrautheit der übertragenden Nachrichten via E-Mail.\nMAPS (Internet Message Access Protokoll) welches mit SSL/\nTLS über den Port 993 die verschlüsselte Transport Labensit:\nIMAP ist ein Anwendungsprotokoll für das Empfangen und\nEinlaufungen auf dem Mail-Servern gespeichert und lokal\nsynchronisiert.\nPOP3S (Post Office Protocol 3 Secure) ist ein E-Mail-\nProtokoll für das Herunterladen auf den Posteingang und nutzt eine\nverschlüsselte Verbindung mit Hilfe von SSL/TLS. Über POP3S werden\nNachrichten aus dem E-Mail-Server abgegriffen und lokal\nheruntergeladen bzw. anschließend bei Bedarf gelöscht.\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Die Online-USV (USV-Klasse 1) gilt als die teuerste Variante unter\nden unterbrechungsfreien Stromversorgungen. Sie basiert auf\neinem kontinuierlichen Stromversorgungskonzept. Erzeugt durch\neine Sinusspannung am Ausgang. Alle allgemeinen Verbraucher\nwerden dabei mit einer synthetisch erzeugter Sinusspannung des\nVerbraucher auskommt abzüglich die Batterie\naufgeladen wird.\nBei Netzausfall erfolgt ein unterbrechungsfreier Übergang auf\nden Batteriebetrieb. Die Ausgangsspannung entspricht bei der\nvollen 230 Volt Schwankungen, während die Ausgangsspannung einem nahezu einer Sinuskurve entspricht. Ein Netzausgang\nanschließend die Online-USV vor Spannungseinbrüche, vor\nEinflüssen, Frequenzstörungen und Spannungsstörungen.\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWie lautet die Notation einer iSCSI-Verbindung?\n\n●●●",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nIn IPv6 Netzwerken werden MAC-Adressen mithilfe von Multicast in IPv6-Adressen umgewandelt. Wie nennt man dieses Verfahren?\n\n●●",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\nWelche Meilensteine kann man in Projekte planen und durchführen?\n\n●",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nErklären den Begriff Unicast aus dem Bereich der Netzwerkkommunikation.\n\n●●",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\nBitte ergänze die fehlenden Elemente und Beschreibungen im Vorgang des Netzplans.\n\n[IMAGE: Table with columns for Vorgangsname and other network plan elements]",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWie wird eine Fibre Channel Verbindung adressiert?\n\n●●●",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nVorteile der Projektschritte klar erkennbar\n- eine einfache Nachverfolgung der Projektschritte möglich\n- einfache Steuerung und Kontrolle der Projektphasen\n\nNachteile\n- wird Rückkopplung bereits zu\nfrühem Zeitpunkt nötig, müssen\ndie tatsächlichen Anforderungen während des Projekts zu\nändern\n- Unflexibel, wenn sich Anforderungen während des Projekts\nden tatsächlichen Anforderungen anpassen nicht",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nKenner:\nSoftwareprojekte, die sehr viel Sorgfalt und Planung erfordern, aber auch\nSoftwareprojekte mit klaren und stabilen Anforderungen. Diese sind meist\nkleine Projekte mit wenigen Beteiligten.\n\nBeispiel:\nein Textverarbeitungsprogramm zu entwickeln, das einer vorhandenen, klar\ndefinierten Spezifikation entspricht und keine oder kaum Änderungen an den\nAnforderungen erwartet werden.\n\nPlanungsphase:\nErstellen eines detaillierten Projektplanes, der alle Aktivitäten und Meilensteine\nzu jedem Zeitpunkt klar definiert und dabei Ressourcen optimal einsetzt.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDie Risikoanalyse ist Bestandteil des Risikomanagements.\nDas Risikomanagement umfasst:\n- die Risikoidentifizierung\n- die Risikoanalyse / Risikobewertung\n- die Risikoabschätzung\n- die Risikosteuerung / Risikomaßnahmen\n\nDie Risikoanalyse ist für IT-Dienstleistungen und -Lösungen besonders in\nIT-Systeme und IT-Dienstleistungen, die Kosten Bewertungen in\nder Produktentwicklung, in die Pharmabranche sowie beim\nAktiensenkauf.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDie Meilenstein-Planung ist eine Form der Projektplanung und\nverfolgt bestimmte Ziele wie:\n- Leistungsfortschrittscontrolling zur Bewertung des\nAufwandes im Vergleich zum Soll-Zustand\n- Schaffen von Zwischenzielen zur Motivation der\nMitarbeiter\n- Anweisungen zur Informationsverdichtung zu einem\nvorher bestimmten Zeitpunkt\n- Einigkeit über Projektziele im gesamten Projektteam zu\nmachen\n- Vorhandene Ressourcen für jedes Projektziele optimal zu\nnutzen, zum Beispiel durch Setzen von Prioritäten und das\neine gültige Meilensteinliste im gesamten Projektteam\nbekanntgeben",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDer Deckungsbeitrag ist eine Differenzrechnung, welche auch\nals Betriebserfolgsrechnung bezeichnet wird.\nDie Differenz zwischen den Erlösen und den variablen Kosten\nwird als Deckungsbeitrag bezeichnet.\n\nDeckungsbeitrag = Erlös - variable Kosten\n\nFaustformel zur Verfügung gibt:\nals Differenz zwischen Erlösen und den variablen Kosten\nvariablen Kosten bezeichnet.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nKlassische Modelle\n- Wasserfallmodell\n- V-Modell\n- Spiralmodell\n\nAgile Modelle\n- Scrum\n- Kanban\n- Extreme Programming\n- Extreme Programmierung",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Zum Beispiel enthält diese Netzwerk-Hierarchie-Diagramm-Skizze einen\nProjektüberblick eines kleinen Netzwerkes mit seinen geografischen Knoten.\n\n[IMAGE: Network hierarchy diagram with boxes and connecting lines showing network topology]",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "[IMAGE: Table with network address assignments showing columns for network parameters and rows with values]\n<table><tr><td></td><td>TE</td><td>TG</td></tr><tr><td></td><td></td><td>Netzwerk Adressraum</td></tr><tr><td></td><td></td><td>Broadcast</td></tr><tr><td>1</td><td></td><td></td></tr><tr><td>2</td><td></td><td></td></tr><tr><td>3</td><td></td><td></td></tr><tr><td>4</td><td></td><td></td></tr></table>",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas bedeutet der Begriff Standby- oder Offline-USV?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas bedeutet der Begriff SSID (Service Set Identifier)?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nErläutere den Unterschied zwischen einem Switch und einem Hub.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas versteht man unter der Bezeichnung Netzinteraktive USV?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nEine der wichtigsten Dienste in der Informationstechnologie sind E-Mail-Dienste. Es kommen verschiedene E-Mail-Protokolle dabei zum Einsatz. Unterscheide die Mailprotokolle IMAP4, SMTP/S POP3/S und deren Verwendungszweck.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas versteht man unter einer Online-USV?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man im Netzwerkbereich unter dem Quality of\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgaben hat das Domain Name System (DNS) in einer\nWindows Domänenlandschaft bzw. Active Directory?\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche verkürzte Schreibweise der IPv6-Adresse\n0020:0db8:0a:0000:0000:0000:0000:0048 wird eingesetzt?\n1. 2001:0db8:0a::0048:303:ff\n2. 2001:0db8:0a::0048:3030:ff\n3. 2001::0b48:a:ff:27:0ab:3ab:ff\n4. kombinierter IPv6/IPv4-Adressraum\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBeschreibe typische Merkmale des Client-Server-Modells.\n●",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBitte vergleiche die Protokolle UDP und TCP miteinander und\n●●●",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWann kommt ein tagged VLAN (Virtual Local Area Network) zum\nEinsatz?\n●●",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas bedeutet der Begriff Standby- oder Offline-USV?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas bedeutet der Begriff SSID (Service Set Identifier)?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nErläutere den Unterschied zwischen einem Switch und einem Hub.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas versteht man unter der Bezeichnung Netzinteraktive USV?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nEine der wichtigsten Dienste in der Informationstechnologie sind E-Mail-Dienste. Es kommen verschiedene E-Mail-Protokolle dabei zum Einsatz. Unterscheide die Mailprotokolle IMAP4, SMTP/S, POP3/S und nenne ihre Verwendungsbereiche.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas versteht man unter einer Online-USV?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWie lautet die Notation einer iSCSI-Verbindung?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nIn IPv6 Netzwerken werden MAC-Adressen mithilfe von Multicast in IPv6-Adressen umgewandelt. Wie nennt man dieses Verfahren?\n\n••",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\nWie viele Vorgänge kann man im Projekt planen und darstellen?\n\n•",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nErklären den Begriff Unicast aus dem Bereich der Netzwerkkommunikation.\n\n••",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\nBitte ergänze die fehlenden Elemente und Beschreibungen und Vorgänge des Netzplans.\n\n[IMAGE: Partially visible table with Netzplan elements]",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWie wird eine Fibre Channel Verbindung adressiert?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Die einfachste unterbrechungsfreie Stromversorgungen der USV-Klasse II sind Standby-USV. Offline-USV-Klasse-II-Geräte sind primär für den sogenannten Offline-Betrieb konzipiert und sollen kurzeitig für kurzeitige Stromausfälle überbrücken. Im Normalbetrieb wird Netz können nicht ausgeglichen werden. Wegen der doch kurzen Überbrückungszeit, dem einfachen Netzfilter und dem einfachen Netzstabilisator ist Netzstabilisierung gering. Spannungsschwankungen sind zulässig gegen. Spannungsfilter und Spannungsoptionen können keine ausregende Stabilisierung für Netzstörung.\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "SSID (Service Set Identifier) ist laut IEEE (Institute of Electrical and Electronics Engineers) ein Netzwerkname und wird auch oft als Netzwerkname bezeichnet. Eine SSID ist bis zu 32 Zeichen, oft als Netzwerkname bezeichnet. Eine SSID ist bis zu 32 Zeichen. Die SSID stellt auch sowie Art Broadcastdienste für die Netzwerkteilnehmer.\nFunktaste die:\nMit dem SSID stellt sich auch sowie Art Broadcastdienste für Netzwerk gelten verschiedenen als Clients, die mehrere Netzwerkknoten kann.\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Switch:\n- arbeitet auf Schicht 2 (Layer 2-Switch) im OSI-Referenzmodell\n- verarbeitet Ethernet-Frames nach IEEE 802.3\n- schaltet Ports bis zu 4/5/50 physikalische Ports in einem Gerät\n\nRouter:\n- arbeitet auf Schicht 3 im OSI-Referenzmodell\n- verbindet Netzwerke\n- verarbeitet Protokolle wie OSPF, RIP, IS-IS und BGP\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Netzinteraktive unterbrechungsfreie Stromversorgungen\nUSV-Klasse 2 / Netzinteraktiv ähnlich wie die Standby-USV Funktionsweise. Sie schützen allgemein vor dem Stromnetz und durch Ihrer Spannungsschwankungen ausgleichen. Im Normalbetrieb wird Netzstrom als Versorger genutzt, gleichzeitig wird zwischen 2 bis 4 Millisekunden, die umschalten vom Batteriebetrieb zum Netzbetrieb ist nahezu verzögerungsfrei.\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "SMTPS (Simple Mail Transfer Protocol Secure) bezeichnet E-Mail-Transport via SMTP über SSL/TLS über den Port 465.\nSMTP (Simple Mail Transfer Protocol) ist ein Protokoll für den Empfang und Transport von Transportlösungen sowie Integrität und Vertraulichkeit der übertragenen Nachrichten, wie z.B. E-Mail.\nMAPS (Internet Message Access Protocol) Protokoll welcher mit SSL/TLS über den Port 993 den gesicherten Transportkanal.\nIMAP (Internet Message Access Protocol) Protokoll für den Abruf und Einblicken auf dem Mail-Servern gespeichert und lokal synchronisiert.\n\nPOP3S (Post Office Protocol 3 Secure) ist ein E-Mail-Protokoll um Nachrichten vom dem Posteingang und nutzt eine Verschlüsselung mit Hilfe von SSL/TLS über den Port 995. Im Gegensatz zu IMAP, werden Nachrichten in der Regel nach dem heruntergeladen bzw. anschließend bei Bedarf gelöscht.\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Die Online-USV (USV-Klasse 1) gilt als die teuerste Variante unter den unterbrechungsfreien Stromversorgungen. Durch die unterbrechungsfreien Stromversorgungen. Durch die allgemeine Erzeugung einer Sinusspannung am Ausgang. Als allgemeinen Erzeugung einer Sinusspannung am Ausgang wird der Verbraucher mit 48 Volt und 230 Volt Schwankungen, während die Ausgangsspannung immer einer Sinuskurve entspricht. Ein Netzausgang wird beizuzahlt einen Übergangslosen Übergang auf Batteriebetrieb, während die Ausgangsspannung immer einer Sinuskurve entspricht.\nBei Netzausfall wird ein unterbrechungsfreier Übergang auf Batteriebetrieb realisiert, während die Ausgangsspannung immer 48 Volt und 230 Volt Schwankungen, während die Ausgangsspannung aufgeladen wird.\n\nAntwort",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgabe hat bei IPv4 eine Broadcast-Adresse?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBenennen Sie IPv4-Adressbereiche (IPv4-Address-Types):\n111.179\n10.1.173\n172.16.1\n192.168.10\n0.1\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBeschreiben Sie Bestandteile einer IPv6-Adresse.\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man bei IPv6 unter einer Stateless-Address-Autoconfiguration?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nIn IPv6 Netzwerken ist man bestrebt, den Broadcast zu vermeiden. Welche Konzepte stehen dafür zur Verfügung?\n\n•",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWorin unterscheiden sich die Lichtwellenleiter der Single- und Multimodefasern?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Als Host Bus Adapter (HBA) bezeichnet man eine Netzwerkkarte mit einem oder mehreren Datenbusanschlüssen, die in einem Computer eingebaut wird, um Netzwerkverbindungen (Storage) zu ermöglichen.\n\nDas HBA kann auf dedizierte Bussysteme wie den Bus-Slot (bspw. PCIe, MCA, ISA, SCSI, oder Fibre Channel verwendet, d.h. über angesprochen. Auch NVMe-Varianten gibt es, aber mit PCIe, SCSI, Fibre Channel oder Ethernet mit dem Host-System kommunizieren.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Ein Storage Area Network (SAN) bietet blockbasiertes Speicher an, der das Server direkt genutzten Dateisystem. Über logische Einheiten (LUNs) werden Speicherressourcen zugewiesen.\n\nEin SAN besitzt ein eigenes Dateisystem. Abhängig vom Speichergerät Dateisystem, z. B. beim NFS, und mehrfach zugänglich.\n\nEs existieren verschiedene Technologien: angefangen vom SCSI, Fibre-Channel, ATA oder Ethernet bis zu InfiniBand, um Fehlertoleranz sicherzustellen. Über verschiedene RAID-Level, Festplatten syteme lassen sich verschiedene RAID-Einzel- und Discussion lässt sich. Datenduplikation hat.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Infrastructure as a Service, auch Foundation genannt, ist ein Cloud-Dienst-Modell, bei dem ein Anbieter virtualisierte Ressourcen: gibt Ihnen Zur spezifischen auf laufenden Dienste Ihrer Infrastruktur eines Rechenzentrums selbst.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "[IMAGE: Diagram showing DNS (Domain Name System) with servers and network connections, illustrating how DNS queries are resolved through different server levels]\n\nEine DNS-Abfrage unterscheidet durch sich lösungswege aber je nachdem Richtung die Discovery passiert auf (entweder zwischen wenigen und wenige mal).\n\nEs gibt sie rekursive und iterative.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Public Cloud - ein öffentlicher Rechenzentrur. bietet Zugang zu allgemeinen Ressourcen (Dienste über das Internet die allgemein verfügbar sind).\nPrivate Cloud - eine private Rechenleistung, bleibt ausschließlich für eine Organsiation selbst. Cloud-Computing-Dienste auf privaten Netzwerken.\nHybrid Cloud - eine Rechenzentrum bietet bestimmten Zugang für Cloud-Ressourcen interne und externe Cloud-Ressourcen. Unternehmen nutzen für die Private Cloud-Infrastruktur zusammen mit einem externen Public Cloud.\nCommunity Cloud - wird geteilt von einer Gemeinschaft von Cloud-Nutzern. Es gehört eine Netzgemeinschaft Cloud-Infrastruktur und gemeinsam mehrerer Rechenzentrur, hatten Gemeinschaft und/oder Aufzeichnungen.\n\nWelche gibt es mindestens der oben genannten Cloud-Typen:\n\nMulti Cloud - eine kombination von unterschiedlichen Cloud-Computing-Dienste.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Klasse 1: VI (Voltage and Frequency Independent from mains supply)\nSchutz vor den Folgen eines Stromausfalls, Unterspannung, Überspannung, Frequenzabweichungen und anderen Stromversorgungsstörungen\n\nKlasse 2: VI (Voltage and Frequency Dependent on mains supply)\nSchutz vor den Folgen eines Stromausfalls, mit Unterspannung-folgen\n\nKlasse 3: VFD (Voltage and Frequency Dependent, jedoch mit einer Verzögerung von bis zu 10 Millisekunden)",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\nFrage\n\nWas bezeichnet man als Kick-Off-Meeting?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Informieren und Beraten von Kunden und Kundinnen\n\nNenne die englischen Bezeichnungen der einzelnen Schlösser als\n\n<table><tr><td>Schlösser/Typl</td><td>Bezeichnung Deutsch</td><td>Bezeichnung Englisch</td></tr><tr><td>1</td><td>Einsteckschloss</td><td></td></tr><tr><td>2</td><td>Kastenschloss</td><td></td></tr><tr><td>3</td><td>Vorhängeschloss</td><td></td></tr><tr><td>4</td><td>Zylinderschloss</td><td></td></tr><tr><td>5</td><td>Tresorschloss</td><td></td></tr></table>",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Informieren und Beraten von Kunden und Kundinnen\n\nFrage\n\nWas versteht man unter dem Begriff Cross-Selling?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Informieren und Beraten von Kunden und Kundinnen\n\nErläre man Von-Ohm-Modell (Sachebene, Appell,\nSelbstoffenbarung und Beziehung) die folgenden Aussagen eines\nKunden gegenüber eines Verkäufers/Verkäuferin:\n\n1. Sie können ruhlich lehren\n2. Ich bin mit Ihnen nicht zufrieden\n3. Sie haben nicht pünktlich geliefert\n4. Kommunizieren Sie künftig mit mir genau",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Planen, Vorbereiten und Durchführen von Arbeitsaufgaben\n\nFrage\n\nWas ist ein Gantt-Diagramm?",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Informieren und Beraten von Kunden und Kundinnen\n\nFrage\n\nBeschreibe den Begriff Pre-Sales-Angebot und nenne 3 Beispiele.",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Als Host Bus Adapter (HBA) bezeichnet man eine Netzwerkkarte mit einem Spezialprozessor und Datenpuffer (Storage), um den Prozessor zu entlasten. Es wird verwendet, um Slot (PCI, SCSI, MA iSCSI, MA iSCSI und Fibre Channel verbindet, gilt als primäres Protokoll für das Fibre Channel SAN. Es kommuniziert mittels iSCSI, Fibre Channel und Ethernet mit dem Host-System kommuniziert.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Ein Storage Area Network (SAN) bietet blockbasiertes Speicher, der das Server direkt gemäß dem Dateisystem. Das logische Laufwerk erscheint dem Server wie eine lokale Festplatte.\n\nEin SAN besitzt ein eigenes Dateisystem. Abhängig vom Speichergerät Dateisystem, z. B. beim NFS und mehrfach gemountet werden.\n\nEs existieren verschiedene Technologien: angefangen von SCSI, Fibre-Channel, ATA über Ethernet (bis zu 10 Gbit/s), und iSCSI. Verbindungsaufbau über verschiedene RAID-Level, Fehlertoleranz und Datensicherheit. Über verschiedene Einträge kann die Datenmigration bzw. Datenspeicherung auf Festplatten Toleranz bez. Datenspeicherung hat.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Infrastructure as a Service (auch Foundation genannt) ist ein Cloud-Service-Modell, bei dem ein Cloud-Anbieter virtualisierte Ressourcen, bereitgestellt über das Internet, auf Bedarfsbasis Dienste bereitstellt. Der Nutzer greift auf bereitgestellte Dienste zurück und verwaltet selbst diese eigene Recheninstanzen selbst.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Eine DMZ (Demilitarisierte Zone) trennt durch verschiedene Firewalls ein gesichertes internes Netzwerk von einem externen Netzwerk (z.B. Internet). Sie dient dem Schutz des internen Netzwerks, indem öffentlich zugängliche Dienste (wie Webserver) in der DMZ platziert werden, während Rechner im internen Netzwerk besser geschützt sind. Es gibt einarmige und zweibeinige (img).\n\n[IMAGE: Network diagram showing DMZ architecture with firewall, internal network, DMZ zone with servers, and external internet connection]",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Public Cloud - Als öffentliche Rechnerwolke: bietet Zugang zu abstrahierten IT-Infrastrukturen und Diensten, die dynamisch bereitgestellt werden. Dabei sind Ressourcen und Dienste mehreren Nutzern zugänglich.\nPrivate Cloud - eine private Rechnerwolke bietet ausschließlich für eine Organisation genutzten Cloud-Computing-Ressourcen über das Internet.\nHybrid Cloud - ist eine Kombination aus Public Cloud und Private Cloud oder Community Cloud Dienst, bei der Daten und Anwendungen zwischen ihnen verschoben werden können. Ermöglicht größere Flexibilität.\nCommunity Cloud - ist geteilt von mehreren Organisationen und unterstützt eine spezifische Gemeinschaft.\nMulti Cloud - ist die gleichzeitige Nutzung mehrerer verschiedener Cloud-Computing-Dienste.\n\nWelchem gibt es mindestens vier unterschiedliche Cloud-Typen?\n\nMulti Cloud – es gibt fünf verschiedene Cloud-Computing-Dienste.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Klasse 1: VI (Voltage and Frequency Independent from mains supply)\nSchutz vor den Folgen eines Stromausfalls, Unterspannung, Überspannung, und Frequenzschwankungen. Enthält Kurzzeitige Überspannungen\n\nKlasse 2: VI (Voltage and Frequency Dependent on mains supply)\nSchutz vor den Folgen eines Stromausfalls, Unterspannung, Überspannung\n\nKlasse 3: VFD (Voltage and Frequency Dependent on mains supply)\nSchutz vor den Folgen eines Stromausfalls, jedoch mit einer Verzögerung von bis zu 10 Millisekunden (ms)",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgabe hat bei IPv4 eine Broadcast-Adresse?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBenennen Sie IPv4-Adressbereiche (IPv4-Address-Types):\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nBeschreiben Sie Bestandteile einer IPv4-Adresse.\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man bei IPv6 unter einer Stateless-Address-Autoconfiguration?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nIn IPv6 Netzwerken ist man bestrebt, den Broadcast zu vermeiden. Welche Konzepte lösen dies stattdessen ab?\n\n•",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWorin unterscheiden sich die Lichtwellenleiter der Single- und Multimodefasern?\n\n•••",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne Vor- und Nachteile von Multimodefasern.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Informationen stellt der DHCP-Dienst (Dynamic Host Configuration Protocol) zur Verfügung?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne Vor- und Nachteile von Singlemode-Glasfasern.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgaben hat ein DHCP-Server innerhalb der IT-Infrastruktur?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nKürze bitte die Schreibweise der IPv6-Adresse 2003:00c0:7f:b4d0:\n0000:0000:0000:0001 und definiere Verbindung zu einem Interface-Alias.",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgabe hat das Simple Network Management Protocol (SNMP)?",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgabe hat ein Netzwerk-Router?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nDas Unternehmensnetzwerk 192.168.100.0/24 der Software GmbH soll in 5 gleichgroße Subnetze aufgeteilt werden.\nWie lautet die korrekte Subnetzmaske und wie viele Host-IP-Adressen kann ich zusammen in allen 5 Subnetzen nutzen?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne die Inhalte des Servicemodells PaaS (Platform as a Service).",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas ist eine Broadcast-Domain?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWas versteht man unter dem Begriff Green-IT?",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne die 4 transportorientierten Schichten des OSI-Modells und ordne diese den Aufgaben zu.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWas versteht man im Netzwerkbereich unter dem Quality of\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWelche Aufgaben hat das Domain Name System (DNS) in einer\nWindows Domänenlandschaft bzw. Active Directory?\n●○",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWelche verkürzte Schreibweise der IPv6-Adresse\n0020:0db8:0c07:ab60:0040:0000:0000:0048 ist erlaubt?\n1. 2001:0db8:0c07:ab60:40::48\n2. 2001:0db8:0c07:ab60::40::48\n3. 2001:db8:c07:ab60:40::48\n4. 20:db8:c7:ab60:40:0:0:48",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nBeschreiben typische Merkmale des Client-Server-Modells.\n●",
+      "difficulty": 1
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nBitte vergleiche die Protokolle UDP und TCP miteinander und\n[IMAGE: partially visible table comparing UDP and TCP]\n●●●",
+      "difficulty": 3
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "question",
+      "text": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nFrage\n\nWann kommt ein tagged VLAN (Virtual Local Area Network) zum\nEinsatz?\n●●",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDie Nutzwertanalyse liefert im Allgemeinen eine Entscheidungs-\nhilfe, die eine Punktwertung individuell (im Beispiel die eine\nEntscheidungsfindung bei komplexen Problemen.\n\nServices mehrerer Plattformen, eines Punktwerteverfahrens gibt.\nMittels eines Scoring Modells werden verschiedene\nAnbietern oder Modelle und einzelne Produkte oder\nServices mehrerer Plattformen, eines Punktwerteverfahrens\nhergestellt werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nMithilfe der Dual-Channel-Technik kann der Speichercontroller\nden Prozessor mit einer Art Fastlane für den unbenutzen\n\nDadurch verdoppelt sich die Speicherbandbreite dem\nDurchsatz aufteilen und damit parallel berechnen und dem.\ndie Verbindung die Speichermodule\n\nBeglichen das ist, und eine identische Modulkapazität besteht sowie\npaarweise mithilfe der Technik aktiviert werden.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\n[IMAGE: laptop/computer device]\n\nAllgemein kann einen Thin-Client-Desktop-Präsentation bieten.\nberechnen, welche diese bei einem normalen Computer\ndes vielen Rechenleistung ist einem normalen Computer\n\nDie virtuelle Desktop-Präsentation läuft per Streaming über USB\nund wird direkt damit komprimiert auf der Heutige der\nein vorhandenes Desktop-Präsentations-System läuft. Ihm. Clients\n\nVirtualisierung-Lös kann beschleunigen (im Netzwerk).\nUnternehmen Desktop-Systemen, welche über USB, über Netzwerk\nAudio- und Displaysys.\n\nUnternehmer Clients welche über USB, über Netzwerk\nbeschleunigen. die Konfiguration.\nBenutzerprofil-Präs, die Konfiguration und\nZugriffe auf Verzeichnisse und\ninstallierte Programme werden vom\nDienstserver gesteuert. Thin-\nClients sind ressourcensparend und haben eine\nbegrenzte Leistungsaufnahme.",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nUm den Betriebsergebnis positiv zu verändern, gibt es folgende\nMöglichkeiten:\n\n- Herstellungskosten (Kosten) (Rabatte aushandeln)\n- Verkaufspreise erhöhen (Wettbewerb)\n- Allgemeine Verwaltungskosten minimieren (Gehalt, Einsatz von\nTechnologien)\n- Herstellungskosten senken, Kosten von Günstigem\n\nSchwierig:\n- Marktveränderungen durch Digitalisierung von Social Media\n- Personalkosten reduzieren durch Digitalisierung\n- Fixkosten sinken (z. B. Nutzung von Fahrzeug-Leasing statt\nKauf)\n- Prozesskosten durch Digitalisierung (Buchhaltung/\nProduktivität)",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nDie ABC-Analyse teilt in betriebswirtschaftliche Analyse\nverfahren, die mithilfe bestimmte Konzepte der Gütern in\nKlassen A, B und C einteilt. Dabei wird A Gütern mit den\nAnteilen für Gütern mit einem Unternehmens-Ressourcen, welche\nin Klasse B kommen die Kunden, die durchschnittlich, mit\nden und damit wenig betragen zu Kunden, die Klasse C.\n\nSonstige Umsatzabteilungen lassen sich folgenderweise\nbehandeln.\n\nÄhnlich dem Pareto-Prinzip (80/20 Regel).",
+      "difficulty": 2
+    },
+    {
+      "karteikartenNr": 0,
+      "side": "answer",
+      "text": "Antwort\n\nFolgende Aspekte sind allgemeinen Natur und sollten beim\nmethodischen Support-Bearbeitung zugrundenommen:\n\n- Vermitteln: Support-Protokoll, welches die dem ersten\nkommen\n- Hier die Supportgespräch-Ergebnis\n- Wesentlich ist, dem die Grenzen oder eine Beschwerden\n- Nachfragen mit den R-Fragen (was, wer, wann...)",
+      "difficulty": 2
+    }
+  ],
+  "cards": [
+    {
+      "id": 36,
+      "question": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Aufgaben hat ein DHCP-Server innerhalb des IT-Netzwerks?",
+      "answer": "Das Dynamic Host Configuration Protocol (Eine IPv4-Netzwerkkonfiguration ist\nein automatisches Protokoll zum Konfigurieren von IP-Adressen für Geräte in einem\nNetzwerk. Es übergibt die meisten der wesentlichen Netzwerkkonfigurationsinformationen\nautomatisch, wie z.B. IP-Adresse und DNS-Serverinformationen. BOOTP/RFC 951 (942)\nwar der Vorläufer. DHCP ist stark angewachsen und es wurde ein neuer Standard\nentwickelt: RFC 2131 für IPv4 und RFC 3315 für IPv6, welcher als DHCPv6 bekannt ist.\nDie Adresszuweisung erfolgt über DORA (Discover, Offer, Request und Acknowledge)\n\nZu Autokonfiguration können folgende Daten vergeben werden:\n- IP-Adresse\n- Subnetzmaske / DHCP-Server\n- Default-Gateway\n- DNS und NTS-Server\n- Beliebige DNS-Suchen\n- Proxy und NTP-Optionen mit Websocket Clients\n- Proxy-Autokonfigurationsdatei\n- Zusätzliche Optionen für PXE-Boot",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "question": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nWelche Informationen stellt der DHCP-Dienst (Dynamic Host Configuration Protocol) zur Verfügung?",
+      "answer": "Folgende Informationen werden durch DHCP Dienst zur Verfügung gestellt:\n\n- Einem Gerät wird eine eindeutige IP-Adresse zugewiesen, um es\n  im Netzwerk zu identifizieren\n- Subnetzmaske (teilt dem Gerät mit, welche Teile der aktuellen\n  IP-Adresse gelten)\n- Standard-Gateway (Verbindung des lokalen Netzwerkes mit dem\n  Internet oder anderen Netzwerken; Weiterleitung des IP-Datenverkehrs)\n- DNS-Server (Auflösung von Domainnamen in IP-Adressen; z.B. Browser\n  gibt www.google.ch ein und DNS-Server übersetzt dies in eine\n  IP-Adresse)\n\nWeitere Optionen:\n- TFTP-Server: zum Synchronisieren bei Systemen\n- Hostname: Name des Gerätes, in der das Gerät bekannt ist",
+      "difficulty": 3
+    },
+    {
+      "id": 131,
+      "question": "Beurteilen marktgängiger IT-Systeme und Lösungen\n\nNenne die Vor- und Nachteile der Virtualisierung von Servern und Desktops auch unter Berücksichtigung von Cloudangeboten.",
+      "answer": "Vorteile:\n- Stromersparnis\n- Skalierbarkeit\n- Redundante Systeme (Ausfallsicherheit)\n- Schnellere Server-Provisionierung\n- so gut wie keine Kapazitätsbeschränkungen\n- Nutzung von kostengünstigen Angeboten\n- keine Investitionskosten für Cloud-Betrieb (pay-as-you-go)\n- Lastverteilung über Software\n\nNachteile:\n- nicht jede Lösung ist kostengünstig für den 24/7-Einsatz\n- eventuell höhere Latenzeiten mit zu vielen virtuellen Maschinen pro Host\n- Hardware und Software kann nicht zu 100% selbst administriert werden\n- Datenschutzrichtlinien je immer möglich\n- angebotene Lösungen nicht in allen Regionen erhältlich",
+      "difficulty": 2
+    },
+    {
+      "id": 139,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nZum Starten eines PC-Systems setzt man seit langer Zeit auf das BIOS. Seit 2010 ist das UEFI Standard. Bitte vergleiche BIOS und UEFI (mindestens 4 Punkte).",
+      "answer": "UEFI (Unified Extensible Firmware Interface):\n– kann auch von Laufwerken mit 2,2 TB oder mehr booten\n– grafische Benutzeroberfläche mit Mausbedienung\n– unterstützt 64-Bit-Prozessoren nativ ab Werk\n– Treiber lassen sich als Modul nachladen\n– nutzt GPT-Partitionierungsschema\n– kann von VM-Container starten\n\nBIOS (Basic Input Output System):\n– keine Mausbedienung möglich\n– kann nur vom Master-Boot-Record starten\n– kann nur von Laufwerken bis 2 TB booten",
+      "difficulty": 3
+    },
+    {
+      "id": 141,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWie kann ich mit Hilfe von Kommandozeilen-Werkzeugen in einer windowsbasierten IT-Landschaft die Namensauflösung überprüfen?\n\n●○",
+      "answer": "Eingabeaufforderung (CMD):\n- ping -a\n- nslookup\n- tracert\n\nPowerShell:\n- Resolve-DnsName",
+      "difficulty": 1
+    },
+    {
+      "id": 143,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nNenne die 4 Features, die verhindern, dass während des Startvorgangs von Windows 10 Schadsoftware wie Rootkits und Bootkits geladen werden können.\n\n●●●",
+      "answer": "1. Sicherer Start\nComputer mit einer UEFI-Firmware und einem Trusted Platform Module (TPM) können so konfiguriert werden, dass nur vertrauenswürdige Betriebssystem-Startprogramme geladen werden.\n\n2. Vertrauenswürdiger Start\nWindows überprüft während des Startvorgangs die Integrität jeder Komponente, bevor diese in den Arbeitsspeicher geladen wird.\n\n3. Antischadensoftware-Frühstart (Early Launch Antimalware, ELAM)\nMit der ELAM werden alle Treiber vor der Laden gesetzt, um zu verhindern, dass nicht zertifizierte oder genehmigte Treiber mit dem Betriebssystem geladen werden.\n\n4. Kontrollierter Start\nDie Firmware des PCs protokolliert den Startvorgang, und Windows kann die Informationen an einen vertrauenswürdigen Server senden, der die Integrität des PCs objektiv prüfen und bewerten kann.",
+      "difficulty": 3
+    },
+    {
+      "id": 144,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nErläutere den Unterschied zwischen Partitionierung und Formatierung eines Datenträgers.\n\n●●●",
+      "answer": "Die Partitionierung eines Datenträgers ist die physische und logische Einteilung des Speichermediums in Volumes, welche zusammenhängende sowie aufeinanderfolgende Datenblöcke logisch zusammenfasst.\n\nDie Formatierung eines Datenträgers ist die logische Einteilung der Partitionsstruktur mit einem Dateisystem, wie zum Beispiel NTFS, Ext4 oder Btrfs durch das Betriebssystem selbst oder durch eine entsprechende Software.",
+      "difficulty": 3
+    },
+    {
+      "id": 145,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWas versteht man unter einem Service-Tag oder Asset-Tag?\n\n●●",
+      "answer": "Asset-Tags oder Service-Tags identifizieren Geräte mit einer eindeutigen Seriennummer oder einem Bar- oder QR-Code. Asset-Tags oder Service-Tags sind in der Regel Etiketten mit einer selbstklebenden Rückseite. Diese Tags werden zur Bestandskontrolle, Inventarisierung und zur Nachverfolgung der Hardware benutzt.",
+      "difficulty": 2
+    },
+    {
+      "id": 152,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFrage\n\nWelche Vor- und Nachteile hat ein Notebook?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "answer": "Vorteile:\n– netzunabhängiges Arbeiten möglich durch Akku\n– Netzwerkzugriff mithilfe von WWAN/WLAN Modulen\n– integrierte Tastatur, Touchpad (Maus)\n– bei stationärer Nutzung wenig Stellfläche notwendig\n– geringer Stromverbrauch als Desktop-PCs\n– arbeiten in der Regel leiser als ein PC\n– durch Dockingstation erweiterbar\n\nNachteile:\n– hohes Gewicht gegenüber Tablet oder Netbook\n– proprietäres Netzteil\n– geringe Festplattenspeicherkapazitäten\n– technische Aufrüstung ist oft umständlich oder gar nicht möglich\n– Display ist kleiner als beim Desktop-Gerät\n– oftmals kein separater Ziffernblock auf der Tastatur verfügbar",
+      "difficulty": 2
+    },
+    {
+      "id": 153,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFrage\n\nWelcher digitale Anschluss ist auf dem Bild zu erkennen?\n\n[IMAGE: digital cable/connector]\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "answer": "DisplayPort: Eine genormte, universelle und lizenzfreie digitale Verbindungsschnittstelle für Bild- und Tonübertragung.\n\nAuf dem Bild sind der klassische DisplayPort Steckverbinder und der Mini-DisplayPort Steckverbinder zu sehen.\n\n[IMAGE: DisplayPort and Mini-DisplayPort connectors]",
+      "difficulty": 1
+    },
+    {
+      "id": 154,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFrage\n\nWelche Hard- und Softwareanforderungen werden an einen Dateiserver im Unternehmen gestellt?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "answer": "Die folgenden Anforderungen werden an einen Dateiserver gestellt:\n– redundantes Netzteil\n– redundanter Netzwerkzugriff\n– redundantes Plattensystem (RAID-Verbund)\n– granulares Dateiberechtigungssystem\n– Zusammenarbeit auf Dateiebene ohne Versionskonflikte\n– Zulassung von Ordner Freigaben (SMB/NFS)\n– geringe Latenz (Netzwerk)\n– geringe Zugriffszeiten auf das Dateisystem\n– Absicherung des Dateibestands durch Backup oder Snapshots\n– Möglichkeit des Fernzugriffs via WebDAV, oder (S)FTP\n– dynamische Speicherplatzanpassung",
+      "difficulty": 3
+    },
+    {
+      "id": 155,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFrage\n\nErläutere die Unterschiede zwischen ADSL, VDSL und SDSL?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "answer": "ADSL (Asymmetric Digital Subscriber Line):\nADSL ist die am meisten genutzte Technik, um sich mit einem Internetanbieter zu verbinden. Bei dieser Technik sind die Upload- und Downloadgeschwindigkeiten unterschiedlich. Das bedeutet, dass die Downloadgeschwindigkeit immer höher ist als die Uploadgeschwindigkeit.\n\nVDSL (Very High Speed Digital Subscriber Line):\nVDSL ist die aktuell angebotene Technik, um sich mit einem Internetanbieter zu verbinden. Wie bei ADSL sind die Upload- und Downloadgeschwindigkeiten unterschiedlich. Auch hier ist die Downloadgeschwindigkeit immer höher als die Uploadgeschwindigkeit.\n\nSDSL (Symmetric Digital Subscriber Line):\nSDSL ist eine Technik, bei der die Upload- und Downloadgeschwindigkeiten gleich sind. SDSL wird verwendet, wenn Daten in Echtzeit übertragen werden müssen, wie zum Beispiel bei Videoübertragungen oder bei der VoIP-Telefonie.",
+      "difficulty": 2
+    },
+    {
+      "id": 156,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFrage\n\nBerechne die Zeit für den Download einer 2 GiB großen Datei über eine 50 Mbit/s ADSL Verbindung.\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "answer": "Gegebene Werte:\n2 GiB Dateigröße\n50 Mbit/s ADSL\n\nRechenweg:\n2 GiB * 1.024 = 2.048 GiB\n2.048 * 1.024 = 2.097.152 MiB\n2.097.152 * 1.024 = 2.147.483.648 Byte\n2.147.483.648 Byte * 8 = 17.179.869.184 Bit\n17.179.869.184 Bit / 50.000.000 Bit/s = 343,59738368 Sekunden\n\nLösung:\n343,59738368 Sekunden / 60 = 5,7266 Minuten\n≈ 5 Minuten und 44 Sekunden",
+      "difficulty": 3
+    },
+    {
+      "id": 157,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nFrage\n\nWorauf sollte man bei der Beschaffung von IT-Hardware achten?\n\nIT-Berufe · René Neumann                © 2025 u-form Verlag",
+      "answer": "Die folgenden Kriterien sind bei der Beschaffung von Hardware zu beachten:\n– Langlebigkeit der Hardware (min. 5 Jahre Support vom Hersteller)\n– Skalierbarkeit auf Basis vorhandener Hardware\n– kostengünstiger Support\n– geringer Stromverbrauch und geringe Abwärme\n– umweltfreundliches Produkt\n– remote Management\n– leicht austauschbar\n– schnelle Ersatzbeschaffung",
+      "difficulty": 3
+    },
+    {
+      "id": 168,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelche 3 VPN Verbindungsarten gibt es?\n\n●●○\n\nIT-Berufe · René Neumann",
+      "answer": "1. End-to-Site-VPN: Richtig sind auch die Bezeichnungen Host-to-LAN-VPN, Host-to-Gateway-VPN oder Remote-Access-VPN\n\n2. Site-to-Site-VPN: Richtig sind auch die Bezeichnungen LAN-to-LAN-VPN oder Gateway-to-Gateway-VPN\n\n3. End-to-End-VPN: Richtig sind auch die Bezeichnungen Host-to-Host-VPN oder Remote-Desktop-VPN",
+      "difficulty": 2
+    },
+    {
+      "id": 169,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelche Merkmale hat ein Virtual Private Network (VPN)?\n\n●●○\n\nIT-Berufe · René Neumann",
+      "answer": "Ein Virtual Private Network, deutsch virtuelles privates Netzwerk, ist ein logisches Netzwerk, welches eine geschützte Netzwerkverbindung unter Nutzung öffentlicher Netzwerke herstellt. Mit Hilfe von Verschlüsselungstechnologien soll über eine VPN-Verbindung die Authentizität, die Vertraulichkeit und die Integrität der Daten sichergestellt werden.\n\nUm die Datensicherheit zu gewährleisten, gibt es eine Reihe von Protokollen und Lösungen wie L2TP over IPsec, SSL-VPN, OpenVPN und Layer-2-VPN. Das Virtual Private Network wird grundsätzlich in 3 Verbindungsarten (End-to-Site, Site-to-Site und End-to-End) unterteilt.",
+      "difficulty": 2
+    },
+    {
+      "id": 170,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nBeim Einsatz eines WLANs im Unternehmen ist besondere Sorgfalt auf die Einhaltung der Datensicherheit zu legen.\n\nWelche Sicherheitsmethoden und Verschlüsselungsstandards können zum Einsatz kommen?\n\n●●●",
+      "answer": "Sicherheitsmethoden:\n– WPA (gilt als unsicher)\n– WPA2-Personal/Enterprise\n– WPA3-Personal/Enterprise mit Radius\n\nVerschlüsselungsstandards:\n– Advanced Encryption Standard (AES)\n– Temporal Key Integrity Protocol (TKIP)\n– Simultaneous Authentication of Equals (SAE)",
+      "difficulty": 3
+    },
+    {
+      "id": 171,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelches Befehlszeilenkommando wurde im Bild ausgeführt?\nErläutere die Funktion des Protokolls.\n\n●○○\n\n[IMAGE: Terminal/command line output showing network-related data with IP addresses and statistics]",
+      "answer": "Es handelt sich um das Address Resolution Protocol (ARP), welches ein Netzwerkprotokoll ist, das zu einer Netzwerkadresse (OSI-Modell Schicht 3) die physische Adresse (MAC-Adresse) des Netzwerkinterfaces (OSI-Modell Schicht 2) ermittelt und diese Zuordnung in sogenannten ARP-Cache ablegt und zwischenspeichert.\n\n[IMAGE: terminal output showing ARP command results]",
+      "difficulty": 1
+    },
+    {
+      "id": 172,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelche Vorteile ergeben sich durch den Einsatz eines Virtual Local Area Networks (VLAN)?\n\n●●●",
+      "answer": "In einem VLAN können folgende Vorteile genutzt werden:\n– physikalische Netztopologie kann in logische Gruppen unterteilt werden\n– Priorisierungen des Datenverkehrs sind möglich\n– eine bessere Lastverteilung ist möglich\n– Unterteilung in Broadcastdomänen, dadurch weniger Kollisionsbereiche\n– flexiblere Anpassung von Gruppenzugriffsrechten\n– Trennung des Datenverkehrs nach spezifischen Anwendungen",
+      "difficulty": 3
+    },
+    {
+      "id": 173,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelches Befehlszeilenkommando wurde hier ausgeführt?\n\n●○○\n\n[IMAGE: Terminal/command line output showing traceroute/tracert results with IP addresses and hop times]",
+      "answer": "Es handelt sich um den Befehl tracert.\n\n[IMAGE: terminal output showing tracert command results]",
+      "difficulty": 1
+    },
+    {
+      "id": 174,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelches Befehlszeilenkommando wurde hier ausgeführt?\n\n●○○\n\n[IMAGE: Terminal/command line output showing DNS lookup results including Server: Fritz.Box, Address: 192.168.0.1, Name and Address fields showing 192.168.0.258]",
+      "answer": "Es handelt sich um den Befehl nslookup.\n\n[IMAGE: terminal output showing nslookup command results with entries for StandardServer: Fritz.Box, Address: 192.168.0.1, Server: Fritz.Box, Address: 192.168.0.1, Name: Skylinux.Fritz.Box, Address: 192.168.0.250]",
+      "difficulty": 1
+    },
+    {
+      "id": 188,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nWelche allgemeinen Anforderungen werden an ein Datenbanksystem gestellt?\n•••",
+      "answer": "Folgende allgemeine Anforderungen an ein Datenbanksystem sind:\n– Datenunabhängigkeit\n– Effizienter Speicherzugriff\n– Paralleler Datenzugriff\n– Datenkonsistenz\n– Gemeinsame Datenbasis\n– Datenintegrität\n– Datensicherheit\n– Wiederherstellungsverfahren\n– Abfragesprache\n– Keine/kontrollierte Redundanz",
+      "difficulty": 3
+    },
+    {
+      "id": 189,
+      "question": "Entwickeln, Erstellen und Betreuen von IT-Lösungen\n\nDie Normalisierung eines Datenbankschemas ist wichtiger Bestandteil des Datenbank Designs. Nenne die ersten drei Normalformen und deren Zweck.\n••○",
+      "answer": "Allgemein dient die Normalisierung der Verhinderung von Datenredundanzen.\n\nFolgende 3 Normalformen gibt es:\n\nDie Erste Normalform (1NF) ist dann erfüllt, wenn alle Informationen in einer Tabelle atomar vorliegen.\n\nDie Zweite Normalform (2NF) liegt dann vor, wenn die Tabelle in der ersten Normalform ist und jedes Nichtschlüsselattribut von jedem Schlüsselkandidaten voll funktional abhängig ist.\n\nDie Dritte Normalform (3NF) gilt als erfüllt, wenn er sich bereits in der zweiten Normalform (2NF) befindet und kein Nichtschlüsselattribut transitiv von einem Kandidatenschlüssel abhängt.",
+      "difficulty": 2
+    },
+    {
+      "id": 200,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWas bedeutet der Begriff MFA (Multi-Factor-Authentication) und wo kommt sie zum Einsatz?\n\n●○○",
+      "answer": "Die Multi-Factor-Authentication (MFA) ist eine erweiterte Form der Zugangsberechtigung, die durch mehrere unabhängige Merkmale (Faktoren) überprüft wird und erst nach Eingabe eines starken Passworts sowie der Eingabe einer Nummer (via SMS oder App) oder einer Zertifikatsdatei erteilt wird.\n\nEinsatzbereiche sind:\n– Online-Banking\n– Debit- oder Kreditkartenzahlung\n– Online-Ausweisfunktion des Personalausweises\n– Absicherung jeglicher öffentlich zugänglicher Onlinezugänge",
+      "difficulty": 1
+    },
+    {
+      "id": 201,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nBeschreibe den Begriff Datensicherheit und nenne deren Schutzziele.\n\n●●○",
+      "answer": "Datensicherheit, oftmals auch Informationssicherheit genannt, beinhaltet alle technischen und nicht-technischen Maßnahmen zur Sicherstellung der 3 Schutzziele Vertraulichkeit, Verfügbarkeit und Integrität.\n\nEin weiteres Schutzziel ist noch die Authentizität. Hier geht es um die Eigenschaften der Echtheit, Überprüfbarkeit und Vertrauenswürdigkeit eines Objekts.\n\nDatensicherheit oder Informationssicherheit unterscheidet sich nicht nach Art der Daten (siehe Datenschutz, wo es um personenbezogene Daten geht).\nEs geht hier in erster Linie um den Schutz vor Gefahren/Bedrohungen bzw. der Vermeidung von wirtschaftlichen Schäden sowie die Minimierung von Risiken im IT-Bereich.",
+      "difficulty": 2
+    },
+    {
+      "id": 212,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWelche Anwendungen oder Verfahren verwenden kryptografische Hashfunktionen?",
+      "answer": "Antwort\n\nBei folgenden Anwendungen oder Verfahren kommt es zum Einsatz von Kryptografischen Hashfunktionen:\n– Integritätsprüfungen\n– Erzeugung von Prüfsummen\n– Erzeugung von Sitzungsschlüsseln\n– Generatoren für Einmal-Passwörter\n– Verfahren zur Authentifizierung mit digitalen Signaturen\n– Speichern von Passwörtern",
+      "difficulty": 2
+    },
+    {
+      "id": 213,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nNenne Einsatzbereiche und Verfahren von symmetrischen Schlüsseln.",
+      "answer": "Antwort\n\n<table><tr><th>Einsatzbereich</th><th>Verfahren</th></tr><tr><td>– Wireless LAN (WPA2)\n– WiMAX\n– SSH\n– IPsec\n– Secure Real-Time Transport\n– Wireless LAN\n– VPN-Software, z.B. OpenVPN</td><td>– AES (Advanced Encryption Standard)\n– Triple-DES\n– Blowfish\n– SHA2 (Secure Hash Algorithm 2)</td></tr><tr><td>– Wireless LAN (WPA3)</td><td></td></tr></table>",
+      "difficulty": 2
+    },
+    {
+      "id": 215,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nEräutere den Unterschied zwischen einem differentiellen und inkrementellen Backup.",
+      "answer": "Antwort\n\nDifferentielles Backup\nEin differentielles Backup ist eine Datensicherungsform bei der, ausgehend von einem vollständigen Backup, alle Dateien kopiert werden, die seit dem letzten vollständigen Backup verändert wurden oder neu hinzugekommen sind.\nBeim vollständigen Wiederherstellen der Daten benötigt man zuerst das letzte Vollbackup und danach das letzte differentielle Backup.\n\nInkrementelles Backup\nEin inkrementelles Backup ist eine Datensicherungsform bei der, ausgehend von einem vollständigen Backup, nur die Dateien gesichert werden, die seit dem letzten inkrementierten Sicherung verändert wurden oder neu hinzugekommen sind. Beim vollständigen Wiederherstellen der Daten benötigt man zunächst das letzte Vollbackup und danach alle weiteren nötigen inkrementellen Backups in der Reihenfolge die jeweiligen inkrementiellen Backups.",
+      "difficulty": 2
+    },
+    {
+      "id": 216,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWie gestaltet sich ein vollständiger Backup-Plan nach dem Großvater-Vater-Sohn-Prinzip?",
+      "answer": "Antwort\n\nBeim Großvater-Vater-Sohn-Prinzip geht es um ein Rotationsschema zur Datensicherung auf Speichermedien.\nIm Rahmen einer 5-Tage Woche kommen dabei 20 Speichermedien zum Einsatz.\n4x Sohn-Medien → tägliche Datensicherung (inkrementelles Backup)\n4x Vater-Medien → wöchentliche Datensicherung (inkrementelles Backup)\n12x Großvater-Medien → monatliche Datensicherung (Vollbackup)",
+      "difficulty": 2
+    },
+    {
+      "id": 218,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\n●●●\n○\n\nIn der datenverarbeitenden Industrie kommt dem Datenschutz große Bedeutung zu.\nWelchem Zweck dient das IT-Sicherheitsmanagement?",
+      "answer": "Das IT-Sicherheitsmanagement beschreibt den permanenten Prozess innerhalb einer Unternehmung oder Organisation zur Gewährleistung der IT-Sicherheit und des Datenschutzes. Es sollen Gefahren oder Bedrohungen für die Informationssicherheit sowie den Datenschutz eines Unternehmens oder einer Organisation verhindert oder abgewehrt werden.",
+      "difficulty": 3
+    },
+    {
+      "id": 219,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\n●●\n○\n\nWelche Kriterien muss eine sichere Passwortrichtlinie erfüllen?",
+      "answer": "Zur Absicherung der Daten bzw. zur Absicherung der Zugriffe auf IT-gestützte Systeme muss eine sichere Passwortrichtlinie folgende Kriterien erfüllen:\n– Mindestlänge des Passworts, z.B. 10-15 Zeichen\n– Das Passwort muss aus mindestens einem Groß- und Kleinbuchstaben, einer Sonderzeichen und einer Ziffer bestehen, z.B. 4+0kJFr10o0\n– Das Passwort sollte keine Datumsstände im Passwort enthalten sein, wie z.B. marc/2012\n– Passwortänderung alle 30-90 Tage sollten\n– Das wiederholte Benutzen von alten Passwörtern ist eingeschränkt.\n– Loginversuche werden auf maximal 3 Versuche innerhalb einer Minute begrenzt\n– Es wird optional eine MFA Multi-Factor Authentication angeboten\n– Als möglichst sicheres als zulässig, wird das Zugangsporno für das Konto gesperrt\n– Wörter aus dem Duden oder ähnlichen Werken sind nicht zugelassen",
+      "difficulty": 2
+    },
+    {
+      "id": 221,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\n●●\n○\n\nBenenne je 2 Vor- und Nachteile des Sicherheitstyps WPA2-Personal und WPA2-Enterprise.",
+      "answer": "<table><tr><td>Sicherheitstyp</td><td>Vorteile</td><td>Nachteile</td></tr><tr><td>WPA2-Personal (PSK)</td><td>– leicht zu implementieren\n– selbst einfacher Sicherheitstyp in Geräten</td><td>– Passwortwechsel wird bei größeren Unternehmen da das Passwort häufig bekannt ist\n– große Anzahl von Geräten beim Arbeitnehmer</td></tr><tr><td>WPA2-Enterprise</td><td>– Einsatz in großen Unternehmen und Geräte sehr einfach\n– Wechsel der Passwörter da zentral verwaltet</td><td>– Einsatz von technischem oder Arbeitsaufwändiger\n– Servers notwendig, sowie einen RADIUS Servers notwendig.</td></tr></table>",
+      "difficulty": 2
+    },
+    {
+      "id": 223,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWelche Bedingungen muss ein ergonomischer PC-Arbeitsplatz erfüllen?\n\n●●\n○",
+      "answer": "Antwort\n\nAllgemeine Ergonomie-Richtlinien sind in der Richtlinie 90/270/EWG\ngeregelt. Diese Richtlinie enthält Mindestvorschriften bezüglich der Arbeit an\nBildschirmgeräten.\nFolgende Bedingungen müssen sich ergonomisch auf die Arbeitnehmer beziehen:\n– die Messe müssen eine Monitor so ergonomisch PC-Arbeitsplatz erfüllen:\n– Der Bildschirmabstand von 50 cm zum Bildschirm ist zu gewährleisten\n– Der Bildschirm soll eingerichtet sein, dass er frei von störenden\nReflexionen und Blendungen ist.\n– Arbeitstische und Stühle müssen sich an die Körpergröße anpassen lassen.\n– Ein Winkel von 90° zwischen Ober- und Unterarm sowie Ober- und\nUnterschenkel ist optimal.\n– Eine natürliche Körperhaltung muss für die Beine.\n– Genügend Bewegungsspielraum für die Beine.\n– Eine weitere gen Bestimmungen der Arbeitsstättenverordnung\n(ArbStättV).",
+      "difficulty": 2
+    },
+    {
+      "id": 224,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWelche Aussagen trifft die Arbeitsstättenverordnung (ArbStättV) in Bezug auf Bildschirm und Tastatur?\n\n●●●",
+      "answer": "Antwort\n\nDie Arbeitsstättenverordnung (ArbStättV) enthält im Anhang wesentliche\nRegelungen zum Einrichten eines Bildschirmarbeitsplatzes.\nInsbesondere folgende Punkte sind dabei zu beachten:\n– Die Zeichen auf dem Bildschirm müssen scharf, deutlich und ausreichend\ngroß dargestellt sein.\n– Das Bild muss stabil, flimmerfrei und ohne verzerrungen dargestellt\nwerden. Damit sind die Kontrast des Bildschirms müssen einstellbar sein.\n– Der Bildschirmabstand muss so angepasste sein, dass er frei von\nstörenden Reflektionen und Blendungen ist.\n– Das Bildschirm-angezeige muss so angepasste sein, damit\neine ergonomische Anpassung der Arbeit möglich sein.\n– Die Tastatur muss vom Bildschirmgerät getrennt und neigbar sein, damit\neine ergonomische Anpassung der Arbeit möglich sein.\n– Die PC-Tastatur muss eine reflexionsarme Oberfläche besitzen.\n– Die Tastenoberfläche muss sich von Untergrund und deutlich abheben und\ndie Tastenbezeichnung muss sich von Untergrund und deutlich lesbar sein.",
+      "difficulty": 3
+    },
+    {
+      "id": 225,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWas ist der PDCA-Zyklus und aus welchen Schritten besteht er?\n\n●●○",
+      "answer": "Antwort\n\nEs handelt sich um eine Vorgehensweise im kontinuierlichen\nVerbesserungsprozess im Qualitätsmanagement.\nFolgende Schritte gehören zum PDCA-Zyklus:\n– PLAN (Analyse/Plane/Ziele formulieren)\n– DO (Tun/Durchführen)\n– CHECK (Überprüfen/Soll-Ist-Vergleich)\n– ACT (Aktion/Reagieren/Verbessern)",
+      "difficulty": 2
+    },
+    {
+      "id": 226,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nBeschreibe die fünf Punkte der SMART-Methode im Projektmanagement.\n\n●●\n○",
+      "answer": "Antwort\n\nIn Projektmanagement wird die SMART-Methode eingesetzt, um\nZielsetzungen des Projekts zu definieren.\nFolgende Bestandteile sind zu definieren:\nS pezifisch: Die Projektziele sind so konkret wie möglich zu\nformulieren.\nM essbar: Die Projektziele müssen auch messbar sein.\nA ktuierend / A ttraktiv: Projektziele müssen auch Motivation zur\nUmsetzung machen.\nR ealistisch: Die Projektziele müssen innerhalb des gesetzten\nZeitrahmens auch umsetzbar sein.\nT erminiert: Die Projektziele müssen zeitlich bindend sein.\nWelche Aufgaben sind bis wann zu erledigen?",
+      "difficulty": 2
+    },
+    {
+      "id": 227,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nWelche Maßnahmen im Unternehmen haben einen positiven Effekt auf die Arbeitsqualität?\n\n●\n○○",
+      "answer": "Antwort\n\nUm die Arbeitsqualität und Mitarbeiterzufriedenheit im\nUnternehmen zu erhöhen, sind folgende Maßnahmen hilfreich:\n– Einsatz flexibler Arbeitszeitmodelle\n– Ermöglichen von Homeoffice\n– Weiterbildungs- und Fortbildungsmöglichkeiten anbieten\n– variable Zusatzvergütung für das Erreichen von vereinbarten\nZielen\n– Gewinnbeteiligung am Erfolg des Unternehmens\n– Altersteilzeitangebote für ältere Arbeitnehmer",
+      "difficulty": 1
+    },
+    {
+      "id": 228,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nMit welchen Maßnahmen kann man im Unternehmen die Produktqualität entscheidend verbessern?\n\n●●\n○",
+      "answer": "Antwort\n\nFolgende Maßnahmen können zur Verbesserung der\nProduktqualität beitragen:\n– Einführung einer permanenten Qualitätssicherung, um\ngleichbleibend hohe Qualität der Produkte zu gewährleisten\n– wiederkehrende Kundenbefragungen zur Qualität der\nProdukte\n– Produktionsprozesse kontinuierlich verbessern\n– Mitarbeiterschulungen zum Thema Produktqualität anbieten\n– qualitativ hochwertige Ausgangsmaterialien nutzen\n– Prozessfehler ermitteln und für Abhilfe sorgen",
+      "difficulty": 2
+    },
+    {
+      "id": 229,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\nWelches sind die allgemeinen Kriterien einer Schutzbedarfsanalyse von IT-Systemen?\n●●○",
+      "answer": "Folgende Kriterien sind für eine Schutzbedarfsanalyse wichtig:\n– Wie hoch ist das Risiko, dass die IT-Infrastrukturen angegriffen werden?\n– Welche Objekte müssen in der IT-Infrastruktur besonders abgesichert werden?\n– Welchen konkreten Bedrohungsszenarien ist die IT-Infrastruktur ausgesetzt?\n– Welche Maßnahmen sind geeignet, die IT-Infrastruktur gegen interne und externe Bedrohungen zu schützen?\n– Wie hoch ist das aktuelle Gefährdungspotenzial?\n– Wie groß sind mögliche Schäden durch Angriffe auf produktive IT-Infrastrukturen?\n– Wie sieht die Kosten-Nutzen Betrachtung bzw. Risikoberechnung aus?",
+      "difficulty": 2
+    },
+    {
+      "id": 232,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\nWelche Maßnahmen sind geeignet, um Schäden an der IT-Infrastruktur zu vermeiden bzw. die Sicherheit der IT-Systeme zu erhöhen?\n●●○",
+      "answer": "Die folgenden Maßnahmen sind geeignet, potenzielle Schäden an der IT-Infrastruktur zu vermeiden:\n– Datenverschlüsselung der Datenträger\n– Konzept für Netzwerksegmentierung im Unternehmen,\nEinsatz von VLANs\n– mehrstufiges Firewallkonzept sowie Regeln für die Endpoint-Security auf den Clientsystemen\n– Rechtekonzept für Mitarbeitende und Administratoren\n– regelmäßiges Patchen der IT-Systeme\n– permanentes Logging und Auditing (Penetrationstest, kurz: Pentest)\n– Einsatz einer Passwortrichtlinie sowie einer Multi-Factor-Authentication\n– Verfahrensanweisung oder Vier-Augen-Prinzip\n– regelmäßige Schulungen der Mitarbeitenden, um das Bewusstsein zu erhöhen bzw. Bedrohungen zu erkennen",
+      "difficulty": 2
+    },
+    {
+      "id": 234,
+      "question": "IT-Sicherheit und Datenschutz, Ergonomie\n\nFrage\n\nWelche Themen sind für einen TÜV geprüften IT-Sicherheitsbeauftragten für die IT-Sicherheit im Unternehmen von Bedeutung?\n●●○",
+      "answer": "Als TÜV geprüfter IT-Sicherheitsbeauftragter (Information Security-Officer) sind folgende Themen für die IT-Sicherheit in Unternehmen von Bedeutung:\n– Informationssicherheit und\nInformationssicherheitsmanagement\n– IS-Management-System nach ISO 27001\n– IS-Management-System nach BSI IT-Grundschutz\n– Konzepte der Informationssicherheit\n– Aktuelle Themenfelder und Konzepte im Hinblick der Informationssicherheit\n– Sicherheitsmaßnahmen/Konzepte im Hinblick auf Systemsicherheit und Anwendungssicherheit,\nSicherheit auf Basis, Netzwerksicherheit,\nSystemsicherheit und Anwendungssicherheit",
+      "difficulty": 2
+    },
+    {
+      "id": 240,
+      "question": "Auftragsabschluss und Leistungserbringung\n\nFrage\n\n●\n○○\n\nNenne die wesentlichen Bestandteile eines Kaufvertrags.",
+      "answer": "Antwort\n\nIn einem Kaufvertrag können abweichend der Regelungen des\nBürgerlichen Gesetzbuches (BGB) oder des Handelsgesetzbuches\n(HGB) verschiedene mittels vertraglich festgelegt werden.\nGrundsätzlich sind in §§ 433 bis 453 BGB Allgemeine Vorschriften\nzum Kaufvertrag (Dinge) geregelt wie:\n– Vertragstypische Pflichten beim Kaufvertrag, z. B.\n   Eigentumsübertragung, Zahlung des Kaufpreises\n– Rechte des Käufers bei Mängeln, z. B. Nacherfüllung,\n   Minderung\n– Garantie, z. B. Garantiedauer über der gesetzlichen\n   Mängelhaftung (Gewährleistung)\n– Haftungsausschluss, z. B. Ausschließung bestimmter\n   Sacheigenschaften",
+      "difficulty": 1
+    },
+    {
+      "id": 242,
+      "question": "Auftragsabschluss und Leistungserbringung\n\nWelche Vertragsbestandteile sollten in einem Vertrag zur Softwarestellung geregelt sein?",
+      "answer": "Antwort\n\nIn einem Vertrag zur Softwareerstellung sollten beispielsweise folgende Inhalte geregelt sein:\n- Vertragsgegenstand (Lastenheft)\n- Entwicklung und Herstellung (Pflichtenheft)\n- Qualitätsstandard\n- Fertigstellungstermin\n- Nutzungsrechte\n- Haftung\n- Abnahme\n- Vergütung",
+      "difficulty": 3
+    },
+    {
+      "id": 243,
+      "question": "Auftragsabschluss und Leistungserbringung\n\nWelche Bestandteile hat in der Regel ein IT-Servicevertrag?",
+      "answer": "Antwort\n\nIT-Serviceverträge werden individuell zwischen dem Auftraggeber und dem Kunden geschlossen. Sie enthalten in der Regel folgende Angaben:\n- Einsatzzeiten, z. B. Mo - Fr in der Zeit 08:00 - 16:00 Uhr\n- Erreichbarkeit des Ansprechpartners, z. B. Mobilfunknummer\n- Klärung der Mitwirkung des Kunden, Hinweise zur Systeme Standard\n- Informationen zur Erbringung der Dienstleistungen und\n- Angaben zum Vertragsgegenstand, z. B. Anzahl der IT-\n- Angaben zur Mangelgewährleistung\n- Informationen zum Datenschutz und zur Datensicherheit\n- Regelungen zur Haftung bei Datenverlust\n- Höhe der Vergütungen\n- Laufzeiten und Kündigung des IT-Servicevertrages\n- Informationen zu Nebenreden\n- Salvatorische Klausel",
+      "difficulty": 2
+    },
+    {
+      "id": 245,
+      "question": "Auftragsabschluss und Leistungserbringung\n\nWelches sind die ökonomischen Ziele eines Unternehmens?",
+      "answer": "Antwort\n\nDie Ertragsziele, die Marktziele sowie die Leistungsziele zählen zu den Ertragszielen ökonomischen Zielen eines Unternehmens.\nGewinn und Kapital zusammenhängt.\nZu den Ertragszielen zählt alles, was mit den Begriff Umsatz,\n\nMarktziele definiert der Unternehmer selbst, indem er festlegt, welchen gewünschten Marktanteile er haben möchte bzw. welche Steigerung des Marktanteils er für sich in Aussicht stellt.\n\nAls Leistungsziel werden gewisse Qualitätsstandards sowie die Sicherstellung der Arbeitsplätze definiert.",
+      "difficulty": 2
+    },
+    {
+      "id": 246,
+      "question": "Auftragsabschluss und Leistungserbringung\n\nUnterscheide die 3 Cloud-Computing Begriffe IaaS, SaaS und PaaS.",
+      "answer": "Antwort\n\nBeim Cloud-Computing unterscheidet man drei Cloud-Service-Ebenen, die wie bei einer Pyramide aufeinander aufbauen:\nInfrastructure as a Service (IaaS) ist im Wesentlichen der Ersatz für traditionelle Rechenzentren.\nPlatform as a Service (PaaS) beschreibt eine Architektur, in der die Form bereitgestellt werden.\nSoftware as a Service (SaaS) beschreibt ein Konzept, bei dem Software nicht länger als Lizenzen an einen Benutzer verkauft wird, sondern ihm gleich als Service zur Verfügung gestellt wird.",
+      "difficulty": 2
+    },
+    {
+      "id": 247,
+      "question": "IT-Berufe: René Neumann\n\nFrage\n\nAuftragsabschluss und Leistungserbringung\n\n●○\n\nWas ist ein Organigramm?",
+      "answer": "Ein Organigramm ist eine Art Übersichtsbild der Organisation eines Unternehmens bzw. der Organisationsschaubild genannt, welches in grafischer Form die interne Struktur bzw. Aufbauorgani-sation des Unternehmens abbildet.\nDer Begriff Organigramm ist zusammengesetzt aus Organisation und Diagramm.\nFolgende Informationen über die interne Struktur sind im Organigramm enthalten:\n- Übersicht der Standorte und Aufgaben beim Unternehmensverbund\n- Abteilung der betrieblichen Aufgaben auf Stellen und Abteilungen,\n- Namentliche und personelle Besetzung (Stäbe, Abteilungen, Stellen)\n- Struktur der Aufbau- bzw. Leitungsorganisation\n- Abbildung der Weisungsbeziehungen\n- Leitungshilfsstellen",
+      "difficulty": 1
+    },
+    {
+      "id": 248,
+      "question": "IT-Berufe: René Neumann\n\nFrage\n\nAuftragsabschluss und Leistungserbringung\n\n●●○\n\nWas versteht man unter einer Aufbauorganisation?",
+      "answer": "Eine Aufbauorganisation ist eine Art hierarchische Struktur einer Behörde oder einer Organisation. Sie gliedert ein Unternehmen in Aufgabenbereiche und bestimmt dabei Abteilungen, Leitungsebenen sowie Stabsstellen.\nDas Ergebnis dieser Struktur wird in der Regel in Form eines Organigramms visualisiert. Es gibt zur Darstellung verschiedene Organisationsformen, wie das Einliniensystem, das Stabliniensystem, die Matrixorganisation sowie die Mehrliniensystem.",
+      "difficulty": 2
+    }
+  ]
+}

@@ -39,12 +39,26 @@ A personal exam-prep app for **Management Grundlagen** and **AP1** coursework. B
 These run against the live DB/API — requires a `.env` with the right secrets.
 
 ```bash
+# Quiz bank pipeline (Management / SQL)
 npm run create-notes -- <subject>      # Parse lecture PDFs → generated-notes.md
 npm run generate -- <subject>          # notes → quiz-bank.json
 npm run improve-context -- <subject>   # Enrich quiz bank answers via Claude
 npm run curate -- <subject>            # Filter/improve quiz-bank.json (removes low-value Qs)
 npm run quiz -- <subject>              # Interactive CLI quiz
+
+# AP1 Karteikarten import pipeline
+npm run import-karteikarten -- <folder>              # OCR card images → karteikarten-import.json
+npm run validate-karteikarten                        # Remove mismatched pairs from the JSON
+npm run rematch-karteikarten                         # Semantically pair leftover orphan Q/As (run after validate)
 ```
+
+### Karteikarten import workflow
+
+1. Drop all card photos (question sides + answer sides mixed) into a folder
+2. `npm run import-karteikarten -- ./pictures-ap1/` — Claude vision OCRs every image (8 concurrent), auto-detects question vs answer side, pairs by printed card number → `karteikarten-import.json`
+3. `npm run validate-karteikarten` — Claude Haiku checks every pair for topic match, removes mismatches
+4. Paste the `cards` array from `karteikarten-import.json` into the JSON import field at `/ap1/karteikarten/erstellen`
+5. (Optional) `npm run rematch-karteikarten` — semantically matches unpaired questions with unpaired answers and appends them to the JSON
 
 ## Local setup
 

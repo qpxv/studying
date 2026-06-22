@@ -155,17 +155,32 @@ To add a new subject: create `subjects/<name>/assets/` and `subjects/<name>/note
 
 ## Scripts (all require `.env` with `ANTHROPIC_API_KEY`)
 ```bash
+# Quiz bank pipeline
 npm run create-notes -- <subject>      # PDF → generated-notes.md  (Sonnet)
 npm run generate -- <subject>          # notes → quiz-bank.json     (Haiku)
 npm run improve-context -- <subject>   # enrich quiz bank answers   (Haiku)
 npm run curate -- <subject>            # filter/improve quiz-bank.json (Sonnet)
 npm run quiz -- <subject>              # interactive CLI quiz        (Opus)
+
+# AP1 Karteikarten image import pipeline
+npm run import-karteikarten -- <folder>   # OCR images → karteikarten-import.json (Sonnet, concurrency 8)
+npm run validate-karteikarten             # remove mismatched Q/A pairs (Haiku, batches of 20)
+npm run rematch-karteikarten              # semantically pair orphan Q/As (Sonnet) — run after validate
 ```
 Pass subject as a positional arg after `--`, e.g. `npm run create-notes -- sql`.
 
 `create-notes` uses **claude-sonnet-4-6** (heavy PDF vision work).
 `generate` and `improve-context` use **claude-haiku-4-5-20251001** (cheap structured JSON).
 `curate` uses **claude-sonnet-4-6** — reads the existing quiz-bank.json, removes low-value questions (slide-specific trivia, diagram-dependent questions, near-duplicates, example-output memorization) and improves question context. Processes in chunks of 80.
+
+### Karteikarten import pipeline detail
+`import-karteikarten` — accepts a folder of unsorted card images (question sides and answer sides mixed). Sends each image to Claude Sonnet vision (8 concurrent). Claude auto-detects question vs answer side, extracts `karteikartenNr` from the printed number, transcribes text verbatim (tables → HTML, diagrams → `[IMAGE: ...]`). Merges pairs by `karteikartenNr`. Output: `karteikarten-import.json` with `cards` (matched), `incomplete` (one side missing), `unmatched` (nr=0).
+
+`validate-karteikarten` — reads `karteikarten-import.json`, sends all complete pairs to Claude Haiku in batches of 20, asks whether each Q/A is actually about the same topic. Removes mismatches from `cards` and overwrites the file.
+
+`rematch-karteikarten` — takes all `incomplete` + `unmatched` entries, semantically matches orphan questions with orphan answers using Claude Sonnet, appends newly matched pairs to `cards`. Run this after `validate-karteikarten` to recover pairs where the card number was misread.
+
+**Import format** — the `cards` array in `karteikarten-import.json` uses `{ id, question, answer, difficulty }` which matches exactly what `importKarteikarten()` in `app/ap1/karteikarten/actions.ts` expects. Paste the array into the JSON import field at `/ap1/karteikarten/erstellen`.
 
 ## SQL Praxis mode (no static files)
 `/sql/praxis` requires no pre-generated content. Each round:

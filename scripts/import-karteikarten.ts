@@ -20,7 +20,7 @@ interface ExtractedCard {
 }
 
 interface MergedCard {
-  karteikartenNr: number;
+  id: number;
   question: string;
   answer: string;
   difficulty: number;
@@ -237,7 +237,7 @@ function mergeCards(all: ExtractedCard[]): {
 
     if (q && a) {
       cards.push({
-        karteikartenNr: nr,
+        id: nr,
         question: q.text,
         answer: a.text,
         difficulty: q.difficulty ?? 2,
