@@ -201,6 +201,14 @@ function JsonImportForm() {
         // AI sometimes puts literal newlines/tabs inside JSON strings — fix them and retry
         parsed = JSON.parse(fixJsonControlChars(cleaned));
       }
+      if (
+        !Array.isArray(parsed) &&
+        parsed !== null &&
+        typeof parsed === 'object' &&
+        Array.isArray((parsed as Record<string, unknown>).cards)
+      ) {
+        parsed = (parsed as Record<string, unknown>).cards;
+      }
       cards = Array.isArray(parsed) ? parsed : [parsed as (typeof cards)[0]];
     } catch {
       setParseError('Ungültiges JSON – bitte überprüfen');
