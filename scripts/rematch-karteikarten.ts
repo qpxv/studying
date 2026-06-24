@@ -25,7 +25,7 @@ interface IncompleteCard {
 }
 
 interface MergedCard {
-  karteikartenNr: number;
+  id: number;
   question: string;
   answer: string;
   difficulty: number;
@@ -137,7 +137,7 @@ async function main() {
   const usedAIndices = new Set<number>();
   let totalInput = 0;
   let totalOutput = 0;
-  let nextNr = Math.max(0, ...data.cards.map(c => c.karteikartenNr)) + 1;
+  let nextNr = Math.max(0, ...data.cards.map(c => c.id)) + 1;
 
   for (let qi = 0; qi < orphanQuestions.length; qi += CHUNK_Q) {
     const qChunk = orphanQuestions.slice(qi, qi + CHUNK_Q);
@@ -172,8 +172,9 @@ async function main() {
         .join('');
 
       try {
-        const cleaned = raw.replace(/^```[a-z]*\n?/i, '').replace(/```\s*$/, '').trim();
-        const matches: MatchResult[] = JSON.parse(cleaned);
+        const jsonMatch = raw.match(/\[[\s\S]*\]/);
+        if (!jsonMatch) { console.error('  Warning: no JSON array found in response'); continue; }
+        const matches: MatchResult[] = JSON.parse(jsonMatch[0]);
 
         for (const match of matches) {
           if (match.confidence === 'low') continue;
@@ -194,7 +195,7 @@ async function main() {
           const nr = q.nr !== 0 ? q.nr : a.nr !== 0 ? a.nr : nextNr++;
 
           newPairs.push({
-            karteikartenNr: nr,
+            id: nr,
             question: q.text,
             answer: a.text,
             difficulty: q.difficulty,
@@ -209,7 +210,7 @@ async function main() {
   }
 
   // ── Merge and save ───────────────────────────────────────────────────────
-  const allCards = [...data.cards, ...newPairs].sort((a, b) => a.karteikartenNr - b.karteikartenNr);
+  const allCards = [...data.cards, ...newPairs].sort((a, b) => a.id - b.id);
 
   const output = {
     ...data,
